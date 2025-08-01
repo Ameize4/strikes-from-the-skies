@@ -1,4 +1,3 @@
-using System;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -16,16 +15,6 @@ namespace DefaultNamespace
         private void Update()
         {
             HandleCharacterInput();
-        }
-
-        private void LateUpdate()
-        {
-            HandleCameraInput();
-        }
-
-        private void HandleCameraInput()
-        {
-            
         }
 
         private void HandleCharacterInput()

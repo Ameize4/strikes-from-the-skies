@@ -1,4 +1,3 @@
-using System;
 using KinematicCharacterController;
 using UnityEngine;
 
@@ -14,6 +13,8 @@ namespace DefaultNamespace
     public class CharacterController : MonoBehaviour, ICharacterController
     {
         public KinematicCharacterMotor Motor;
+
+        public Transform playerInputSpace;
         
         
         private Vector3 _moveInputVector;
@@ -45,6 +46,8 @@ namespace DefaultNamespace
             Vector3 reorientedInput = Vector3.Cross(
                 Motor.GroundingStatus.GroundNormal, inputRight).normalized * _moveInputVector.magnitude;
             Vector3 tmv = reorientedInput * 5;
+
+            tmv = playerInputSpace.TransformDirection(tmv);
 
             currentVelocity = tmv;
         }

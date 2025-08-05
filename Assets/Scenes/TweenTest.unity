@@ -147,11 +147,11 @@ Transform:
   m_GameObject: {fileID: 59549398}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.39104939, y: 1.1228672, z: 1.133973}
+  m_LocalPosition: {x: 0.020950615, y: 0.007867217, z: 0.0007728338}
   m_LocalScale: {x: 115, y: 115, z: 115}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2014772211}
+  m_Father: {fileID: 1904375673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &59549400
 MeshCollider:
@@ -395,7 +395,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -423,8 +423,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491776531}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.19973631, y: 0.6784974, z: -0.19991867, w: -0.67807025}
-  m_LocalPosition: {x: 7.3424954, y: 3.83125, z: 4.73516}
+  m_LocalRotation: {x: -0.01787911, y: 0.9771837, z: -0.19146377, w: -0.09018898}
+  m_LocalPosition: {x: 4.5995564, y: 2.0468385, z: 4.684127}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -902,7 +902,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   positionTarget: {x: 0, y: 2.5, z: 5}
   rotationTarget: {x: 60, y: 5, z: 0}
+  toneClip: {fileID: 0}
+  volume: 0.5
+  frequency: 700
   duration: 1
+  isDebug: 0
+  dotLen: 0.2
 --- !u!1 &813017353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,6 +1499,7 @@ Transform:
   - {fileID: 506227280}
   - {fileID: 538115103}
   - {fileID: 2138246559}
+  - {fileID: 59549399}
   m_Father: {fileID: 2014772211}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1904375674
@@ -1510,7 +1516,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   positionTarget: {x: -0.412, y: 1.115, z: 1.1332}
   rotationTarget: {x: 0, y: 0, z: 352.61038}
+  toneClip: {fileID: 0}
+  volume: 0.5
+  frequency: 700
   duration: 0.1
+  isDebug: 0
+  dotLen: 0.3
 --- !u!82 &1904375675
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1641,7 +1652,6 @@ Transform:
   - {fileID: 1621266755}
   - {fileID: 117321054}
   - {fileID: 2035583978}
-  - {fileID: 59549399}
   - {fileID: 1211559011}
   - {fileID: 813017354}
   - {fileID: 1659187841}

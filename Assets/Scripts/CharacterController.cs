@@ -15,7 +15,9 @@ namespace DefaultNamespace
         public KinematicCharacterMotor Motor;
 
         public Transform playerInputSpace;
-        
+
+        public float speedWalk = 2f;
+        public float speedRun = 5f;
         
         private Vector3 _moveInputVector;
         private Vector3 _lookInputVector;
@@ -37,6 +39,10 @@ namespace DefaultNamespace
 
         public void UpdateVelocity(ref Vector3 currentVelocity, float deltaTime)
         {
+            float speed = speedWalk;
+            if (Input.GetKey(KeyCode.LeftShift))
+                speed = speedRun;
+            
             if (Motor.GroundingStatus.IsStableOnGround)
             {
                 // Reorient source velocity on current ground slope
@@ -46,7 +52,7 @@ namespace DefaultNamespace
                 Vector3 inputRight = Vector3.Cross(_moveInputVector, Motor.CharacterUp);
                 Vector3 reorientedInput = Vector3.Cross(
                     Motor.GroundingStatus.GroundNormal, inputRight).normalized * _moveInputVector.magnitude;
-                Vector3 tmv = reorientedInput * 5;
+                Vector3 tmv = reorientedInput * speed;
                 tmv = playerInputSpace.TransformDirection(tmv);
                 currentVelocity = tmv;
             }

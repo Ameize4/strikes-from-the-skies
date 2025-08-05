@@ -37,19 +37,24 @@ namespace DefaultNamespace
 
         public void UpdateVelocity(ref Vector3 currentVelocity, float deltaTime)
         {
-            // Reorient source velocity on current ground slope
-            // (this is because we don't want our smoothing to cause any velocity losses in slope changes)
-            currentVelocity = Motor.GetDirectionTangentToSurface(currentVelocity, 
-                Motor.GroundingStatus.GroundNormal) * currentVelocity.magnitude;
-
-            Vector3 inputRight = Vector3.Cross(_moveInputVector, Motor.CharacterUp);
-            Vector3 reorientedInput = Vector3.Cross(
-                Motor.GroundingStatus.GroundNormal, inputRight).normalized * _moveInputVector.magnitude;
-            Vector3 tmv = reorientedInput * 5;
-
-            tmv = playerInputSpace.TransformDirection(tmv);
-
-            currentVelocity = tmv;
+            if (Motor.GroundingStatus.IsStableOnGround)
+            {
+                // Reorient source velocity on current ground slope
+                // (this is because we don't want our smoothing to cause any velocity losses in slope changes)
+                currentVelocity = Motor.GetDirectionTangentToSurface(currentVelocity, 
+                    Motor.GroundingStatus.GroundNormal) * currentVelocity.magnitude;
+                Vector3 inputRight = Vector3.Cross(_moveInputVector, Motor.CharacterUp);
+                Vector3 reorientedInput = Vector3.Cross(
+                    Motor.GroundingStatus.GroundNormal, inputRight).normalized * _moveInputVector.magnitude;
+                Vector3 tmv = reorientedInput * 5;
+                tmv = playerInputSpace.TransformDirection(tmv);
+                currentVelocity = tmv;
+            }
+            else
+            {
+                // Gravity
+                currentVelocity += new Vector3(0, -30, 0) * deltaTime;
+            }
         }
 
         #region NotImplemented

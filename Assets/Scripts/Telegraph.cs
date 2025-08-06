@@ -1,7 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class TweenTest : MonoBehaviour
+public class Telegraph : MonoBehaviour
 {
     public Vector3 positionTarget;
     public Vector3 rotationTarget;

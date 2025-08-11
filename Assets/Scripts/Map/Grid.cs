@@ -23,15 +23,20 @@ namespace DefaultNamespace.Map
         public GameObject Cube;
         public GameObject EnemyPrefab;
 
+        public EnemyData[] enemiesData;
+        
         private Enemy[] enemies;
-        public GridPos[] path;
 
         private void Start()
         {
             // Init enemies
-            enemies = new Enemy[1];
-            var enemyGO = Instantiate(EnemyPrefab);
-            enemies[0] = new Enemy(this, enemyGO.transform);
+            enemies = new Enemy[enemiesData.Length];
+            for (var i = 0; i < enemiesData.Length; i++)
+            {
+                var enemyData = enemiesData[i];
+                var enemyGO = Instantiate(EnemyPrefab);
+                enemies[i] = new Enemy(this, enemyData, enemyGO.transform);
+            }
             
             // Init cells
             cells = new Cell[sizeX * sizeY];
@@ -48,28 +53,51 @@ namespace DefaultNamespace.Map
             {
                 var newCube = Instantiate(Cube, transform);
                 newCube.transform.position = GetCellPosition(cell);
+                cell.gameObject = newCube;
             }
             
             //
-            var cellPath = new Cell[path.Length];
-            for (var i = 0; i < path.Length; i++)
+            for (var enemyIdx = 0; enemyIdx < enemiesData.Length; enemyIdx++)
             {
-                var gridPos = path[i];
-                var cell = cells[gridPos.posX * sizeX + gridPos.posY];
-                cellPath[i] = cell;
+                var enemyData = enemiesData[enemyIdx];
+                var cellPath = new Cell[enemyData.path.Length];
+                for (var pathIdx = 0; pathIdx < enemyData.path.Length; pathIdx++)
+                {
+                    var gridPos = enemyData.path[pathIdx];
+                    var cell = cells[gridPos.posX * sizeX + gridPos.posY];
+                    cellPath[pathIdx] = cell;
+                }
+
+                enemies[enemyIdx].SetPath(cellPath);
             }
-            enemies[0].SetPath(cellPath);
         }
 
         private void Update()
         {
-            foreach (var e in enemies)
-                e.Process();
+            foreach (var e in enemies) e.Process();
+            if (Input.GetMouseButton(0))
+            {
+                TryKillCell();
+            }
         }
 
         public Vector3 GetCellPosition(Cell cell)
         {
             return transform.position + transform.TransformDirection(new Vector3(cell.gridPos.posX, 0, cell.gridPos.posY));
+        }
+
+        // Until we can throw cell by morse
+        public int TargetX, TargetY;
+        private void TryKillCell()
+        {
+            var targetCell = cells[TargetX * sizeX + TargetY];
+            foreach (var enemy in enemies)
+            {
+                if (enemy.IsOnCell(targetCell))
+                {
+                    enemy.isDead = true;
+                }
+            }
         }
     }
 }

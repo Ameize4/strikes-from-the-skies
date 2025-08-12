@@ -19,7 +19,7 @@ namespace DefaultNamespace.Map
     {
         public int sizeX, sizeY;
 
-        private Cell[] cells;
+        public Cell[] cells;
         public GameObject Cube;
         public GameObject EnemyPrefab;
 
@@ -29,15 +29,6 @@ namespace DefaultNamespace.Map
 
         private void Start()
         {
-            // Init enemies
-            enemies = new Enemy[enemiesData.Length];
-            for (var i = 0; i < enemiesData.Length; i++)
-            {
-                var enemyData = enemiesData[i];
-                var enemyGO = Instantiate(EnemyPrefab);
-                enemies[i] = new Enemy(this, enemyData, enemyGO.transform);
-            }
-            
             // Init cells
             cells = new Cell[sizeX * sizeY];
             for (int i = 0; i < sizeX; i++)
@@ -56,19 +47,14 @@ namespace DefaultNamespace.Map
                 cell.gameObject = newCube;
             }
             
-            //
+            // Init enemies
+            enemies = new Enemy[enemiesData.Length];
             for (var enemyIdx = 0; enemyIdx < enemiesData.Length; enemyIdx++)
             {
                 var enemyData = enemiesData[enemyIdx];
-                var cellPath = new Cell[enemyData.path.Length];
-                for (var pathIdx = 0; pathIdx < enemyData.path.Length; pathIdx++)
-                {
-                    var gridPos = enemyData.path[pathIdx];
-                    var cell = cells[gridPos.posX * sizeX + gridPos.posY];
-                    cellPath[pathIdx] = cell;
-                }
-
-                enemies[enemyIdx].SetPath(cellPath);
+                var enemyGO = Instantiate(EnemyPrefab);
+                enemies[enemyIdx] = new Enemy(this, enemyData, enemyGO.transform);
+                enemies[enemyIdx].SetPath(enemyData.path);
             }
         }
 

@@ -31,10 +31,16 @@ namespace DefaultNamespace.Map
             posIdx = 0;
         }
 
-        public void SetPath(Cell[] path)
+        public void SetPath(GridPos[] path)
         {
-            cellPath = path;
-            transform.position = grid.GetCellPosition(path[0]);
+            cellPath = new Cell[path.Length];
+            for (var pathIdx = 0; pathIdx < path.Length; pathIdx++)
+            {
+                var gridPos = path[pathIdx];
+                var cell = grid.cells[gridPos.posX * grid.sizeX + gridPos.posY];
+                cellPath[pathIdx] = cell;
+            }
+            transform.position = grid.GetCellPosition(cellPath[0]);
         }
         
         public void Process()

@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 namespace DefaultNamespace.Map
@@ -22,6 +23,8 @@ namespace DefaultNamespace.Map
         public Cell[] cells;
         public GameObject Cube;
         public GameObject EnemyPrefab;
+        public TMP_Text textLabel;
+        public Vector3 OffsetUp, OffsetRight;
 
         public EnemyData[] enemiesData;
         
@@ -56,6 +59,8 @@ namespace DefaultNamespace.Map
                 enemies[enemyIdx] = new Enemy(this, enemyData, enemyGO.transform);
                 enemies[enemyIdx].SetPath(enemyData.path);
             }
+
+            AddHelpers();
         }
 
         private void Update()
@@ -83,6 +88,26 @@ namespace DefaultNamespace.Map
                 {
                     enemy.isDead = true;
                 }
+            }
+        }
+
+        private void AddHelpers()
+        {
+            for (int i = 0; i < sizeX; i++)
+            {
+                var pos = cells[i].gameObject.transform.position;
+                var label = Instantiate(textLabel, transform);
+                label.transform.position = pos + OffsetUp;
+                label.text = i.ToString();
+            }
+
+            string[] alphabet = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
+            for (int i = 0; i < sizeY; i++)
+            {
+                var pos = cells[i*sizeY+sizeX-1].gameObject.transform.position;
+                var label = Instantiate(textLabel, transform);
+                label.transform.position = pos + OffsetRight;
+                label.text = alphabet[i];
             }
         }
     }

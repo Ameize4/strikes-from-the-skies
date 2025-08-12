@@ -55,7 +55,7 @@ namespace DefaultNamespace.Map
             for (var enemyIdx = 0; enemyIdx < enemiesData.Length; enemyIdx++)
             {
                 var enemyData = enemiesData[enemyIdx];
-                var enemyGO = Instantiate(EnemyPrefab);
+                var enemyGO = Instantiate(EnemyPrefab, transform);
                 enemies[enemyIdx] = new Enemy(this, enemyData, enemyGO.transform);
                 enemies[enemyIdx].SetPath(enemyData.path);
             }
@@ -74,7 +74,9 @@ namespace DefaultNamespace.Map
 
         public Vector3 GetCellPosition(Cell cell)
         {
-            return transform.position + transform.TransformDirection(new Vector3(cell.gridPos.posX, 0, cell.gridPos.posY));
+            var x = cell.gridPos.posX * transform.localScale.x;
+            var y = cell.gridPos.posY * transform.localScale.y;
+            return transform.position + transform.TransformDirection(new Vector3(x, 0, y));
         }
 
         // Until we can throw cell by morse

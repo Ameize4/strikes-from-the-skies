@@ -1577,7 +1577,7 @@ MonoBehaviour:
   frequency: 700
   duration: 0.1
   isDebug: 0
-  dotLen: 0.3
+  dotLen: 0.15
 --- !u!1 &747299197 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6938978007382601096, guid: 3298d6a034e84fd41baa7be8bd2cd5bb, type: 3}

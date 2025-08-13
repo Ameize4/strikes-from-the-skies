@@ -18,7 +18,7 @@ public class Telegraph : MonoBehaviour
     public float duration;
     public bool isDebug;
 
-    private Sequence s;
+    private Sequence seq;
 
     public float dotLen = 0.3f;
     
@@ -33,7 +33,7 @@ public class Telegraph : MonoBehaviour
         toneClip = GenerateTone(frequency, 1);
         audioSource.clip = toneClip;
 
-        
+        seq = DOTween.Sequence();
         // audioSource.clip = AudioClip.Create("Gha", 1, 1, 44100 * 2, false);
         // var numSamples = audioSource.clip.samples * audioSource.clip.channels;
         // var samples = new NativeArray<float>(numSamples, Allocator.Temp);
@@ -77,8 +77,9 @@ public class Telegraph : MonoBehaviour
             }
 
             audioSource.Play();
-            s.Kill();
-            s.Append(DOTween.To(
+            seq.Kill();
+            seq = DOTween.Sequence();
+            seq.Append(DOTween.To(
                 () => transform.rotation, 
                 x => transform.rotation = x, 
                 rotationTarget, 
@@ -103,8 +104,9 @@ public class Telegraph : MonoBehaviour
             }
             
             audioSource.Stop();
-            s.Kill();
-            s.Append(DOTween.To(
+            seq.Kill();
+            seq = DOTween.Sequence();
+            seq.Append(DOTween.To(
                     () => transform.rotation,
                     x => transform.rotation = x,
                     rotationInit,

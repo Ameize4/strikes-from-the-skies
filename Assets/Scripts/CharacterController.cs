@@ -34,6 +34,7 @@ namespace DefaultNamespace
 
         public void UpdateRotation(ref Quaternion currentRotation, float deltaTime)
         {
+            if (_moveInputVector == Vector3.zero) return;
             currentRotation = Quaternion.LookRotation(_moveInputVector, Motor.CharacterUp);
         }
 

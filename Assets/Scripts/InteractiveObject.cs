@@ -1,3 +1,4 @@
+using DefaultNamespace.Interfaces;
 using UnityEngine;
 
 public class InteractiveObject : MonoBehaviour
@@ -68,12 +69,11 @@ public class InteractiveObject : MonoBehaviour
 
     private void SetInteractiveComponents(bool state)
     {
-        // TODO: Заменить на вызов интерфейса IInteractive
         foreach (var component in interactiveComponents)
         {
-            if (component != null)
+            if (component != null && component is IInteractive interactive)
             {
-                component.enabled = state;
+                interactive.SetInteraction(state);
             }
         }
     }

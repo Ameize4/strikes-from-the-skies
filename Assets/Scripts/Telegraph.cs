@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using DefaultNamespace;
+using DefaultNamespace.Interfaces;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
-public class Telegraph : MonoBehaviour
+public class Telegraph : MonoBehaviour, IInteractive
 {
     public Vector3 positionTarget;
     public Vector3 rotationTarget;
@@ -32,6 +33,8 @@ public class Telegraph : MonoBehaviour
 
     public TMP_Text label;
     private string translatedText = "";
+    
+    private bool isInteractiveModeEnabled = false;
     
     void Start()
     {
@@ -77,6 +80,8 @@ public class Telegraph : MonoBehaviour
     
     void Update()
     {
+        if (isInteractiveModeEnabled == false) return;
+        
         bool isMouseInput = HandleMouseInput();
 
         if (morseInput.Count > 0 && isMouseInput == false && letterPause < Mathf.Abs(timeOfInputRelease - Time.time))
@@ -149,5 +154,18 @@ public class Telegraph : MonoBehaviour
         if (Input.GetMouseButton(0))
             isProcessed = true;
         return isProcessed;
+    }
+
+    public void SetInteraction(bool value)
+    {
+        isInteractiveModeEnabled = value;
+        if (value)
+        { }
+        else
+        {
+            label.text = "";
+            translatedText = "";
+            morseInput?.Clear();
+        }
     }
 }

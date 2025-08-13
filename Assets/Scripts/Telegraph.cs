@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using DefaultNamespace;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 public class Telegraph : MonoBehaviour
@@ -27,6 +29,10 @@ public class Telegraph : MonoBehaviour
 
     private float mouseInputDownTime = 0f;
     private float timeOfInputRelease = 0f;
+
+    public TMP_Text label;
+    private string translatedText = "";
+    
     void Start()
     {
         positionInit = transform.localPosition;
@@ -75,9 +81,14 @@ public class Telegraph : MonoBehaviour
 
         if (morseInput.Count > 0 && isMouseInput == false && letterPause < Mathf.Abs(timeOfInputRelease - Time.time))
         {
-            var res = string.Join(' ', morseInput);
-            Debug.Log(res);
+            translatedText += MorseCodeTranscription.GetStringFromMorseOrEmpty(string.Join("", morseInput));
+            label.text = translatedText;
             morseInput.Clear();
+        }
+        else if (morseInput.Count > 0)
+        {
+            var res = string.Join("", morseInput);
+            label.text = translatedText + res;
         }
     }
 

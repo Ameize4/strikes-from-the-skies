@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
@@ -21,8 +22,11 @@ public class Telegraph : MonoBehaviour
     private Sequence seq;
 
     public float dotLen = 0.3f;
-    
-    private float length = 0f;
+    public float letterPause = 0.3f;
+    private List<string> morseInput;
+
+    private float mouseInputDownTime = 0f;
+    private float timeOfInputRelease = 0f;
     void Start()
     {
         positionInit = transform.localPosition;
@@ -34,6 +38,7 @@ public class Telegraph : MonoBehaviour
         audioSource.clip = toneClip;
 
         seq = DOTween.Sequence();
+        morseInput = new List<string>();
         // audioSource.clip = AudioClip.Create("Gha", 1, 1, 44100 * 2, false);
         // var numSamples = audioSource.clip.samples * audioSource.clip.channels;
         // var samples = new NativeArray<float>(numSamples, Allocator.Temp);
@@ -66,9 +71,23 @@ public class Telegraph : MonoBehaviour
     
     void Update()
     {
+        bool isMouseInput = HandleMouseInput();
+
+        if (morseInput.Count > 0 && isMouseInput == false && letterPause < Mathf.Abs(timeOfInputRelease - Time.time))
+        {
+            var res = string.Join(' ', morseInput);
+            Debug.Log(res);
+            morseInput.Clear();
+        }
+    }
+
+    private bool HandleMouseInput()
+    {
+        bool isProcessed = false;
         if (Input.GetMouseButtonDown(0))
         {
-            length = Time.time;
+            isProcessed = true;
+            mouseInputDownTime = Time.time;
             
             if (isDebug)
             {
@@ -93,15 +112,13 @@ public class Telegraph : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
-            length -= Time.time;
-            if (dotLen > Mathf.Abs(length))
-            {
-                Debug.Log(".");
-            }
+            isProcessed = true;
+            timeOfInputRelease = Time.time;
+            mouseInputDownTime -= timeOfInputRelease;
+            if (dotLen > Mathf.Abs(mouseInputDownTime))
+                morseInput.Add(".");
             else
-            {
-                Debug.Log("-");
-            }
+                morseInput.Add("-");
             
             audioSource.Stop();
             seq.Kill();
@@ -117,5 +134,9 @@ public class Telegraph : MonoBehaviour
                     positionInit,
                     duration).SetEase(Ease.InQuad));
         }
+
+        if (Input.GetMouseButton(0))
+            isProcessed = true;
+        return isProcessed;
     }
 }

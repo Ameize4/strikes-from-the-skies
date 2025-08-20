@@ -48,6 +48,7 @@ namespace DefaultNamespace.Map
                 var newCube = Instantiate(Cube, transform);
                 newCube.transform.position = GetCellPosition(cell);
                 cell.gameObject = newCube;
+                cell.gameObject.transform.name = $"X{cell.gridPos.posX}Y{cell.gridPos.posY}";
             }
             
             // Init enemies
@@ -95,21 +96,23 @@ namespace DefaultNamespace.Map
 
         private void AddHelpers()
         {
+            string[] alphabet = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
             for (int i = 0; i < sizeX; i++)
             {
                 var pos = cells[i].gameObject.transform.position;
                 var label = Instantiate(textLabel, transform);
                 label.transform.position = pos + OffsetUp;
-                label.text = i.ToString();
+                label.transform.rotation = Quaternion.LookRotation(-transform.right);
+                label.text = alphabet[i];
             }
 
-            string[] alphabet = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
             for (int i = 0; i < sizeY; i++)
             {
-                var pos = cells[i*sizeY+sizeX-1].gameObject.transform.position;
+                var pos = cells[i*sizeY].gameObject.transform.position;
                 var label = Instantiate(textLabel, transform);
                 label.transform.position = pos + OffsetRight;
-                label.text = alphabet[i];
+                label.transform.rotation = Quaternion.LookRotation(-transform.right);
+                label.text = i.ToString();
             }
         }
     }

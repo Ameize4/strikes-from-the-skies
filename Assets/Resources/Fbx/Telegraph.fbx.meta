@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4617969c7f2a8fb408479ea5c93f6695
+guid: b36111044357d014b801893ac6aa25f1
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,23 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Light_Emiss_Green
-    second: {fileID: 2100000, guid: 32e8240a0ad11e443b3205926590c880, type: 2}
+      name: String
+    second: {fileID: 2100000, guid: 4eb493e1846f9d349b0b7b5bc16b10ec, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Light_Emiss_Red
-    second: {fileID: 2100000, guid: 028aee52a623d454eb6a1ae4a3b8b217, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Map
-    second: {fileID: 2100000, guid: 0ac5968fe44a304429a31aff141e872d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Map_Table
-    second: {fileID: 2100000, guid: 4ad8c8e2df51ed94a82032e827289d08, type: 2}
+      name: Telegraph
+    second: {fileID: 2100000, guid: 53e06bbff9ffac742b71a7a2d394bf29, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -1,34 +1,14 @@
 fileFormatVersion: 2
-guid: 4617969c7f2a8fb408479ea5c93f6695
+guid: 8accab9eb1b207d4d82a683c5a09ec43
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Light_Emiss_Green
-    second: {fileID: 2100000, guid: 32e8240a0ad11e443b3205926590c880, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Light_Emiss_Red
-    second: {fileID: 2100000, guid: 028aee52a623d454eb6a1ae4a3b8b217, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Map
-    second: {fileID: 2100000, guid: 0ac5968fe44a304429a31aff141e872d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Map_Table
-    second: {fileID: 2100000, guid: 4ad8c8e2df51ed94a82032e827289d08, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace DefaultNamespace.Map
 {
@@ -58,6 +59,11 @@ namespace DefaultNamespace.Map
         public bool IsOnCell(Cell cell)
         {
             return cellPath[posIdx] == cell;
+        }
+
+        public void Clean()
+        {
+            Object.Destroy(transform.gameObject);
         }
     }
 }

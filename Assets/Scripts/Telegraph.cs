@@ -89,6 +89,15 @@ public class Telegraph : MonoBehaviour, IInteractive
             translatedText += MorseCodeTranscription.GetStringFromMorseOrEmpty(string.Join("", morseInput));
             label.text = translatedText;
             morseInput.Clear();
+            
+            
+            if (translatedText.Length == 2)
+            {
+                GameManager.Instance.SendMorseCoordinates(translatedText);
+                label.color = Color.green;
+                DOTween.To(() => label.color, x => label.color = x, Color.white, 0.6f)
+                    .OnComplete(() => { label.text = ""; translatedText = ""; });
+            }
         }
         else if (morseInput.Count > 0)
         {

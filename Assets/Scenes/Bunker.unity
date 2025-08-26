@@ -1651,7 +1651,7 @@ MonoBehaviour:
   duration: 0.1
   isDebug: 0
   dotLen: 0.15
-  letterPause: 0.3
+  letterPause: 0.4
   label: {fileID: 720391400}
 --- !u!1 &747299197 stripped
 GameObject:
@@ -2103,15 +2103,19 @@ PrefabInstance:
       objectReference: {fileID: -1444460858095362738, guid: 3298d6a034e84fd41baa7be8bd2cd5bb, type: 3}
     - target: {fileID: -5610832936595009893, guid: 3298d6a034e84fd41baa7be8bd2cd5bb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 59.61824
+      value: 62.253365
       objectReference: {fileID: 0}
     - target: {fileID: -5610832936595009893, guid: 3298d6a034e84fd41baa7be8bd2cd5bb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 54.19
+      value: 56.585194
+      objectReference: {fileID: 0}
+    - target: {fileID: -5610832936595009893, guid: 3298d6a034e84fd41baa7be8bd2cd5bb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 104.42
       objectReference: {fileID: 0}
     - target: {fileID: -5610832936595009893, guid: 3298d6a034e84fd41baa7be8bd2cd5bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.095
+      value: -9.097
       objectReference: {fileID: 0}
     - target: {fileID: -5610832936595009893, guid: 3298d6a034e84fd41baa7be8bd2cd5bb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2119,23 +2123,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5610832936595009893, guid: 3298d6a034e84fd41baa7be8bd2cd5bb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.192
+      value: 2.203
       objectReference: {fileID: 0}
     - target: {fileID: -5610832936595009893, guid: 3298d6a034e84fd41baa7be8bd2cd5bb, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071043
+      value: -0.0018511862
       objectReference: {fileID: 0}
     - target: {fileID: -5610832936595009893, guid: 3298d6a034e84fd41baa7be8bd2cd5bb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071043
+      value: 0.001851186
       objectReference: {fileID: 0}
     - target: {fileID: -5610832936595009893, guid: 3298d6a034e84fd41baa7be8bd2cd5bb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0018511974
+      value: -0.7071043
       objectReference: {fileID: 0}
     - target: {fileID: -5610832936595009893, guid: 3298d6a034e84fd41baa7be8bd2cd5bb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0018511974
+      value: -0.70710444
       objectReference: {fileID: 0}
     - target: {fileID: -5610832936595009893, guid: 3298d6a034e84fd41baa7be8bd2cd5bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2143,7 +2147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5610832936595009893, guid: 3298d6a034e84fd41baa7be8bd2cd5bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.3
+      value: -180.3
       objectReference: {fileID: 0}
     - target: {fileID: -5379710940614439506, guid: 3298d6a034e84fd41baa7be8bd2cd5bb, type: 3}
       propertyPath: m_CustomShadowLayers
@@ -3394,6 +3398,106 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7835944207358130237, guid: 3298d6a034e84fd41baa7be8bd2cd5bb, type: 3}
+--- !u!1 &1084138474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1084138476}
+  - component: {fileID: 1084138475}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1084138475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084138474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f34183060374f4f84e95c7ff96a2d3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 1770552387}
+  enemiesData:
+  - speed: 2
+    path:
+    - posX: 9
+      posY: 9
+    - posX: 9
+      posY: 8
+    - posX: 8
+      posY: 8
+    - posX: 8
+      posY: 7
+    - posX: 7
+      posY: 7
+    - posX: 7
+      posY: 6
+    - posX: 6
+      posY: 6
+    - posX: 6
+      posY: 5
+  - speed: 1
+    path:
+    - posX: 1
+      posY: 9
+    - posX: 1
+      posY: 8
+    - posX: 2
+      posY: 8
+    - posX: 2
+      posY: 7
+    - posX: 3
+      posY: 7
+    - posX: 3
+      posY: 6
+    - posX: 4
+      posY: 6
+    - posX: 4
+      posY: 5
+  - speed: 3
+    path:
+    - posX: 1
+      posY: 9
+    - posX: 1
+      posY: 8
+    - posX: 2
+      posY: 8
+    - posX: 2
+      posY: 7
+    - posX: 3
+      posY: 7
+    - posX: 3
+      posY: 6
+    - posX: 4
+      posY: 6
+    - posX: 4
+      posY: 5
+--- !u!4 &1084138476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084138474}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1093309271 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4470441844611919273, guid: 3298d6a034e84fd41baa7be8bd2cd5bb, type: 3}
@@ -5315,63 +5419,6 @@ MonoBehaviour:
   textLabel: {fileID: 5066595790257469836, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}
   OffsetUp: {x: 0, y: 0, z: 0.2}
   OffsetRight: {x: -0.2, y: 0, z: 0}
-  enemiesData:
-  - speed: 2
-    path:
-    - posX: 9
-      posY: 9
-    - posX: 9
-      posY: 8
-    - posX: 8
-      posY: 8
-    - posX: 8
-      posY: 7
-    - posX: 7
-      posY: 7
-    - posX: 7
-      posY: 6
-    - posX: 6
-      posY: 6
-    - posX: 6
-      posY: 5
-  - speed: 1
-    path:
-    - posX: 1
-      posY: 9
-    - posX: 1
-      posY: 8
-    - posX: 2
-      posY: 8
-    - posX: 2
-      posY: 7
-    - posX: 3
-      posY: 7
-    - posX: 3
-      posY: 6
-    - posX: 4
-      posY: 6
-    - posX: 4
-      posY: 5
-  - speed: 3
-    path:
-    - posX: 1
-      posY: 9
-    - posX: 1
-      posY: 8
-    - posX: 2
-      posY: 8
-    - posX: 2
-      posY: 7
-    - posX: 3
-      posY: 7
-    - posX: 3
-      posY: 6
-    - posX: 4
-      posY: 6
-    - posX: 4
-      posY: 5
-  TargetX: 0
-  TargetY: 0
 --- !u!1 &1799352640 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8485173162082002552, guid: 3298d6a034e84fd41baa7be8bd2cd5bb, type: 3}
@@ -5615,7 +5662,7 @@ MonoBehaviour:
     DefaultMode: 2
   DefaultBlend:
     Style: 1
-    Time: 2
+    Time: 1
     CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -6407,6 +6454,7 @@ MeshCollider:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1084138476}
   - {fileID: 321276526}
   - {fileID: 199834477}
   - {fileID: 1209433223}

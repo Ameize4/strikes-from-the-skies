@@ -26,9 +26,11 @@ namespace DefaultNamespace.Map
         public TMP_Text textLabel;
         public Vector3 OffsetUp, OffsetRight;
 
-        public EnemyData[] enemiesData;
-        
         private Enemy[] enemies;
+        
+        private bool inActiveWave = false;
+        
+        static string[] alphabet = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
 
         private void Start()
         {
@@ -51,26 +53,20 @@ namespace DefaultNamespace.Map
                 cell.gameObject.transform.name = $"X{cell.gridPos.posX}Y{cell.gridPos.posY}";
             }
             
-            // Init enemies
-            enemies = new Enemy[enemiesData.Length];
-            for (var enemyIdx = 0; enemyIdx < enemiesData.Length; enemyIdx++)
-            {
-                var enemyData = enemiesData[enemyIdx];
-                var enemyGO = Instantiate(EnemyPrefab, transform);
-                enemies[enemyIdx] = new Enemy(this, enemyData, enemyGO.transform);
-                enemies[enemyIdx].SetPath(enemyData.path);
-            }
 
             AddHelpers();
         }
 
         private void Update()
         {
+            UpdateEnemies();
+        }
+
+        private void UpdateEnemies()
+        {
+            if (inActiveWave == false) return;
+
             foreach (var e in enemies) e.Process();
-            if (Input.GetMouseButton(0))
-            {
-                TryKillCell();
-            }
         }
 
         public Vector3 GetCellPosition(Cell cell)
@@ -80,23 +76,32 @@ namespace DefaultNamespace.Map
             return transform.position + transform.TransformDirection(new Vector3(x, 0, y));
         }
 
-        // Until we can throw cell by morse
-        public int TargetX, TargetY;
-        private void TryKillCell()
+        public void TryKillCell(int TargetX, string TargetYLetter)
         {
+            int targetY = Array.FindIndex(alphabet, x => x == TargetYLetter);
+            TryKillCell(TargetX, targetY);
+        }
+        
+        public void TryKillCell(int TargetX, int TargetY)
+        {
+            if (enemies == null) return;
+            
             var targetCell = cells[TargetX * sizeX + TargetY];
+
+            bool isAllKilled = true;
             foreach (var enemy in enemies)
             {
-                if (enemy.IsOnCell(targetCell))
-                {
-                    enemy.isDead = true;
-                }
+                // Try kill cells
+                if (enemy.IsOnCell(targetCell)) enemy.isDead = true;
+
+                if (!enemy.isDead) isAllKilled = false;
             }
+
+            if (isAllKilled)  FinalizeEnemyWave();
         }
 
         private void AddHelpers()
         {
-            string[] alphabet = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
             for (int i = 0; i < sizeX; i++)
             {
                 var pos = cells[i].gameObject.transform.position;
@@ -114,6 +119,32 @@ namespace DefaultNamespace.Map
                 label.transform.rotation = Quaternion.LookRotation(-transform.right);
                 label.text = i.ToString();
             }
+        }
+        
+        public void BeginEnemyWave(EnemyData[] enemiesData)
+        {
+            if (inActiveWave) return;
+
+            // Init enemies
+            enemies = new Enemy[enemiesData.Length];
+            for (var enemyIdx = 0; enemyIdx < enemiesData.Length; enemyIdx++)
+            {
+                var enemyData = enemiesData[enemyIdx];
+                var enemyGO = Instantiate(EnemyPrefab, transform);
+                enemies[enemyIdx] = new Enemy(this, enemyData, enemyGO.transform);
+                enemies[enemyIdx].SetPath(enemyData.path);
+            }
+            
+            inActiveWave = true;
+        }
+
+        private void FinalizeEnemyWave()
+        {
+            inActiveWave = false;
+            foreach (var enemy in enemies)
+                enemy.Clean();
+
+            enemies = null;
         }
     }
 }

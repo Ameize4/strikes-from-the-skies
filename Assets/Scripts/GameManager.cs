@@ -1,5 +1,6 @@
 using System.Linq;
 using UnityEngine;
+using Yarn.Unity;
 
 namespace DefaultNamespace
 {
@@ -7,6 +8,9 @@ namespace DefaultNamespace
     {
         public static GameManager Instance;
         
+        [SerializeField] DialogueRunner dialogueRunner;
+        [SerializeField] DialogueReference dialogue;
+
         public Map.Grid grid;
         
         public Map.EnemyData[] enemiesData;
@@ -22,8 +26,19 @@ namespace DefaultNamespace
             {
                 grid.BeginEnemyWave(enemiesData);
             }
+
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                dialogueRunner.StartDialogue(dialogue.nodeName);
+            }
         }
 
+        [YarnCommand("SpawnWave")]
+        public static void Yarn_SpawnWave()
+        {
+            Instance.grid.BeginEnemyWave(Instance.enemiesData);
+            
+        }
         public void SendMorseCoordinates(string message)
         {
             print(message);

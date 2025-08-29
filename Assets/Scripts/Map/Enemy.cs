@@ -61,6 +61,12 @@ namespace DefaultNamespace.Map
             return cellPath[posIdx] == cell;
         }
 
+        public void Die()
+        {
+            isDead = true;
+            transform.gameObject.SetActive(false);
+        }
+
         public void Clean()
         {
             Object.Destroy(transform.gameObject);

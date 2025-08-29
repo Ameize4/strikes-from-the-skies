@@ -32,7 +32,7 @@ namespace DefaultNamespace.Map
         
         static string[] alphabet = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
 
-        private Transform enemyContainer;
+        private string eventNameOnFinish;
 
         private void Start()
         {
@@ -94,7 +94,7 @@ namespace DefaultNamespace.Map
             foreach (var enemy in enemies)
             {
                 // Try kill cells
-                if (enemy.IsOnCell(targetCell)) enemy.isDead = true;
+                if (enemy.IsOnCell(targetCell)) enemy.Die();
 
                 if (!enemy.isDead) isAllKilled = false;
             }
@@ -122,8 +122,8 @@ namespace DefaultNamespace.Map
                 label.text = i.ToString();
             }
         }
-        
-        public void BeginEnemyWave(EnemyData[] enemiesData)
+
+        public void BeginEnemyWave(EnemyData[] enemiesData, string eventNameOnFinish)
         {
             if (inActiveWave) return;
 
@@ -140,7 +140,8 @@ namespace DefaultNamespace.Map
                 enemies[enemyIdx] = new Enemy(this, enemyData, enemyGO.transform);
                 enemies[enemyIdx].SetPath(enemyData.path);
             }
-            
+
+            this.eventNameOnFinish = eventNameOnFinish;
             inActiveWave = true;
         }
 
@@ -151,6 +152,8 @@ namespace DefaultNamespace.Map
                 enemy.Clean();
 
             enemies = null;
+
+            GameManager.Instance.AllEnemiesDestroyed(eventNameOnFinish);
         }
     }
 }

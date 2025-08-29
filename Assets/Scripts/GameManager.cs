@@ -41,7 +41,6 @@ namespace DefaultNamespace
         }
         public void SendMorseCoordinates(string message)
         {
-            print(message);
             if (message.Length == 2)
             {
                 string left = message[0].ToString();

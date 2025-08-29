@@ -32,6 +32,8 @@ namespace DefaultNamespace.Map
         
         static string[] alphabet = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
 
+        private Transform enemyContainer;
+
         private void Start()
         {
             // Init cells
@@ -131,6 +133,10 @@ namespace DefaultNamespace.Map
             {
                 var enemyData = enemiesData[enemyIdx];
                 var enemyGO = Instantiate(EnemyPrefab, transform);
+
+                var localScale = transform.localScale;
+                enemyGO.transform.localScale = new Vector3(1/localScale.x, 1/localScale.y, 1/localScale.z);
+                
                 enemies[enemyIdx] = new Enemy(this, enemyData, enemyGO.transform);
                 enemies[enemyIdx].SetPath(enemyData.path);
             }

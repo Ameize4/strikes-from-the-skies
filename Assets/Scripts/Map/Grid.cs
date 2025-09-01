@@ -32,8 +32,6 @@ namespace DefaultNamespace.Map
         
         static string[] alphabet = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
 
-        private string eventNameOnFinish;
-
         private void Start()
         {
             // Init cells
@@ -123,7 +121,7 @@ namespace DefaultNamespace.Map
             }
         }
 
-        public void BeginEnemyWave(EnemyData[] enemiesData, string eventNameOnFinish)
+        public void BeginEnemyWave(EnemyData[] enemiesData)
         {
             if (inActiveWave) return;
 
@@ -141,7 +139,6 @@ namespace DefaultNamespace.Map
                 enemies[enemyIdx].SetPath(enemyData.path);
             }
 
-            this.eventNameOnFinish = eventNameOnFinish;
             inActiveWave = true;
         }
 
@@ -153,7 +150,7 @@ namespace DefaultNamespace.Map
 
             enemies = null;
 
-            GameManager.Instance.AllEnemiesDestroyed(eventNameOnFinish);
+            GameManager.Instance.AllEnemiesDestroyed();
         }
     }
 }

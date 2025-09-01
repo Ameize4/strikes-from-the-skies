@@ -3110,74 +3110,9 @@ MonoBehaviour:
   dialogue:
     project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
     nodeName: Start
-  dialogue_afterWave1:
-    project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
-    nodeName: AfterWave1
-  dialogue_afterWave2:
-    project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
-    nodeName: AfterWave2
   grid: {fileID: 1770552387}
+  chapters: {fileID: 11400000, guid: 8e69d846da4771e4d917c3dca9dcc0c4, type: 2}
   enemiesData:
-  - speed: 20
-    path:
-    - posX: 9
-      posY: 9
-    - posX: 9
-      posY: 8
-    - posX: 8
-      posY: 8
-    - posX: 8
-      posY: 7
-    - posX: 7
-      posY: 7
-    - posX: 7
-      posY: 6
-    - posX: 6
-      posY: 6
-    - posX: 6
-      posY: 5
-  - speed: 15
-    path:
-    - posX: 1
-      posY: 9
-    - posX: 1
-      posY: 8
-    - posX: 2
-      posY: 8
-    - posX: 2
-      posY: 7
-    - posX: 3
-      posY: 7
-    - posX: 3
-      posY: 6
-    - posX: 4
-      posY: 6
-    - posX: 4
-      posY: 5
-  - speed: 30
-    path:
-    - posX: 1
-      posY: 9
-    - posX: 1
-      posY: 8
-    - posX: 2
-      posY: 8
-    - posX: 2
-      posY: 7
-    - posX: 3
-      posY: 7
-    - posX: 3
-      posY: 6
-    - posX: 4
-      posY: 6
-    - posX: 4
-      posY: 5
-  enemiesData_wave1:
-  - speed: 999
-    path:
-    - posX: 7
-      posY: 7
-  enemiesData_wave2:
   - speed: 20
     path:
     - posX: 9

@@ -10,15 +10,14 @@ namespace DefaultNamespace
         
         [SerializeField] DialogueRunner dialogueRunner;
         [SerializeField] DialogueReference dialogue;
-        [SerializeField] DialogueReference dialogue_afterWave1;
-        [SerializeField] DialogueReference dialogue_afterWave2;
 
         [Space]
         public Map.Grid grid;
+
+        public Map.Chapters chapters;
+        private int currentChapterIdx = 0;
         
         public Map.EnemyData[] enemiesData;
-        public Map.EnemyData[] enemiesData_wave1;
-        public Map.EnemyData[] enemiesData_wave2;
 
         private void Awake()
         {
@@ -34,20 +33,20 @@ namespace DefaultNamespace
         {
             if (Input.GetKeyDown(KeyCode.P))
             {
-                grid.BeginEnemyWave(enemiesData, "");
+                grid.BeginEnemyWave(enemiesData);
             }
         }
 
         [YarnCommand("SpawnWave")]
         public static void Yarn_SpawnWave()
         {
-            Instance.grid.BeginEnemyWave(Instance.enemiesData_wave1, Instance.dialogue_afterWave1.nodeName);
+            Instance.grid.BeginEnemyWave(Instance.chapters.chapters[Instance.currentChapterIdx].enemiesData);
         }
-
-        [YarnCommand("SpawnWave1")]
-        public static void Yarn_SpawnWave1()
+        
+        [YarnCommand("NextChapter")]
+        public static void Yarn_NextChapter()
         {
-            Instance.grid.BeginEnemyWave(Instance.enemiesData_wave2, Instance.dialogue_afterWave2.nodeName);
+            Instance.currentChapterIdx += 1;
         }
         
         public void SendMorseCoordinates(string message)
@@ -77,11 +76,11 @@ namespace DefaultNamespace
             }
         }
 
-        public void AllEnemiesDestroyed(string eventName)
+        public void AllEnemiesDestroyed()
         {
-            if (eventName != "")
+            if (chapters.chapters[currentChapterIdx].dialogueAfterWave != "")
             {
-                dialogueRunner.StartDialogue(eventName);
+                dialogueRunner.StartDialogue(chapters.chapters[currentChapterIdx].dialogueAfterWave);
             }
         }
     }

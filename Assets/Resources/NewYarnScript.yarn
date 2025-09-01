@@ -10,14 +10,16 @@ Try to kill first enemy, he shouldn't move
 
 title: AfterWave1
 ---
+<<NextChapter>>
 <<wait 2>>
 ...
 Wave 1 is finished
-<<SpawnWave1>>
+<<SpawnWave>>
 ===
 
 title: AfterWave2
 ---
+<<NextChapter>>
 <<wait 2>>
 ...
 Wave 2 is finished

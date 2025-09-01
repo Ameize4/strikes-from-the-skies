@@ -1,0 +1,27 @@
+﻿title: Start
+---
+<<wait 6>>
+You are such a sleepyhead
+Go to table and press "E" to focus on it
+You should pass coordinates through telegraph, it's on the left table
+Try to kill first enemy, he shouldn't move 
+<<SpawnWave>>
+===
+
+title: AfterWave1
+---
+<<NextChapter>>
+<<wait 2>>
+...
+Wave 1 is finished
+<<SpawnWave>>
+===
+
+title: AfterWave2
+---
+<<NextChapter>>
+<<wait 2>>
+...
+Wave 2 is finished
+If you want to repeat wave, press P
+===

@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a152a19dae1f42b6a5b4471023e8fe44, type: 3}
+  m_Name: Chapters
+  m_EditorClassIdentifier: 
+  chapters:
+  - name: Tutorial wave
+    enemiesData:
+    - speed: 999
+      delay: 0
+      path:
+      - posX: 0
+        posY: 6
+    dialogueAfterWave:
+      project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
+      nodeName: AfterWave1
+  - name: Secons wave
+    enemiesData:
+    - speed: 20
+      delay: 0
+      path:
+      - posX: 9
+        posY: 9
+      - posX: 9
+        posY: 8
+      - posX: 8
+        posY: 8
+      - posX: 8
+        posY: 7
+      - posX: 7
+        posY: 7
+      - posX: 7
+        posY: 6
+      - posX: 6
+        posY: 6
+      - posX: 6
+        posY: 5
+    - speed: 15
+      delay: 0
+      path:
+      - posX: 1
+        posY: 9
+      - posX: 1
+        posY: 8
+      - posX: 2
+        posY: 8
+      - posX: 2
+        posY: 7
+      - posX: 3
+        posY: 7
+      - posX: 3
+        posY: 6
+      - posX: 4
+        posY: 6
+      - posX: 4
+        posY: 5
+    - speed: 30
+      delay: 0
+      path:
+      - posX: 1
+        posY: 9
+      - posX: 1
+        posY: 8
+      - posX: 2
+        posY: 8
+      - posX: 2
+        posY: 7
+      - posX: 3
+        posY: 7
+      - posX: 3
+        posY: 6
+      - posX: 4
+        posY: 6
+      - posX: 4
+        posY: 5
+    dialogueAfterWave:
+      project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
+      nodeName: AfterWave2

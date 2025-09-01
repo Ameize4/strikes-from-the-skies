@@ -15,7 +15,7 @@ namespace DefaultNamespace
         public Map.Grid grid;
 
         public Map.Chapters chapters;
-        private int currentChapterIdx = 0;
+        [SerializeField] private int currentChapterIdx = 0;
         
         public Map.EnemyData[] enemiesData;
 

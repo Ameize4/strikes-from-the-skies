@@ -16,15 +16,17 @@ MonoBehaviour:
   - name: Tutorial wave
     enemiesData:
     - speed: 999
+      delay: 0
       path:
-      - posX: 7
-        posY: 7
+      - posX: 0
+        posY: 6
     dialogueAfterWave:
       project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
       nodeName: AfterWave1
   - name: Secons wave
     enemiesData:
     - speed: 20
+      delay: 0
       path:
       - posX: 9
         posY: 9
@@ -43,6 +45,7 @@ MonoBehaviour:
       - posX: 6
         posY: 5
     - speed: 15
+      delay: 0
       path:
       - posX: 1
         posY: 9
@@ -61,6 +64,7 @@ MonoBehaviour:
       - posX: 4
         posY: 5
     - speed: 30
+      delay: 0
       path:
       - posX: 1
         posY: 9

@@ -3112,8 +3112,10 @@ MonoBehaviour:
     nodeName: Start
   grid: {fileID: 1770552387}
   chapters: {fileID: 11400000, guid: 8e69d846da4771e4d917c3dca9dcc0c4, type: 2}
+  currentChapterIdx: 0
   enemiesData:
-  - speed: 20
+  - speed: 1
+    delay: 0
     path:
     - posX: 9
       posY: 9
@@ -3131,7 +3133,8 @@ MonoBehaviour:
       posY: 6
     - posX: 6
       posY: 5
-  - speed: 15
+  - speed: 1
+    delay: 5
     path:
     - posX: 1
       posY: 9
@@ -3149,7 +3152,8 @@ MonoBehaviour:
       posY: 6
     - posX: 4
       posY: 5
-  - speed: 30
+  - speed: 1
+    delay: 10
     path:
     - posX: 1
       posY: 9

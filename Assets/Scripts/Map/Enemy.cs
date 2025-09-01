@@ -8,6 +8,7 @@ namespace DefaultNamespace.Map
     public struct EnemyData
     {
         public float speed;
+        public float delay;
         public GridPos[] path;
     }
     
@@ -22,14 +23,18 @@ namespace DefaultNamespace.Map
         
         private float coundDown;
         public bool isDead;
+        public bool isDelayed;
 
         public Enemy(Grid grid, EnemyData data, Transform transform)
         {
             this.grid = grid;
             this.data = data;
             this.transform = transform;
-            coundDown = data.speed;
             posIdx = 0;
+            isDelayed = data.delay > 0;
+            coundDown = isDelayed ? data.delay : data.speed;
+            
+            if (isDelayed) transform.gameObject.SetActive(false);
         }
 
         public void SetPath(GridPos[] path)
@@ -52,6 +57,13 @@ namespace DefaultNamespace.Map
             if (coundDown > 0) return;
             
             coundDown = data.speed;
+            if (isDelayed)
+            {
+                transform.gameObject.SetActive(true);
+                isDelayed = false;
+                return;
+            }
+
             posIdx = (posIdx + 1) % cellPath.Length;
             transform.position = grid.GetCellPosition(cellPath[posIdx]);
         }

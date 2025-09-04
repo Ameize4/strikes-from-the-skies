@@ -49,7 +49,7 @@ MonoBehaviour:
       - posX: 2
         posY: 6
     - speed: 25
-      delay: 15
+      delay: 10
       path:
       - posX: 9
         posY: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
       - posX: 6
         posY: 2
     - speed: 25
-      delay: 30
+      delay: 20
       path:
       - posX: 1
         posY: 9

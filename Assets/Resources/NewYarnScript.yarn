@@ -57,11 +57,13 @@ title: AfterWave1_X
 title: AfterWave1_X_1
 ---
 Верно, сынок, это мы.
+<<jump AfterWave1_X_X>>
 ===
 
 title: AfterWave1_X_2
 ---
 Верно, сынок, это мы.
+<<jump AfterWave1_X_X>>
 ===
 
 title: AfterWave1_X_X

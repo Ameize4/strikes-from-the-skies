@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using DefaultNamespace;
 using DefaultNamespace.Interfaces;
@@ -7,6 +8,28 @@ using UnityEngine;
 
 public class Telegraph : MonoBehaviour, IInteractive
 {
+    [Serializable]
+    public class Rule
+    {
+        public float Threshold;
+        public Action Action;
+        public RuleType Type;
+
+        public Rule(float threshold, RuleType type, Action action)
+        {
+            Threshold = threshold;
+            Type = type;
+            Action = action;
+        }
+    }
+    
+    public enum RuleType { Press, Idle }
+    private List<Rule> rules = new List<Rule>();
+    private HashSet<Rule> triggered = new HashSet<Rule>();
+    
+    public float MaxPressDuration = 1f;
+    public Action OverholdRule;
+    
     public Vector3 positionTarget;
     public Vector3 rotationTarget;
 
@@ -35,9 +58,21 @@ public class Telegraph : MonoBehaviour, IInteractive
     private string translatedText = "";
     
     private bool isInteractiveModeEnabled = false;
-    
+
+    private bool isPressed;
+    private float pressStart, idleStart;
+
+
     void Start()
     {
+        rules.Add(new Rule(0, RuleType.Press, () => { morseInput.Add("."); }));
+        rules.Add(new Rule(dotLen, RuleType.Press, () => { morseInput.Add("-"); }));
+        rules.Add(new Rule(0.01f, RuleType.Idle, AddMorseDotsToLabel));
+        rules.Add(new Rule(letterPause, RuleType.Idle, TranslateMorseToLetter));
+        rules.Add(new Rule(letterPause*2, RuleType.Idle, SendMessageAndClear));
+
+        OverholdRule = RemoveOneLetter;
+
         positionInit = transform.localPosition;
         rotationInit = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
         
@@ -61,6 +96,44 @@ public class Telegraph : MonoBehaviour, IInteractive
         // audioSource.clip.SetData(samples, 0);
     }
 
+    private void AddMorseDotsToLabel()
+    {
+        var res = string.Join("", morseInput);
+        label.text = translatedText + res;
+        idleStart = Time.time;
+    }
+
+    private void TranslateMorseToLetter()
+    {
+        translatedText += MorseCodeTranscription.GetStringFromMorseOrEmpty(
+            string.Join("", morseInput));
+        label.text = translatedText;
+        morseInput.Clear();
+    }
+
+    private void SendMessageAndClear()
+    {
+        GameManager.Instance.SendMorseCoordinates(translatedText);
+        label.color = Color.green;
+        DOTween.To(() => label.color, x => label.color = x, Color.white, 0.6f)
+            .OnComplete(() =>
+            {
+                label.text = "";
+                translatedText = "";
+            });
+    }
+
+    private void RemoveOneLetter()
+    {
+        if (translatedText.Length <= 0)
+        {
+            return;
+        }
+        
+        translatedText = translatedText.Remove(translatedText.Length - 1, 1);
+        label.text = translatedText;
+    }
+
     private AudioClip GenerateTone(float freq, float lengthSec)
     {
         int sampleRate = AudioSettings.outputSampleRate;
@@ -77,69 +150,52 @@ public class Telegraph : MonoBehaviour, IInteractive
         clip.SetData(samples, 0);
         return clip;
     }
-    
+
     void Update()
     {
         if (isInteractiveModeEnabled == false) return;
-        
-        bool isMouseInput = HandleMouseInput();
-
-        if (morseInput.Count > 0 && isMouseInput == false 
-                                 && letterPause < Mathf.Abs(timeOfInputRelease - Time.time))
-        {
-            translatedText += MorseCodeTranscription.GetStringFromMorseOrEmpty(
-                string.Join("", morseInput));
-            label.text = translatedText;
-            morseInput.Clear();
-            
-            
-            if (translatedText.Length == 2)
-            {
-                GameManager.Instance.SendMorseCoordinates(translatedText);
-                label.color = Color.green;
-                DOTween.To(() => label.color, x => label.color = x, Color.white, 0.6f)
-                    .OnComplete(() => { label.text = ""; translatedText = ""; });
-            }
-        }
-        else if (morseInput.Count > 0)
-        {
-            var res = string.Join("", morseInput);
-            label.text = translatedText + res;
-        }
+        ProcessInput();
     }
 
-    private bool HandleMouseInput()
+    private void ProcessInput()
     {
-        bool isProcessed = false;
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            isProcessed = true;
-            mouseInputDownTime = Time.time;
-            
-            if (isDebug)
-            {
-                toneClip = GenerateTone(frequency, 1);
-                audioSource.clip = toneClip;
-            }
+            isPressed = true;
+            pressStart = Time.time;
+            triggered.Clear();
             AnimateClickOn();
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (isPressed)
         {
-            isProcessed = true;
-            timeOfInputRelease = Time.time;
-            mouseInputDownTime -= timeOfInputRelease;
-            if (dotLen > Mathf.Abs(mouseInputDownTime))
-                morseInput.Add(".");
-            else
-                morseInput.Add("-");
+            float held = Time.time - pressStart;
 
-            AnimateClickOff();
+            if (held >= MaxPressDuration)
+            {
+                Debug.Log("OverHold detected, resetting...");
+                isPressed = false;
+                OverholdRule?.Invoke();
+                idleStart = Time.time;
+                triggered.Clear();
+                AnimateClickOff();
+                return;
+            }
+
+            if (Input.GetKeyUp(KeyCode.Mouse0))
+            {
+                isPressed = false;
+                TriggerPressRule(held);
+                idleStart = Time.time;
+                triggered.Clear();
+                AnimateClickOff();
+            }
         }
-
-        if (Input.GetMouseButton(0))
-            isProcessed = true;
-        return isProcessed;
+        else
+        {
+            float idle = Time.time - idleStart;
+            TriggerIdleRule(idle);
+        }
     }
 
     private void AnimateClickOn()
@@ -188,4 +244,34 @@ public class Telegraph : MonoBehaviour, IInteractive
             morseInput?.Clear();
         }
     }
-}
+    
+    private void TriggerPressRule(float duration)
+    {
+        Rule bestRule = null;
+        
+        foreach (var rule in rules)
+        {
+            if (rule.Type == RuleType.Press && rule.Threshold <= duration)
+            {
+                if (bestRule == null || rule.Threshold > bestRule.Threshold)
+                {
+                    bestRule = rule;
+                }
+            }
+        }
+        bestRule?.Action?.Invoke();
+    }
+    private void TriggerIdleRule(float duration)
+    {
+        foreach (var rule in rules)
+        {
+            if (rule.Type == RuleType.Idle && duration >= rule.Threshold)
+            {
+                if (!triggered.Contains(rule))
+                {
+                    rule.Action?.Invoke();
+                    triggered.Add(rule);
+                }
+            }
+        }
+    }}

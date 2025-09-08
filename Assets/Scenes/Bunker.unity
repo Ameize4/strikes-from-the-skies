@@ -1307,6 +1307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61d6e725935968746bf8386464c5eb9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxPressDuration: 1
   positionTarget: {x: -0.6934808, y: 0.07421839, z: -0.096372604}
   rotationTarget: {x: 0, y: 0, z: -7.718}
   toneClip: {fileID: 0}

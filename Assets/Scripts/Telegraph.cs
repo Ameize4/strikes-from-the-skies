@@ -84,9 +84,11 @@ public class Telegraph : MonoBehaviour, IInteractive
         
         bool isMouseInput = HandleMouseInput();
 
-        if (morseInput.Count > 0 && isMouseInput == false && letterPause < Mathf.Abs(timeOfInputRelease - Time.time))
+        if (morseInput.Count > 0 && isMouseInput == false 
+                                 && letterPause < Mathf.Abs(timeOfInputRelease - Time.time))
         {
-            translatedText += MorseCodeTranscription.GetStringFromMorseOrEmpty(string.Join("", morseInput));
+            translatedText += MorseCodeTranscription.GetStringFromMorseOrEmpty(
+                string.Join("", morseInput));
             label.text = translatedText;
             morseInput.Clear();
             
@@ -119,20 +121,7 @@ public class Telegraph : MonoBehaviour, IInteractive
                 toneClip = GenerateTone(frequency, 1);
                 audioSource.clip = toneClip;
             }
-
-            audioSource.Play();
-            seq.Kill();
-            seq = DOTween.Sequence();
-            seq.Append(DOTween.To(
-                () => transform.rotation, 
-                x => transform.rotation = x, 
-                rotationTarget, 
-                duration).SetEase(Ease.OutQuad))
-                .Join(DOTween.To(
-                () => transform.localPosition, 
-                x => transform.localPosition = x, 
-                positionTarget, 
-                duration).SetEase(Ease.OutQuad));
+            AnimateClickOn();
         }
 
         if (Input.GetMouseButtonUp(0))
@@ -144,20 +133,8 @@ public class Telegraph : MonoBehaviour, IInteractive
                 morseInput.Add(".");
             else
                 morseInput.Add("-");
-            
-            audioSource.Stop();
-            seq.Kill();
-            seq = DOTween.Sequence();
-            seq.Append(DOTween.To(
-                    () => transform.rotation,
-                    x => transform.rotation = x,
-                    rotationInit,
-                    duration).SetEase(Ease.InQuad))
-                .Join(DOTween.To(
-                    () => transform.localPosition,
-                    x => transform.localPosition = x,
-                    positionInit,
-                    duration).SetEase(Ease.InQuad));
+
+            AnimateClickOff();
         }
 
         if (Input.GetMouseButton(0))
@@ -165,6 +142,40 @@ public class Telegraph : MonoBehaviour, IInteractive
         return isProcessed;
     }
 
+    private void AnimateClickOn()
+    {
+        audioSource.Play();
+        seq.Kill();
+        seq = DOTween.Sequence();
+        seq.Append(DOTween.To(
+                () => transform.rotation, 
+                x => transform.rotation = x, 
+                rotationTarget, 
+                duration).SetEase(Ease.OutQuad))
+            .Join(DOTween.To(
+                () => transform.localPosition, 
+                x => transform.localPosition = x, 
+                positionTarget, 
+                duration).SetEase(Ease.OutQuad));
+    }
+
+    private void AnimateClickOff()
+    {
+        audioSource.Stop();
+        seq.Kill();
+        seq = DOTween.Sequence();
+        seq.Append(DOTween.To(
+                () => transform.rotation,
+                x => transform.rotation = x,
+                rotationInit,
+                duration).SetEase(Ease.InQuad))
+            .Join(DOTween.To(
+                () => transform.localPosition,
+                x => transform.localPosition = x,
+                positionInit,
+                duration).SetEase(Ease.InQuad));
+    }
+    
     public void SetInteraction(bool value)
     {
         isInteractiveModeEnabled = value;

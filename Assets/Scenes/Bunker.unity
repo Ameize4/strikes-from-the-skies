@@ -1161,6 +1161,8 @@ MonoBehaviour:
   virtualCamera: {fileID: 1005161326}
   interactiveComponents:
   - {fileID: 739094584}
+  rightObject: {fileID: 1248687644}
+  leftObject: {fileID: 0}
 --- !u!1 &739094581
 GameObject:
   m_ObjectHideFlags: 0
@@ -3386,6 +3388,8 @@ MonoBehaviour:
   outlineObject: {fileID: 0}
   virtualCamera: {fileID: 2024224843}
   interactiveComponents: []
+  rightObject: {fileID: 0}
+  leftObject: {fileID: 728736022}
 --- !u!64 &1290517160
 MeshCollider:
   m_ObjectHideFlags: 0

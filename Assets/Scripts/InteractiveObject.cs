@@ -10,6 +10,8 @@ public class InteractiveObject : MonoBehaviour
     [SerializeField] private GameObject virtualCamera;
     [SerializeField] private MonoBehaviour[] interactiveComponents;
 
+    [SerializeField] private InteractiveObject rightObject, leftObject;
+
     private Transform player;
     private bool isFocused;
     private int defaultCameraPriority;
@@ -28,6 +30,18 @@ public class InteractiveObject : MonoBehaviour
         {
             if (Input.GetKeyDown(exitKey))
                 StopInteraction();
+            
+            if (Input.GetKeyDown(KeyCode.D) && rightObject != null)
+            {
+                StopInteraction();
+                rightObject.StartInteraction();
+            }
+            else if (Input.GetKeyDown(KeyCode.A) && leftObject != null)
+            {
+                StopInteraction();
+                leftObject.StartInteraction();
+            }
+            
             return;
         }
 

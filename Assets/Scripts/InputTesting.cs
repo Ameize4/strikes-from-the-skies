@@ -14,23 +14,29 @@ public class ButtonHandler : MonoBehaviour
 
     public enum RuleType { Press, Idle }
 
-    private List<Rule> rules = new List<Rule>();
+    public float MaxPressDuration = 6f; // удержание дольше этого времени сбрасывает состояние
+    public Action OnOverHold;           // отдельный колбэк (по желанию)
 
+    private List<Rule> rules = new List<Rule>();
     private float pressStart;
     private float idleStart;
     private bool isPressed;
 
+    private HashSet<Rule> triggered = new HashSet<Rule>();
+
     void Start()
     {
         // Пример конфигурации:
-        rules.Add(new Rule { Threshold = 0f, Type = RuleType.Press, Action = () => Debug.Log("Press 0s") });
-        rules.Add(new Rule { Threshold = 1f, Type = RuleType.Press, Action = () => Debug.Log("Press 1s") });
-        rules.Add(new Rule { Threshold = 3f, Type = RuleType.Press, Action = () => Debug.Log("Press 3s") });
-        rules.Add(new Rule { Threshold = 5f, Type = RuleType.Press, Action = () => Debug.Log("Press 5s") });
+        rules.Add(new Rule { Threshold = 0f, Type = RuleType.Press, Action = () => Debug.Log("Press ≥0s") });
+        rules.Add(new Rule { Threshold = 1f, Type = RuleType.Press, Action = () => Debug.Log("Press ≥1s") });
+        rules.Add(new Rule { Threshold = 3f, Type = RuleType.Press, Action = () => Debug.Log("Press ≥3s") });
+        rules.Add(new Rule { Threshold = 5f, Type = RuleType.Press, Action = () => Debug.Log("Press ≥5s") });
 
         rules.Add(new Rule { Threshold = 1f, Type = RuleType.Idle, Action = () => Debug.Log("Idle 1s") });
         rules.Add(new Rule { Threshold = 3f, Type = RuleType.Idle, Action = () => Debug.Log("Idle 3s") });
         rules.Add(new Rule { Threshold = 5f, Type = RuleType.Idle, Action = () => Debug.Log("Idle 5s") });
+
+        OnOverHold = () => Debug.Log("OverHold! Press too long, reset.");
 
         idleStart = Time.time;
     }
@@ -44,23 +50,35 @@ public class ButtonHandler : MonoBehaviour
             triggered.Clear();
         }
 
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (isPressed)
         {
-            isPressed = false;
             float held = Time.time - pressStart;
-            TriggerPressRule(held);
-            idleStart = Time.time;
-            triggered.Clear();
-        }
 
-        if (!isPressed)
+            // Проверяем превышение лимита
+            if (held >= MaxPressDuration)
+            {
+                Debug.Log("OverHold detected, resetting...");
+                isPressed = false;
+                OnOverHold?.Invoke();
+                idleStart = Time.time;
+                triggered.Clear();
+                return;
+            }
+
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                isPressed = false;
+                TriggerPressRule(held);
+                idleStart = Time.time;
+                triggered.Clear();
+            }
+        }
+        else
         {
             float idle = Time.time - idleStart;
             TriggerIdleRule(idle);
         }
     }
-
-    private HashSet<Rule> triggered = new HashSet<Rule>();
 
     private void TriggerPressRule(float duration)
     {

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using DefaultNamespace;
 using DefaultNamespace.Interfaces;
@@ -8,38 +7,42 @@ using UnityEngine;
 
 public class Telegraph : MonoBehaviour, IInteractive
 {
-    public float MaxPressDuration = 1f;
-    
-    public Vector3 positionTarget;
-    public Vector3 rotationTarget;
+    #region Inspector
+
+    [Header("UI")]
+    [SerializeField] private TMP_Text label;
+
+    [Header("Timings in seconds")]
+    [SerializeField] private float dotLen = 0.3f;
+    [SerializeField] private float letterPause = 0.3f;
+    [SerializeField] private float MaxPressDuration = 1f;
+
+    [Header("DOTTween settings")]
+    [SerializeField] private float tweenDuration;
+    [SerializeField] private Vector3 positionTarget;
+    [SerializeField] private Vector3 rotationTarget;
 
     private Vector3 positionInit;
     private Vector3 rotationInit;
 
-    public AudioClip toneClip;
+    [Header("Audio settings")]
+    [SerializeField] private AudioClip toneClip;
     private AudioSource audioSource;
 
-    public float volume = 0.5f;
-    public float frequency = 700f;
+    [SerializeField] private float volume = 0.5f;
+    [SerializeField] private float frequency = 700f;
+    
+    #endregion
 
-    public float duration;
-    public bool isDebug;
+    private InputDurationHandler inputDurationHandler;
 
     private Sequence seq;
 
-    public float dotLen = 0.3f;
-    public float letterPause = 0.3f;
     private List<string> morseInput;
-
-    private float mouseInputDownTime = 0f;
-    private float timeOfInputRelease = 0f;
-
-    public TMP_Text label;
     private string translatedText = "";
     
     private bool isInteractiveModeEnabled = false;
 
-    private InputDurationHandler inputDurationHandler;
 
     void Start()
     {
@@ -78,6 +81,8 @@ public class Telegraph : MonoBehaviour, IInteractive
         // audioSource.clip.SetData(samples, 0);
     }
 
+    #region Input Reactions
+
     private void AddMorseDotsToLabel()
     {
         var res = string.Join("", morseInput);
@@ -112,6 +117,8 @@ public class Telegraph : MonoBehaviour, IInteractive
         label.text = translatedText;
     }
 
+    #endregion
+
     private AudioClip GenerateTone(float freq, float lengthSec)
     {
         int sampleRate = AudioSettings.outputSampleRate;
@@ -145,12 +152,12 @@ public class Telegraph : MonoBehaviour, IInteractive
                 () => transform.rotation, 
                 x => transform.rotation = x, 
                 rotationTarget, 
-                duration).SetEase(Ease.OutQuad))
+                tweenDuration).SetEase(Ease.OutQuad))
             .Join(DOTween.To(
                 () => transform.localPosition, 
                 x => transform.localPosition = x, 
                 positionTarget, 
-                duration).SetEase(Ease.OutQuad));
+                tweenDuration).SetEase(Ease.OutQuad));
     }
 
     private void AnimateClickOff()
@@ -162,12 +169,12 @@ public class Telegraph : MonoBehaviour, IInteractive
                 () => transform.rotation,
                 x => transform.rotation = x,
                 rotationInit,
-                duration).SetEase(Ease.InQuad))
+                tweenDuration).SetEase(Ease.InQuad))
             .Join(DOTween.To(
                 () => transform.localPosition,
                 x => transform.localPosition = x,
                 positionInit,
-                duration).SetEase(Ease.InQuad));
+                tweenDuration).SetEase(Ease.InQuad));
     }
     
     public void SetInteraction(bool value)

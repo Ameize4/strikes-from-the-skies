@@ -1309,17 +1309,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61d6e725935968746bf8386464c5eb9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  label: {fileID: 720391400}
+  dotLen: 0.15
+  letterPause: 0.4
   MaxPressDuration: 1
-  positionTarget: {x: -0.6934808, y: 0.07421839, z: -0.096372604}
+  tweenDuration: 0.1
+  positionTarget: {x: -0.6935, y: 0.0742, z: -0.0964}
   rotationTarget: {x: 0, y: 0, z: -7.718}
   toneClip: {fileID: 0}
   volume: 0.1
   frequency: 700
-  duration: 0.1
-  isDebug: 0
-  dotLen: 0.15
-  letterPause: 0.4
-  label: {fileID: 720391400}
 --- !u!1 &802265135
 GameObject:
   m_ObjectHideFlags: 0

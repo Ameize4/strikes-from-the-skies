@@ -8,27 +8,7 @@ using UnityEngine;
 
 public class Telegraph : MonoBehaviour, IInteractive
 {
-    [Serializable]
-    public class Rule
-    {
-        public float Threshold;
-        public Action Action;
-        public RuleType Type;
-
-        public Rule(float threshold, RuleType type, Action action)
-        {
-            Threshold = threshold;
-            Type = type;
-            Action = action;
-        }
-    }
-    
-    public enum RuleType { Press, Idle }
-    private List<Rule> rules = new List<Rule>();
-    private HashSet<Rule> triggered = new HashSet<Rule>();
-    
     public float MaxPressDuration = 1f;
-    public Action OverholdRule;
     
     public Vector3 positionTarget;
     public Vector3 rotationTarget;
@@ -59,19 +39,21 @@ public class Telegraph : MonoBehaviour, IInteractive
     
     private bool isInteractiveModeEnabled = false;
 
-    private bool isPressed;
-    private float pressStart, idleStart;
-
+    private InputDurationHandler inputDurationHandler;
 
     void Start()
     {
-        rules.Add(new Rule(0, RuleType.Press, () => { morseInput.Add("."); }));
-        rules.Add(new Rule(dotLen, RuleType.Press, () => { morseInput.Add("-"); }));
-        rules.Add(new Rule(0.01f, RuleType.Idle, AddMorseDotsToLabel));
-        rules.Add(new Rule(letterPause, RuleType.Idle, TranslateMorseToLetter));
-        rules.Add(new Rule(letterPause*2, RuleType.Idle, SendMessageAndClear));
+        inputDurationHandler = new InputDurationHandler(KeyCode.Mouse0, MaxPressDuration);
+        
+        inputDurationHandler.AddRule(0, InputDurationHandler.RuleType.Press, () => { morseInput.Add("."); });
+        inputDurationHandler.AddRule(dotLen, InputDurationHandler.RuleType.Press, () => { morseInput.Add("-"); });
+        inputDurationHandler.AddRule(0.01f, InputDurationHandler.RuleType.Idle, AddMorseDotsToLabel);
+        inputDurationHandler.AddRule(letterPause, InputDurationHandler.RuleType.Idle, TranslateMorseToLetter);
+        inputDurationHandler.AddRule(letterPause*2, InputDurationHandler.RuleType.Idle, SendMessageAndClear);
+        inputDurationHandler.AddOverHoldRule(RemoveOneLetter);
 
-        OverholdRule = RemoveOneLetter;
+        inputDurationHandler.Press += AnimateClickOn;
+        inputDurationHandler.Release += AnimateClickOff;
 
         positionInit = transform.localPosition;
         rotationInit = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
@@ -100,7 +82,6 @@ public class Telegraph : MonoBehaviour, IInteractive
     {
         var res = string.Join("", morseInput);
         label.text = translatedText + res;
-        idleStart = Time.time;
     }
 
     private void TranslateMorseToLetter()
@@ -125,10 +106,7 @@ public class Telegraph : MonoBehaviour, IInteractive
 
     private void RemoveOneLetter()
     {
-        if (translatedText.Length <= 0)
-        {
-            return;
-        }
+        if (translatedText.Length <= 0) return;
         
         translatedText = translatedText.Remove(translatedText.Length - 1, 1);
         label.text = translatedText;
@@ -154,48 +132,8 @@ public class Telegraph : MonoBehaviour, IInteractive
     void Update()
     {
         if (isInteractiveModeEnabled == false) return;
-        ProcessInput();
-    }
-
-    private void ProcessInput()
-    {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            isPressed = true;
-            pressStart = Time.time;
-            triggered.Clear();
-            AnimateClickOn();
-        }
-
-        if (isPressed)
-        {
-            float held = Time.time - pressStart;
-
-            if (held >= MaxPressDuration)
-            {
-                Debug.Log("OverHold detected, resetting...");
-                isPressed = false;
-                OverholdRule?.Invoke();
-                idleStart = Time.time;
-                triggered.Clear();
-                AnimateClickOff();
-                return;
-            }
-
-            if (Input.GetKeyUp(KeyCode.Mouse0))
-            {
-                isPressed = false;
-                TriggerPressRule(held);
-                idleStart = Time.time;
-                triggered.Clear();
-                AnimateClickOff();
-            }
-        }
-        else
-        {
-            float idle = Time.time - idleStart;
-            TriggerIdleRule(idle);
-        }
+        
+        inputDurationHandler.Process();
     }
 
     private void AnimateClickOn()
@@ -244,34 +182,4 @@ public class Telegraph : MonoBehaviour, IInteractive
             morseInput?.Clear();
         }
     }
-    
-    private void TriggerPressRule(float duration)
-    {
-        Rule bestRule = null;
-        
-        foreach (var rule in rules)
-        {
-            if (rule.Type == RuleType.Press && rule.Threshold <= duration)
-            {
-                if (bestRule == null || rule.Threshold > bestRule.Threshold)
-                {
-                    bestRule = rule;
-                }
-            }
-        }
-        bestRule?.Action?.Invoke();
-    }
-    private void TriggerIdleRule(float duration)
-    {
-        foreach (var rule in rules)
-        {
-            if (rule.Type == RuleType.Idle && duration >= rule.Threshold)
-            {
-                if (!triggered.Contains(rule))
-                {
-                    rule.Action?.Invoke();
-                    triggered.Add(rule);
-                }
-            }
-        }
-    }}
+}

@@ -15,6 +15,7 @@ public class Telegraph : MonoBehaviour, IInteractive
     [Header("Timings in seconds")]
     [SerializeField] private float dotLen = 0.3f;
     [SerializeField] private float letterPause = 0.3f;
+    [SerializeField] private float wordPause = 1f;
     [SerializeField] private float MaxPressDuration = 1f;
 
     [Header("DOTTween settings")]
@@ -46,14 +47,14 @@ public class Telegraph : MonoBehaviour, IInteractive
 
     void Start()
     {
-        inputDurationHandler = new InputDurationHandler(KeyCode.Mouse0, MaxPressDuration);
+        inputDurationHandler = new InputDurationHandler(KeyCode.Mouse0);
         
-        inputDurationHandler.AddRule(0, InputDurationHandler.RuleType.Press, () => { morseInput.Add("."); });
-        inputDurationHandler.AddRule(dotLen, InputDurationHandler.RuleType.Press, () => { morseInput.Add("-"); });
-        inputDurationHandler.AddRule(0.01f, InputDurationHandler.RuleType.Idle, AddMorseDotsToLabel);
-        inputDurationHandler.AddRule(letterPause, InputDurationHandler.RuleType.Idle, TranslateMorseToLetter);
-        inputDurationHandler.AddRule(letterPause*2, InputDurationHandler.RuleType.Idle, SendMessageAndClear);
-        inputDurationHandler.AddOverHoldRule(RemoveOneLetter);
+        inputDurationHandler.AddPressRule(0, () => { morseInput.Add("."); });
+        inputDurationHandler.AddPressRule(dotLen, () => { morseInput.Add("-"); });
+        inputDurationHandler.AddIdleRule(0.01f, AddMorseDotsToLabel);
+        inputDurationHandler.AddIdleRule(letterPause, TranslateMorseToLetter);
+        inputDurationHandler.AddIdleRule(wordPause, SendMessageAndClear);
+        inputDurationHandler.AddOverHoldRule(MaxPressDuration, RemoveOneLetter);
 
         inputDurationHandler.Press += AnimateClickOn;
         inputDurationHandler.Release += AnimateClickOff;

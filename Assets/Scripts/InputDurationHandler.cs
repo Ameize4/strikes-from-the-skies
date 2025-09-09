@@ -28,7 +28,7 @@ public class InputDurationHandler
 
     private KeyCode key;
 
-    public InputDurationHandler(KeyCode key, float MaxPressDuration)
+    public InputDurationHandler(KeyCode key)
     {
         // Example rules:
         // rules.Add(new Rule { Threshold = 0f, Type = RuleType.Press, Action = () => Debug.Log("Press ≥0s") });
@@ -41,22 +41,32 @@ public class InputDurationHandler
         // OnOverHold = () => Debug.Log("OverHold! Press too long, reset.");
 
         this.key = key;
-        this.MaxPressDuration = MaxPressDuration;
         idleStart = Time.time;
     }
 
-    public void AddRule(float threshold, RuleType type, Action action)
+    public void AddPressRule(float threshold, Action action)
     {
         var rule = new Rule();
+        rule.Type = RuleType.Press;
         rule.Threshold = threshold;
-        rule.Type = type;
         rule.Action = action;
         
         rules.Add(rule);
     }
 
-    public void AddOverHoldRule(Action action)
+    public void AddIdleRule(float threshold, Action action)
     {
+        var rule = new Rule();
+        rule.Type = RuleType.Idle;
+        rule.Threshold = threshold;
+        rule.Action = action;
+        
+        rules.Add(rule);
+    }
+
+    public void AddOverHoldRule(float MaxPressDuration, Action action)
+    {
+        this.MaxPressDuration = MaxPressDuration;
         OverholdRule = action;
     }
 
@@ -75,7 +85,7 @@ public class InputDurationHandler
             float held = Time.time - pressStart;
 
             // Проверяем превышение лимита
-            if (held >= MaxPressDuration)
+            if (MaxPressDuration != 0 && held >= MaxPressDuration)
             {
                 Debug.Log("OverHold detected, resetting...");
                 isPressed = false;

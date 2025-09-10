@@ -2861,7 +2861,7 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 0.6528301, g: 0.6045753, b: 0.37814876, a: 1}
-  m_Intensity: 30
+  m_Intensity: 15
   m_Range: 10
   m_SpotAngle: 158.2463
   m_InnerSpotAngle: 146.32376
@@ -2900,7 +2900,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 0
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1

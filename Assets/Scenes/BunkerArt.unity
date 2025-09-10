@@ -1777,6 +1777,8 @@ MonoBehaviour:
   virtualCamera: {fileID: 1005161326}
   interactiveComponents:
   - {fileID: 739094584}
+  rightObject: {fileID: 0}
+  leftObject: {fileID: 0}
 --- !u!1 &739094581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1923,16 +1925,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61d6e725935968746bf8386464c5eb9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  label: {fileID: 0}
+  dotLen: 0.3
+  letterPause: 0.3
+  wordPause: 1
+  MaxPressDuration: 1
+  tweenDuration: 0
   positionTarget: {x: -0.6934808, y: 0.07421839, z: -0.096372604}
   rotationTarget: {x: 0, y: 0, z: -7.718}
   toneClip: {fileID: 0}
   volume: 0.5
   frequency: 700
-  duration: 0.1
-  isDebug: 0
-  dotLen: 0.3
-  letterPause: 0.3
-  label: {fileID: 0}
 --- !u!1 &767922934 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4214726985332892257, guid: 347c94a10e01f334983a98f3b5c4337d, type: 3}

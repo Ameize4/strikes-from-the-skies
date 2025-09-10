@@ -77,7 +77,7 @@ namespace DefaultNamespace.Map
 
             var audioSource = transform.GetComponent<AudioSource>();
             audioSource.time = 0.6f;
-            audioSource.pitch = Random.Range(0.9f, 1.1f);
+            audioSource.pitch = Random.Range(0.95f, 1.1f);
             audioSource.Play();
         }
 

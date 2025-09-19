@@ -7,37 +7,58 @@ using UnityEngine;
 
 public class Telegraph : MonoBehaviour, IInteractive
 {
-    public Vector3 positionTarget;
-    public Vector3 rotationTarget;
+    #region Inspector
+
+    [Header("UI")]
+    [SerializeField] private TMP_Text label;
+
+    [Header("Timings in seconds")]
+    [SerializeField] private float dotLen = 0.3f;
+    [SerializeField] private float letterPause = 0.3f;
+    [SerializeField] private float wordPause = 1f;
+    [SerializeField] private float MaxPressDuration = 1f;
+
+    [Header("DOTTween settings")]
+    [SerializeField] private float tweenDuration;
+    [SerializeField] private Vector3 positionTarget;
+    [SerializeField] private Vector3 rotationTarget;
 
     private Vector3 positionInit;
     private Vector3 rotationInit;
 
-    public AudioClip toneClip;
+    [Header("Audio settings")]
+    [SerializeField] private AudioClip toneClip;
     private AudioSource audioSource;
 
-    public float volume = 0.5f;
-    public float frequency = 700f;
+    [SerializeField] private float volume = 0.5f;
+    [SerializeField] private float frequency = 700f;
+    
+    #endregion
 
-    public float duration;
-    public bool isDebug;
+    private InputDurationHandler inputDurationHandler;
 
     private Sequence seq;
 
-    public float dotLen = 0.3f;
-    public float letterPause = 0.3f;
     private List<string> morseInput;
-
-    private float mouseInputDownTime = 0f;
-    private float timeOfInputRelease = 0f;
-
-    public TMP_Text label;
     private string translatedText = "";
     
     private bool isInteractiveModeEnabled = false;
-    
+
+
     void Start()
     {
+        inputDurationHandler = new InputDurationHandler(KeyCode.Mouse0);
+        
+        inputDurationHandler.AddPressRule(0, () => { morseInput.Add("."); });
+        inputDurationHandler.AddPressRule(dotLen, () => { morseInput.Add("-"); });
+        inputDurationHandler.AddIdleRule(0.01f, AddMorseDotsToLabel);
+        inputDurationHandler.AddIdleRule(letterPause, TranslateMorseToLetter);
+        inputDurationHandler.AddIdleRule(wordPause, SendMessageAndClear);
+        inputDurationHandler.AddOverHoldRule(MaxPressDuration, RemoveOneLetter);
+
+        inputDurationHandler.Press += AnimateClickOn;
+        inputDurationHandler.Release += AnimateClickOff;
+
         positionInit = transform.localPosition;
         rotationInit = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
         
@@ -61,6 +82,44 @@ public class Telegraph : MonoBehaviour, IInteractive
         // audioSource.clip.SetData(samples, 0);
     }
 
+    #region Input Reactions
+
+    private void AddMorseDotsToLabel()
+    {
+        var res = string.Join("", morseInput);
+        label.text = translatedText + res;
+    }
+
+    private void TranslateMorseToLetter()
+    {
+        translatedText += MorseCodeTranscription.GetStringFromMorseOrEmpty(
+            string.Join("", morseInput));
+        label.text = translatedText;
+        morseInput.Clear();
+    }
+
+    private void SendMessageAndClear()
+    {
+        GameManager.Instance.SendMorseCoordinates(translatedText);
+        label.color = Color.green;
+        DOTween.To(() => label.color, x => label.color = x, Color.white, 0.6f)
+            .OnComplete(() =>
+            {
+                label.text = "";
+                translatedText = "";
+            });
+    }
+
+    private void RemoveOneLetter()
+    {
+        if (translatedText.Length <= 0) return;
+        
+        translatedText = translatedText.Remove(translatedText.Length - 1, 1);
+        label.text = translatedText;
+    }
+
+    #endregion
+
     private AudioClip GenerateTone(float freq, float lengthSec)
     {
         int sampleRate = AudioSettings.outputSampleRate;
@@ -77,94 +136,48 @@ public class Telegraph : MonoBehaviour, IInteractive
         clip.SetData(samples, 0);
         return clip;
     }
-    
+
     void Update()
     {
         if (isInteractiveModeEnabled == false) return;
         
-        bool isMouseInput = HandleMouseInput();
-
-        if (morseInput.Count > 0 && isMouseInput == false && letterPause < Mathf.Abs(timeOfInputRelease - Time.time))
-        {
-            translatedText += MorseCodeTranscription.GetStringFromMorseOrEmpty(string.Join("", morseInput));
-            label.text = translatedText;
-            morseInput.Clear();
-            
-            
-            if (translatedText.Length == 2)
-            {
-                GameManager.Instance.SendMorseCoordinates(translatedText);
-                label.color = Color.green;
-                DOTween.To(() => label.color, x => label.color = x, Color.white, 0.6f)
-                    .OnComplete(() => { label.text = ""; translatedText = ""; });
-            }
-        }
-        else if (morseInput.Count > 0)
-        {
-            var res = string.Join("", morseInput);
-            label.text = translatedText + res;
-        }
+        inputDurationHandler.Process();
     }
 
-    private bool HandleMouseInput()
+    private void AnimateClickOn()
     {
-        bool isProcessed = false;
-        if (Input.GetMouseButtonDown(0))
-        {
-            isProcessed = true;
-            mouseInputDownTime = Time.time;
-            
-            if (isDebug)
-            {
-                toneClip = GenerateTone(frequency, 1);
-                audioSource.clip = toneClip;
-            }
-
-            audioSource.Play();
-            seq.Kill();
-            seq = DOTween.Sequence();
-            seq.Append(DOTween.To(
+        audioSource.Play();
+        seq.Kill();
+        seq = DOTween.Sequence();
+        seq.Append(DOTween.To(
                 () => transform.rotation, 
                 x => transform.rotation = x, 
                 rotationTarget, 
-                duration).SetEase(Ease.OutQuad))
-                .Join(DOTween.To(
+                tweenDuration).SetEase(Ease.OutQuad))
+            .Join(DOTween.To(
                 () => transform.localPosition, 
                 x => transform.localPosition = x, 
                 positionTarget, 
-                duration).SetEase(Ease.OutQuad));
-        }
-
-        if (Input.GetMouseButtonUp(0))
-        {
-            isProcessed = true;
-            timeOfInputRelease = Time.time;
-            mouseInputDownTime -= timeOfInputRelease;
-            if (dotLen > Mathf.Abs(mouseInputDownTime))
-                morseInput.Add(".");
-            else
-                morseInput.Add("-");
-            
-            audioSource.Stop();
-            seq.Kill();
-            seq = DOTween.Sequence();
-            seq.Append(DOTween.To(
-                    () => transform.rotation,
-                    x => transform.rotation = x,
-                    rotationInit,
-                    duration).SetEase(Ease.InQuad))
-                .Join(DOTween.To(
-                    () => transform.localPosition,
-                    x => transform.localPosition = x,
-                    positionInit,
-                    duration).SetEase(Ease.InQuad));
-        }
-
-        if (Input.GetMouseButton(0))
-            isProcessed = true;
-        return isProcessed;
+                tweenDuration).SetEase(Ease.OutQuad));
     }
 
+    private void AnimateClickOff()
+    {
+        audioSource.Stop();
+        seq.Kill();
+        seq = DOTween.Sequence();
+        seq.Append(DOTween.To(
+                () => transform.rotation,
+                x => transform.rotation = x,
+                rotationInit,
+                tweenDuration).SetEase(Ease.InQuad))
+            .Join(DOTween.To(
+                () => transform.localPosition,
+                x => transform.localPosition = x,
+                positionInit,
+                tweenDuration).SetEase(Ease.InQuad));
+    }
+    
     public void SetInteraction(bool value)
     {
         isInteractiveModeEnabled = value;

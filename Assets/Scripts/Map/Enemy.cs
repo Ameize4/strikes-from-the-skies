@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using Object = UnityEngine.Object;
+using Random = UnityEngine.Random;
 
 namespace DefaultNamespace.Map
 {
@@ -25,6 +26,9 @@ namespace DefaultNamespace.Map
         public bool isDead;
         public bool isDelayed;
 
+        private float randomMin = -0.5f;
+        private float randomMax =  0.5f;
+
         public Enemy(Grid grid, EnemyData data, Transform transform)
         {
             this.grid = grid;
@@ -33,6 +37,8 @@ namespace DefaultNamespace.Map
             posIdx = 0;
             isDelayed = data.delay > 0;
             coundDown = isDelayed ? data.delay : data.speed;
+            
+            coundDown += Random.Range(randomMin, randomMax);
             
             if (isDelayed) transform.gameObject.SetActive(false);
         }
@@ -57,6 +63,8 @@ namespace DefaultNamespace.Map
             if (coundDown > 0) return;
             
             coundDown = data.speed;
+            coundDown += Random.Range(randomMin, randomMax);
+
             if (isDelayed)
             {
                 transform.gameObject.SetActive(true);
@@ -66,6 +74,11 @@ namespace DefaultNamespace.Map
 
             posIdx = (posIdx + 1) % cellPath.Length;
             transform.position = grid.GetCellPosition(cellPath[posIdx]);
+
+            var audioSource = transform.GetComponent<AudioSource>();
+            audioSource.time = 0.6f;
+            audioSource.pitch = Random.Range(0.95f, 1.1f);
+            audioSource.Play();
         }
 
         public bool IsOnCell(Cell cell)

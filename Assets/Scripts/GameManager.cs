@@ -16,6 +16,8 @@ namespace DefaultNamespace
 
         public Map.Chapters chapters;
         [SerializeField] private int currentChapterIdx = 0;
+
+        public AudioClip enemyAudioClip;
         
         public Map.EnemyData[] enemiesData;
 

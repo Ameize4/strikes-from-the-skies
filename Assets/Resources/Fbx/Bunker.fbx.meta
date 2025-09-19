@@ -12,6 +12,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Axe
+    second: {fileID: 2100000, guid: 4f79245052be8744fbc8da1cf1c23394, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Bucket
     second: {fileID: 2100000, guid: 4b4452866aeb7bc41952b6e0ea8220ca, type: 2}
   - first:
@@ -32,8 +37,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Clothes
+    second: {fileID: 2100000, guid: b356fe752a964d2439dc12f3b9721084, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Crowbar
+    second: {fileID: 2100000, guid: 6bc11c5ed874fdc4891ee6933ebd21c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Floor
     second: {fileID: 2100000, guid: 1ab0ded9d2ae38a4c9338f74e7d5874e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lamps
+    second: {fileID: 2100000, guid: f910af121902c844ebf2694be068642c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -42,8 +62,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: PipesAndStuff
+    second: {fileID: 2100000, guid: 7c5030613846c154e94ce949a65fd438, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shelve
+    second: {fileID: 2100000, guid: 883bd433817fd7445903db7a941fa41f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Sink
     second: {fileID: 2100000, guid: c3a3c865ea697db41b0264f0374f14c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StorageShelve
+    second: {fileID: 2100000, guid: af987b2e2cd429f478a785be25ad8331, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stove
+    second: {fileID: 2100000, guid: d53a8e3780842744eabf29287add41cb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -52,8 +92,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: TableLamp
+    second: {fileID: 2100000, guid: 20c932b6ea5c08e4fb5cf6a22effb36b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Walls
     second: {fileID: 2100000, guid: 23d2c97ad2b80e14c9a1657780ac8a89, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodenBarrier
+    second: {fileID: 2100000, guid: 6a23f22609e71be48b4bcacce741b86c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -96,7 +146,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1

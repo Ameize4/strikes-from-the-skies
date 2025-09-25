@@ -2904,11 +2904,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f34183060374f4f84e95c7ff96a2d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 802265136}
+  followPoint: {fileID: 802265136}
   dialogueRunner: {fileID: 921657498}
   dialogue:
     project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
     nodeName: Start
+  _lightmapSwapper: {fileID: 1277880760}
+  _lightingInfo1: {fileID: 11400000, guid: c89da2c6c3ca6fd4b8a84b8ec402f26b, type: 2}
+  _lightingInfo2: {fileID: 11400000, guid: e6918f9c8e185684487205cf0ceb6bb5, type: 2}
   grid: {fileID: 1770552387}
   chapters: {fileID: 11400000, guid: 8e69d846da4771e4d917c3dca9dcc0c4, type: 2}
   currentChapterIdx: 0
@@ -3645,6 +3648,50 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1277880759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1277880761}
+  - component: {fileID: 1277880760}
+  m_Layer: 0
+  m_Name: LightMapSwapper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1277880760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277880759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad2f39b4952147fe815705b879847668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1277880761
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277880759}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1290517160
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6575,6 +6622,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1119348069}
   - {fileID: 1084138476}
+  - {fileID: 1277880761}
   - {fileID: 1936218994}
   - {fileID: 321276526}
   - {fileID: 199834477}

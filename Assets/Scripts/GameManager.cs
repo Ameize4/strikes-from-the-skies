@@ -17,6 +17,10 @@ namespace DefaultNamespace
         [SerializeField] DialogueReference dialogue;
 
         [Space]
+        [SerializeField] private LightmapSwapper _lightmapSwapper;
+        [SerializeField] private LightingInfo _lightingInfo1, _lightingInfo2;
+        
+        [Space]
         public Map.Grid grid;
 
         public Map.Chapters chapters;
@@ -71,6 +75,18 @@ namespace DefaultNamespace
             if (Input.GetKey(KeyCode.O))
             {
                 trauma = 1f;
+            }
+
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                if (Input.GetKeyDown(KeyCode.Alpha1))
+                {
+                    _lightmapSwapper.SetLightmaps(_lightingInfo1);
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha2))
+                {
+                    _lightmapSwapper.SetLightmaps(_lightingInfo2);
+                }
             }
 
             var shake = Mathf.Pow(trauma, traumaExponent);

@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using Unity.Cinemachine;
 using UnityEngine;
@@ -16,10 +17,15 @@ namespace DefaultNamespace
         [SerializeField] DialogueRunner dialogueRunner;
         [SerializeField] DialogueReference dialogue;
 
+        [Serializable]
+        public struct LightingInfo
+        {
+            public Texture2D Color;
+            // public Texture2D ShadowMask;
+        }
         [Space]
-        [SerializeField] private LightmapSwapper _lightmapSwapper;
-        [SerializeField] private LightingInfo _lightingInfo1, _lightingInfo2;
-        
+        [SerializeField] private LightingInfo[] _lightingInfos;
+
         [Space]
         public Map.Grid grid;
 
@@ -34,6 +40,10 @@ namespace DefaultNamespace
         public AudioClip enemyAudioClip;
         
         public Map.EnemyData[] enemiesData;
+
+        // int values of KeyCode Enum of keyboard numbers
+        public int alphaKeyCode1 = 49;
+        public int alphaKeyCode9 = 57;
 
         private void Awake()
         {
@@ -73,13 +83,14 @@ namespace DefaultNamespace
 
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                if (Input.GetKeyDown(KeyCode.Alpha1))
+                for (var index = 0; index < _lightingInfos.Length; index++)
                 {
-                    _lightmapSwapper.SetLightmaps(_lightingInfo1);
-                }
-                else if (Input.GetKeyDown(KeyCode.Alpha2))
-                {
-                    _lightmapSwapper.SetLightmaps(_lightingInfo2);
+                    var info = _lightingInfos[index];
+                    KeyCode tempKeyCode = (KeyCode)(alphaKeyCode1+index);
+                    if (Input.GetKeyDown(tempKeyCode))
+                    {
+                        SetLightmaps(info);
+                    }
                 }
             }
             
@@ -131,6 +142,14 @@ namespace DefaultNamespace
             {
                 dialogueRunner.StartDialogue(chapters.chapters[currentChapterIdx].dialogueAfterWave);
             }
+        }
+        
+        public void SetLightmaps(LightingInfo info)
+        {
+            LightmapData data = new LightmapData();
+            data.lightmapColor = info.Color;
+            // data.shadowMask = info.ShadowMask;
+            LightmapSettings.lightmaps = new LightmapData[] { data };
         }
     }
 }

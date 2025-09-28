@@ -25,14 +25,16 @@ namespace DefaultNamespace
 
         public Map.Chapters chapters;
         [SerializeField] private int currentChapterIdx = 0;
+        
+        [Space]
+        [SerializeField] private CameraShake.CameraShakeProperties cameraShakeProperties;
+        private CameraShake _cameraShake;
 
+        
         public AudioClip enemyAudioClip;
         
         public Map.EnemyData[] enemiesData;
 
-        private Vector3 localPosition, localRotation;
-        private Transform newTrackingObject;
-        
         private void Awake()
         {
             Instance = this;
@@ -41,30 +43,22 @@ namespace DefaultNamespace
         private void Start()
         {
             // dialogueRunner.StartDialogue(dialogue.nodeName);
-            localPosition = followPoint.localPosition;
-            localRotation = followPoint.localRotation.eulerAngles;
             
-            CinemachineCore.CameraActivatedEvent.AddListener(Call);
+            CinemachineCore.CameraActivatedEvent.AddListener(CameraChangedListener);
+
+            _cameraShake = new CameraShake(cameraShakeProperties);
+            _cameraShake.SetNewTarget(followPoint);
         }
 
-        private void Call(ICinemachineCamera.ActivationEventParams arg0)
+        private void CameraChangedListener(ICinemachineCamera.ActivationEventParams arg0)
         {
-            var camera = (CinemachineCamera)arg0.IncomingCamera;
-            newTrackingObject = camera.Target.TrackingTarget;
-            if (newTrackingObject == null) newTrackingObject = camera.transform;
+            var IncomingCamera = (CinemachineCamera)arg0.IncomingCamera;
+            var newTrackingObject = IncomingCamera.Target.TrackingTarget;
+            if (newTrackingObject == null) newTrackingObject = IncomingCamera.transform;
+
+            _cameraShake.SetNewTarget(newTrackingObject);
         }
 
-        [SerializeField]
-        float frequency = 25;
-        
-        [SerializeField]
-        private Vector3 maximumTranslationShake = Vector3.one;
-        [SerializeField]
-        private Vector3 maximumAngularShake = Vector3.one;
-
-        private float trauma = 0;
-        private float recoverySpeed = 1;
-        private float traumaExponent = 2;
         
         private void Update()
         {
@@ -74,7 +68,7 @@ namespace DefaultNamespace
             }
             if (Input.GetKey(KeyCode.O))
             {
-                trauma = 1f;
+                _cameraShake.SetTrauma(1f);
             }
 
             if (Input.GetKey(KeyCode.LeftShift))
@@ -88,34 +82,8 @@ namespace DefaultNamespace
                     _lightmapSwapper.SetLightmaps(_lightingInfo2);
                 }
             }
-
-            var shake = Mathf.Pow(trauma, traumaExponent);
-            followPoint.localPosition = localPosition + new Vector3(
-                maximumTranslationShake.x * Mathf.PerlinNoise(0, Time.time*frequency) * 2 - 1, 
-                maximumTranslationShake.y * Mathf.PerlinNoise(1, Time.time*frequency) * 2 - 1,
-                maximumTranslationShake.z * Mathf.PerlinNoise(2, Time.time*frequency) * 2 - 1
-            ) * shake;
-            followPoint.localRotation = Quaternion.Euler(localRotation + new Vector3(
-                maximumAngularShake.x * (Mathf.PerlinNoise(3, Time.time*frequency) * 2 - 1),
-                maximumAngularShake.y * (Mathf.PerlinNoise(4, Time.time*frequency) * 2 - 1),
-                maximumAngularShake.z * (Mathf.PerlinNoise(5, Time.time*frequency) * 2 - 1)
-            ) * shake);
-            trauma = Mathf.Clamp01(trauma - recoverySpeed * Time.deltaTime);
-        }
-
-        private void LateUpdate()
-        {
-            if (newTrackingObject)
-            {
-                followPoint.localPosition = localPosition;
-                followPoint.localRotation = Quaternion.Euler(localRotation);
-
-                followPoint = newTrackingObject;
-                localPosition = newTrackingObject.localPosition;
-                localRotation = newTrackingObject.localRotation.eulerAngles;
-
-                newTrackingObject = null;
-            }
+            
+            _cameraShake.Process();
         }
 
         [YarnCommand("SpawnWave")]

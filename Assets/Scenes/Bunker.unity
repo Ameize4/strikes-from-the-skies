@@ -2915,6 +2915,12 @@ MonoBehaviour:
   grid: {fileID: 1770552387}
   chapters: {fileID: 11400000, guid: 8e69d846da4771e4d917c3dca9dcc0c4, type: 2}
   currentChapterIdx: 0
+  cameraShakeProperties:
+    frequency: 25
+    recoverySpeed: 1
+    traumaExponent: 2
+    maximumTranslationShake: {x: 1, y: 1, z: 1}
+    maximumAngularShake: {x: 1, y: 1, z: 1}
   enemyAudioClip: {fileID: 8300000, guid: 3e7e4306b540116438022ae5555eecf0, type: 3}
   enemiesData:
   - speed: 1
@@ -2974,9 +2980,6 @@ MonoBehaviour:
       posY: 6
     - posX: 4
       posY: 5
-  frequency: 25
-  maximumTranslationShake: {x: 1, y: 1, z: 1}
-  maximumAngularShake: {x: 1, y: 1, z: 1}
 --- !u!4 &1084138476
 Transform:
   m_ObjectHideFlags: 0

@@ -52,7 +52,7 @@ namespace DefaultNamespace
 
         private void Start()
         {
-            // dialogueRunner.StartDialogue(dialogue.nodeName);
+            dialogueRunner.StartDialogue(dialogue.nodeName);
             
             CinemachineCore.CameraActivatedEvent.AddListener(CameraChangedListener);
 
@@ -100,6 +100,11 @@ namespace DefaultNamespace
         [YarnCommand("SpawnWave")]
         public static void Yarn_SpawnWave()
         {
+            var enemiesData = Instance.chapters.chapters[Instance.currentChapterIdx].enemiesData;
+            if (enemiesData?.Length <= 0)
+            {
+                Instance.AllEnemiesDestroyed();
+            }
             Instance.grid.BeginEnemyWave(Instance.chapters.chapters[Instance.currentChapterIdx].enemiesData);
         }
         

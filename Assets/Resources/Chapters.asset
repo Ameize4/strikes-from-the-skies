@@ -14,12 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chapters:
   - name: Tutorial wave
-    enemiesData:
-    - speed: 999
-      delay: 0
-      path:
-      - posX: 7
-        posY: 6
+    enemiesData: []
     dialogueAfterWave:
       project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
       nodeName: AfterWave1

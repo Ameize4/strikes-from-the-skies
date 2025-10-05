@@ -2933,6 +2933,7 @@ MonoBehaviour:
     traumaExponent: 2
     maximumTranslationShake: {x: 1, y: 1, z: 1}
     maximumAngularShake: {x: 1, y: 1, z: 1}
+  _volume: {fileID: 354219723}
   enemyAudioClip: {fileID: 8300000, guid: 3e7e4306b540116438022ae5555eecf0, type: 3}
   enemiesData:
   - speed: 1
@@ -5783,7 +5784,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0

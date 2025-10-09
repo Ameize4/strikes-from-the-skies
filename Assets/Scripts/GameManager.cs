@@ -1,5 +1,9 @@
+using System;
 using System.Linq;
+using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using Yarn.Unity;
 
 namespace DefaultNamespace
@@ -7,19 +11,44 @@ namespace DefaultNamespace
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance;
+
+        [SerializeField] private Transform followPoint;
         
+        [Space]
         [SerializeField] DialogueRunner dialogueRunner;
         [SerializeField] DialogueReference dialogue;
+
+        [Serializable]
+        public struct LightingInfo
+        {
+            public Texture2D Color;
+            // public Texture2D ShadowMask;
+        }
+        [Space]
+        [SerializeField] private LightingInfo[] _lightingInfos;
 
         [Space]
         public Map.Grid grid;
 
         public Map.Chapters chapters;
         [SerializeField] private int currentChapterIdx = 0;
+        
+        [Space]
+        [SerializeField] private CameraShake.CameraShakeProperties cameraShakeProperties;
+        private CameraShake _cameraShake;
 
+        [Space] [SerializeField] private Volume _volume;
+        private Vignette vignette;
+        
         public AudioClip enemyAudioClip;
         
         public Map.EnemyData[] enemiesData;
+
+        // int values of KeyCode Enum of keyboard numbers
+        private int alphaKeyCode1 = 49;
+        private int alphaKeyCode9 = 57;
+
+        private float trauma;
 
         private void Awake()
         {
@@ -29,6 +58,24 @@ namespace DefaultNamespace
         private void Start()
         {
             dialogueRunner.StartDialogue(dialogue.nodeName);
+            
+            CinemachineCore.CameraActivatedEvent.AddListener(CameraChangedListener);
+
+            _cameraShake = new CameraShake(cameraShakeProperties);
+            _cameraShake.SetNewTarget(followPoint);
+            
+            _volume.sharedProfile.TryGet(out Vignette vignette);
+
+            this.vignette = vignette;
+        }
+
+        private void CameraChangedListener(ICinemachineCamera.ActivationEventParams arg0)
+        {
+            var IncomingCamera = (CinemachineCamera)arg0.IncomingCamera;
+            var newTrackingObject = IncomingCamera.Target.TrackingTarget;
+            if (newTrackingObject == null) newTrackingObject = IncomingCamera.transform;
+
+            _cameraShake.SetNewTarget(newTrackingObject);
         }
 
         private void Update()
@@ -37,11 +84,40 @@ namespace DefaultNamespace
             {
                 grid.BeginEnemyWave(enemiesData);
             }
+            if (Input.GetKey(KeyCode.O))
+            {
+                _cameraShake.SetTrauma(1f);
+                trauma = 1f;
+                vignette.intensity.Override(trauma);
+            }
+
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                for (var index = 0; index < _lightingInfos.Length; index++)
+                {
+                    var info = _lightingInfos[index];
+                    KeyCode tempKeyCode = (KeyCode)(alphaKeyCode1+index);
+                    if (Input.GetKeyDown(tempKeyCode))
+                    {
+                        SetLightmaps(info);
+                    }
+                }
+            }
+
+            trauma = Mathf.Clamp01(trauma - cameraShakeProperties.recoverySpeed * Time.deltaTime);
+            if (trauma != 0) vignette.intensity.value = Mathf.Clamp(trauma, 0.181f, 1f);
+
+            _cameraShake.Process();
         }
 
         [YarnCommand("SpawnWave")]
         public static void Yarn_SpawnWave()
         {
+            var enemiesData = Instance.chapters.chapters[Instance.currentChapterIdx].enemiesData;
+            if (enemiesData?.Length <= 0)
+            {
+                Instance.AllEnemiesDestroyed();
+            }
             Instance.grid.BeginEnemyWave(Instance.chapters.chapters[Instance.currentChapterIdx].enemiesData);
         }
         
@@ -84,6 +160,14 @@ namespace DefaultNamespace
             {
                 dialogueRunner.StartDialogue(chapters.chapters[currentChapterIdx].dialogueAfterWave);
             }
+        }
+        
+        public void SetLightmaps(LightingInfo info)
+        {
+            LightmapData data = new LightmapData();
+            data.lightmapColor = info.Color;
+            // data.shadowMask = info.ShadowMask;
+            LightmapSettings.lightmaps = new LightmapData[] { data };
         }
     }
 }

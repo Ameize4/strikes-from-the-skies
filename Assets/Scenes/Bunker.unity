@@ -2251,6 +2251,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2958262986520364888, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 136cc6cadf9d2324b9bc46e99f032b07, type: 2}
+    - target: {fileID: 2958262986520364888, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -7578797847539021145, guid: 136cc6cadf9d2324b9bc46e99f032b07, type: 2}
+    - target: {fileID: 2958262986520364888, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2958262987206614837, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2904,13 +2916,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f34183060374f4f84e95c7ff96a2d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followPoint: {fileID: 802265136}
   dialogueRunner: {fileID: 921657498}
   dialogue:
     project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
     nodeName: Start
+  _lightingInfos:
+  - Color: {fileID: 2800000, guid: 23c2ab4cb1ce10145ac9253722d23369, type: 3}
+  - Color: {fileID: 2800000, guid: c3f52f325d3bcb548a042744bcd18336, type: 3}
   grid: {fileID: 1770552387}
   chapters: {fileID: 11400000, guid: 8e69d846da4771e4d917c3dca9dcc0c4, type: 2}
   currentChapterIdx: 0
+  cameraShakeProperties:
+    frequency: 25
+    recoverySpeed: 1
+    traumaExponent: 2
+    maximumTranslationShake: {x: 1, y: 1, z: 1}
+    maximumAngularShake: {x: 1, y: 1, z: 1}
+  _volume: {fileID: 354219723}
   enemyAudioClip: {fileID: 8300000, guid: 3e7e4306b540116438022ae5555eecf0, type: 3}
   enemiesData:
   - speed: 1
@@ -2970,6 +2993,8 @@ MonoBehaviour:
       posY: 6
     - posX: 4
       posY: 5
+  alphaKeyCode1: 49
+  alphaKeyCode9: 57
 --- !u!4 &1084138476
 Transform:
   m_ObjectHideFlags: 0
@@ -5759,7 +5784,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0

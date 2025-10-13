@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Ammunition
+    second: {fileID: 2100000, guid: 25e30533e04b2a9468f769f6ef77686c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Atlas
     second: {fileID: 2100000, guid: a1b8c99dfb1945c449d6cf6276575fa0, type: 2}
   - first:
@@ -14,6 +19,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Axe
     second: {fileID: 2100000, guid: 4f79245052be8744fbc8da1cf1c23394, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bags
+    second: {fileID: 2100000, guid: c22ed714e612596429f3b5b74eaead8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boxes
+    second: {fileID: 2100000, guid: af6b4b133583bb94b8d255c28a90d0f7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -47,8 +62,38 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Cutterly
+    second: {fileID: 2100000, guid: 05dd7f36ca7b62d43b8de5cf759a22cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Electronic
+    second: {fileID: 2100000, guid: e963de255b4a31b4ca6242e441fd16ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Firewood
+    second: {fileID: 2100000, guid: 7004b8d3ddc0dc447ace08b879b69321, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Floor
     second: {fileID: 2100000, guid: 1ab0ded9d2ae38a4c9338f74e7d5874e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Generator
+    second: {fileID: 2100000, guid: e99b9b334fae9b54da5599993e26ddef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ground
+    second: {fileID: 2100000, guid: b874075481e1203479b9a56e7c5716d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LPipes
+    second: {fileID: 2100000, guid: 89f570da099a9fc49b5ca5d52ec030a6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -59,6 +104,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Lattice
     second: {fileID: 2100000, guid: 93fb49684f0b0614abc9b88aaef33149, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Papers
+    second: {fileID: 2100000, guid: f0bb504f11f4c3c4c97724eca386ce63, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -77,6 +127,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: StockPile
+    second: {fileID: 2100000, guid: ecce84f127575a54990e7c38c936889f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: StorageShelve
     second: {fileID: 2100000, guid: af987b2e2cd429f478a785be25ad8331, type: 2}
   - first:
@@ -84,6 +139,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Stove
     second: {fileID: 2100000, guid: d53a8e3780842744eabf29287add41cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Suitcase
+    second: {fileID: 2100000, guid: 0ded2ed8d828e8444b28096a9a3a6794, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -159,8 +219,8 @@ ModelImporter:
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 15.000001
-    secondaryUVHardAngle: 88
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 87
     secondaryUVMarginMethod: 1
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1

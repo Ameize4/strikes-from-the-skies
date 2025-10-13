@@ -2,7 +2,8 @@ using System;
 using System.Linq;
 using Unity.Cinemachine;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using Yarn.Unity;
 
 namespace DefaultNamespace
@@ -11,7 +12,7 @@ namespace DefaultNamespace
     {
         public static GameManager Instance;
 
-        [FormerlySerializedAs("camera")] [SerializeField] private Transform followPoint;
+        [SerializeField] private Transform followPoint;
         
         [Space]
         [SerializeField] DialogueRunner dialogueRunner;
@@ -36,14 +37,18 @@ namespace DefaultNamespace
         [SerializeField] private CameraShake.CameraShakeProperties cameraShakeProperties;
         private CameraShake _cameraShake;
 
+        [Space] [SerializeField] private Volume _volume;
+        private Vignette vignette;
         
         public AudioClip enemyAudioClip;
         
         public Map.EnemyData[] enemiesData;
 
         // int values of KeyCode Enum of keyboard numbers
-        public int alphaKeyCode1 = 49;
-        public int alphaKeyCode9 = 57;
+        private int alphaKeyCode1 = 49;
+        private int alphaKeyCode9 = 57;
+
+        private float trauma;
 
         private void Awake()
         {
@@ -52,12 +57,16 @@ namespace DefaultNamespace
 
         private void Start()
         {
-            // dialogueRunner.StartDialogue(dialogue.nodeName);
+            dialogueRunner.StartDialogue(dialogue.nodeName);
             
             CinemachineCore.CameraActivatedEvent.AddListener(CameraChangedListener);
 
             _cameraShake = new CameraShake(cameraShakeProperties);
             _cameraShake.SetNewTarget(followPoint);
+            
+            _volume.sharedProfile.TryGet(out Vignette vignette);
+
+            this.vignette = vignette;
         }
 
         private void CameraChangedListener(ICinemachineCamera.ActivationEventParams arg0)
@@ -69,7 +78,6 @@ namespace DefaultNamespace
             _cameraShake.SetNewTarget(newTrackingObject);
         }
 
-        
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.P))
@@ -79,6 +87,8 @@ namespace DefaultNamespace
             if (Input.GetKey(KeyCode.O))
             {
                 _cameraShake.SetTrauma(1f);
+                trauma = 1f;
+                vignette.intensity.Override(trauma);
             }
 
             if (Input.GetKey(KeyCode.LeftShift))
@@ -93,13 +103,21 @@ namespace DefaultNamespace
                     }
                 }
             }
-            
+
+            trauma = Mathf.Clamp01(trauma - cameraShakeProperties.recoverySpeed * Time.deltaTime);
+            if (trauma != 0) vignette.intensity.value = Mathf.Clamp(trauma, 0.181f, 1f);
+
             _cameraShake.Process();
         }
 
         [YarnCommand("SpawnWave")]
         public static void Yarn_SpawnWave()
         {
+            var enemiesData = Instance.chapters.chapters[Instance.currentChapterIdx].enemiesData;
+            if (enemiesData?.Length <= 0)
+            {
+                Instance.AllEnemiesDestroyed();
+            }
             Instance.grid.BeginEnemyWave(Instance.chapters.chapters[Instance.currentChapterIdx].enemiesData);
         }
         

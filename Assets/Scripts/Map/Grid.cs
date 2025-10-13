@@ -67,6 +67,8 @@ namespace DefaultNamespace.Map
             if (inActiveWave == false) return;
 
             foreach (var e in enemies) e.Process();
+            
+            if (enemies.Length == 0) FinalizeEnemyWave();
         }
 
         public Vector3 GetCellPosition(Cell cell)
@@ -97,7 +99,7 @@ namespace DefaultNamespace.Map
                 if (!enemy.isDead) isAllKilled = false;
             }
 
-            if (isAllKilled)  FinalizeEnemyWave();
+            if (isAllKilled) FinalizeEnemyWave();
         }
 
         private void AddHelpers()

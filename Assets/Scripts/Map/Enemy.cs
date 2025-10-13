@@ -11,6 +11,7 @@ namespace DefaultNamespace.Map
         public float speed;
         public float delay;
         public GridPos[] path;
+        public bool isInvisible;
     }
     
     public class Enemy
@@ -67,7 +68,7 @@ namespace DefaultNamespace.Map
 
             if (isDelayed)
             {
-                transform.gameObject.SetActive(true);
+                transform.gameObject.SetActive(!data.isInvisible);
                 isDelayed = false;
                 return;
             }

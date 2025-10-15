@@ -4515,6 +4515,8 @@ MonoBehaviour:
     maximumTranslationShake: {x: 1, y: 1, z: 1}
     maximumAngularShake: {x: 1, y: 1, z: 1}
   _volume: {fileID: 1978565525}
+  maxVignette: 0.333
+  minVignette: 0.181
   enemyAudioClip: {fileID: 8300000, guid: 3e7e4306b540116438022ae5555eecf0, type: 3}
   enemiesData:
   - speed: 1

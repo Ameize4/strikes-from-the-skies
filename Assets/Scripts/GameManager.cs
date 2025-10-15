@@ -38,6 +38,7 @@ namespace DefaultNamespace
         private CameraShake _cameraShake;
 
         [Space] [SerializeField] private Volume _volume;
+        [SerializeField] float maxVignette, minVignette;
         private Vignette vignette;
         
         public AudioClip enemyAudioClip;
@@ -88,7 +89,6 @@ namespace DefaultNamespace
             {
                 _cameraShake.SetTrauma(1f);
                 trauma = 1f;
-                vignette.intensity.Override(trauma);
             }
 
             if (Input.GetKey(KeyCode.LeftShift))
@@ -105,7 +105,8 @@ namespace DefaultNamespace
             }
 
             trauma = Mathf.Clamp01(trauma - cameraShakeProperties.recoverySpeed * Time.deltaTime);
-            if (trauma != 0) vignette.intensity.value = Mathf.Clamp(trauma, 0.181f, 1f);
+            var vignetteTrauma = (trauma * (maxVignette-minVignette)) + minVignette;
+            if (trauma != 0) vignette.intensity.value = vignetteTrauma;
 
             _cameraShake.Process();
         }

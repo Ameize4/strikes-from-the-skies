@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -32,6 +33,8 @@ namespace DefaultNamespace.Map
         
         static string[] alphabet = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
 
+        private Queue<Cell> searchFrontier = new Queue<Cell>();
+
         private void Start()
         {
             // Init cells
@@ -40,26 +43,131 @@ namespace DefaultNamespace.Map
             {
                 for (int j = 0; j < sizeY; j++)
                 {
-                    cells[i*sizeX + j] = new Cell(new GridPos(i, j), this);
+                    var cell = new Cell(new GridPos(i, j), this);
+                    var cellIndex = i * sizeX + j;
+                    cells[cellIndex] = cell;
+
+                    cell._isAlternative = (j % 2 == 0);
+                    if (i % 2 == 0)
+                    {
+                        cell._isAlternative = !cell._isAlternative;
+                    }
+
+                    if (j > 0)
+                    {
+                        Cell.MakeNorthSouthNeighbors(cell, cells[cellIndex - 1]);
+                    }
+                    if (i > 0)
+                    {
+                        Cell.MakeEastWestNeighbors(cell, cells[cellIndex - sizeY]);
+                    }
                 }
             }
 
-            // Create cell object
+            var n = 1;
             foreach (var cell in cells)
             {
                 var newCube = Instantiate(Cube, transform);
                 newCube.transform.position = GetCellPosition(cell);
                 cell.gameObject = newCube;
-                cell.gameObject.transform.name = $"X{cell.gridPos.posX}Y{cell.gridPos.posY}";
+                cell.gameObject.transform.name = $"X{cell.gridPos.posX}Y{cell.gridPos.posY}n{n}";
+                n++;
             }
             
-
             AddHelpers();
+            ToggleDestination(cells[cells.Length / 2]);
+            ToggleDestination(cells[cells.Length / 4]);
+            ToggleWall(cells[cells.Length / 2 + 1]);
+            ToggleWall(cells[cells.Length / 2 + 2]);
         }
 
         private void Update()
         {
             UpdateEnemies();
+        }
+
+        private void ToggleDestination(Cell cell)
+        {
+            if (cell.contentType == CellContentType.Destination) {
+                cell.contentType = CellContentType.Empty;
+                if (!FindPath())
+                {
+                    cell.contentType = CellContentType.Destination;
+                    FindPath();
+                }
+            }
+            else
+            {
+                cell.contentType = CellContentType.Destination;
+                FindPath();
+            }
+        }
+
+        private void ToggleWall(Cell cell)
+        {
+            if (cell.contentType == CellContentType.Wall) {
+                cell.contentType = CellContentType.Empty;
+                FindPath();
+            }
+            else if (cell.contentType == CellContentType.Empty)
+            {
+                cell.contentType = CellContentType.Wall;
+                if (!FindPath())
+                {
+                    cell.contentType = CellContentType.Wall;
+                    FindPath();
+                }
+            }
+        }
+
+        private bool FindPath()
+        {
+            foreach (Cell cell in cells)
+            {
+                if (cell.contentType == CellContentType.Destination)
+                {
+                    cell.BecomeDestination();
+                    searchFrontier.Enqueue(cell);
+                }
+                else
+                {
+                    cell.ClearPath();
+                }
+            }
+
+            if (searchFrontier.Count == 0) return false;
+
+                
+            while (searchFrontier.Count > 0) {
+                Cell cell = searchFrontier.Dequeue();
+                if (cell != null)
+                {
+                    if (cell._isAlternative)
+                    {
+                        searchFrontier.Enqueue(cell.GrowPathNorth());
+                        searchFrontier.Enqueue(cell.GrowPathSouth());
+                        searchFrontier.Enqueue(cell.GrowPathEast());
+                        searchFrontier.Enqueue(cell.GrowPathWest());
+                    }
+                    else
+                    {
+                        searchFrontier.Enqueue(cell.GrowPathWest());
+                        searchFrontier.Enqueue(cell.GrowPathEast());
+                        searchFrontier.Enqueue(cell.GrowPathSouth());
+                        searchFrontier.Enqueue(cell.GrowPathNorth());
+                    }
+                }
+            }
+
+            foreach (Cell cell in cells)
+            {
+                if (!cell.HasPath)
+                    return false;
+            }
+
+            foreach (Cell cell in cells) cell.ShowPath();
+
+            return true;
         }
 
         private void UpdateEnemies()

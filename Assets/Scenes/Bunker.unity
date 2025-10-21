@@ -7764,6 +7764,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sizeX: 10
   sizeY: 10
+  mainTownCells:
+  - posX: 3
+    posY: 3
+  - posX: 4
+    posY: 2
+  secondTown: []
+  thirdTown: []
   Cube: {fileID: 8431031526804502337, guid: 5a27e1c9db77f3349a254e61e0852409, type: 3}
   EnemyPrefab: {fileID: 919132149155446097, guid: 8accab9eb1b207d4d82a683c5a09ec43, type: 3}
   textLabel: {fileID: 5066595790257469836, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}

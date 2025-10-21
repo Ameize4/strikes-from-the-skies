@@ -23,6 +23,8 @@ namespace DefaultNamespace.Map
         public CellContentType contentType = CellContentType.Empty;
 
         public bool HasPath => distance != int.MaxValue;
+        
+        public Cell NextCellOnPath => nextOnPath;
 
         public Cell(GridPos gridPos, Grid grid)
         {

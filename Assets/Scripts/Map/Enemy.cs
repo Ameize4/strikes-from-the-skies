@@ -30,6 +30,9 @@ namespace DefaultNamespace.Map
         private float randomMin = -0.5f;
         private float randomMax =  0.5f;
 
+        private Cell cellFrom, cellTo;
+        private float progress;
+
         public Enemy(Grid grid, EnemyData data, Transform transform)
         {
             this.grid = grid;
@@ -53,7 +56,11 @@ namespace DefaultNamespace.Map
                 var cell = grid.cells[gridPos.posX * grid.sizeX + gridPos.posY];
                 cellPath[pathIdx] = cell;
             }
-            transform.position = grid.GetCellPosition(cellPath[0]);
+            
+            cellFrom = cellPath[0];
+            cellTo = cellFrom.NextCellOnPath;
+
+            transform.position = grid.GetCellPosition(cellFrom);
         }
         
         public void Process()
@@ -73,8 +80,9 @@ namespace DefaultNamespace.Map
                 return;
             }
 
-            posIdx = (posIdx + 1) % cellPath.Length;
-            transform.position = grid.GetCellPosition(cellPath[posIdx]);
+            cellFrom = cellTo;
+            cellTo = cellFrom.NextCellOnPath ?? cellPath[0];
+            transform.position = grid.GetCellPosition(cellFrom);
 
             var audioSource = transform.GetComponent<AudioSource>();
             audioSource.time = 0.6f;

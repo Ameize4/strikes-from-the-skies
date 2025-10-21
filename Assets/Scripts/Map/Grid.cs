@@ -21,6 +21,11 @@ namespace DefaultNamespace.Map
     {
         public int sizeX, sizeY;
 
+        [Space]
+        [SerializeField] private GridPos[] mainTownCells;
+        [SerializeField] private GridPos[] secondTown, thirdTown;
+        
+
         public Cell[] cells;
         public GameObject Cube;
         public GameObject EnemyPrefab;
@@ -75,10 +80,10 @@ namespace DefaultNamespace.Map
             }
             
             AddHelpers();
-            ToggleDestination(cells[cells.Length / 2]);
-            ToggleDestination(cells[cells.Length / 4]);
-            ToggleWall(cells[cells.Length / 2 + 1]);
-            ToggleWall(cells[cells.Length / 2 + 2]);
+            foreach (GridPos cell in mainTownCells)
+            {
+                ToggleDestination(cell.posX, cell.posY);
+            }
         }
 
         private void Update()
@@ -86,6 +91,12 @@ namespace DefaultNamespace.Map
             UpdateEnemies();
         }
 
+        public void ToggleDestination(int x, int y)
+        {
+            var cell = cells[GetCellIdxByCoordinates(x, y)];
+            ToggleDestination(cell);
+        }
+        
         private void ToggleDestination(Cell cell)
         {
             if (cell.contentType == CellContentType.Destination) {
@@ -103,6 +114,13 @@ namespace DefaultNamespace.Map
             }
         }
 
+
+        public void ToggleWall(int x, int y)
+        {
+            var cell = cells[GetCellIdxByCoordinates(x, y)];
+            ToggleDestination(cell);
+        }
+        
         private void ToggleWall(Cell cell)
         {
             if (cell.contentType == CellContentType.Wall) {
@@ -208,6 +226,11 @@ namespace DefaultNamespace.Map
             }
 
             if (isAllKilled) FinalizeEnemyWave();
+        }
+
+        public int GetCellIdxByCoordinates(int x, int y)
+        {
+            return x * sizeX + y;
         }
 
         private void AddHelpers()

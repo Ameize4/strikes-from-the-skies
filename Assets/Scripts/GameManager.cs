@@ -3,6 +3,7 @@ using System.Linq;
 using DG.Tweening;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using Yarn.Unity;
@@ -139,6 +140,14 @@ namespace DefaultNamespace
             Instance.phoneHandler.playAudioRing();
             Instance.callJumpDialogueName = nodeName;
             Instance.waitingForCall = true;
+        }
+        
+
+        [SerializeField] private PlayableDirector _timelinePlayable;
+        [YarnCommand("SpawnTimeline")]
+        public static void Yarn_SpawnTimeline()
+        {
+            Instance._timelinePlayable.Play();
         }
         
         public void SendMorseCoordinates(string message)

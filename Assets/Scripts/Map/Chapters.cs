@@ -17,5 +17,6 @@ namespace DefaultNamespace.Map
     public class Chapters : ScriptableObject
     {
         public Chapter[] chapters;
+        public EnemyData[] debugEnemyData;
     }
 }

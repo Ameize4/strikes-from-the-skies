@@ -273,7 +273,6 @@ namespace DefaultNamespace.Map
                 enemyGO.transform.localScale = new Vector3(1/localScale.x, 1/localScale.y, 1/localScale.z);
                 
                 enemies[enemyIdx] = new Enemy(this, enemyData, enemyGO.transform);
-                enemies[enemyIdx].SetPath(enemyData.path);
             }
 
             inActiveWave = true;

@@ -42,8 +42,6 @@ namespace DefaultNamespace
         private Vignette vignette;
         
         public AudioClip enemyAudioClip;
-        
-        public Map.EnemyData[] enemiesData;
 
         // int values of KeyCode Enum of keyboard numbers
         private int alphaKeyCode1 = 49;
@@ -83,7 +81,7 @@ namespace DefaultNamespace
         {
             if (Input.GetKeyDown(KeyCode.P))
             {
-                grid.BeginEnemyWave(enemiesData);
+                grid.BeginEnemyWave(chapters.debugEnemyData);
             }
             if (Input.GetKey(KeyCode.O))
             {

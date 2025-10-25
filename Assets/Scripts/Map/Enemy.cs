@@ -10,7 +10,7 @@ namespace DefaultNamespace.Map
     {
         public float speed;
         public float delay;
-        public GridPos[] path;
+        public GridPos beginPosition;
         public bool isInvisible;
     }
     
@@ -21,7 +21,6 @@ namespace DefaultNamespace.Map
         private Grid grid;
 
         private int posIdx;
-        private Cell[] cellPath;
         
         private float coundDown;
         public bool isDead;
@@ -44,20 +43,14 @@ namespace DefaultNamespace.Map
             
             coundDown += Random.Range(randomMin, randomMax);
             
+            SetPath(data);
+            
             if (isDelayed) transform.gameObject.SetActive(false);
         }
 
-        public void SetPath(GridPos[] path)
+        public void SetPath(EnemyData data)
         {
-            cellPath = new Cell[path.Length];
-            for (var pathIdx = 0; pathIdx < path.Length; pathIdx++)
-            {
-                var gridPos = path[pathIdx];
-                var cell = grid.cells[gridPos.posX * grid.sizeX + gridPos.posY];
-                cellPath[pathIdx] = cell;
-            }
-            
-            cellFrom = cellPath[0];
+            cellFrom = grid.GetCellIdxByCoordinates(data.beginPosition.posX, data.beginPosition.posY);
             cellTo = cellFrom.NextCellOnPath;
 
             transform.position = grid.GetCellPosition(cellFrom);
@@ -81,7 +74,7 @@ namespace DefaultNamespace.Map
             }
 
             cellFrom = cellTo;
-            cellTo = cellFrom.NextCellOnPath ?? cellPath[0];
+            cellTo = cellFrom.NextCellOnPath ??  grid.GetCellIdxByCoordinates(data.beginPosition.posX, data.beginPosition.posY);
             transform.position = grid.GetCellPosition(cellFrom);
 
             var audioSource = transform.GetComponent<AudioSource>();
@@ -92,7 +85,7 @@ namespace DefaultNamespace.Map
 
         public bool IsOnCell(Cell cell)
         {
-            return cellPath[posIdx] == cell;
+            return cellFrom == cell;
         }
 
         public void Die()

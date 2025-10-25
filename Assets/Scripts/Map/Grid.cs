@@ -22,8 +22,9 @@ namespace DefaultNamespace.Map
         public int sizeX, sizeY;
 
         [Space]
+        [SerializeField] private GridPos[] walls;
         [SerializeField] private GridPos[] mainTownCells;
-        [SerializeField] private GridPos[] secondTown, thirdTown;
+        [SerializeField] private GridPos[] dotingeimTown, maginshollTown, greenfallTown;
         
 
         public Cell[] cells;
@@ -83,6 +84,22 @@ namespace DefaultNamespace.Map
             foreach (GridPos cell in mainTownCells)
             {
                 ToggleDestination(cell.posX, cell.posY);
+            }
+            foreach (GridPos cell in walls)
+            {
+                ToggleWall(cell.posX, cell.posY);
+            }
+            foreach (GridPos cell in dotingeimTown)
+            {
+                ToggleWall(cell.posX, cell.posY);
+            }
+            foreach (GridPos cell in maginshollTown)
+            {
+                ToggleWall(cell.posX, cell.posY);
+            }
+            foreach (GridPos cell in greenfallTown)
+            {
+                ToggleWall(cell.posX, cell.posY);
             }
         }
 

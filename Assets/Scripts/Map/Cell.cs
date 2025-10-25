@@ -26,6 +26,8 @@ namespace DefaultNamespace.Map
         
         public Cell NextCellOnPath => nextOnPath;
 
+        public bool isEnemyHere;
+
         public Cell(GridPos gridPos, Grid grid)
         {
             this.gridPos = gridPos;

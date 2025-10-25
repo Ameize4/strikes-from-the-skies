@@ -72,8 +72,12 @@ namespace DefaultNamespace.Map
                 isDelayed = false;
                 return;
             }
+            
+            if (cellTo.isEnemyHere) return;
 
+            cellFrom.isEnemyHere = false;
             cellFrom = cellTo;
+            cellFrom.isEnemyHere = true;
             cellTo = cellFrom.NextCellOnPath ??  grid.GetCellIdxByCoordinates(data.beginPosition.posX, data.beginPosition.posY);
             transform.position = grid.GetCellPosition(cellFrom);
 
@@ -91,6 +95,7 @@ namespace DefaultNamespace.Map
         public void Die()
         {
             isDead = true;
+            cellFrom.isEnemyHere = false;
             transform.gameObject.SetActive(false);
         }
 

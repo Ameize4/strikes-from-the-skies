@@ -93,7 +93,7 @@ namespace DefaultNamespace.Map
 
         public void ToggleDestination(int x, int y)
         {
-            var cell = cells[GetCellIdxByCoordinates(x, y)];
+            var cell = GetCellByCoordinates(x, y);
             ToggleDestination(cell);
         }
         
@@ -117,8 +117,8 @@ namespace DefaultNamespace.Map
 
         public void ToggleWall(int x, int y)
         {
-            var cell = cells[GetCellIdxByCoordinates(x, y)];
-            ToggleDestination(cell);
+            var cell = GetCellByCoordinates(x, y);
+            ToggleWall(cell);
         }
         
         private void ToggleWall(Cell cell)
@@ -228,9 +228,14 @@ namespace DefaultNamespace.Map
             if (isAllKilled) FinalizeEnemyWave();
         }
 
-        public int GetCellIdxByCoordinates(int x, int y)
+        public Cell GetCellByCoordinates(GridPos gridPos)
         {
-            return x * sizeX + y;
+            return GetCellByCoordinates(gridPos.posX, gridPos.posY);
+        }
+        
+        public Cell GetCellByCoordinates(int x, int y)
+        {
+            return cells[x * sizeX + y];
         }
 
         private void AddHelpers()

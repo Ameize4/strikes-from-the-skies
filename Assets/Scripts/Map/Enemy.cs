@@ -50,7 +50,7 @@ namespace DefaultNamespace.Map
 
         public void SetPath(EnemyData data)
         {
-            cellFrom = grid.GetCellIdxByCoordinates(data.beginPosition.posX, data.beginPosition.posY);
+            cellFrom = grid.GetCellByCoordinates(data.beginPosition);
             cellTo = cellFrom.NextCellOnPath;
 
             transform.position = grid.GetCellPosition(cellFrom);
@@ -78,7 +78,7 @@ namespace DefaultNamespace.Map
             cellFrom.isEnemyHere = false;
             cellFrom = cellTo;
             cellFrom.isEnemyHere = true;
-            cellTo = cellFrom.NextCellOnPath ??  grid.GetCellIdxByCoordinates(data.beginPosition.posX, data.beginPosition.posY);
+            cellTo = cellFrom.NextCellOnPath ?? grid.GetCellByCoordinates(data.beginPosition);
             transform.position = grid.GetCellPosition(cellFrom);
 
             var audioSource = transform.GetComponent<AudioSource>();

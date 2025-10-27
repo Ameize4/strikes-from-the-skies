@@ -34,6 +34,7 @@ namespace DefaultNamespace.Map
         public Vector3 OffsetUp, OffsetRight;
 
         private Enemy[] enemies;
+        private Queue<Enemy> enemiesToClean = new Queue<Enemy>();
         
         private bool inActiveWave = false;
         
@@ -221,28 +222,46 @@ namespace DefaultNamespace.Map
             return transform.position + transform.TransformDirection(new Vector3(x, 0, y));
         }
 
-        public void TryKillCell(int TargetX, string TargetYLetter)
+        public bool TryKillCell(int TargetX, string TargetYLetter)
         {
             int targetY = Array.FindIndex(alphabet, x => x == TargetYLetter);
-            TryKillCell(TargetX, targetY);
+            return TryKillCell(TargetX, targetY);
         }
         
-        public void TryKillCell(int TargetX, int TargetY)
+        public bool TryKillCell(int TargetX, int TargetY)
         {
-            if (enemies == null) return;
+            if (enemies == null) return false;
             
-            var targetCell = cells[TargetX * sizeX + TargetY];
+            Cell targetCell = GetCellByCoordinates(TargetX, TargetY);
+            if (targetCell == null || !targetCell.isEnemyHere)
+                return false;
 
-            bool isAllKilled = true;
+            bool isEnemyOnCellKiled = false;
+            bool isAllEnemiesKilled = true;
             foreach (var enemy in enemies)
             {
                 // Try kill cells
-                if (enemy.IsOnCell(targetCell)) enemy.Die();
+                if (enemy.IsOnCell(targetCell))
+                {
+                    enemy.MarkDead();
+                    enemiesToClean.Enqueue(enemy);
+                    isEnemyOnCellKiled = true;
+                }
 
-                if (!enemy.isDead) isAllKilled = false;
+                if (!enemy.isDead) isAllEnemiesKilled = false;
             }
 
-            if (isAllKilled) FinalizeEnemyWave();
+            if (isAllEnemiesKilled) FinalizeEnemyWave();
+            return isEnemyOnCellKiled;
+        }
+
+        public void CleanDiedEnemies()
+        {
+            while (enemiesToClean.Count > 0)
+            {
+                Enemy enemy = enemiesToClean.Dequeue();
+                enemy.RemoveFromBoard();
+            }
         }
 
         public Cell GetCellByCoordinates(GridPos gridPos)

@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using DG.Tweening;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -125,7 +126,6 @@ namespace DefaultNamespace
         {
             Instance.currentChapterIdx += 1;
         }
-        
         public void SendMorseCoordinates(string message)
         {
             if (message.Length == 2)
@@ -149,7 +149,14 @@ namespace DefaultNamespace
                     (left, right) = (right, left);
                 }
 
-                grid.TryKillCell(int.Parse(left), right);
+                bool success = grid.TryKillCell(int.Parse(left), right);
+            
+                DOTween.Sequence().AppendInterval(2.5f).OnComplete(() =>
+                {
+                    trauma = 1f;
+                    _cameraShake.SetTrauma(0.5f);
+                    grid.CleanDiedEnemies();
+                });
             }
         }
 

@@ -52,6 +52,7 @@ namespace DefaultNamespace.Map
         public void SetPath(EnemyData data)
         {
             cellFrom = grid.GetCellByCoordinates(data.beginPosition);
+            cellFrom.isEnemyHere = true;
             cellTo = cellFrom.NextCellOnPath;
 
             transform.position = grid.GetCellPosition(cellFrom);
@@ -77,6 +78,12 @@ namespace DefaultNamespace.Map
             
             if (cellTo.isEnemyHere) return;
 
+            if (cellTo.contentType == CellContentType.Destination)
+            {
+                Debug.Log("bruh");
+                return;
+            }
+            
             cellFrom.isEnemyHere = false;
             cellFrom = cellTo;
             cellFrom.isEnemyHere = true;
@@ -99,9 +106,13 @@ namespace DefaultNamespace.Map
             return cellFrom == cell;
         }
 
-        public void Die()
+        public void MarkDead()
         {
             isDead = true;
+        }
+
+        public void RemoveFromBoard()
+        {
             cellFrom.isEnemyHere = false;
             transform.gameObject.SetActive(false);
         }

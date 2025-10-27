@@ -7704,8 +7704,6 @@ MonoBehaviour:
   sizeX: 10
   sizeY: 10
   walls:
-  - posX: 7
-    posY: 0
   - posX: 8
     posY: 0
   - posX: 8

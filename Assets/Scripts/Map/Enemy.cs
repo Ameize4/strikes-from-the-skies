@@ -46,6 +46,7 @@ namespace DefaultNamespace.Map
             SetPath(data);
             
             if (isDelayed) transform.gameObject.SetActive(false);
+            else PlayAudioStep();
         }
 
         public void SetPath(EnemyData data)
@@ -69,6 +70,7 @@ namespace DefaultNamespace.Map
             if (isDelayed)
             {
                 transform.gameObject.SetActive(!data.isInvisible);
+                PlayAudioStep();
                 isDelayed = false;
                 return;
             }
@@ -81,6 +83,11 @@ namespace DefaultNamespace.Map
             cellTo = cellFrom.NextCellOnPath ?? grid.GetCellByCoordinates(data.beginPosition);
             transform.position = grid.GetCellPosition(cellFrom);
 
+            PlayAudioStep();
+        }
+
+        private void PlayAudioStep()
+        {
             var audioSource = transform.GetComponent<AudioSource>();
             audioSource.time = 0.6f;
             audioSource.pitch = Random.Range(0.95f, 1.1f);

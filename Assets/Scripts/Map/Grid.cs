@@ -22,8 +22,9 @@ namespace DefaultNamespace.Map
         public int sizeX, sizeY;
 
         [Space]
+        [SerializeField] private GridPos[] walls;
         [SerializeField] private GridPos[] mainTownCells;
-        [SerializeField] private GridPos[] secondTown, thirdTown;
+        [SerializeField] private GridPos[] dotingeimTown, maginshollTown, greenfallTown;
         
 
         public Cell[] cells;
@@ -33,6 +34,7 @@ namespace DefaultNamespace.Map
         public Vector3 OffsetUp, OffsetRight;
 
         private Enemy[] enemies;
+        private Queue<Enemy> enemiesToClean = new Queue<Enemy>();
         
         private bool inActiveWave = false;
         
@@ -84,6 +86,22 @@ namespace DefaultNamespace.Map
             {
                 ToggleDestination(cell.posX, cell.posY);
             }
+            foreach (GridPos cell in walls)
+            {
+                ToggleWall(cell.posX, cell.posY);
+            }
+            foreach (GridPos cell in dotingeimTown)
+            {
+                ToggleWall(cell.posX, cell.posY);
+            }
+            foreach (GridPos cell in maginshollTown)
+            {
+                ToggleWall(cell.posX, cell.posY);
+            }
+            foreach (GridPos cell in greenfallTown)
+            {
+                ToggleWall(cell.posX, cell.posY);
+            }
         }
 
         private void Update()
@@ -93,7 +111,7 @@ namespace DefaultNamespace.Map
 
         public void ToggleDestination(int x, int y)
         {
-            var cell = cells[GetCellIdxByCoordinates(x, y)];
+            var cell = GetCellByCoordinates(x, y);
             ToggleDestination(cell);
         }
         
@@ -117,8 +135,8 @@ namespace DefaultNamespace.Map
 
         public void ToggleWall(int x, int y)
         {
-            var cell = cells[GetCellIdxByCoordinates(x, y)];
-            ToggleDestination(cell);
+            var cell = GetCellByCoordinates(x, y);
+            ToggleWall(cell);
         }
         
         private void ToggleWall(Cell cell)
@@ -204,33 +222,56 @@ namespace DefaultNamespace.Map
             return transform.position + transform.TransformDirection(new Vector3(x, 0, y));
         }
 
-        public void TryKillCell(int TargetX, string TargetYLetter)
+        public bool TryKillCell(int TargetX, string TargetYLetter)
         {
             int targetY = Array.FindIndex(alphabet, x => x == TargetYLetter);
-            TryKillCell(TargetX, targetY);
+            return TryKillCell(TargetX, targetY);
         }
         
-        public void TryKillCell(int TargetX, int TargetY)
+        public bool TryKillCell(int TargetX, int TargetY)
         {
-            if (enemies == null) return;
+            if (enemies == null) return false;
             
-            var targetCell = cells[TargetX * sizeX + TargetY];
+            Cell targetCell = GetCellByCoordinates(TargetX, TargetY);
+            if (targetCell == null || !targetCell.isEnemyHere)
+                return false;
 
-            bool isAllKilled = true;
+            bool isEnemyOnCellKiled = false;
+            bool isAllEnemiesKilled = true;
             foreach (var enemy in enemies)
             {
                 // Try kill cells
-                if (enemy.IsOnCell(targetCell)) enemy.Die();
+                if (enemy.IsOnCell(targetCell))
+                {
+                    enemy.MarkDead();
+                    enemiesToClean.Enqueue(enemy);
+                    isEnemyOnCellKiled = true;
+                }
 
-                if (!enemy.isDead) isAllKilled = false;
+                if (!enemy.isDead) isAllEnemiesKilled = false;
             }
 
-            if (isAllKilled) FinalizeEnemyWave();
+            if (isAllEnemiesKilled) FinalizeEnemyWave();
+            return isEnemyOnCellKiled;
         }
 
-        public int GetCellIdxByCoordinates(int x, int y)
+        public void CleanDiedEnemies()
         {
-            return x * sizeX + y;
+            while (enemiesToClean.Count > 0)
+            {
+                Enemy enemy = enemiesToClean.Dequeue();
+                enemy.RemoveFromBoard();
+            }
+        }
+
+        public Cell GetCellByCoordinates(GridPos gridPos)
+        {
+            return GetCellByCoordinates(gridPos.posX, gridPos.posY);
+        }
+        
+        public Cell GetCellByCoordinates(int x, int y)
+        {
+            return cells[x * sizeX + y];
         }
 
         private void AddHelpers()
@@ -273,7 +314,6 @@ namespace DefaultNamespace.Map
                 enemyGO.transform.localScale = new Vector3(1/localScale.x, 1/localScale.y, 1/localScale.z);
                 
                 enemies[enemyIdx] = new Enemy(this, enemyData, enemyGO.transform);
-                enemies[enemyIdx].SetPath(enemyData.path);
             }
 
             inActiveWave = true;

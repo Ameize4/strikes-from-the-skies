@@ -10,7 +10,7 @@ namespace DefaultNamespace.Map
     {
         public float speed;
         public float delay;
-        public GridPos[] path;
+        public GridPos beginPosition;
         public bool isInvisible;
     }
     
@@ -21,7 +21,6 @@ namespace DefaultNamespace.Map
         private Grid grid;
 
         private int posIdx;
-        private Cell[] cellPath;
         
         private float coundDown;
         public bool isDead;
@@ -44,20 +43,16 @@ namespace DefaultNamespace.Map
             
             coundDown += Random.Range(randomMin, randomMax);
             
+            SetPath(data);
+            
             if (isDelayed) transform.gameObject.SetActive(false);
+            else PlayAudioStep();
         }
 
-        public void SetPath(GridPos[] path)
+        public void SetPath(EnemyData data)
         {
-            cellPath = new Cell[path.Length];
-            for (var pathIdx = 0; pathIdx < path.Length; pathIdx++)
-            {
-                var gridPos = path[pathIdx];
-                var cell = grid.cells[gridPos.posX * grid.sizeX + gridPos.posY];
-                cellPath[pathIdx] = cell;
-            }
-            
-            cellFrom = cellPath[0];
+            cellFrom = grid.GetCellByCoordinates(data.beginPosition);
+            cellFrom.isEnemyHere = true;
             cellTo = cellFrom.NextCellOnPath;
 
             transform.position = grid.GetCellPosition(cellFrom);
@@ -76,14 +71,30 @@ namespace DefaultNamespace.Map
             if (isDelayed)
             {
                 transform.gameObject.SetActive(!data.isInvisible);
+                PlayAudioStep();
                 isDelayed = false;
                 return;
             }
+            
+            if (cellTo.isEnemyHere) return;
 
+            if (cellTo.contentType == CellContentType.Destination)
+            {
+                Debug.Log("bruh");
+                return;
+            }
+            
+            cellFrom.isEnemyHere = false;
             cellFrom = cellTo;
-            cellTo = cellFrom.NextCellOnPath ?? cellPath[0];
+            cellFrom.isEnemyHere = true;
+            cellTo = cellFrom.NextCellOnPath ?? grid.GetCellByCoordinates(data.beginPosition);
             transform.position = grid.GetCellPosition(cellFrom);
 
+            PlayAudioStep();
+        }
+
+        private void PlayAudioStep()
+        {
             var audioSource = transform.GetComponent<AudioSource>();
             audioSource.time = 0.6f;
             audioSource.pitch = Random.Range(0.95f, 1.1f);
@@ -92,12 +103,17 @@ namespace DefaultNamespace.Map
 
         public bool IsOnCell(Cell cell)
         {
-            return cellPath[posIdx] == cell;
+            return cellFrom == cell;
         }
 
-        public void Die()
+        public void MarkDead()
         {
             isDead = true;
+        }
+
+        public void RemoveFromBoard()
+        {
+            cellFrom.isEnemyHere = false;
             transform.gameObject.SetActive(false);
         }
 

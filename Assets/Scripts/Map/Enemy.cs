@@ -45,7 +45,7 @@ namespace DefaultNamespace.Map
             
             SetPath(data);
             
-            if (isDelayed) transform.gameObject.SetActive(false);
+            if (isDelayed || data.isInvisible) transform.gameObject.SetActive(false);
             else PlayAudioStep();
         }
 

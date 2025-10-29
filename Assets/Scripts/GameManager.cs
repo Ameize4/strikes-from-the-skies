@@ -46,6 +46,8 @@ namespace DefaultNamespace
         [SerializeField] float maxVignette, minVignette;
         private Vignette vignette;
         
+        [SerializeField] private PlayableDirector _timelinePlayable;
+
         public AudioClip enemyAudioClip;
 
         // int values of KeyCode Enum of keyboard numbers
@@ -143,7 +145,6 @@ namespace DefaultNamespace
         }
         
 
-        [SerializeField] private PlayableDirector _timelinePlayable;
         [YarnCommand("SpawnTimeline")]
         public static void Yarn_SpawnTimeline()
         {

@@ -33,6 +33,9 @@ namespace DefaultNamespace
 
         public Map.Chapters chapters;
         [SerializeField] private int currentChapterIdx = 0;
+
+        [Space]
+        [SerializeField] private PhoneHandler phoneHandler;
         
         [Space]
         [SerializeField] private CameraShake.CameraShakeProperties cameraShakeProperties;
@@ -49,6 +52,9 @@ namespace DefaultNamespace
         private int alphaKeyCode9 = 57;
 
         private float trauma;
+
+        private bool waitingForCall;
+        private string callJumpDialogueName;
 
         private void Awake()
         {
@@ -126,6 +132,15 @@ namespace DefaultNamespace
         {
             Instance.currentChapterIdx += 1;
         }
+        
+        [YarnCommand("JumpToCall")]
+        public static void Yarn_JumpToCall(string nodeName)
+        {
+            Instance.phoneHandler.playAudioRing();
+            Instance.callJumpDialogueName = nodeName;
+            Instance.waitingForCall = true;
+        }
+        
         public void SendMorseCoordinates(string message)
         {
             if (message.Length == 2)
@@ -174,6 +189,16 @@ namespace DefaultNamespace
             data.lightmapColor = info.Color;
             // data.shadowMask = info.ShadowMask;
             LightmapSettings.lightmaps = new LightmapData[] { data };
+        }
+        
+        public void AnswerPhone()
+        {
+            if (!waitingForCall) return;
+            
+            waitingForCall = false;
+            dialogueRunner.StartDialogue(callJumpDialogueName);
+            callJumpDialogueName = "";
+            phoneHandler.playAudioPlasticImpact();
         }
     }
 }

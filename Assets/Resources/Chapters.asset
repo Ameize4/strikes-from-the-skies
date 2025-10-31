@@ -153,27 +153,33 @@ MonoBehaviour:
       project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
       nodeName: 
   debugEnemyData:
-  - speed: 25
+  - speed: 999
     delay: 0
     beginPosition:
-      posX: 0
+      posX: 7
+      posY: 5
+    isInvisible: 0
+  - speed: 999
+    delay: 0
+    beginPosition:
+      posX: 4
+      posY: 3
+    isInvisible: 0
+  - speed: 999
+    delay: 0
+    beginPosition:
+      posX: 3
+      posY: 7
+    isInvisible: 0
+  - speed: 999
+    delay: 0
+    beginPosition:
+      posX: 2
+      posY: 2
+    isInvisible: 0
+  - speed: 999
+    delay: 0
+    beginPosition:
+      posX: 6
       posY: 0
-    isInvisible: 0
-  - speed: 25
-    delay: 10
-    beginPosition:
-      posX: 0
-      posY: 9
-    isInvisible: 0
-  - speed: 25
-    delay: 20
-    beginPosition:
-      posX: 1
-      posY: 9
-    isInvisible: 0
-  - speed: 25
-    delay: 20
-    beginPosition:
-      posX: 0
-      posY: 1
     isInvisible: 0

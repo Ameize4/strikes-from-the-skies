@@ -5613,7 +5613,7 @@ MonoBehaviour:
   outlineObject: {fileID: 0}
   virtualCamera: {fileID: 2024224843}
   interactiveComponents:
-  - {fileID: 1304346263}
+  - {fileID: 0}
   rightObject: {fileID: 0}
   leftObject: {fileID: 728736022}
 --- !u!82 &1248687645
@@ -8751,10 +8751,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8220881878328737918, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}
 --- !u!64 &1470078511
 MeshCollider:
@@ -11189,7 +11186,7 @@ Transform:
   m_GameObject: {fileID: 2024224843}
   serializedVersion: 2
   m_LocalRotation: {x: -0.4487484, y: 0.060382433, z: -0.030217651, w: -0.89110374}
-  m_LocalPosition: {x: -8.737454, y: 2.1452012, z: 1.0342126}
+  m_LocalPosition: {x: -8.58, y: 2, z: 1.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

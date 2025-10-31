@@ -139,7 +139,11 @@ public class Telegraph : MonoBehaviour, IInteractive
 
     void Update()
     {
-        if (isInteractiveModeEnabled == false) return;
+        if (isInteractiveModeEnabled == false)
+        {
+            inputDurationHandler.ProcessIdle();
+            return;
+        }
         
         inputDurationHandler.Process();
     }
@@ -181,13 +185,10 @@ public class Telegraph : MonoBehaviour, IInteractive
     public void SetInteraction(bool value)
     {
         isInteractiveModeEnabled = value;
+        //  There has been logic, but now it is artefact of unused logic
         if (value)
         { }
         else
-        {
-            label.text = "";
-            translatedText = "";
-            morseInput?.Clear();
-        }
+        { }
     }
 }

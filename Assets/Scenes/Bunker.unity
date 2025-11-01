@@ -1042,7 +1042,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Character: {fileID: 199834479}
   move: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  lClick: {fileID: -4177729537470816904, guid: 052faaac586de48259a63d0c4782560b, type: 3}
 --- !u!4 &321276526
 Transform:
   m_ObjectHideFlags: 0
@@ -1177,9 +1176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YarnOptionSelector
   dialogueView: {fileID: 321946567}
-  playerInput: {fileID: 321276527}
   lClick: {fileID: -4177729537470816904, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  rClick: {fileID: -4177729537470816904, guid: 052faaac586de48259a63d0c4782560b, type: 3}
 --- !u!1 &321946566 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8020628925107869965, guid: 52571f68872914e24837210513edea1d, type: 3}
@@ -1209,9 +1206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YarnOptionSelector
   dialogueView: {fileID: 321946567}
-  playerInput: {fileID: 321276527}
   lClick: {fileID: 3001919216989983466, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  rClick: {fileID: -4090225696740746782, guid: 052faaac586de48259a63d0c4782560b, type: 3}
 --- !u!1001 &334604527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5346,6 +5341,7 @@ MonoBehaviour:
   minVignette: 0.181
   _timelinePlayable: {fileID: 1943797404}
   enemyAudioClip: {fileID: 8300000, guid: 3e7e4306b540116438022ae5555eecf0, type: 3}
+  twoLetterTelegraphLimitEnabled: 0
 --- !u!4 &1084138476
 Transform:
   m_ObjectHideFlags: 0

@@ -18,12 +18,14 @@ public class pause : MonoBehaviour
     private DepthOfField depthOfField;
 
     private bool canBePaused = true;
+    private bool changedThisFrame;
 
     bool paused = false;
 
     private void SetPaused()
     {
         canBePaused = InteractiveObject.CurrentFocus != null;
+        changedThisFrame = true;
     }
     
     private void OnEnable()
@@ -55,6 +57,11 @@ public class pause : MonoBehaviour
 
     void Update()
     {
+        if (changedThisFrame)
+        {
+            changedThisFrame = false;
+            return;
+        }
         if(Input.GetKeyDown(KeyCode.Escape) && canBePaused)
         {
             paused = togglePause();

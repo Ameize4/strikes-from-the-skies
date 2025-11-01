@@ -42,22 +42,28 @@ MonoBehaviour:
       delay: 0
       beginPosition:
         posX: 0
-        posY: 0
+        posY: 3
       isInvisible: 0
     - speed: 25
-      delay: 10
+      delay: 0.5
       beginPosition:
-        posX: 9
-        posY: 0
-      isInvisible: 0
-    - speed: 25
-      delay: 20
-      beginPosition:
-        posX: 1
-        posY: 9
+        posX: 0
+        posY: 6
       isInvisible: 0
     - speed: 25
       delay: 30
+      beginPosition:
+        posX: 1
+        posY: 0
+      isInvisible: 0
+    - speed: 25
+      delay: 30.5
+      beginPosition:
+        posX: 0
+        posY: 0
+      isInvisible: 0
+    - speed: 25
+      delay: 50
       beginPosition:
         posX: 0
         posY: 9
@@ -169,23 +175,29 @@ MonoBehaviour:
     delay: 0
     beginPosition:
       posX: 0
+      posY: 3
+    isInvisible: 0
+  - speed: 25
+    delay: 0.5
+    beginPosition:
+      posX: 0
+      posY: 6
+    isInvisible: 0
+  - speed: 25
+    delay: 30
+    beginPosition:
+      posX: 1
       posY: 0
     isInvisible: 0
   - speed: 25
-    delay: 10
+    delay: 30.5
+    beginPosition:
+      posX: 0
+      posY: 0
+    isInvisible: 0
+  - speed: 25
+    delay: 50
     beginPosition:
       posX: 0
       posY: 9
-    isInvisible: 0
-  - speed: 25
-    delay: 20
-    beginPosition:
-      posX: 1
-      posY: 9
-    isInvisible: 0
-  - speed: 25
-    delay: 20
-    beginPosition:
-      posX: 0
-      posY: 1
     isInvisible: 0

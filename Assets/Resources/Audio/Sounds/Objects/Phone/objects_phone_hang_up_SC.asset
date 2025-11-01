@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e444e5f947e2a7409a1eaa10f9fa16e, type: 3}
-  m_Name: player_footstep_SC
+  m_Name: objects_phone_hang_up_SC
   m_EditorClassIdentifier: Sonity.Public.Runtime::Sonity.SoundContainer
   internals:
     data:
       foundReferences: []
       previewAudioMixerGroup: {fileID: 0}
-      expandPreview: 0
+      expandPreview: 1
       expandAudioClips: 1
       previewCurves: 1
       audioMixerGroup: {fileID: 0}
@@ -49,7 +49,7 @@ MonoBehaviour:
       volumeExpand: 1
       volumeDecibel: 0
       volumeRatio: 1
-      volumeRandomEnable: 1
+      volumeRandomEnable: 0
       volumeRandomRangeDecibel: -3
       volumeDistanceRolloff: -2
       volumeDistanceCurve:
@@ -163,7 +163,7 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-      pitchExpand: 1
+      pitchExpand: 0
       pitchSemitone: 0
       pitchRatio: 1
       pitchRandomEnable: 1
@@ -317,7 +317,7 @@ MonoBehaviour:
       stereoPanAngleUse: 0
       stereoPanAngleAmount: 0.75
       stereoPanAngleRolloff: -2
-      reverbZoneMixExpand: 1
+      reverbZoneMixExpand: 0
       reverbZoneMixDecibel: 0
       reverbZoneMixRatio: 1
       reverbZoneMixDistanceIncrease: 0.5
@@ -429,10 +429,10 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-      lowpassExpand: 1
-      lowpassEnabled: 1
-      lowpassFrequencyEditor: 1521
-      lowpassFrequencyEngine: 0.07512513
+      lowpassExpand: 0
+      lowpassEnabled: 0
+      lowpassFrequencyEditor: 20000
+      lowpassFrequencyEngine: 1
       lowpassAmountEditor: 6
       lowpassAmountEngine: 1
       lowpassDistanceEnable: 0
@@ -650,14 +650,8 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
     audioClips:
-    - {fileID: 8300000, guid: d4ff2d549e58799469c0e41a90732e69, type: 3}
-    - {fileID: 8300000, guid: 53a1656ea27b7454198a80dcf8dfa9c5, type: 3}
-    - {fileID: 8300000, guid: 6aafc5ef19772b14eae46d9f1845d519, type: 3}
-    - {fileID: 8300000, guid: 0a28a2fd2f0334a4cb0534f7c7e896f1, type: 3}
-    - {fileID: 8300000, guid: 08ca823bf9344e54990f07d5c9e3bebe, type: 3}
-    - {fileID: 8300000, guid: 374c03d12abe3154285e3395b73a9a0a, type: 3}
-    - {fileID: 8300000, guid: 101b2cc1b89a9bf4bb153109aed1a07f, type: 3}
-    - {fileID: 8300000, guid: 0a6f2617c81054545a768e01cf865bd2, type: 3}
+    - {fileID: 8300000, guid: 051636394ec6c7f4aa420c00f7bc3215, type: 3}
+    - {fileID: 8300000, guid: 876ef013d600a5347936b27ec8c57b73, type: 3}
     notes: Notes
-  assetGuid: ca3b5d8c10f0bf24f802d40880b8e500
-  assetGuidHash: -5685850167961895869
+  assetGuid: 0619d54964420044580bc4996864fd56
+  assetGuidHash: -7416311535452259581

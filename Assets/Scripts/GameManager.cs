@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using DG.Tweening;
+using Sonity;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Playables;
@@ -48,7 +49,10 @@ namespace DefaultNamespace
         
         [SerializeField] private PlayableDirector _timelinePlayable;
 
-        public AudioClip enemyAudioClip;
+        [SerializeField] public SoundEvent enemyShowedUpSE;
+        [SerializeField] public SoundEvent enemyMovedSE;
+        [SerializeField] public SoundEvent enemyDestroyedSE;
+
 
         // int values of KeyCode Enum of keyboard numbers
         private int alphaKeyCode1 = 49;

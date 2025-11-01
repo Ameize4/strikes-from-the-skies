@@ -5610,7 +5610,9 @@ MonoBehaviour:
   maxVignette: 0.333
   minVignette: 0.181
   _timelinePlayable: {fileID: 1943797404}
-  enemyAudioClip: {fileID: 8300000, guid: 3e7e4306b540116438022ae5555eecf0, type: 3}
+  enemyShowedUpSE: {fileID: 11400000, guid: ebc78f38efb6e5b4e8ae473cb27fbe1b, type: 2}
+  enemyMovedSE: {fileID: 11400000, guid: c128da7fb614b214e8e4b2fc4d0fcb5f, type: 2}
+  enemyDestroyedSE: {fileID: 11400000, guid: 2b467cc9a9eac7640b9755491fdd6916, type: 2}
   twoLetterTelegraphLimitEnabled: 0
 --- !u!4 &1084138476
 Transform:

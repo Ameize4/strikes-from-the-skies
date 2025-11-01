@@ -96,10 +96,16 @@ public class Telegraph : MonoBehaviour, IInteractive
             string.Join("", morseInput));
         label.text = translatedText;
         morseInput.Clear();
+
+        if (GameManager.Instance.twoLetterTelegraphLimitEnabled && translatedText.Length >= 2)
+        {
+            SendMessageAndClear();
+        }
     }
 
     private void SendMessageAndClear()
     {
+        if (translatedText == "" || translatedText.Length < 2) return;
         GameManager.Instance.SendMorseCoordinates(translatedText);
         label.color = Color.green;
         DOTween.To(() => label.color, x => label.color = x, Color.white, 0.6f)

@@ -59,6 +59,8 @@ namespace DefaultNamespace
         private bool waitingForCall;
         private string callJumpDialogueName;
 
+        public bool twoLetterTelegraphLimitEnabled;
+
         private void Awake()
         {
             Instance = this;

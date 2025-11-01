@@ -19,7 +19,19 @@ MonoBehaviour:
       delay: 0
       beginPosition:
         posX: 3
+        posY: 5
+      isInvisible: 0
+    - speed: 999
+      delay: 0
+      beginPosition:
+        posX: 5
         posY: 4
+      isInvisible: 0
+    - speed: 999
+      delay: 0
+      beginPosition:
+        posX: 2
+        posY: 2
       isInvisible: 0
     dialogueAfterWave:
       project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}

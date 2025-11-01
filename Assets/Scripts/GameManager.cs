@@ -57,6 +57,8 @@ namespace DefaultNamespace
         [SerializeField] public SoundEvent canonHitSE;
         [SerializeField] public SoundEvent canonMissedSE;
 
+        [Space] [SerializeField] private ParticleSystem p1, p2, p3;
+
 
         // int values of KeyCode Enum of keyboard numbers
         private int alphaKeyCode1 = 49;
@@ -199,6 +201,9 @@ namespace DefaultNamespace
                     trauma = 1f;
                     _cameraShake.SetTrauma(0.5f);
                     grid.CleanDiedEnemies();
+                    p1.Play();
+                    p2.Play();
+                    p3.Play();
                 });
             }
         }

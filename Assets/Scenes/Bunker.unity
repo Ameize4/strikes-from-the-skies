@@ -2452,8 +2452,16 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5066595790257469836, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 136cc6cadf9d2324b9bc46e99f032b07, type: 2}
+    - target: {fileID: 5066595790257469836, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}
       propertyPath: m_fontSizeBase
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066595790257469836, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8220881878328737918, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}
       propertyPath: m_Name
@@ -3798,9 +3806,7 @@ MonoBehaviour:
   tweenDuration: 0.1
   positionTarget: {x: -0.6935, y: 0.0742, z: -0.0964}
   rotationTarget: {x: 0, y: 0, z: -7.718}
-  toneClip: {fileID: 0}
-  volume: 0.1
-  frequency: 700
+  sound: {fileID: 11400000, guid: 18c30e49f757e83479029d981ff4c2db, type: 2}
 --- !u!64 &752774927
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8186,8 +8192,16 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5066595790257469836, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 136cc6cadf9d2324b9bc46e99f032b07, type: 2}
+    - target: {fileID: 5066595790257469836, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}
       propertyPath: m_fontSizeBase
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066595790257469836, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8220881878328737918, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}
       propertyPath: m_Name
@@ -9200,6 +9214,14 @@ PrefabInstance:
       propertyPath: m_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5066595790257469836, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 136cc6cadf9d2324b9bc46e99f032b07, type: 2}
+    - target: {fileID: 5066595790257469836, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8220881878328737918, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}
       propertyPath: m_Name
       value: MorseTranscriptionLabel
@@ -9299,10 +9321,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8220881878328737918, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}
 --- !u!64 &1470078511
 MeshCollider:

@@ -16,7 +16,7 @@ MonoBehaviour:
     notes: Notes
     data:
       previewAudioMixerGroup: {fileID: 0}
-      expandSoundContainers: 1
+      expandSoundContainers: 0
       expandTimeline: 1
       expandPreview: 0
       expandAllSoundTag: 0

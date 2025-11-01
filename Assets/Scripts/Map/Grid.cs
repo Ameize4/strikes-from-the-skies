@@ -81,7 +81,7 @@ namespace DefaultNamespace.Map
                 n++;
             }
             
-            AddHelpers();
+            // AddHelpers();
             foreach (GridPos cell in mainTownCells)
             {
                 ToggleDestination(cell.posX, cell.posY);

@@ -84,8 +84,50 @@ MonoBehaviour:
       nodeName: Wave3_EnemyDefeated
   - name: Wave 4, boss fight
     enemiesData:
-    - speed: 999
+    - speed: 15
       delay: 0
+      beginPosition:
+        posX: 4
+        posY: 4
+      isInvisible: 0
+    - speed: 20
+      delay: 2.5
+      beginPosition:
+        posX: 0
+        posY: 0
+      isInvisible: 0
+    - speed: 20
+      delay: 3
+      beginPosition:
+        posX: 2
+        posY: 7
+      isInvisible: 0
+    - speed: 20
+      delay: 3.5
+      beginPosition:
+        posX: 0
+        posY: 3
+      isInvisible: 0
+    - speed: 15
+      delay: 30
+      beginPosition:
+        posX: 4
+        posY: 4
+      isInvisible: 0
+    - speed: 20
+      delay: 31
+      beginPosition:
+        posX: 4
+        posY: 4
+      isInvisible: 0
+    - speed: 20
+      delay: 31.5
+      beginPosition:
+        posX: 4
+        posY: 4
+      isInvisible: 0
+    - speed: 15
+      delay: 31
       beginPosition:
         posX: 4
         posY: 4
@@ -171,33 +213,51 @@ MonoBehaviour:
       project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
       nodeName: 
   debugEnemyData:
-  - speed: 25
+  - speed: 15
     delay: 0
+    beginPosition:
+      posX: 4
+      posY: 4
+    isInvisible: 0
+  - speed: 20
+    delay: 2.5
+    beginPosition:
+      posX: 0
+      posY: 0
+    isInvisible: 0
+  - speed: 20
+    delay: 3
+    beginPosition:
+      posX: 2
+      posY: 7
+    isInvisible: 0
+  - speed: 20
+    delay: 3.5
     beginPosition:
       posX: 0
       posY: 3
     isInvisible: 0
-  - speed: 25
-    delay: 0.5
-    beginPosition:
-      posX: 0
-      posY: 6
-    isInvisible: 0
-  - speed: 25
+  - speed: 15
     delay: 30
     beginPosition:
-      posX: 1
-      posY: 0
+      posX: 4
+      posY: 4
     isInvisible: 0
-  - speed: 25
-    delay: 30.5
+  - speed: 20
+    delay: 31
     beginPosition:
-      posX: 0
-      posY: 0
+      posX: 4
+      posY: 4
     isInvisible: 0
-  - speed: 25
-    delay: 50
+  - speed: 20
+    delay: 31.5
     beginPosition:
-      posX: 0
-      posY: 9
+      posX: 4
+      posY: 4
+    isInvisible: 0
+  - speed: 15
+    delay: 31
+    beginPosition:
+      posX: 4
+      posY: 4
     isInvisible: 0

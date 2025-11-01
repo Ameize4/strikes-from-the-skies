@@ -1,3 +1,4 @@
+using Sonity;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -6,7 +7,7 @@ namespace DefaultNamespace
     {
         [SerializeField] private float interactionDistance = 3f;
         [SerializeField] private KeyCode interactKey = KeyCode.E;
-        [SerializeField] private AudioClip phoneAudioClip, plasticAC;
+        [SerializeField] public SoundEvent phoneRingSE, phonePickUpSE;
 
         private Transform player;
         private AudioSource AS;
@@ -34,14 +35,13 @@ namespace DefaultNamespace
 
         public void playAudioRing()
         {
-            AS.clip = phoneAudioClip;
-            AS.Play();
+            phoneRingSE.Play(transform);
         }
 
         public void playAudioPlasticImpact()
         {
-            AS.clip = plasticAC;
-            AS.Play();
+            phoneRingSE.Stop(transform);
+            phonePickUpSE.Play(transform);
         }
     }
 }

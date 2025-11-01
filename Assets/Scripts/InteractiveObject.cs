@@ -1,3 +1,4 @@
+using System;
 using DefaultNamespace.Interfaces;
 using UnityEngine;
 
@@ -15,6 +16,18 @@ public class InteractiveObject : MonoBehaviour
     private Transform player;
     private bool isFocused;
     private int defaultCameraPriority;
+
+    public static event Action _currentFocusChanged;
+    private static InteractiveObject _currentFocus;
+    public static InteractiveObject CurrentFocus
+    {
+        get => _currentFocus;
+        private set
+        {
+            _currentFocusChanged?.Invoke();
+            _currentFocus = value;
+        }
+    }
 
     private void Start()
     {
@@ -62,6 +75,7 @@ public class InteractiveObject : MonoBehaviour
             virtualCamera.SetActive(true);
         
         SetInteractiveComponents(true);
+        CurrentFocus = this;
     }
 
     private void StopInteraction()
@@ -73,6 +87,7 @@ public class InteractiveObject : MonoBehaviour
             virtualCamera.SetActive(false);
         
         SetInteractiveComponents(false);
+        CurrentFocus = null;
     }
 
     private void SetOutline(bool state)

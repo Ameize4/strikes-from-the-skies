@@ -8,9 +8,13 @@ public class YarnOptionSelector : MonoBehaviour
     [SerializeField] DialoguePresenterBase dialogueView;
     public InputActionReference lClick;
 
-    private void Start()
+    private void OnEnable()
     {
         lClick.action.performed += Focus;
+    }
+    private void OnDisable()
+    {
+        lClick.action.performed -= Focus;
     }
 
     void Focus(InputAction.CallbackContext context)

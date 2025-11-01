@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Rendering;
@@ -11,7 +12,23 @@ public class pause : MonoBehaviour
     [Space] [SerializeField] private Volume _volume;
     private DepthOfField depthOfField;
 
+    private bool canBePaused = true;
+
     bool paused = false;
+
+    private void SetPaused()
+    {
+        canBePaused = InteractiveObject.CurrentFocus != null;
+    }
+    
+    private void OnEnable()
+    {
+        InteractiveObject._currentFocusChanged += SetPaused;
+    }
+    private void OnDisable()
+    {
+        InteractiveObject._currentFocusChanged -= SetPaused;
+    }
 
     private void Start()
     {
@@ -29,8 +46,10 @@ public class pause : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape) && canBePaused)
+        {
             paused = togglePause();
+        }
     }
 	
     bool togglePause()

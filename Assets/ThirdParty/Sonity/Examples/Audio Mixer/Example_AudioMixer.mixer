@@ -20,7 +20,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Example_AMB
+  m_Name: Ambience
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 18172bb85ad178c4380cc075828ac177
   m_Children: []
@@ -39,7 +39,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Example_UI
+  m_Name: UI
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: db8a04e5951774e4b92d76691329cff9
   m_Children: []
@@ -72,7 +72,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Example_MUS
+  m_Name: Music
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 65f8afbaaf809294697ee79ffdb5605c
   m_Children: []
@@ -105,10 +105,13 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Example_SFX
+  m_Name: SFX
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 205bfbe2090161d449a1a7b3c5c830ed
-  m_Children: []
+  m_Children:
+  - {fileID: 4727921224084469547}
+  - {fileID: -8824916832726023315}
+  - {fileID: -8917451982255763891}
   m_Volume: 7d938eaea188278448d0d2581a2b5afe
   m_Pitch: 6a46146ece117754eb8d6b570710c35f
   m_Send: 00000000000000000000000000000000
@@ -165,11 +168,8 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: b1ac42e56bad6604ea4ccf25f87df0a1
   m_Children:
-  - {fileID: -8917451982255763891}
   - {fileID: -6159010822118239673}
   - {fileID: -1045835971392157012}
-  - {fileID: -8824916832726023315}
-  - {fileID: 4727921224084469547}
   m_Volume: a5c55c37a4102d6448e93291d4dbe5cd
   m_Pitch: 69d8f2d2dd4d0d64db30e18a51fcaaa8
   m_Send: 00000000000000000000000000000000
@@ -237,7 +237,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Example_VO
+  m_Name: VoiceOver
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 081641d4a469f9447b3ffd7d287e6fb6
   m_Children: []

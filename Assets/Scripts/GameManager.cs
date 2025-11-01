@@ -49,9 +49,13 @@ namespace DefaultNamespace
         
         [SerializeField] private PlayableDirector _timelinePlayable;
 
-        [SerializeField] public SoundEvent enemyShowedUpSE;
+        [Space] [SerializeField] public SoundEvent enemyShowedUpSE;
         [SerializeField] public SoundEvent enemyMovedSE;
         [SerializeField] public SoundEvent enemyDestroyedSE;
+
+        [Space] [SerializeField] public SoundEvent canonShotSE;
+        [SerializeField] public SoundEvent canonHitSE;
+        [SerializeField] public SoundEvent canonMissedSE;
 
 
         // int values of KeyCode Enum of keyboard numbers
@@ -182,8 +186,16 @@ namespace DefaultNamespace
 
                 bool success = grid.TryKillCell(int.Parse(left), right);
             
-                DOTween.Sequence().AppendInterval(2.5f).OnComplete(() =>
+                DOTween.Sequence()
+                    .AppendInterval(0.3f).AppendCallback(() =>
+                    {
+                        canonShotSE.Play(transform);
+                    })
+                    .AppendInterval(2.5f).AppendCallback(() =>
                 {
+                    if (success) canonHitSE.Play(transform);
+                    else canonMissedSE.Play(transform);
+                    
                     trauma = 1f;
                     _cameraShake.SetTrauma(0.5f);
                     grid.CleanDiedEnemies();

@@ -5613,6 +5613,9 @@ MonoBehaviour:
   enemyShowedUpSE: {fileID: 11400000, guid: ebc78f38efb6e5b4e8ae473cb27fbe1b, type: 2}
   enemyMovedSE: {fileID: 11400000, guid: c128da7fb614b214e8e4b2fc4d0fcb5f, type: 2}
   enemyDestroyedSE: {fileID: 11400000, guid: 2b467cc9a9eac7640b9755491fdd6916, type: 2}
+  canonShotSE: {fileID: 11400000, guid: 60660060cbc59f44dbc3d63e49507acb, type: 2}
+  canonHitSE: {fileID: 11400000, guid: baf88464ce394894ea59f304e5e9ede3, type: 2}
+  canonMissedSE: {fileID: 11400000, guid: 0e85fab506b05ec46a32b1e5f0d97755, type: 2}
   twoLetterTelegraphLimitEnabled: 0
 --- !u!4 &1084138476
 Transform:

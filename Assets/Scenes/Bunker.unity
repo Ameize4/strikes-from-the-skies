@@ -2607,11 +2607,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2683738262453034793, guid: 1305720c8c0a1794eb921f1a69df2ec0, type: 3}
       propertyPath: internals.debug.drawSoundEventsInGameViewEnabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2683738262453034793, guid: 1305720c8c0a1794eb921f1a69df2ec0, type: 3}
       propertyPath: internals.debug.drawSoundEventsInSceneViewEnabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1576988032187696, guid: 1305720c8c0a1794eb921f1a69df2ec0, type: 3}
       propertyPath: m_Name
@@ -9219,9 +9219,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 136cc6cadf9d2324b9bc46e99f032b07, type: 2}
     - target: {fileID: 5066595790257469836, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -7578797847539021145, guid: 136cc6cadf9d2324b9bc46e99f032b07, type: 2}
+    - target: {fileID: 5066595790257469836, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5441814959615374369, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: -7578797847539021145, guid: 136cc6cadf9d2324b9bc46e99f032b07, type: 2}
     - target: {fileID: 8220881878328737918, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}
       propertyPath: m_Name
       value: MorseTranscriptionLabel
@@ -9321,7 +9329,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8220881878328737918, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 10731653ad7c4884ab6362a6704e2c54, type: 3}
 --- !u!64 &1470078511
 MeshCollider:

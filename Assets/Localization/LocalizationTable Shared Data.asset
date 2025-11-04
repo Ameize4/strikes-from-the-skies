@@ -1,0 +1,688 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: LocalizationTable Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: LocalizationTable
+  m_TableCollectionNameGuidString: 5c0bc3c92bb249b4b85cdf57aecf7bf9
+  m_Entries:
+  - m_Id: 43523039232
+    m_Key: ui_mainmenu_start_game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43564982272
+    m_Key: ui_settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43564982273
+    m_Key: ui_exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43564982274
+    m_Key: ui_sound_volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43569176576
+    m_Key: ui_music_volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43569176577
+    m_Key: ui_interaction_press1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43569176578
+    m_Key: ui_interaction_to_interact
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43569176579
+    m_Key: ui_interaction_hold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43569176580
+    m_Key: ui_interaction_to_answer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43569176581
+    m_Key: ui_interaction_yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43569176582
+    m_Key: ui_interaction_no
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43569176583
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43569176584
+    m_Key: chapter1_intro1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43569176585
+    m_Key: chapter1_intro2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43569176586
+    m_Key: chapter1_intro3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43569176587
+    m_Key: chapter1_intro4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43569176588
+    m_Key: chapter1_intro5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43569176589
+    m_Key: chapter1_intro6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43569176590
+    m_Key: chapter1_intro7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43569176591
+    m_Key: chapter1_intro8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370880
+    m_Key: chapter1_unfinished_enemy1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370881
+    m_Key: chapter1_unfinished_enemy2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370882
+    m_Key: chapter1_unfinished_enemy3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370883
+    m_Key: chapter1_unfinished_enemy4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370884
+    m_Key: chapter1_unfinished_enemy5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370885
+    m_Key: chapter1_unfinished_enemy6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370886
+    m_Key: chapter2_question_history1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370887
+    m_Key: chapter2_question_history2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370888
+    m_Key: chapter2_question_history3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370889
+    m_Key: chapter2_question_history_option1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370890
+    m_Key: chapter2_question_history_option1_answer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370891
+    m_Key: chapter2_question_history_option2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370892
+    m_Key: chapter2_question_history_option2_answer1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370893
+    m_Key: chapter2_question_history_option2_answer2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370894
+    m_Key: chapter2_question_posters1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370895
+    m_Key: chapter2_question_posters2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370896
+    m_Key: chapter2_question_posters_option1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370897
+    m_Key: chapter2_question_posters_option1_answer1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370898
+    m_Key: chapter2_question_posters_option2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370899
+    m_Key: chapter2_question_posters_option2_answer1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370900
+    m_Key: chapter2_question_posters_option2_answer2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370901
+    m_Key: chapter2_question_posters_option2_answer3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370902
+    m_Key: chapter2_question_posters_option2_answer4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370903
+    m_Key: chapter2_question_posters_option2_answer5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370904
+    m_Key: chapter2_wave_incoming1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370905
+    m_Key: chapter2_question_isalive
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370906
+    m_Key: chapter2_question_isalive_yes1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370907
+    m_Key: chapter2_question_isalive_yes2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370908
+    m_Key: chapter2_question_isalive_yes3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370909
+    m_Key: chapter2_question_isalive_yes4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370910
+    m_Key: chapter2_question_isalive_no1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370911
+    m_Key: chapter2_question_isalive_no2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370912
+    m_Key: chapter2_arrowslit1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370913
+    m_Key: chapter2_arrowslit2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370914
+    m_Key: chapter2_arrowslit3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370915
+    m_Key: chapter2_arrowslit4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370916
+    m_Key: chapter2_arrowslit_breath1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370917
+    m_Key: chapter2_arrowslit_breath2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370918
+    m_Key: chapter2_arrowslit_light1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370919
+    m_Key: chapter2_arrowslit_light2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370920
+    m_Key: chapter2_
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370921
+    m_Key: chapter2_before_sleep1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370922
+    m_Key: chapter2_before_sleep2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370923
+    m_Key: chapter2_before_sleep3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370924
+    m_Key: chapter2_before_sleep4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370925
+    m_Key: chapter2_before_sleep5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370926
+    m_Key: chapter3_interrupted_dialogue1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370927
+    m_Key: chapter3_interrupted_dialogue2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370928
+    m_Key: chapter3_interrupted_dialogue3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370929
+    m_Key: chapter3_interrupted_dialogue4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370930
+    m_Key: chapter3_invisible_enemy1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370931
+    m_Key: chapter3_invisible_enemy2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370932
+    m_Key: chapter3_invisible_enemy3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370933
+    m_Key: chapter3_invisible_enemy4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370934
+    m_Key: chapter3_invisible_enemy5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370935
+    m_Key: chapter3_long_inactivity1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370936
+    m_Key: chapter3_long_inactivity2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370937
+    m_Key: chapter3_long_inactivity3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370938
+    m_Key: chapter3_long_inactivity4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43573370939
+    m_Key: chapter3_long_inactivity5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565184
+    m_Key: chapter3_long_inactivity6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565185
+    m_Key: chapter3_long_inactivity7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565186
+    m_Key: chapter3_successfull_elimination1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565187
+    m_Key: chapter3_successfull_elimination2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565188
+    m_Key: chapter3_successfull_elimination3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565189
+    m_Key: chapter3_successfull_elimination4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565190
+    m_Key: chapter3_artillerist_goodmood1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565191
+    m_Key: chapter3_artillerist_goodmood2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565192
+    m_Key: chapter3_artilerist_badmood1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565193
+    m_Key: chapter3_artilerist_badmood2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565194
+    m_Key: chapter3_artillerist_inhumanely1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565195
+    m_Key: chapter3_artillerist_inhumanely2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565196
+    m_Key: chapter3_artillerist_inhumanely3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565197
+    m_Key: chapter3_artillerist_must_be_done1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565198
+    m_Key: chapter3_artillerist_must_be_done2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565199
+    m_Key: chapter3_artillerist_must_be_done3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565200
+    m_Key: chapter4_sorrow1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565201
+    m_Key: chapter4_sorrow2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565202
+    m_Key: chapter4_sorrow3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565203
+    m_Key: chapter4_sorrow4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565204
+    m_Key: chapter4_sorrow5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565205
+    m_Key: chapter4_sorrow6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565206
+    m_Key: chapter4_sorrow_army1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565207
+    m_Key: chapter4_sorrow_army2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565208
+    m_Key: chapter4_sorrow_army3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565209
+    m_Key: chapter4_sorrow_army4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565210
+    m_Key: chapter4_sorrow_army5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565211
+    m_Key: chapter4_sorrow_army6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565212
+    m_Key: chapter4_sorrow_cat1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565213
+    m_Key: chapter4_sorrow_cat2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565214
+    m_Key: chapter4_sorrow_cat3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565215
+    m_Key: chapter4_sorrow_cat4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565216
+    m_Key: chapter4_sorrow_cat5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565217
+    m_Key: chapter4_sorrow_cat6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565218
+    m_Key: chapter4_sorrow_cat7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565219
+    m_Key: chapter4_sorrow_cat8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565220
+    m_Key: chapter4_sorrow_cat9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565221
+    m_Key: chapter4_sorrow_cat10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565222
+    m_Key: chapter4_sorrow_cat11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565223
+    m_Key: chapter4_sorrow7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565224
+    m_Key: chapter4_sorrow8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565225
+    m_Key: chapter4_sorrow9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565226
+    m_Key: chapter4_sorrow10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565227
+    m_Key: chapter4_sorrow11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565228
+    m_Key: chapter4_sorrow12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565229
+    m_Key: chapter5_evacuation1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565230
+    m_Key: chapter5_evacuation2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565231
+    m_Key: chapter5_evacuation3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565232
+    m_Key: chapter5_evacuation4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565233
+    m_Key: chapter5_evacuation5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565234
+    m_Key: chapter5_evacuation6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565235
+    m_Key: chapter5_evacuation7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565236
+    m_Key: chapter5_evacuation8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565237
+    m_Key: chapter5_evacuation9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565238
+    m_Key: chapter5_evacuation10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565239
+    m_Key: chapter5_evacuation11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565240
+    m_Key: chapter5_evacuation12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565241
+    m_Key: chapter5_evacuation13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565242
+    m_Key: chapter5_evacuation14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565243
+    m_Key: chapter5_evacuation15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565244
+    m_Key: chapter5_dying_artilerist1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565245
+    m_Key: chapter5_dying_artilerist2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565246
+    m_Key: chapter5_dying_artilerist3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565247
+    m_Key: chapter5_dying_artilerist4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565248
+    m_Key: chapter5_dying_artilerist5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565249
+    m_Key: chapter5_dying_artilerist6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43577565250
+    m_Key: chapter5_fake_voice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43581759488
+    m_Key: basestate_damaged1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43581759489
+    m_Key: basestate_damaged2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43581759490
+    m_Key: basestate_damaged3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43581759491
+    m_Key: basestate_seriously_damaged1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43581759492
+    m_Key: basestate_seriously_damaged2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43581759493
+    m_Key: basestate_seriously_damaged3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43581759494
+    m_Key: basestate_seriously_damaged4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43581759495
+    m_Key: basestate_almost_dead1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43581759496
+    m_Key: basestate_almost_dead2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43581759497
+    m_Key: basestate_almost_dead3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43581759498
+    m_Key: basestate_almost_dead4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43581759499
+    m_Key: mapobj_dot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43581759500
+    m_Key: mapobj_magg
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43581759501
+    m_Key: mapobj_greenfall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43581759502
+    m_Key: mapobj_ashsea
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43581759503
+    m_Key: mapobj_headquartet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43581759504
+    m_Key: mapobj_oldbunker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43581759505
+    m_Key: mapobj_imhere
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 3971364639616532905
+  references:
+    version: 2
+    RefIds:
+    - rid: 3971364639616532905
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1762282603614

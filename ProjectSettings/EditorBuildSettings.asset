@@ -9,5 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Bunker.unity
     guid: ab8adab5cb8e31d4a9c1dcb816d4e91c
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: b97f33b95ab7ed3498153d8bbeb595a2, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.localization.settings: {fileID: 11400000, guid: 8b36130eaafe8b5489b844920b25e0f5, type: 2}
   m_UseUCBPForAssetBundles: 0

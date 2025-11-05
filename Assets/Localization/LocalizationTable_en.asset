@@ -62,636 +62,13 @@ MonoBehaviour:
     m_Localized: No
     m_Metadata:
       m_Items: []
-  - m_Id: 43569176584
-    m_Localized: Greetings, Sergeant. My name is Edward Dowell, I am the artillerist.
-      You are my fire controller.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43569176585
+  - m_Id: 3002717757441
     m_Localized: The Empire's forces are currently evacuating the civilians. Our
       duty is to provide them with cover.
     m_Metadata:
       m_Items: []
-  - m_Id: 43569176586
-    m_Localized: To begin, activate the map on the table. There should be a switch..
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43569176587
-    m_Localized: Activated? Good.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43569176588
-    m_Localized: Fire controller, you must provide me with enemy coordinates. The
-      enemy is marked on the map with red dots.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43569176589
-    m_Localized: When you see one - telegraph me immediately.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43569176590
-    m_Localized: Don't even think of using the phone. The Command suspects wiretapping.
-      Only the telegraph!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43569176591
-    m_Localized: When you hear the sirens, it will mean that the enemy's attacking.
-      Phone communications will be out immediately, so no use relying on them.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370880
-    m_Localized: 'You''re in luck: there''s a wounded enemy on the battlefield. Still
-      alive, but immobile'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370881
-    m_Localized: At least you'll learn how it's done, before all hell breaks loose.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370882
-    m_Localized: 'I repeat: when you see the red dot, do not hesitate and send me
-      the coordinates immediately.'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370883
-    m_Localized: Well, I'll be damned. We've spent five years to capture this land.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370884
-    m_Localized: And yet the enemy wipes out all fortifications in a matter of hours...
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370885
-    m_Localized: Enough chitchat. Be ready to send me the coordinates.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370886
-    m_Localized: Good job, Sergeant! See, it ain't that hard. I'm no rookie myself
-      - I've got your back.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370887
-    m_Localized: I do wonder, does the young folk even know about the great conquests
-      of the Empire?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370888
-    m_Localized: What do they teach you about us at school?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370889
-    m_Localized: 'Not much: just dates and the outcomes.'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370890
-    m_Localized: Seriously? They are raising a lost generation. Just so you know,
-      we went through hell and back for the good of the Empire!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370891
-    m_Localized: Every year, there's a special lesson. Not to mention my history
-      teacher - he's obsessed with that era.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370892
-    m_Localized: I'm glad to hear that. Good to know the country remembers our feat.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370893
-    m_Localized: The battles raged at this very place. It has belonged to us for
-      the longest time. The Empire becomes mightier thanks to people like you and
-      I.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370894
-    m_Localized: ...
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370895
-    m_Localized: Do you also have these posters? Who do you think are the monsters
-      depicted on them?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370896
-    m_Localized: No idea.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370897
-    m_Localized: They're supposed to be us! What horrible faces! I'm no heartthrob,
-      sure, but these make us out to be complete freaks!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370898
-    m_Localized: Us?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370899
-    m_Localized: That's right, sonny.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370900
-    m_Localized: I only wonder if they had really seen us this way? Or was it just
-      so the soldiers would fight better?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370901
-    m_Localized: The Republic saw us as monsters. Still, it was them who set their
-      own lands on fire just to smoke us out!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370902
-    m_Localized: 'They made excuses! Said they didn''t have time to evacuate their
-      civilians. The point is: they''ve destroyed everything they could get their
-      hands on just so that we wouldn''t get it.'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370903
-    m_Localized: However it may be, we won. We've made these lands into our colonies.
-      That's because our homeland is the greatest Empire of this era!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370904
-    m_Localized: Crap! They are coming! Prepare to send the coordinates!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370905
-    m_Localized: Looks like we held them off. Sergeant, you alive?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370906
-    m_Localized: Yes.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370907
-    m_Localized: Good to hear.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370908
-    m_Localized: ...
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370909
-    m_Localized: Alright. You did well. Good job.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370910
-    m_Localized: No.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370911
-    m_Localized: Ha-ha. A joker, huh? I like that.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370912
-    m_Localized: Who do you think we are fighting?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370913
-    m_Localized: The Command stays silent and whoever I talk to doesn't know either.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370914
-    m_Localized: What if it turns out there's no enemy at all? What if we're fighting
-      among ourselves?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370915
-    m_Localized: Hey, is your firing slit welded too?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370916
-    m_Localized: Aye, sir. Not a hole, it's pretty stuffy in here.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370917
-    m_Localized: Open the ventilation door sometimes. If you can even call it a door.
-      Can't even fit a hand through there. Still, at least you'll get some fresh
-      air.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370918
-    m_Localized: Aye. Even light doesn't pass through.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370919
-    m_Localized: You hang on in there. Everything feels pressing on you at first,
-      then you get used to it. At least open the storeroom door sometimes. It will
-      trick you into feeling there's more space.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370920
-    m_Localized: ...
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370921
-    m_Localized: You've piled it on me, Sarge.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370922
-    m_Localized: I'll go lay down.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370923
-    m_Localized: My advice - you do the same. Haven't had a chance to sit down since
-      arrival.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370924
-    m_Localized: Sleep a bit or do something else. You'll need the stength.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370925
-    m_Localized: Over.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370926
-    m_Localized: So, Sergeant, got any sleep?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370927
-    m_Localized: I didn't get much myself. Wish there was a pillow and a blanket.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370928
-    m_Localized: And a good book. Discovered a writer recently, what's his name...
-      Wells!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370929
-    m_Localized: Now that fellow is a pro at making things u...
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370930
-    m_Localized: Come in, do you read me?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370931
-    m_Localized: Commander Aiken speaking.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370932
-    m_Localized: The enemy is currently at Dotinheim. They are currently undetectable
-      by our radars. Still, we know for sure they are there.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370933
-    m_Localized: Blanket the town with fire now. Otherwise, the enemy will get away.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370934
-    m_Localized: I repeat - fire on Dotinheim. Begin at once.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370935
-    m_Localized: Sergeant, what the hell do you think you are doing?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370936
-    m_Localized: You want a military tribunal? Fine - I'll see to it. You'll end
-      up cutting timber on a penal gang!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370937
-    m_Localized: Mark my words - you won't get off easy!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370938
-    m_Localized: Dowell, open fire!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43573370939
-    m_Localized: You should thank Edward. You'd be executed this very day if not
-      for him.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565184
-    m_Localized: Return to your duty, immediately.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565185
-    m_Localized: You won't have another chance.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565186
-    m_Localized: Sergeant Dowell, congratualtions on the successful attack. The Motherland
-      will not forget you.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565187
-    m_Localized: This conversation is an exception. It won't happen again.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565188
-    m_Localized: 'I once again remind you: using the phone during attacks is strictly
-      prohibited!'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565189
-    m_Localized: Over.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565190
-    m_Localized: Hey, Sergeant, you did a great job.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565191
-    m_Localized: Don't beat yourself up. Orders are orders.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565192
-    m_Localized: Rookie, have you lost your mind?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565193
-    m_Localized: An order's an order.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565194
-    m_Localized: This is inhumane. There may have still been people left there.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565195
-    m_Localized: Let's pretend I didn't hear that. What were you thinking when you
-      applied for the army? We are killing people, not pushing forms.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565196
-    m_Localized: If I hear anything like this again - I won't pity you and will report
-      to the Command.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565197
-    m_Localized: You are right. I should have done it.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565198
-    m_Localized: That's what I like to hear. Now stop whining and do your job.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565199
-    m_Localized: You won't last long here otherwise.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565200
-    m_Localized: Hey, Sergeant, you there?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565201
-    m_Localized: "I can\u2019t calm myself."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565202
-    m_Localized: "There\u2019s something clawing at my heart."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565203
-    m_Localized: I keep thinking about life back home - what's become of my house?
-      What are the neighbours doing? Is the family safe?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565204
-    m_Localized: "I know I shouldn\u2019t. But the harder I push the thoughts away,
-      the more they press back."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565205
-    m_Localized: Tell me about yourself, take the old man's mind off of things.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565206
-    m_Localized: I applied for the army right after school.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565207
-    m_Localized: Didn't lose any time, eh. Me too. After getting the graduation forms
-      I went straight where the action was. Seen the world, got a medal.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565208
-    m_Localized: Got back home. Had a hard time at first, but I got used to it.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565209
-    m_Localized: I became a mechanic, worked at a factory. Now I got back into my
-      uniform again and it feels like I never left.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565210
-    m_Localized: When you get back, don't let yourself go mad. And if you got a girl
-      - don't blame her. It's not her fault.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565211
-    m_Localized: You went through your own hell, just like she - through her's. She's
-      waiting for you, her heart in torment.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565212
-    m_Localized: I've got a cat back home. Name's Fluffy.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565213
-    m_Localized: There you go talking about home again! I asked you to talk about
-      something else, didn't I?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565214
-    m_Localized: ...
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565215
-    m_Localized: Five years ago, we got a dog. A little white one, hunts mice better
-      than a cat!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565216
-    m_Localized: My wife's a tailoress. Mimi's her main model. She'd always make
-      her little costumes, hats. She used to make those for the kids, but they're
-      all grown up now.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565217
-    m_Localized: I keep telling her - why bother so much with the dog. But she just
-      can't help it.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565218
-    m_Localized: I say - let her do it, before she puts me in a bonnet.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565219
-    m_Localized: ...
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565220
-    m_Localized: One time the coals in the firplace got all cooled down, so Mimi
-      snuck in there and slept through the night.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565221
-    m_Localized: Scared the crap out of me. I go downstairs - and in the dark, all
-      I see are her eyes and teeth.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565222
-    m_Localized: We all laughed so hard that time.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565223
-    m_Localized: ...
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565224
-    m_Localized: I hope we'll get home soon.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565225
-    m_Localized: ...
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565226
-    m_Localized: Did you hear that?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565227
-    m_Localized: What's happening?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565228
-    m_Localized: What the...
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565229
-    m_Localized: Sergeant, this is commander Aiken speaking.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565230
-    m_Localized: The evacuation of the civilians has been successfully completed.
-      The Empire thanks you for your service.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565231
-    m_Localized: ...
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565232
-    m_Localized: What the hell is this?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565233
-    m_Localized: It's heading our way! Report to the Colonel!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565235
-    m_Localized: Is everyone ok?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565236
-    m_Localized: Fellows, stop panicking!  It's a dud.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565237
-    m_Localized: It has a pretty weird shape, though.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565238
-    m_Localized: ...
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565239
-    m_Localized: All command units, move to the bunker on level minus three. Immediately.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565240
-    m_Localized: Forget the stupid papers! We're all about to die!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565241
-    m_Localized: I repeat. All command units, move to the bunker on level minus three.
-      Immediately.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565242
-    m_Localized: Oh God!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565243
-    m_Localized: AAAAAAAAA!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565244
-    m_Localized: Hello? Sergeant?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565245
-    m_Localized: You're a nice chap... We did a good job, you and I.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565246
-    m_Localized: It hurts, for some reason. Guess I got them kidneys inflamed again.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565247
-    m_Localized: Should've covered with a scarf, like my wife told me. Guess I was
-      too dumb to listen.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565248
-    m_Localized: Listen... Remember me on Day of Military Glory, will you?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565249
-    m_Localized: See ya around... Sarge...
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43577565250
-    m_Localized: Fire controller! Open the door. Are you going to let me in?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43581759488
-    m_Localized: Do you copy? Headquarters speaking.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43581759489
-    m_Localized: The Command has suffered insignificant damage. The situation is
-      under control.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43581759490
-    m_Localized: Return to your duty.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43581759491
-    m_Localized: Do you copy? This is Command Headquarters.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43581759492
-    m_Localized: Sergeant, you must pay more attention..
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43581759493
-    m_Localized: The last attack has considerably damaged the Headquarters building.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43581759494
-    m_Localized: We won't last long. Please, protect us.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43581759495
-    m_Localized: Sergeant! This is Command Headquarters.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43581759496
-    m_Localized: "By your recklessness, you\u2019ve jeopardized the survival of not
-      only the Command Headquarters, but the whole Empire!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43581759497
-    m_Localized: The situation's dire! The building is going to collapse any minute!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43581759498
-    m_Localized: Don't let these freaks bury us here!
+  - m_Id: 76895159640100
+    m_Localized: "\u2026"
     m_Metadata:
       m_Items: []
   - m_Id: 43581759499
@@ -720,6 +97,633 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 43581759505
     m_Localized: I`m here
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3002717757440
+    m_Localized: Greetings, Sergeant. My name is Edward Dowell, I am the artillerist.
+      You are my fire controller.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251456
+    m_Localized: To begin, activate the map on the table. There should be a switch..
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251457
+    m_Localized: Activated? Good.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251458
+    m_Localized: Fire controller, you must provide me with enemy coordinates. The
+      enemy is marked on the map with red dots.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251459
+    m_Localized: When you see one - telegraph me immediately.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251460
+    m_Localized: Don't even think of using the phone. The Command suspects wiretapping.
+      Only the telegraph!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251461
+    m_Localized: When you hear the sirens, it will mean that the enemy's attacking.
+      Phone communications will be out immediately, so no use relying on them.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251462
+    m_Localized: 'You''re in luck: there''s a wounded enemy on the battlefield. Still
+      alive, but immobile'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251463
+    m_Localized: At least you'll learn how it's done, before all hell breaks loose.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251464
+    m_Localized: 'I repeat: when you see the red dot, do not hesitate and send me
+      the coordinates immediately.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251465
+    m_Localized: Well, I'll be damned. We've spent five years to capture this land.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251466
+    m_Localized: And yet the enemy wipes out all fortifications in a matter of hours...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251467
+    m_Localized: Enough chitchat. Be ready to send me the coordinates.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251468
+    m_Localized: Good job, Sergeant! See, it ain't that hard. I'm no rookie myself
+      - I've got your back.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251469
+    m_Localized: I do wonder, does the young folk even know about the great conquests
+      of the Empire?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251470
+    m_Localized: What do they teach you about us at school?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251471
+    m_Localized: 'Not much: just dates and the outcomes.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251472
+    m_Localized: Seriously? They are raising a lost generation. Just so you know,
+      we went through hell and back for the good of the Empire!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251473
+    m_Localized: Every year, there's a special lesson. Not to mention my history
+      teacher - he's obsessed with that era.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251474
+    m_Localized: I'm glad to hear that. Good to know the country remembers our feat.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251475
+    m_Localized: The battles raged at this very place. It has belonged to us for
+      the longest time. The Empire becomes mightier thanks to people like you and
+      I.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251476
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251477
+    m_Localized: Do you also have these posters? Who do you think are the monsters
+      depicted on them?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251478
+    m_Localized: No idea.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251479
+    m_Localized: They're supposed to be us! What horrible faces! I'm no heartthrob,
+      sure, but these make us out to be complete freaks!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251480
+    m_Localized: Us?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251481
+    m_Localized: That's right, sonny.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251482
+    m_Localized: I only wonder if they had really seen us this way? Or was it just
+      so the soldiers would fight better?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251483
+    m_Localized: The Republic saw us as monsters. Still, it was them who set their
+      own lands on fire just to smoke us out!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251484
+    m_Localized: 'They made excuses! Said they didn''t have time to evacuate their
+      civilians. The point is: they''ve destroyed everything they could get their
+      hands on just so that we wouldn''t get it.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251485
+    m_Localized: However it may be, we won. We've made these lands into our colonies.
+      That's because our homeland is the greatest Empire of this era!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251486
+    m_Localized: Crap! They are coming! Prepare to send the coordinates!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251487
+    m_Localized: Looks like we held them off. Sergeant, you alive?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251488
+    m_Localized: Yes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251489
+    m_Localized: Good to hear.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251490
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445760
+    m_Localized: Alright. You did well. Good job.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445761
+    m_Localized: No.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445762
+    m_Localized: Ha-ha. A joker, huh? I like that.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445763
+    m_Localized: Who do you think we are fighting?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445764
+    m_Localized: The Command stays silent and whoever I talk to doesn't know either.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445765
+    m_Localized: What if it turns out there's no enemy at all? What if we're fighting
+      among ourselves?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445766
+    m_Localized: Hey, is your firing slit welded too?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445767
+    m_Localized: Aye, sir. Not a hole, it's pretty stuffy in here.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445768
+    m_Localized: Open the ventilation door sometimes. If you can even call it a door.
+      Can't even fit a hand through there. Still, at least you'll get some fresh
+      air.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445769
+    m_Localized: Aye. Even light doesn't pass through.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445770
+    m_Localized: You hang on in there. Everything feels pressing on you at first,
+      then you get used to it. At least open the storeroom door sometimes. It will
+      trick you into feeling there's more space.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445771
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445772
+    m_Localized: You've piled it on me, Sarge.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445773
+    m_Localized: I'll go lay down.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445774
+    m_Localized: My advice - you do the same. Haven't had a chance to sit down since
+      arrival.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445775
+    m_Localized: Sleep a bit or do something else. You'll need the stength.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445776
+    m_Localized: Over.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445777
+    m_Localized: So, Sergeant, got any sleep?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445778
+    m_Localized: I didn't get much myself. Wish there was a pillow and a blanket.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445779
+    m_Localized: And a good book. Discovered a writer recently, what's his name...
+      Wells!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445780
+    m_Localized: Now that fellow is a pro at making things u...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445781
+    m_Localized: Come in, do you read me?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445782
+    m_Localized: Commander Aiken speaking.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445783
+    m_Localized: The enemy is currently at Dotinheim. They are currently undetectable
+      by our radars. Still, we know for sure they are there.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445784
+    m_Localized: Blanket the town with fire now. Otherwise, the enemy will get away.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445785
+    m_Localized: I repeat - fire on Dotinheim. Begin at once.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445786
+    m_Localized: Sergeant, what the hell do you think you are doing?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445787
+    m_Localized: You want a military tribunal? Fine - I'll see to it. You'll end
+      up cutting timber on a penal gang!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445788
+    m_Localized: Mark my words - you won't get off easy!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445789
+    m_Localized: Dowell, open fire!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445790
+    m_Localized: You should thank Edward. You'd be executed this very day if not
+      for him.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445791
+    m_Localized: Return to your duty, immediately.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445792
+    m_Localized: You won't have another chance.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445793
+    m_Localized: Sergeant Dowell, congratualtions on the successful attack. The Motherland
+      will not forget you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445794
+    m_Localized: This conversation is an exception. It won't happen again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445795
+    m_Localized: 'I once again remind you: using the phone during attacks is strictly
+      prohibited!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445796
+    m_Localized: Over.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445797
+    m_Localized: Hey, Sergeant, you did a great job.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445798
+    m_Localized: Don't beat yourself up. Orders are orders.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445799
+    m_Localized: Rookie, have you lost your mind?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445800
+    m_Localized: An order's an order.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445801
+    m_Localized: This is inhumane. There may have still been people left there.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445802
+    m_Localized: Let's pretend I didn't hear that. What were you thinking when you
+      applied for the army? We are killing people, not pushing forms.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445803
+    m_Localized: If I hear anything like this again - I won't pity you and will report
+      to the Command.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895155445804
+    m_Localized: You are right. I should have done it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640064
+    m_Localized: That's what I like to hear. Now stop whining and do your job.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640065
+    m_Localized: You won't last long here otherwise.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640066
+    m_Localized: Hey, Sergeant, you there?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640067
+    m_Localized: "I can\u2019t calm myself."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640068
+    m_Localized: "There\u2019s something clawing at my heart."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640069
+    m_Localized: I keep thinking about life back home - what's become of my house?
+      What are the neighbours doing? Is the family safe?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640070
+    m_Localized: "I know I shouldn\u2019t. But the harder I push the thoughts away,
+      the more they press back."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640071
+    m_Localized: Tell me about yourself, take the old man's mind off of things.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640072
+    m_Localized: I applied for the army right after school.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640073
+    m_Localized: Didn't lose any time, eh. Me too. After getting the graduation forms
+      I went straight where the action was. Seen the world, got a medal.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640074
+    m_Localized: Got back home. Had a hard time at first, but I got used to it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640075
+    m_Localized: I became a mechanic, worked at a factory. Now I got back into my
+      uniform again and it feels like I never left.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640076
+    m_Localized: When you get back, don't let yourself go mad. And if you got a girl
+      - don't blame her. It's not her fault.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640077
+    m_Localized: You went through your own hell, just like she - through her's. She's
+      waiting for you, her heart in torment.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640078
+    m_Localized: I've got a cat back home. Name's Fluffy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640079
+    m_Localized: There you go talking about home again! I asked you to talk about
+      something else, didn't I?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640080
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640081
+    m_Localized: Five years ago, we got a dog. A little white one, hunts mice better
+      than a cat!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640082
+    m_Localized: My wife's a tailoress. Mimi's her main model. She'd always make
+      her little costumes, hats. She used to make those for the kids, but they're
+      all grown up now.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640083
+    m_Localized: I keep telling her - why bother so much with the dog. But she just
+      can't help it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640084
+    m_Localized: I say - let her do it, before she puts me in a bonnet.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640085
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640086
+    m_Localized: One time the coals in the firplace got all cooled down, so Mimi
+      snuck in there and slept through the night.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640087
+    m_Localized: Scared the crap out of me. I go downstairs - and in the dark, all
+      I see are her eyes and teeth.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640088
+    m_Localized: We all laughed so hard that time.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640089
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640090
+    m_Localized: I hope we'll get home soon.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640091
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640092
+    m_Localized: Did you hear that?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640093
+    m_Localized: What's happening?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640094
+    m_Localized: What the...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640095
+    m_Localized: Sergeant, this is commander Aiken speaking.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640096
+    m_Localized: The evacuation of the civilians has been successfully completed.
+      The Empire thanks you for your service.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640097
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640098
+    m_Localized: What the hell is this?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640099
+    m_Localized: It's heading our way! Report to the Colonel!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640101
+    m_Localized: Is everyone ok?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640102
+    m_Localized: Fellows, stop panicking!  It's a dud.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640103
+    m_Localized: It has a pretty weird shape, though.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640104
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640105
+    m_Localized: All command units, move to the bunker on level minus three. Immediately.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640106
+    m_Localized: Forget the stupid papers! We're all about to die!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895159640107
+    m_Localized: I repeat. All command units, move to the bunker on level minus three.
+      Immediately.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895163834368
+    m_Localized: Oh God!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895163834369
+    m_Localized: AAAAAAAAA!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895163834370
+    m_Localized: Hello? Sergeant?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895163834371
+    m_Localized: You're a nice chap... We did a good job, you and I.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895163834372
+    m_Localized: It hurts, for some reason. Guess I got them kidneys inflamed again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895163834373
+    m_Localized: Should've covered with a scarf, like my wife told me. Guess I was
+      too dumb to listen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895163834374
+    m_Localized: Listen... Remember me on Day of Military Glory, will you?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895163834375
+    m_Localized: See ya around... Sarge...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895163834376
+    m_Localized: Fire controller! Open the door. Are you going to let me in?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895163834377
+    m_Localized: Do you copy? Headquarters speaking.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895163834378
+    m_Localized: The Command has suffered insignificant damage. The situation is
+      under control.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895163834379
+    m_Localized: Return to your duty.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895163834380
+    m_Localized: Do you copy? This is Command Headquarters.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895163834381
+    m_Localized: Sergeant, you must pay more attention..
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895163834382
+    m_Localized: The last attack has considerably damaged the Headquarters building.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895163834383
+    m_Localized: We won't last long. Please, protect us.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895163834384
+    m_Localized: Sergeant! This is Command Headquarters.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895163834385
+    m_Localized: "By your recklessness, you\u2019ve jeopardized the survival of not
+      only the Command Headquarters, but the whole Empire!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895163834386
+    m_Localized: The situation's dire! The building is going to collapse any minute!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895163834387
+    m_Localized: Don't let these freaks bury us here!
     m_Metadata:
       m_Items: []
   references:

@@ -93,6 +93,12 @@ namespace DefaultNamespace.Map
             PlayAudioStep();
         }
 
+        public void ShowIfInvisible()
+        {
+            data.isInvisible = false;
+            transform.gameObject.SetActive(true);
+        }
+
         private void PlayAudioShowedUp()
         {
             GameManager.Instance.enemyShowedUpSE.Play(transform);

@@ -155,7 +155,6 @@ namespace DefaultNamespace
             Instance.callJumpDialogueName = nodeName;
             Instance.waitingForCall = true;
         }
-        
 
         [YarnCommand("SpawnTimeline")]
         public static void Yarn_SpawnTimeline()
@@ -163,6 +162,12 @@ namespace DefaultNamespace
             Instance._timelinePlayable.Play();
         }
         
+        [YarnCommand("ShowInvisibleEnemies")]
+        public static void Yarn_ShowInvisibleEnemies()
+        {
+            DOTween.Sequence().AppendInterval(60f).AppendCallback(Instance.grid.ShowAllEnemies);
+        }
+
         public void SendMorseCoordinates(string message)
         {
             if (message.Length == 2)

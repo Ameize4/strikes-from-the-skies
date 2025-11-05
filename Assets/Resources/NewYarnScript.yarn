@@ -166,9 +166,10 @@ title: Wave3_Init_CallFromCommand
 ---
 Приём, как слышно? #line:chapter3_invisible_enemy1
 На связи командир Эйкен. #line:chapter3_invisible_enemy2
-Прямо сейчас противник находится по поселению Доттингем. Наш радар не может его засечь. Но мы точно знаем, что он там. #line:chapter3_invisible_enemy3
+Прямо сейчас противник находится в поселении Доттингем. Наш радар не может его засечь. Но мы точно знаем, что он там. #line:chapter3_invisible_enemy3
 Нужно стрелять по городу вслепую. Иначе враг успеет сбежать. #line:chapter3_invisible_enemy4
-Приступайте немедленно. #line:chapter3_invisible_enemy5
+Повторяю – стреляйте по городу Доттингем. Приступайте немедленно. #line:chapter3_invisible_enemy5
+<<ShowInvisibleEnemies>>
 <<SpawnWave>>
 ===
 

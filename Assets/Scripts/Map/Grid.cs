@@ -314,6 +314,14 @@ namespace DefaultNamespace.Map
 
             inActiveWave = true;
         }
+        
+        public void ShowAllEnemies()
+        {
+            foreach (Enemy enemy in enemies)
+            {
+                enemy.ShowIfInvisible();
+            }
+        }
 
         private void FinalizeEnemyWave()
         {

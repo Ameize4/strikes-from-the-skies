@@ -726,6 +726,14 @@ MonoBehaviour:
     m_Localized: Don't let these freaks bury us here!
     m_Metadata:
       m_Items: []
+  - m_Id: 1670395496030208
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1671234927255552
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

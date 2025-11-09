@@ -2,6 +2,7 @@ using System;
 using DefaultNamespace;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization.Components;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 using UnityEngine.Rendering;
@@ -92,17 +93,22 @@ public class pause : MonoBehaviour
     }
 
 
-    private string localString;
-    private int localIdx;
-    
     private void toggleLocal()
     {
-        var textLabel = localButton.GetComponentInChildren<TMP_Text>();
-        localString ??= textLabel.text;
+        var availableLocales = LocalizationSettings.AvailableLocales.Locales;
 
-        localIdx = (localIdx + 1) % LocalizationSettings.AvailableLocales.Locales.Count;
-        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[localIdx];
-        textLabel.text = $"{localString} <b>{LocalizationSettings.SelectedLocale.Formatter}</b>";
+        int currentLocaleIndex = availableLocales.IndexOf(LocalizationSettings.SelectedLocale);
+        int nextLocaleIndex = (currentLocaleIndex + 1) % availableLocales.Count;
+        var nextLocale = availableLocales[nextLocaleIndex];
+        LocalizationSettings.SelectedLocale = nextLocale;
+
+        var textLabel = localButton.GetComponentInChildren<TMP_Text>();
+        
+        var localizedStringEvent = textLabel.GetComponent<LocalizeStringEvent>();
+        localizedStringEvent.enabled = false;
+
+        var stringOperation = LocalizationSettings.StringDatabase.GetLocalizedString("ui_language");
+        textLabel.text = $"{stringOperation} <b>{nextLocale.Identifier.Code.ToUpper()}</b>";
     }
     
     private string tlmString;

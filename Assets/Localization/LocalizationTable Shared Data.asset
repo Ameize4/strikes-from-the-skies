@@ -792,6 +792,14 @@ MonoBehaviour:
     m_Key: mapobj_imhere
     m_Metadata:
       m_Items: []
+  - m_Id: 1670395496030208
+    m_Key: ui_continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1671234927255552
+    m_Key: ui_language
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

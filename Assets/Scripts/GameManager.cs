@@ -1,7 +1,10 @@
 using System;
 using System.Linq;
+using DG.Tweening;
+using Sonity;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using Yarn.Unity;
@@ -32,23 +35,41 @@ namespace DefaultNamespace
 
         public Map.Chapters chapters;
         [SerializeField] private int currentChapterIdx = 0;
+
+        [Space]
+        [SerializeField] private PhoneHandler phoneHandler;
         
         [Space]
         [SerializeField] private CameraShake.CameraShakeProperties cameraShakeProperties;
         private CameraShake _cameraShake;
 
         [Space] [SerializeField] private Volume _volume;
+        [SerializeField] float maxVignette, minVignette;
         private Vignette vignette;
         
-        public AudioClip enemyAudioClip;
-        
-        public Map.EnemyData[] enemiesData;
+        [SerializeField] private PlayableDirector _timelinePlayable;
+
+        [Space] [SerializeField] public SoundEvent enemyShowedUpSE;
+        [SerializeField] public SoundEvent enemyMovedSE;
+        [SerializeField] public SoundEvent enemyDestroyedSE;
+
+        [Space] [SerializeField] public SoundEvent canonShotSE;
+        [SerializeField] public SoundEvent canonHitSE;
+        [SerializeField] public SoundEvent canonMissedSE;
+
+        [Space] [SerializeField] private ParticleSystem p1, p2, p3;
+
 
         // int values of KeyCode Enum of keyboard numbers
         private int alphaKeyCode1 = 49;
         private int alphaKeyCode9 = 57;
 
         private float trauma;
+
+        private bool waitingForCall;
+        private string callJumpDialogueName;
+
+        public bool twoLetterTelegraphLimitEnabled;
 
         private void Awake()
         {
@@ -82,13 +103,12 @@ namespace DefaultNamespace
         {
             if (Input.GetKeyDown(KeyCode.P))
             {
-                grid.BeginEnemyWave(enemiesData);
+                grid.BeginEnemyWave(chapters.debugEnemyData);
             }
             if (Input.GetKey(KeyCode.O))
             {
                 _cameraShake.SetTrauma(1f);
                 trauma = 1f;
-                vignette.intensity.Override(trauma);
             }
 
             if (Input.GetKey(KeyCode.LeftShift))
@@ -105,7 +125,8 @@ namespace DefaultNamespace
             }
 
             trauma = Mathf.Clamp01(trauma - cameraShakeProperties.recoverySpeed * Time.deltaTime);
-            if (trauma != 0) vignette.intensity.value = Mathf.Clamp(trauma, 0.181f, 1f);
+            var vignetteTrauma = (trauma * (maxVignette-minVignette)) + minVignette;
+            if (trauma != 0) vignette.intensity.value = vignetteTrauma;
 
             _cameraShake.Process();
         }
@@ -127,6 +148,26 @@ namespace DefaultNamespace
             Instance.currentChapterIdx += 1;
         }
         
+        [YarnCommand("JumpToCall")]
+        public static void Yarn_JumpToCall(string nodeName)
+        {
+            Instance.phoneHandler.playAudioRing();
+            Instance.callJumpDialogueName = nodeName;
+            Instance.waitingForCall = true;
+        }
+
+        [YarnCommand("SpawnTimeline")]
+        public static void Yarn_SpawnTimeline()
+        {
+            Instance._timelinePlayable.Play();
+        }
+        
+        [YarnCommand("ShowInvisibleEnemies")]
+        public static void Yarn_ShowInvisibleEnemies()
+        {
+            DOTween.Sequence().AppendInterval(60f).AppendCallback(Instance.grid.ShowAllEnemies);
+        }
+
         public void SendMorseCoordinates(string message)
         {
             if (message.Length == 2)
@@ -150,7 +191,25 @@ namespace DefaultNamespace
                     (left, right) = (right, left);
                 }
 
-                grid.TryKillCell(int.Parse(left), right);
+                bool success = grid.TryKillCell(int.Parse(left), right);
+            
+                DOTween.Sequence()
+                    .AppendInterval(0.3f).AppendCallback(() =>
+                    {
+                        canonShotSE.Play(transform);
+                    })
+                    .AppendInterval(2.5f).AppendCallback(() =>
+                {
+                    if (success) canonHitSE.Play(transform);
+                    else canonMissedSE.Play(transform);
+                    
+                    trauma = 1f;
+                    _cameraShake.SetTrauma(0.5f);
+                    grid.CleanDiedEnemies();
+                    p1.Play();
+                    p2.Play();
+                    p3.Play();
+                });
             }
         }
 
@@ -168,6 +227,16 @@ namespace DefaultNamespace
             data.lightmapColor = info.Color;
             // data.shadowMask = info.ShadowMask;
             LightmapSettings.lightmaps = new LightmapData[] { data };
+        }
+        
+        public void AnswerPhone()
+        {
+            if (!waitingForCall) return;
+            
+            waitingForCall = false;
+            dialogueRunner.StartDialogue(callJumpDialogueName);
+            callJumpDialogueName = "";
+            phoneHandler.playAudioPlasticImpact();
         }
     }
 }

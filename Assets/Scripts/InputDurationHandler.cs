@@ -70,6 +70,12 @@ public class InputDurationHandler
         OverholdRule = action;
     }
 
+    public void ProcessIdle()
+    {
+        float idle = Time.time - idleStart;
+        TriggerIdleRule(idle);
+    }
+
     public void Process()
     {
         if (Input.GetKeyDown(key))
@@ -107,8 +113,7 @@ public class InputDurationHandler
         }
         else
         {
-            float idle = Time.time - idleStart;
-            TriggerIdleRule(idle);
+            ProcessIdle();
         }
     }
 

@@ -1,11 +1,13 @@
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace DefaultNamespace
 {
     public class Player : MonoBehaviour
     {
         public CharacterController Character;
+        public InputActionReference move;
         
         private void Start()
         {
@@ -21,8 +23,10 @@ namespace DefaultNamespace
         {
             PlayerCharacterInputs inputs = new PlayerCharacterInputs();
 
-            inputs.MoveAxisForward = Input.GetAxisRaw("Vertical");
-            inputs.MoveAxisRight = Input.GetAxisRaw("Horizontal");
+            var v = move.action.ReadValue<Vector2>();
+
+            inputs.MoveAxisForward = v.y;
+            inputs.MoveAxisRight = v.x;
             inputs.CameraRotation = quaternion.identity;
             
             Character.SetInputs(ref inputs);

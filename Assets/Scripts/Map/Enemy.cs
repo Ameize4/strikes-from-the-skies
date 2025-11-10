@@ -10,7 +10,7 @@ namespace DefaultNamespace.Map
     {
         public float speed;
         public float delay;
-        public GridPos[] path;
+        public GridPos beginPosition;
         public bool isInvisible;
     }
     
@@ -21,7 +21,6 @@ namespace DefaultNamespace.Map
         private Grid grid;
 
         private int posIdx;
-        private Cell[] cellPath;
         
         private float coundDown;
         public bool isDead;
@@ -29,6 +28,9 @@ namespace DefaultNamespace.Map
 
         private float randomMin = -0.5f;
         private float randomMax =  0.5f;
+
+        private Cell cellFrom, cellTo;
+        private float progress;
 
         public Enemy(Grid grid, EnemyData data, Transform transform)
         {
@@ -41,19 +43,19 @@ namespace DefaultNamespace.Map
             
             coundDown += Random.Range(randomMin, randomMax);
             
-            if (isDelayed) transform.gameObject.SetActive(false);
+            SetPath(data);
+            
+            if (isDelayed || data.isInvisible) transform.gameObject.SetActive(false);
+            else PlayAudioShowedUp();
         }
 
-        public void SetPath(GridPos[] path)
+        public void SetPath(EnemyData data)
         {
-            cellPath = new Cell[path.Length];
-            for (var pathIdx = 0; pathIdx < path.Length; pathIdx++)
-            {
-                var gridPos = path[pathIdx];
-                var cell = grid.cells[gridPos.posX * grid.sizeX + gridPos.posY];
-                cellPath[pathIdx] = cell;
-            }
-            transform.position = grid.GetCellPosition(cellPath[0]);
+            cellFrom = grid.GetCellByCoordinates(data.beginPosition);
+            cellFrom.isEnemyHere = true;
+            cellTo = cellFrom.NextCellOnPath;
+
+            transform.position = grid.GetCellPosition(cellFrom);
         }
         
         public void Process()
@@ -69,27 +71,61 @@ namespace DefaultNamespace.Map
             if (isDelayed)
             {
                 transform.gameObject.SetActive(!data.isInvisible);
+                PlayAudioShowedUp();
                 isDelayed = false;
                 return;
             }
+            
+            if (cellTo.isEnemyHere) return;
 
-            posIdx = (posIdx + 1) % cellPath.Length;
-            transform.position = grid.GetCellPosition(cellPath[posIdx]);
+            if (cellTo.contentType == CellContentType.Destination)
+            {
+                Debug.Log("bruh");
+                return;
+            }
+            
+            cellFrom.isEnemyHere = false;
+            cellFrom = cellTo;
+            cellFrom.isEnemyHere = true;
+            cellTo = cellFrom.NextCellOnPath ?? grid.GetCellByCoordinates(data.beginPosition);
+            transform.position = grid.GetCellPosition(cellFrom);
 
-            var audioSource = transform.GetComponent<AudioSource>();
-            audioSource.time = 0.6f;
-            audioSource.pitch = Random.Range(0.95f, 1.1f);
-            audioSource.Play();
+            PlayAudioStep();
+        }
+
+        public void ShowIfInvisible()
+        {
+            data.isInvisible = false;
+            transform.gameObject.SetActive(true);
+        }
+
+        private void PlayAudioShowedUp()
+        {
+            GameManager.Instance.enemyShowedUpSE.Play(transform);
+        }
+        private void PlayAudioStep()
+        {
+            GameManager.Instance.enemyMovedSE.Play(transform);
+        }
+        private void PlayAudioDestroyed()
+        {
+            GameManager.Instance.enemyDestroyedSE.Play(transform);
         }
 
         public bool IsOnCell(Cell cell)
         {
-            return cellPath[posIdx] == cell;
+            return cellFrom == cell;
         }
 
-        public void Die()
+        public void MarkDead()
         {
             isDead = true;
+        }
+
+        public void RemoveFromBoard()
+        {
+            PlayAudioDestroyed();
+            cellFrom.isEnemyHere = false;
             transform.gameObject.SetActive(false);
         }
 

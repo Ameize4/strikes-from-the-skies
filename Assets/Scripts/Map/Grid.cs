@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -20,6 +21,12 @@ namespace DefaultNamespace.Map
     {
         public int sizeX, sizeY;
 
+        [Space]
+        [SerializeField] private GridPos[] walls;
+        [SerializeField] private GridPos[] mainTownCells;
+        [SerializeField] private GridPos[] dotingeimTown, maginshollTown, greenfallTown;
+        
+
         public Cell[] cells;
         public GameObject Cube;
         public GameObject EnemyPrefab;
@@ -27,10 +34,13 @@ namespace DefaultNamespace.Map
         public Vector3 OffsetUp, OffsetRight;
 
         private Enemy[] enemies;
+        private Queue<Enemy> enemiesToClean = new Queue<Enemy>();
         
         private bool inActiveWave = false;
         
         static string[] alphabet = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
+
+        private Queue<Cell> searchFrontier = new Queue<Cell>();
 
         private void Start()
         {
@@ -40,26 +50,160 @@ namespace DefaultNamespace.Map
             {
                 for (int j = 0; j < sizeY; j++)
                 {
-                    cells[i*sizeX + j] = new Cell(new GridPos(i, j), this);
+                    var cell = new Cell(new GridPos(i, j), this);
+                    var cellIndex = i * sizeX + j;
+                    cells[cellIndex] = cell;
+
+                    cell._isAlternative = (j % 2 == 0);
+                    if (i % 2 == 0)
+                    {
+                        cell._isAlternative = !cell._isAlternative;
+                    }
+
+                    if (j > 0)
+                    {
+                        Cell.MakeNorthSouthNeighbors(cell, cells[cellIndex - 1]);
+                    }
+                    if (i > 0)
+                    {
+                        Cell.MakeEastWestNeighbors(cell, cells[cellIndex - sizeY]);
+                    }
                 }
             }
 
-            // Create cell object
+            var n = 1;
             foreach (var cell in cells)
             {
                 var newCube = Instantiate(Cube, transform);
                 newCube.transform.position = GetCellPosition(cell);
                 cell.gameObject = newCube;
-                cell.gameObject.transform.name = $"X{cell.gridPos.posX}Y{cell.gridPos.posY}";
+                cell.gameObject.transform.name = $"X{cell.gridPos.posX}Y{cell.gridPos.posY}n{n}";
+                n++;
             }
             
-
-            AddHelpers();
+            // AddHelpers();
+            foreach (GridPos cell in mainTownCells)
+            {
+                ToggleDestination(cell.posX, cell.posY);
+            }
+            foreach (GridPos cell in walls)
+            {
+                ToggleWall(cell.posX, cell.posY);
+            }
+            foreach (GridPos cell in dotingeimTown)
+            {
+                ToggleWall(cell.posX, cell.posY);
+            }
+            foreach (GridPos cell in maginshollTown)
+            {
+                ToggleWall(cell.posX, cell.posY);
+            }
+            foreach (GridPos cell in greenfallTown)
+            {
+                ToggleWall(cell.posX, cell.posY);
+            }
         }
 
         private void Update()
         {
             UpdateEnemies();
+        }
+
+        public void ToggleDestination(int x, int y)
+        {
+            var cell = GetCellByCoordinates(x, y);
+            ToggleDestination(cell);
+        }
+        
+        private void ToggleDestination(Cell cell)
+        {
+            if (cell.contentType == CellContentType.Destination) {
+                cell.contentType = CellContentType.Empty;
+                if (!FindPath())
+                {
+                    cell.contentType = CellContentType.Destination;
+                    FindPath();
+                }
+            }
+            else
+            {
+                cell.contentType = CellContentType.Destination;
+                FindPath();
+            }
+        }
+
+
+        public void ToggleWall(int x, int y)
+        {
+            var cell = GetCellByCoordinates(x, y);
+            ToggleWall(cell);
+        }
+        
+        private void ToggleWall(Cell cell)
+        {
+            if (cell.contentType == CellContentType.Wall) {
+                cell.contentType = CellContentType.Empty;
+                FindPath();
+            }
+            else if (cell.contentType == CellContentType.Empty)
+            {
+                cell.contentType = CellContentType.Wall;
+                if (!FindPath())
+                {
+                    cell.contentType = CellContentType.Wall;
+                    FindPath();
+                }
+            }
+        }
+
+        private bool FindPath()
+        {
+            foreach (Cell cell in cells)
+            {
+                if (cell.contentType == CellContentType.Destination)
+                {
+                    cell.BecomeDestination();
+                    searchFrontier.Enqueue(cell);
+                }
+                else
+                {
+                    cell.ClearPath();
+                }
+            }
+
+            if (searchFrontier.Count == 0) return false;
+
+                
+            while (searchFrontier.Count > 0) {
+                Cell cell = searchFrontier.Dequeue();
+                if (cell != null)
+                {
+                    if (cell._isAlternative)
+                    {
+                        searchFrontier.Enqueue(cell.GrowPathNorth());
+                        searchFrontier.Enqueue(cell.GrowPathSouth());
+                        searchFrontier.Enqueue(cell.GrowPathEast());
+                        searchFrontier.Enqueue(cell.GrowPathWest());
+                    }
+                    else
+                    {
+                        searchFrontier.Enqueue(cell.GrowPathWest());
+                        searchFrontier.Enqueue(cell.GrowPathEast());
+                        searchFrontier.Enqueue(cell.GrowPathSouth());
+                        searchFrontier.Enqueue(cell.GrowPathNorth());
+                    }
+                }
+            }
+
+            foreach (Cell cell in cells)
+            {
+                if (!cell.HasPath)
+                    return false;
+            }
+
+            foreach (Cell cell in cells) cell.ShowPath();
+
+            return true;
         }
 
         private void UpdateEnemies()
@@ -78,28 +222,56 @@ namespace DefaultNamespace.Map
             return transform.position + transform.TransformDirection(new Vector3(x, 0, y));
         }
 
-        public void TryKillCell(int TargetX, string TargetYLetter)
+        public bool TryKillCell(int TargetX, string TargetYLetter)
         {
             int targetY = Array.FindIndex(alphabet, x => x == TargetYLetter);
-            TryKillCell(TargetX, targetY);
+            return TryKillCell(TargetX, targetY);
         }
         
-        public void TryKillCell(int TargetX, int TargetY)
+        public bool TryKillCell(int TargetX, int TargetY)
         {
-            if (enemies == null) return;
+            if (enemies == null) return false;
             
-            var targetCell = cells[TargetX * sizeX + TargetY];
+            Cell targetCell = GetCellByCoordinates(TargetX, TargetY);
+            if (targetCell == null || !targetCell.isEnemyHere)
+                return false;
 
-            bool isAllKilled = true;
+            bool isEnemyOnCellKiled = false;
+            bool isAllEnemiesKilled = true;
             foreach (var enemy in enemies)
             {
                 // Try kill cells
-                if (enemy.IsOnCell(targetCell)) enemy.Die();
+                if (enemy.IsOnCell(targetCell))
+                {
+                    enemy.MarkDead();
+                    enemiesToClean.Enqueue(enemy);
+                    isEnemyOnCellKiled = true;
+                }
 
-                if (!enemy.isDead) isAllKilled = false;
+                if (!enemy.isDead) isAllEnemiesKilled = false;
             }
 
-            if (isAllKilled) FinalizeEnemyWave();
+            if (isAllEnemiesKilled) FinalizeEnemyWave();
+            return isEnemyOnCellKiled;
+        }
+
+        public void CleanDiedEnemies()
+        {
+            while (enemiesToClean.Count > 0)
+            {
+                Enemy enemy = enemiesToClean.Dequeue();
+                enemy.RemoveFromBoard();
+            }
+        }
+
+        public Cell GetCellByCoordinates(GridPos gridPos)
+        {
+            return GetCellByCoordinates(gridPos.posX, gridPos.posY);
+        }
+        
+        public Cell GetCellByCoordinates(int x, int y)
+        {
+            return cells[x * sizeX + y];
         }
 
         private void AddHelpers()
@@ -133,19 +305,22 @@ namespace DefaultNamespace.Map
             {
                 var enemyData = enemiesData[enemyIdx];
                 var enemyGO = Instantiate(EnemyPrefab, transform);
-                var audioSource =  enemyGO.AddComponent<AudioSource>();
-                audioSource.playOnAwake = false;
-                audioSource.clip = GameManager.Instance.enemyAudioClip;
-                audioSource.volume = 0.2f;
 
                 var localScale = transform.localScale;
                 enemyGO.transform.localScale = new Vector3(1/localScale.x, 1/localScale.y, 1/localScale.z);
                 
                 enemies[enemyIdx] = new Enemy(this, enemyData, enemyGO.transform);
-                enemies[enemyIdx].SetPath(enemyData.path);
             }
 
             inActiveWave = true;
+        }
+        
+        public void ShowAllEnemies()
+        {
+            foreach (Enemy enemy in enemies)
+            {
+                enemy.ShowIfInvisible();
+            }
         }
 
         private void FinalizeEnemyWave()

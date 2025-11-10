@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using DefaultNamespace;
 using DefaultNamespace.Interfaces;
 using DG.Tweening;
+using Sonity;
 using TMPro;
 using UnityEngine;
 
@@ -25,13 +26,15 @@ public class Telegraph : MonoBehaviour, IInteractive
 
     private Vector3 positionInit;
     private Vector3 rotationInit;
+    
+    [Space] [SerializeField] public SoundEvent sound;
 
-    [Header("Audio settings")]
-    [SerializeField] private AudioClip toneClip;
-    private AudioSource audioSource;
-
-    [SerializeField] private float volume = 0.5f;
-    [SerializeField] private float frequency = 700f;
+    // [Header("Audio settings")]
+    // [SerializeField] private AudioClip toneClip;
+    // private AudioSource audioSource;
+    //
+    // [SerializeField] private float volume = 0.5f;
+    // [SerializeField] private float frequency = 700f;
     
     #endregion
 
@@ -62,10 +65,10 @@ public class Telegraph : MonoBehaviour, IInteractive
         positionInit = transform.localPosition;
         rotationInit = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
         
-        audioSource = GetComponent<AudioSource>();
+        // audioSource = GetComponent<AudioSource>();
         
-        toneClip = GenerateTone(frequency, 1);
-        audioSource.clip = toneClip;
+        // toneClip = GenerateTone(frequency, 1);
+        // audioSource.clip = toneClip;
 
         seq = DOTween.Sequence();
         morseInput = new List<string>();
@@ -96,10 +99,16 @@ public class Telegraph : MonoBehaviour, IInteractive
             string.Join("", morseInput));
         label.text = translatedText;
         morseInput.Clear();
+
+        if (GameManager.Instance.twoLetterTelegraphLimitEnabled && translatedText.Length >= 2)
+        {
+            SendMessageAndClear();
+        }
     }
 
     private void SendMessageAndClear()
     {
+        if (translatedText == "" || translatedText.Length < 2) return;
         GameManager.Instance.SendMorseCoordinates(translatedText);
         label.color = Color.green;
         DOTween.To(() => label.color, x => label.color = x, Color.white, 0.6f)
@@ -120,33 +129,37 @@ public class Telegraph : MonoBehaviour, IInteractive
 
     #endregion
 
-    private AudioClip GenerateTone(float freq, float lengthSec)
-    {
-        int sampleRate = AudioSettings.outputSampleRate;
-        int sampleLength = Mathf.CeilToInt(sampleRate * lengthSec);
-        float[] samples = new float[sampleLength];
-
-        for (int i = 0; i < sampleLength; i++)
-        {
-            float t = (float)i / sampleRate;
-            samples[i] = Mathf.Sin(2 * Mathf.PI * freq * t) * volume;
-        }
-
-        AudioClip clip = AudioClip.Create($"Tone_{freq}Hz", sampleLength, 1, sampleRate, false);
-        clip.SetData(samples, 0);
-        return clip;
-    }
+    // private AudioClip GenerateTone(float freq, float lengthSec)
+    // {
+    //     int sampleRate = AudioSettings.outputSampleRate;
+    //     int sampleLength = Mathf.CeilToInt(sampleRate * lengthSec);
+    //     float[] samples = new float[sampleLength];
+    //
+    //     for (int i = 0; i < sampleLength; i++)
+    //     {
+    //         float t = (float)i / sampleRate;
+    //         samples[i] = Mathf.Sin(2 * Mathf.PI * freq * t) * volume;
+    //     }
+    //
+    //     AudioClip clip = AudioClip.Create($"Tone_{freq}Hz", sampleLength, 1, sampleRate, false);
+    //     clip.SetData(samples, 0);
+    //     return clip;
+    // }
 
     void Update()
     {
-        if (isInteractiveModeEnabled == false) return;
+        if (isInteractiveModeEnabled == false)
+        {
+            inputDurationHandler.ProcessIdle();
+            return;
+        }
         
         inputDurationHandler.Process();
     }
 
     private void AnimateClickOn()
     {
-        audioSource.Play();
+        sound.Play(transform);
         seq.Kill();
         seq = DOTween.Sequence();
         seq.Append(DOTween.To(
@@ -163,7 +176,7 @@ public class Telegraph : MonoBehaviour, IInteractive
 
     private void AnimateClickOff()
     {
-        audioSource.Stop();
+        sound.Stop(transform);
         seq.Kill();
         seq = DOTween.Sequence();
         seq.Append(DOTween.To(
@@ -181,13 +194,10 @@ public class Telegraph : MonoBehaviour, IInteractive
     public void SetInteraction(bool value)
     {
         isInteractiveModeEnabled = value;
+        //  There has been logic, but now it is artefact of unused logic
         if (value)
         { }
         else
-        {
-            label.text = "";
-            translatedText = "";
-            morseInput?.Clear();
-        }
+        { }
     }
 }

@@ -82,6 +82,13 @@ title: AfterWave1_X_2
 
 title: AfterWave1_X_X
 ---
+К слову, ты сейчас, как и я, находимся в старых бункерах врага. Поэтому тут висят эти паршивые плакаты.
+<<jump AfterWave1_X_X_X>>
+===
+
+title: AfterWave1_X_X_X
+---
+/// Добавить звук проигрывания тревоги ///
 Вот чёрт! Они идут! Готовься посылать координаты! #line:chapter2_wave_incoming1 
 <<SpawnWave>>
 ===
@@ -148,8 +155,10 @@ title: Wave2_WhyBunkerClosed
 И тебе тоже стоит. С самого прибытия сюда ни на минуту не присел #line:chapter2_before_sleep3
 Поспи пока или ещё чем займись. Силы нам пока пригодятся. #line:chapter2_before_sleep4
 Конец связи. #line:chapter2_before_sleep5
+/// Добавить скрипт о необходимости лечь спать ///
 <<wait 10>>
 <<JumpToCall Wave3_Init>>
+/// Здесь можно добавить ивент со скрежетом из толчка, тоесть трубы. Подойдя к нему, слышно, будто что-то убежало и звук прекращается ///
 ===
 
 
@@ -159,6 +168,14 @@ title: Wave3_Init
 Я дремал кое-как. Сюда бы подушку с одеялом… #line:chapter3_interrupted_dialogue2
 И книжку бы хорошую. Я вот писателя для себя открыл… как его… Уэллс! #line:chapter3_interrupted_dialogue3
 Он, конечно, мастер выдумы... #line:chapter3_interrupted_dialogue4
+/// Добавить запуск новой волны. Сделать её ///
+<<SpawnWave>>
+===
+
+title: AfterWave3
+---
+<<NextChapter>>
+<<wait 2>>
 <<JumpToCall Wave3_Init_CallFromCommand>>
 ===
 
@@ -175,7 +192,7 @@ title: Wave3_Init_CallFromCommand
 
 title: Wave3_EnemyDefeated
 ---
-
+<<wait 2>>
 <<JumpToCall Wave3_EnemyDefeated_Call>>
 ===
 
@@ -185,7 +202,7 @@ title: Wave3_EnemyDefeated_Call
 Этот разговор - исключение. Впредь такого не повторится. #line:chapter3_successfull_elimination2
 :Напоминаю: использовать телефон во время атаки категорически запрещено! #line:chapter3_successfull_elimination3
 До связи. #line:chapter3_successfull_elimination4
-
+<<wait 10>>
 <<JumpToCall Wave3_EnemyDefeated_Call2>>
 ===
 
@@ -204,20 +221,45 @@ title: Сhapter3_artillerist_inhumanely
 ---
 Будем считать, что я этого не слышал. Ты вообще чем думал, когда в армию пошёл? Мы здесь убиваем, а не бумажки перекладываем. #line:chapter3_artillerist_inhumanely2
 Ещё раз что-то подобное ляпнешь – сообщу командованию и жалеть тебя не буду. #line:chapter3_artillerist_inhumanely3
-<<JumpToCall Сhapter4>>
+/// Надо лечь спать для продолжения ///
+Поспи пока или ещё чем займись. Силы нам пока пригодятся.
+Конец связи.
+/// Добавить скрипт о необходимости лечь спать ///
+<<wait 10>>
+<<NextChapter>>
+<<Jump Сhapter4_Wave>>
 ===
 
 title: Сhapter3_artillerist_must_be_done
 ---
 Вот это я и хотел услышать. Прекрати сопли на кулак наматывать и займись делом. #line:chapter3_artillerist_must_be_done2
 Иначе долго здесь не протянешь. #line:chapter3_artillerist_must_be_done3
+/// Надо лечь спать для продолжения ///
+Поспи пока или ещё чем займись. Силы нам пока пригодятся.
+Конец связи.
+/// Добавить скрипт о необходимости лечь спать ///
 <<wait 10>>
+<<NextChapter>>
+<<Jump Сhapter4_Wave>>
+===
+
+title: Сhapter4_Wave
+---
+<<SpawnWave>>
+
+===
+
+title: Сhapter4_AfterWave
+---
+<<NextChapter>>
+<<wait 2>>
 <<JumpToCall Сhapter4>>
 ===
 
 title: Сhapter4
 ---
-<<NextChapter>>
+/// Надо начать день прям с тревоги ///
+/// Добавить запуск новой волны. Сделать её ///
 Эй, сержант, ты тут? #line:chapter4_sorrow1
 Я всё места себе найти не могу. #line:chapter4_sorrow2
 Что-то на сердце неспокойно. #line:chapter4_sorrow3
@@ -259,6 +301,7 @@ title: Сhapter4_BigEnemy
 ---
 … #line:chapter4_sorrow7
 Скорее бы домой уже. #line:chapter4_sorrow8
+/// Добавить звук титанически огромного трипода (если он будет конечно) ///
 … #line:chapter4_sorrow9
 Ты это слышал? #line:chapter4_sorrow10
 Что происходит? #line:chapter4_sorrow11

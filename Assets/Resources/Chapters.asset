@@ -71,7 +71,18 @@ MonoBehaviour:
     dialogueAfterWave:
       project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
       nodeName: AfterWave2
-  - name: Wave 3, Invisible enemy
+  - name: Wave 3
+    enemiesData:
+    - speed: 999
+      delay: 0
+      beginPosition:
+        posX: 4
+        posY: 4
+      isInvisible: 0
+    dialogueAfterWave:
+      project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
+      nodeName: AfterWave3
+  - name: Wave 4, Invisible enemy
     enemiesData:
     - speed: 999
       delay: 0
@@ -82,7 +93,18 @@ MonoBehaviour:
     dialogueAfterWave:
       project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
       nodeName: Wave3_EnemyDefeated
-  - name: Wave 4, boss fight
+  - name: Wave 5
+    enemiesData:
+    - speed: 999
+      delay: 0
+      beginPosition:
+        posX: 4
+        posY: 4
+      isInvisible: 0
+    dialogueAfterWave:
+      project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
+      nodeName: "\u0421hapter4_AfterWave"
+  - name: Wave 6, boss fight
     enemiesData:
     - speed: 15
       delay: 0
@@ -141,7 +163,7 @@ MonoBehaviour:
     dialogueAfterWave:
       project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
       nodeName: Chapter5
-  - name: Wave 5, Swarm
+  - name: Wave 7, Swarm
     enemiesData:
     - speed: 999
       delay: 1.085
@@ -219,57 +241,9 @@ MonoBehaviour:
       project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
       nodeName: 
   debugEnemyData:
-  - speed: 15
+  - speed: 999
     delay: 0
     beginPosition:
       posX: 4
-      posY: 4
-    isInvisible: 0
-  - speed: 20
-    delay: 2.5
-    beginPosition:
-      posX: 0
-      posY: 0
-    isInvisible: 0
-  - speed: 20
-    delay: 3
-    beginPosition:
-      posX: 2
-      posY: 9
-    isInvisible: 0
-  - speed: 20
-    delay: 3.5
-    beginPosition:
-      posX: 0
-      posY: 3
-    isInvisible: 0
-  - speed: 15
-    delay: 30
-    beginPosition:
-      posX: 4
-      posY: 4
-    isInvisible: 0
-  - speed: 20
-    delay: 32.5
-    beginPosition:
-      posX: 5
-      posY: 4
-    isInvisible: 0
-  - speed: 20
-    delay: 33.5
-    beginPosition:
-      posX: 4
-      posY: 3
-    isInvisible: 0
-  - speed: 20
-    delay: 34
-    beginPosition:
-      posX: 4
-      posY: 5
-    isInvisible: 0
-  - speed: 20
-    delay: 35
-    beginPosition:
-      posX: 3
       posY: 4
     isInvisible: 0

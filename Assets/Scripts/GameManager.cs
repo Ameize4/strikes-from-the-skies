@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using DG.Tweening;
+using Sonity;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Playables;
@@ -48,7 +49,16 @@ namespace DefaultNamespace
         
         [SerializeField] private PlayableDirector _timelinePlayable;
 
-        public AudioClip enemyAudioClip;
+        [Space] [SerializeField] public SoundEvent enemyShowedUpSE;
+        [SerializeField] public SoundEvent enemyMovedSE;
+        [SerializeField] public SoundEvent enemyDestroyedSE;
+
+        [Space] [SerializeField] public SoundEvent canonShotSE;
+        [SerializeField] public SoundEvent canonHitSE;
+        [SerializeField] public SoundEvent canonMissedSE;
+
+        [Space] [SerializeField] private ParticleSystem p1, p2, p3;
+
 
         // int values of KeyCode Enum of keyboard numbers
         private int alphaKeyCode1 = 49;
@@ -145,7 +155,6 @@ namespace DefaultNamespace
             Instance.callJumpDialogueName = nodeName;
             Instance.waitingForCall = true;
         }
-        
 
         [YarnCommand("SpawnTimeline")]
         public static void Yarn_SpawnTimeline()
@@ -153,6 +162,12 @@ namespace DefaultNamespace
             Instance._timelinePlayable.Play();
         }
         
+        [YarnCommand("ShowInvisibleEnemies")]
+        public static void Yarn_ShowInvisibleEnemies()
+        {
+            DOTween.Sequence().AppendInterval(60f).AppendCallback(Instance.grid.ShowAllEnemies);
+        }
+
         public void SendMorseCoordinates(string message)
         {
             if (message.Length == 2)
@@ -178,11 +193,22 @@ namespace DefaultNamespace
 
                 bool success = grid.TryKillCell(int.Parse(left), right);
             
-                DOTween.Sequence().AppendInterval(2.5f).OnComplete(() =>
+                DOTween.Sequence()
+                    .AppendInterval(0.3f).AppendCallback(() =>
+                    {
+                        canonShotSE.Play(transform);
+                    })
+                    .AppendInterval(2.5f).AppendCallback(() =>
                 {
+                    if (success) canonHitSE.Play(transform);
+                    else canonMissedSE.Play(transform);
+                    
                     trauma = 1f;
                     _cameraShake.SetTrauma(0.5f);
                     grid.CleanDiedEnemies();
+                    p1.Play();
+                    p2.Play();
+                    p3.Play();
                 });
             }
         }

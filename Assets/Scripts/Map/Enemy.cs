@@ -46,7 +46,7 @@ namespace DefaultNamespace.Map
             SetPath(data);
             
             if (isDelayed || data.isInvisible) transform.gameObject.SetActive(false);
-            else PlayAudioStep();
+            else PlayAudioShowedUp();
         }
 
         public void SetPath(EnemyData data)
@@ -71,7 +71,7 @@ namespace DefaultNamespace.Map
             if (isDelayed)
             {
                 transform.gameObject.SetActive(!data.isInvisible);
-                PlayAudioStep();
+                PlayAudioShowedUp();
                 isDelayed = false;
                 return;
             }
@@ -93,12 +93,23 @@ namespace DefaultNamespace.Map
             PlayAudioStep();
         }
 
+        public void ShowIfInvisible()
+        {
+            data.isInvisible = false;
+            transform.gameObject.SetActive(true);
+        }
+
+        private void PlayAudioShowedUp()
+        {
+            GameManager.Instance.enemyShowedUpSE.Play(transform);
+        }
         private void PlayAudioStep()
         {
-            var audioSource = transform.GetComponent<AudioSource>();
-            audioSource.time = 0.6f;
-            audioSource.pitch = Random.Range(0.95f, 1.1f);
-            audioSource.Play();
+            GameManager.Instance.enemyMovedSE.Play(transform);
+        }
+        private void PlayAudioDestroyed()
+        {
+            GameManager.Instance.enemyDestroyedSE.Play(transform);
         }
 
         public bool IsOnCell(Cell cell)
@@ -113,6 +124,7 @@ namespace DefaultNamespace.Map
 
         public void RemoveFromBoard()
         {
+            PlayAudioDestroyed();
             cellFrom.isEnemyHere = false;
             transform.gameObject.SetActive(false);
         }

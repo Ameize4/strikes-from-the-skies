@@ -13,5 +13,5 @@ ScriptedImporter:
   variablesClassNamespace: 
   variablesClassParent: Yarn.Unity.InMemoryVariableStorage
   useAddressableAssets: 0
-  unityLocalisationStringTableCollectionGUID: 
-  UseUnityLocalisationSystem: 0
+  unityLocalisationStringTableCollectionGUID: 1820b369e8fb41f49a07d9ad06f3102e
+  UseUnityLocalisationSystem: 1

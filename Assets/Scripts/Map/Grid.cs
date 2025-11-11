@@ -81,7 +81,7 @@ namespace DefaultNamespace.Map
                 n++;
             }
             
-            AddHelpers();
+            // AddHelpers();
             foreach (GridPos cell in mainTownCells)
             {
                 ToggleDestination(cell.posX, cell.posY);
@@ -305,10 +305,6 @@ namespace DefaultNamespace.Map
             {
                 var enemyData = enemiesData[enemyIdx];
                 var enemyGO = Instantiate(EnemyPrefab, transform);
-                var audioSource =  enemyGO.AddComponent<AudioSource>();
-                audioSource.playOnAwake = false;
-                audioSource.clip = GameManager.Instance.enemyAudioClip;
-                audioSource.volume = 0.2f;
 
                 var localScale = transform.localScale;
                 enemyGO.transform.localScale = new Vector3(1/localScale.x, 1/localScale.y, 1/localScale.z);
@@ -317,6 +313,14 @@ namespace DefaultNamespace.Map
             }
 
             inActiveWave = true;
+        }
+        
+        public void ShowAllEnemies()
+        {
+            foreach (Enemy enemy in enemies)
+            {
+                enemy.ShowIfInvisible();
+            }
         }
 
         private void FinalizeEnemyWave()

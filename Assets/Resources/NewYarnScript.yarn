@@ -36,7 +36,7 @@ title: AfterWave1Call
 Молодец, сержант! Видишь, не так уж и сложно. Да и я не пальцем деланный, со мной не пропадёшь. #line:chapter2_question_history1
 Вот интересно, молодёжь вообще в курсе про великие завоевания Империи? #line:chapter2_question_history2
 Что сейчас про нас в школе говорят? #line:chapter2_question_history3
--> Совсем немного: только даты да итоги #line:chapter2_question_history_option1
+-> Совсем немного. Только даты да итоги #line:chapter2_question_history_option1
     <<jump AfterWave1_1>>
 -> Каждый год специальный урок. Ещё и историк мой без ума от этого времени #line:chapter2_question_history_option2
     <<jump AfterWave1_2>>
@@ -75,7 +75,7 @@ title: AfterWave1_X_2
 Верно, сынок. #line:chapter2_question_posters_option2_answer1 
 :Меня только одно волнует: они действительно нас такими видели? Или это для того, чтобы их солдаты бились как следует? #line:chapter2_question_posters_option2_answer2
 Республика всегда видела в нас чудовищ. Но они же при этом жгли собственные земли, чтобы нас выкурить! #line:chapter2_question_posters_option2_answer3
-Оправдывались! Говорили, что не успели эвакуировать мирное население. Важно одно: они уничтожили всё, что успели, лишь бы нам не досталось. #line:chapter2_question_posters_option2_answer4
+:Оправдывались! Говорили, что не успели эвакуировать мирное население. Важно одно: они уничтожили всё, что успели, лишь бы нам не досталось. #line:chapter2_question_posters_option2_answer4
 Но, так или иначе, мы победили. И территории эти сделали нашей колонией. Потому что наша страна – величайшая империя своей эпохи! #line:chapter2_question_posters_option2_answer5
 <<jump AfterWave1_X_X>>
 ===

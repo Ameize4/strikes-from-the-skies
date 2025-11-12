@@ -38,6 +38,7 @@ namespace DefaultNamespace
 
         [Space]
         [SerializeField] private PhoneHandler phoneHandler;
+        [SerializeField] private BedHandler bedHandler;
         
         [Space]
         [SerializeField] private CameraShake.CameraShakeProperties cameraShakeProperties;
@@ -80,6 +81,9 @@ namespace DefaultNamespace
 
         private bool waitingForCall;
         private string callJumpDialogueName;
+
+        private bool waitingForBed;
+        private string bedJumpDialogueName;
 
         public bool twoLetterTelegraphLimitEnabled;
 
@@ -166,6 +170,19 @@ namespace DefaultNamespace
             Instance.phoneHandler.playAudioRing();
             Instance.callJumpDialogueName = nodeName;
             Instance.waitingForCall = true;
+        }
+        
+        [YarnCommand("InitBedInteract")]
+        public static void Yarn_InitBedInteract(string nodeName)
+        {
+            Instance.bedJumpDialogueName = nodeName;
+            Instance.waitingForBed = true;
+        }
+        
+        [YarnCommand("StopSleep")]
+        public static void Yarn_StopSleep()
+        {
+            Instance.bedHandler.StopSleep();
         }
 
         [YarnCommand("SpawnTimeline")]
@@ -269,6 +286,16 @@ namespace DefaultNamespace
             dialogueRunner.StartDialogue(callJumpDialogueName);
             callJumpDialogueName = "";
             phoneHandler.playAudioPlasticImpact();
+        }
+        
+        public void BedInteract()
+        {
+            if (!waitingForBed) return;
+            
+            waitingForBed = false;
+            dialogueRunner.StartDialogue(bedJumpDialogueName);
+            bedJumpDialogueName = "";
+            // Fade In
         }
     }
 }

@@ -59,6 +59,18 @@ namespace DefaultNamespace
 
         [Space] [SerializeField] private ParticleSystem p1, p2, p3;
 
+        [Serializable]
+        private struct YarnSoundBox
+        {
+            public string name;
+            public SoundEvent sound;
+            public Transform transform;
+
+            public void Play() => sound.Play(transform);
+            public void Stop() => sound.Stop(transform);
+        }
+        [Space] [SerializeField] private YarnSoundBox[] yarnSounds;
+
 
         // int values of KeyCode Enum of keyboard numbers
         private int alphaKeyCode1 = 49;
@@ -166,6 +178,26 @@ namespace DefaultNamespace
         public static void Yarn_ShowInvisibleEnemies()
         {
             DOTween.Sequence().AppendInterval(60f).AppendCallback(Instance.grid.ShowAllEnemies);
+        }
+        
+        [YarnCommand("PlaySound")]
+        public static void Yarn_PlaySound(string name)
+        {
+            foreach (var yarnSoundBox in Instance.yarnSounds)
+            {
+                if (yarnSoundBox.name == name) {yarnSoundBox.Play(); return;}
+            }
+            Debug.LogWarning($"There is no yarn sound with {name} name");
+        }
+        
+        [YarnCommand("StopSound")]
+        public static void Yarn_StopSound(string name)
+        {
+            foreach (var yarnSoundBox in Instance.yarnSounds)
+            {
+                if (yarnSoundBox.name == name) {yarnSoundBox.Stop(); return;}
+            }
+            Debug.LogWarning($"There is no yarn sound with {name} name");
         }
 
         public void SendMorseCoordinates(string message)

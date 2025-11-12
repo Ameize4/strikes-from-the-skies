@@ -202,64 +202,124 @@ MonoBehaviour:
       nodeName: "\u0421hapter4_AfterWave"
   - name: Wave 6, boss fight
     enemiesData:
-    - speed: 18
+    - speed: 25
       delay: 0
       beginPosition:
         posX: 0
         posY: 0
       isInvisible: 0
-    - speed: 18
+    - speed: 25
       delay: 0.1
       beginPosition:
         posX: 1
         posY: 1
       isInvisible: 0
-    - speed: 18
+    - speed: 25
       delay: 0.2
       beginPosition:
         posX: 0
         posY: 2
       isInvisible: 0
-    - speed: 18
+    - speed: 25
       delay: 0.3
       beginPosition:
         posX: 1
         posY: 3
       isInvisible: 0
-    - speed: 18
+    - speed: 25
       delay: 0.4
       beginPosition:
         posX: 0
         posY: 4
       isInvisible: 0
-    - speed: 17
+    - speed: 25
       delay: 0.5
       beginPosition:
         posX: 1
         posY: 5
       isInvisible: 0
-    - speed: 17
+    - speed: 25
       delay: 0.6
       beginPosition:
         posX: 0
         posY: 6
       isInvisible: 0
-    - speed: 17
+    - speed: 25
       delay: 0.7
       beginPosition:
         posX: 1
         posY: 7
       isInvisible: 0
-    - speed: 17
+    - speed: 25
       delay: 0.8
       beginPosition:
         posX: 0
         posY: 8
       isInvisible: 0
-    - speed: 17
+    - speed: 25
       delay: 0.9
       beginPosition:
         posX: 1
+        posY: 9
+      isInvisible: 0
+    - speed: 25
+      delay: 1
+      beginPosition:
+        posX: 1
+        posY: 0
+      isInvisible: 0
+    - speed: 25
+      delay: 1.1
+      beginPosition:
+        posX: 0
+        posY: 1
+      isInvisible: 0
+    - speed: 25
+      delay: 1.2
+      beginPosition:
+        posX: 1
+        posY: 2
+      isInvisible: 0
+    - speed: 25
+      delay: 1.3
+      beginPosition:
+        posX: 0
+        posY: 3
+      isInvisible: 0
+    - speed: 25
+      delay: 1.4
+      beginPosition:
+        posX: 1
+        posY: 4
+      isInvisible: 0
+    - speed: 25
+      delay: 1.5
+      beginPosition:
+        posX: 0
+        posY: 5
+      isInvisible: 0
+    - speed: 25
+      delay: 1.6
+      beginPosition:
+        posX: 1
+        posY: 6
+      isInvisible: 0
+    - speed: 25
+      delay: 1.7
+      beginPosition:
+        posX: 0
+        posY: 7
+      isInvisible: 0
+    - speed: 25
+      delay: 1.8
+      beginPosition:
+        posX: 1
+        posY: 8
+      isInvisible: 0
+    - speed: 25
+      delay: 1.9
+      beginPosition:
+        posX: 0
         posY: 9
       isInvisible: 0
     dialogueAfterWave:
@@ -343,122 +403,122 @@ MonoBehaviour:
       project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
       nodeName: 
   debugEnemyData:
-  - speed: 18
+  - speed: 25
     delay: 0
     beginPosition:
       posX: 0
       posY: 0
     isInvisible: 0
-  - speed: 18
+  - speed: 25
     delay: 0.1
     beginPosition:
       posX: 1
       posY: 1
     isInvisible: 0
-  - speed: 18
+  - speed: 25
     delay: 0.2
     beginPosition:
       posX: 0
       posY: 2
     isInvisible: 0
-  - speed: 18
+  - speed: 25
     delay: 0.3
     beginPosition:
       posX: 1
       posY: 3
     isInvisible: 0
-  - speed: 18
+  - speed: 25
     delay: 0.4
     beginPosition:
       posX: 0
       posY: 4
     isInvisible: 0
-  - speed: 17
+  - speed: 25
     delay: 0.5
     beginPosition:
       posX: 1
       posY: 5
     isInvisible: 0
-  - speed: 17
+  - speed: 25
     delay: 0.6
     beginPosition:
       posX: 0
       posY: 6
     isInvisible: 0
-  - speed: 17
+  - speed: 25
     delay: 0.7
     beginPosition:
       posX: 1
       posY: 7
     isInvisible: 0
-  - speed: 17
+  - speed: 25
     delay: 0.8
     beginPosition:
       posX: 0
       posY: 8
     isInvisible: 0
-  - speed: 17
+  - speed: 25
     delay: 0.9
     beginPosition:
       posX: 1
       posY: 9
     isInvisible: 0
-  - speed: 16
+  - speed: 25
     delay: 1
     beginPosition:
       posX: 1
       posY: 0
     isInvisible: 0
-  - speed: 16
+  - speed: 25
     delay: 1.1
     beginPosition:
       posX: 0
       posY: 1
     isInvisible: 0
-  - speed: 16
+  - speed: 25
     delay: 1.2
     beginPosition:
       posX: 1
       posY: 2
     isInvisible: 0
-  - speed: 16
+  - speed: 25
     delay: 1.3
     beginPosition:
       posX: 0
       posY: 3
     isInvisible: 0
-  - speed: 16
+  - speed: 25
     delay: 1.4
     beginPosition:
       posX: 1
       posY: 4
     isInvisible: 0
-  - speed: 15
+  - speed: 25
     delay: 1.5
     beginPosition:
       posX: 0
       posY: 5
     isInvisible: 0
-  - speed: 15
+  - speed: 25
     delay: 1.6
     beginPosition:
       posX: 1
       posY: 6
     isInvisible: 0
-  - speed: 15
+  - speed: 25
     delay: 1.7
     beginPosition:
       posX: 0
       posY: 7
     isInvisible: 0
-  - speed: 15
+  - speed: 25
     delay: 1.8
     beginPosition:
       posX: 1
       posY: 8
     isInvisible: 0
-  - speed: 15
-    delay: 1.1
+  - speed: 25
+    delay: 1.9
     beginPosition:
       posX: 0
       posY: 9

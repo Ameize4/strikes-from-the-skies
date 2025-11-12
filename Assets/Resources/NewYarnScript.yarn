@@ -150,20 +150,23 @@ title: Сhapter2_arrowslit_light
 
 title: Wave2_WhyBunkerClosed
 ---
+:Кстати, забыл сказать: если ошибся в воде координат и хочешь стереть её – зажми и держи кнопку ввода. Так ты сотрёшь символ.
+...
 Загрузил ты меня, сержант. #line:chapter2_before_sleep1
 Пойду прилягу. #line:chapter2_before_sleep2
 И тебе тоже стоит. С самого прибытия сюда ни на минуту не присел #line:chapter2_before_sleep3
 Поспи пока или ещё чем займись. Силы нам пока пригодятся. #line:chapter2_before_sleep4
 Конец связи. #line:chapter2_before_sleep5
 /// Добавить скрипт о необходимости лечь спать ///
-<<wait 10>>
-<<JumpToCall Wave3_Init>>
+<<InitBedInteract Wave3_Init>>
 /// Здесь можно добавить ивент со скрежетом из толчка, тоесть трубы. Подойдя к нему, слышно, будто что-то убежало и звук прекращается ///
 ===
 
 
 title: Wave3_Init
 ---
+<<wait 2>>
+<<StopSleep>>
 Ну что, сержант, удалось поспать? #line:chapter3_interrupted_dialogue1
 Я дремал кое-как. Сюда бы подушку с одеялом… #line:chapter3_interrupted_dialogue2
 И книжку бы хорошую. Я вот писателя для себя открыл… как его… Уэллс! #line:chapter3_interrupted_dialogue3
@@ -221,31 +224,31 @@ title: Сhapter3_artillerist_inhumanely
 ---
 Будем считать, что я этого не слышал. Ты вообще чем думал, когда в армию пошёл? Мы здесь убиваем, а не бумажки перекладываем. #line:chapter3_artillerist_inhumanely2
 Ещё раз что-то подобное ляпнешь – сообщу командованию и жалеть тебя не буду. #line:chapter3_artillerist_inhumanely3
-/// Надо лечь спать для продолжения ///
 Поспи пока или ещё чем займись. Силы нам пока пригодятся.
 Конец связи.
 /// Добавить скрипт о необходимости лечь спать ///
-<<wait 10>>
 <<NextChapter>>
-<<jump Сhapter4_Wave>>
+<<InitBedInteract Сhapter4_Wave>>
 ===
 
 title: Сhapter3_artillerist_must_be_done
 ---
 Вот это я и хотел услышать. Прекрати сопли на кулак наматывать и займись делом. #line:chapter3_artillerist_must_be_done2
 Иначе долго здесь не протянешь. #line:chapter3_artillerist_must_be_done3
-/// Надо лечь спать для продолжения ///
 Поспи пока или ещё чем займись. Силы нам пока пригодятся.
 Конец связи.
 /// Добавить скрипт о необходимости лечь спать ///
-<<wait 10>>
 <<NextChapter>>
-<<jump Сhapter4_Wave>>
+<<InitBedInteract Сhapter4_Wave>>
 ===
 
 title: Сhapter4_Wave
 ---
+<<wait 1.5>>
 <<SpawnWave>>
+<<wait 2>>
+<<StopSleep>>
+
 
 ===
 
@@ -304,7 +307,9 @@ title: Сhapter4_BigEnemy
 /// Добавить звук титанически огромного трипода (если он будет конечно) ///
 … #line:chapter4_sorrow9
 Ты это слышал? #line:chapter4_sorrow10
+… 
 Что происходит? #line:chapter4_sorrow11
+… 
 Это что ещё за… #line:chapter4_sorrow12
 <<SpawnWave>>
 ===

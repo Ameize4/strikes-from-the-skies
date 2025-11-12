@@ -4335,7 +4335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: {fileID: 720391400}
   dotLen: 0.15
-  letterPause: 0.4
+  letterPause: 1
   wordPause: 1.5
   MaxPressDuration: 1
   tweenDuration: 0.1

@@ -38,8 +38,8 @@ MonoBehaviour:
       debugDrawSoundEventColorEnd: {r: 0.66, g: 0, b: 1, a: 1}
       debugDrawSoundEventColorOutline: {r: 0, g: 0, b: 0, a: 1}
       baseExpand: 1
-      volumeDecibel: 0
-      volumeRatio: 1
+      volumeDecibel: -17
+      volumeRatio: 0.14125375
       polyphony: 1
       soundEventModifier:
         volumeDecibel: 0

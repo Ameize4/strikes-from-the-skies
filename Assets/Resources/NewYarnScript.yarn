@@ -173,6 +173,7 @@ title: Wave3_Init
 И книжку бы хорошую. Я вот писателя для себя открыл… как его… Уэллс! #line:chapter3_interrupted_dialogue3
 Он, конечно, мастер выдумы... #line:chapter3_interrupted_dialogue4
 /// Добавить запуск новой волны. Сделать её ///
+<<PlaySound Siren>>
 <<SpawnWave>>
 ===
 
@@ -191,6 +192,7 @@ title: Wave3_Init_CallFromCommand
 Нужно стрелять по городу вслепую. Иначе враг успеет сбежать. #line:chapter3_invisible_enemy4
 Повторяю – стреляйте по городу Доттингем. Приступайте немедленно. #line:chapter3_invisible_enemy5
 <<ShowInvisibleEnemies>>
+<<PlaySound Siren>>
 <<SpawnWave>>
 ===
 
@@ -244,6 +246,7 @@ title: Сhapter3_artillerist_must_be_done
 title: Сhapter4_Wave
 ---
 <<wait 1.5>>
+<<PlaySound Siren>>
 <<SpawnWave>>
 <<wait 2>>
 <<StopSleep>>
@@ -310,6 +313,7 @@ title: Сhapter4_BigEnemy
 Что происходит? #line:chapter4_sorrow11
 … 
 Это что ещё за… #line:chapter4_sorrow12
+<<PlaySound Siren>>
 <<SpawnWave>>
 ===
 
@@ -329,6 +333,7 @@ title: Chapter5_Call
 Оно летит в нашу сторону! Доложите товарищу полковнику! #line:chapter5_evacuation5
 … #line:chapter5_evacuation6
 Все целы? #line:chapter5_evacuation7
+<<PlaySound Alarm>>
 <<SpawnWave>>
 Товарищи, немедленно отставить панику! Это неразорвавшийся снаряд. #line:chapter5_evacuation8
 Только форма у него какая-то странная. #line:chapter5_evacuation9

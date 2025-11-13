@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e444e5f947e2a7409a1eaa10f9fa16e, type: 3}
-  m_Name: objects_map_enemy_showed_up_SC
+  m_Name: ambience_emitter_wind_SC
   m_EditorClassIdentifier: Sonity.Public.Runtime::Sonity.SoundContainer
   internals:
     data:
@@ -47,11 +47,11 @@ MonoBehaviour:
       hrtfPluginSpatialize: 0
       hrtfPluginSpatializePostEffects: 0
       volumeExpand: 1
-      volumeDecibel: -3.1
-      volumeRatio: 0.699842
+      volumeDecibel: -4.2
+      volumeRatio: 0.61659503
       volumeRandomEnable: 0
       volumeRandomRangeDecibel: -3
-      volumeDistanceRolloff: -12
+      volumeDistanceRolloff: -4
       volumeDistanceCurve:
         serializedVersion: 2
         m_Curve:
@@ -429,14 +429,14 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-      lowpassExpand: 0
-      lowpassEnabled: 0
-      lowpassFrequencyEditor: 20000
-      lowpassFrequencyEngine: 1
+      lowpassExpand: 1
+      lowpassEnabled: 1
+      lowpassFrequencyEditor: 1707
+      lowpassFrequencyEngine: 0.084434435
       lowpassAmountEditor: 6
       lowpassAmountEngine: 1
-      lowpassDistanceEnable: 0
-      lowpassDistanceFrequencyRolloff: -2
+      lowpassDistanceEnable: 1
+      lowpassDistanceFrequencyRolloff: -2.6
       lowpassDistanceFrequencyCurve:
         serializedVersion: 2
         m_Curve:
@@ -461,7 +461,7 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-      lowpassDistanceAmountRolloff: -2
+      lowpassDistanceAmountRolloff: -0.3
       lowpassDistanceAmountCurve:
         serializedVersion: 2
         m_Curve:
@@ -650,7 +650,14 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
     audioClips:
-    - {fileID: 8300000, guid: 6d597d011cb44544398b4220438d88c3, type: 3}
+    - {fileID: 8300000, guid: f937c913fee595a44aa50573a315c201, type: 3}
+    - {fileID: 8300000, guid: 001053d19175f1e47a9de74fc2ecfbca, type: 3}
+    - {fileID: 8300000, guid: 8567f11881bee264ebfb7cb2bee0742f, type: 3}
+    - {fileID: 8300000, guid: 54325c601d76ca54fb65628e9c9ef230, type: 3}
+    - {fileID: 8300000, guid: 3b1cd094a41972e428f86fbd335d1986, type: 3}
+    - {fileID: 8300000, guid: cc2affb960a28034b9c560d9b52d7519, type: 3}
+    - {fileID: 8300000, guid: 7299f1e4eeac7dd4589d4c376a21f596, type: 3}
+    - {fileID: 8300000, guid: 8979b5c83096a094a9a282e44eb99dd9, type: 3}
     notes: Notes
-  assetGuid: 8666bfce6d810f54782ba3e3ac259fbe
-  assetGuidHash: 5962971425868844369
+  assetGuid: 30673d9abe43055438167d8a944c6fb0
+  assetGuidHash: -2697845730650624291

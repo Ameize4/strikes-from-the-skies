@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e444e5f947e2a7409a1eaa10f9fa16e, type: 3}
-  m_Name: objects_map_enemy_showed_up_SC
+  m_Name: ambience_emitter_explosion_SC
   m_EditorClassIdentifier: Sonity.Public.Runtime::Sonity.SoundContainer
   internals:
     data:
@@ -47,11 +47,11 @@ MonoBehaviour:
       hrtfPluginSpatialize: 0
       hrtfPluginSpatializePostEffects: 0
       volumeExpand: 1
-      volumeDecibel: -3.1
-      volumeRatio: 0.699842
+      volumeDecibel: 0
+      volumeRatio: 1
       volumeRandomEnable: 0
       volumeRandomRangeDecibel: -3
-      volumeDistanceRolloff: -12
+      volumeDistanceRolloff: -0.6
       volumeDistanceCurve:
         serializedVersion: 2
         m_Curve:
@@ -429,13 +429,13 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-      lowpassExpand: 0
-      lowpassEnabled: 0
-      lowpassFrequencyEditor: 20000
-      lowpassFrequencyEngine: 1
+      lowpassExpand: 1
+      lowpassEnabled: 1
+      lowpassFrequencyEditor: 10432
+      lowpassFrequencyEngine: 0.52112114
       lowpassAmountEditor: 6
       lowpassAmountEngine: 1
-      lowpassDistanceEnable: 0
+      lowpassDistanceEnable: 1
       lowpassDistanceFrequencyRolloff: -2
       lowpassDistanceFrequencyCurve:
         serializedVersion: 2
@@ -540,9 +540,9 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
       highpassExpand: 0
-      highpassEnabled: 0
-      highpassFrequencyEditor: 20000
-      highpassFrequencyEngine: 1
+      highpassEnabled: 1
+      highpassFrequencyEditor: 114
+      highpassFrequencyEngine: 0.0047047045
       highpassAmountEditor: 6
       highpassAmountEngine: 1
       highpassDistanceEnable: 0
@@ -650,7 +650,10 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
     audioClips:
-    - {fileID: 8300000, guid: 6d597d011cb44544398b4220438d88c3, type: 3}
+    - {fileID: 8300000, guid: 37373b496e80e4241ad5fcd9ff86a988, type: 3}
+    - {fileID: 8300000, guid: 18330adc0734ce84fa128a3e85a71897, type: 3}
+    - {fileID: 8300000, guid: 651cf08e948e5fc4686e4826d210b165, type: 3}
+    - {fileID: 8300000, guid: 446cbe100ee275141b01649da7c5dd1e, type: 3}
     notes: Notes
-  assetGuid: 8666bfce6d810f54782ba3e3ac259fbe
-  assetGuidHash: 5962971425868844369
+  assetGuid: c6a8b19e8b044b84aabb1cbbf89faab2
+  assetGuidHash: -7684472713982511346

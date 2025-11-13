@@ -1,7 +1,7 @@
 ﻿title: Start
 ---
-<<wait 4>>
-
+<<StopSleep>>
+<<wait 6>>
 <<JumpToCall StartCall>>
 ===
 
@@ -26,7 +26,7 @@ title: StartCall
 
 title: AfterWave1
 ---
-<<wait 2>>
+<<wait 4>>
 <<JumpToCall AfterWave1Call>>
 ===
 

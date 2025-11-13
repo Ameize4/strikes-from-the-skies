@@ -82,12 +82,13 @@ title: AfterWave1_X_2
 
 title: AfterWave1_X_X
 ---
-К слову, ты сейчас, как и я, находимся в старых бункерах врага. Поэтому тут висят эти паршивые плакаты.
+Кстати, эти бункеры раньше принадлежали Республике. А их плакаты убирать не стали. Видать, решили, что надолго мы тут не задержимся.
 <<jump AfterWave1_X_X_X>>
 ===
 
 title: AfterWave1_X_X_X
 ---
+<<PlaySound Siren>>
 /// Добавить звук проигрывания тревоги ///
 Вот чёрт! Они идут! Готовься посылать координаты! #line:chapter2_wave_incoming1 
 <<SpawnWave>>
@@ -226,7 +227,6 @@ title: Сhapter3_artillerist_inhumanely
 Ещё раз что-то подобное ляпнешь – сообщу командованию и жалеть тебя не буду. #line:chapter3_artillerist_inhumanely3
 Поспи пока или ещё чем займись. Силы нам пока пригодятся.
 Конец связи.
-/// Добавить скрипт о необходимости лечь спать ///
 <<NextChapter>>
 <<InitBedInteract Сhapter4_Wave>>
 ===
@@ -237,7 +237,6 @@ title: Сhapter3_artillerist_must_be_done
 Иначе долго здесь не протянешь. #line:chapter3_artillerist_must_be_done3
 Поспи пока или ещё чем займись. Силы нам пока пригодятся.
 Конец связи.
-/// Добавить скрипт о необходимости лечь спать ///
 <<NextChapter>>
 <<InitBedInteract Сhapter4_Wave>>
 ===
@@ -254,6 +253,8 @@ title: Сhapter4_Wave
 
 title: Сhapter4_AfterWave
 ---
+/// Надо начать день прям с тревоги ///
+/// Добавить запуск новой волны. Сделать её ///
 <<NextChapter>>
 <<wait 2>>
 <<JumpToCall Сhapter4>>
@@ -261,8 +262,6 @@ title: Сhapter4_AfterWave
 
 title: Сhapter4
 ---
-/// Надо начать день прям с тревоги ///
-/// Добавить запуск новой волны. Сделать её ///
 Эй, сержант, ты тут? #line:chapter4_sorrow1
 Я всё места себе найти не могу. #line:chapter4_sorrow2
 Что-то на сердце неспокойно. #line:chapter4_sorrow3

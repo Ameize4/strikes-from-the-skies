@@ -6289,8 +6289,11 @@ MonoBehaviour:
   p2: {fileID: 1307627622}
   p3: {fileID: 130066414}
   yarnSounds:
-  - name: cannon
-    sound: {fileID: 11400000, guid: 60660060cbc59f44dbc3d63e49507acb, type: 2}
+  - name: Siren
+    sound: {fileID: 11400000, guid: c92f32e42797b6241b9fa2e8c6088a13, type: 2}
+    transform: {fileID: 1906318215}
+  - name: Alarm
+    sound: {fileID: 11400000, guid: 22e4bca5aec5d1b4782f8571f09b46f3, type: 2}
     transform: {fileID: 1906318215}
   twoLetterTelegraphLimitEnabled: 0
 --- !u!4 &1084138476

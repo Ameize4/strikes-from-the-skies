@@ -367,7 +367,7 @@ title: Chapter5_dying_artilerist
 title: Chapter5_fake_voice
 ---
 Наводчик! Открывай дверь. Запустишь? 
-<<JumpToCall Chapter5_openthedoor>>
+<<InitBedInteract Chapter5_openthedoor>>
 ===
 
 title: Chapter5_openthedoor

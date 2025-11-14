@@ -295,7 +295,7 @@ namespace DefaultNamespace
             waitingForBed = false;
             dialogueRunner.StartDialogue(bedJumpDialogueName);
             bedJumpDialogueName = "";
-            // Fade In
+            bedHandler.StartSleep();
         }
     }
 }

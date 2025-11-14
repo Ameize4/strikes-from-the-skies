@@ -28,6 +28,10 @@ namespace DefaultNamespace
         private void StartInteraction()
         {
             GameManager.Instance.BedInteract();
+        }
+
+        public void StartSleep()
+        {
             fadeInAnimator.SetTrigger("FadeIn");
         }
 

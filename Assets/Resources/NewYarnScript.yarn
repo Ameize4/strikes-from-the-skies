@@ -97,7 +97,7 @@ title: AfterWave1_X_X_X
 title: AfterWave2
 ---
 <<NextChapter>>
-<<wait 2>>
+<<wait 4>>
 <<JumpToCall AfterWave2Call>>
 ===
 
@@ -180,7 +180,7 @@ title: Wave3_Init
 title: AfterWave3
 ---
 <<NextChapter>>
-<<wait 2>>
+<<wait 4>>
 <<JumpToCall Wave3_Init_CallFromCommand>>
 ===
 
@@ -198,7 +198,7 @@ title: Wave3_Init_CallFromCommand
 
 title: Wave3_EnemyDefeated
 ---
-<<wait 2>>
+<<wait 4>>
 <<JumpToCall Wave3_EnemyDefeated_Call>>
 ===
 
@@ -259,7 +259,7 @@ title: Сhapter4_AfterWave
 /// Надо начать день прям с тревоги ///
 /// Добавить запуск новой волны. Сделать её ///
 <<NextChapter>>
-<<wait 2>>
+<<wait 4>>
 <<JumpToCall Сhapter4>>
 ===
 
@@ -321,6 +321,7 @@ title: Сhapter4_BigEnemy
 title: Chapter5
 ---
 <<NextChapter>>
+<<wait 4>>
 <<JumpToCall Chapter5_Call>>
 ===
 
@@ -328,12 +329,13 @@ title: Chapter5_Call
 ---
 Товарищ сержант, на связи командир Эйкен. #line:chapter5_evacuation1
 Миссия по эвакуации гражданского населения завершена успешно. Империя благодарит вас за службу.  #line:chapter5_evacuation2
+<<PlaySound VeryFastEnemy>>
 … #line:chapter5_evacuation3
 Это ещё что такое? #line:chapter5_evacuation4
+<<PlaySound Alarm>>
 Оно летит в нашу сторону! Доложите товарищу полковнику! #line:chapter5_evacuation5
 … #line:chapter5_evacuation6
 Все целы? #line:chapter5_evacuation7
-<<PlaySound Alarm>>
 <<SpawnWave>>
 Товарищи, немедленно отставить панику! Это неразорвавшийся снаряд. #line:chapter5_evacuation8
 Только форма у него какая-то странная. #line:chapter5_evacuation9
@@ -349,5 +351,7 @@ title: Chapter5_Call
 
 title: Chapter5_Call2
 ---
+
+/// Надо добавить вырубание света и последующее стучание в дверь и слова артиллериста ///
 <<SpawnTimeline>>
 ===

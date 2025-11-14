@@ -334,6 +334,7 @@ title: Chapter5_Call
 Это ещё что такое? #line:chapter5_evacuation4
 <<PlaySound Alarm>>
 Оно летит в нашу сторону! Доложите товарищу полковнику! #line:chapter5_evacuation5
+<<PlaySound Boom>>
 … #line:chapter5_evacuation6
 Все целы? #line:chapter5_evacuation7
 <<SpawnWave>>
@@ -345,13 +346,31 @@ title: Chapter5_Call
 :Повторяю. Всему личному составу командования: незамедлительно проследовать в убежище на минус третий этаж. #line:chapter5_evacuation13
 Господи! #line:chapter5_evacuation14
 ААААААААА! #line:chapter5_evacuation15
-<<wait 5>>
-<<JumpToCall Chapter5_Call2>>
+<<wait 2.5>>
+<<JumpToCall Chapter5_dying_artilerist>>
 ===
 
-title: Chapter5_Call2
+title: Chapter5_dying_artilerist
 ---
-
+Эй? Сержант?
+Ты славный малый… Хорошо мы с тобой поработали.
+Только теперь больно чего-то. Видать, почки опять воспалились…
+Надо было шарфом прикрывать, как жена говорила. А я, дурак, не слушал.
+Ты… Это… Вспоминай меня на день воинской славы, хорошо?
+Бывай… Сержантик…
+<<StopSound Alarm>>
 /// Надо добавить вырубание света и последующее стучание в дверь и слова артиллериста ///
+<<wait 23>>
+<<jump Chapter5_fake_voice>>
+===
+
+title: Chapter5_fake_voice
+---
+Наводчик! Открывай дверь. Запустишь? 
+<<JumpToCall Chapter5_openthedoor>>
+===
+
+title: Chapter5_openthedoor
+---
 <<SpawnTimeline>>
 ===

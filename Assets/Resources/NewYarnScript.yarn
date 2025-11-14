@@ -360,7 +360,7 @@ title: Chapter5_dying_artilerist
 Бывай… Сержантик…
 <<StopSound Alarm>>
 /// Надо добавить вырубание света и последующее стучание в дверь и слова артиллериста ///
-<<wait 23>>
+<<wait 20>>
 <<jump Chapter5_fake_voice>>
 ===
 

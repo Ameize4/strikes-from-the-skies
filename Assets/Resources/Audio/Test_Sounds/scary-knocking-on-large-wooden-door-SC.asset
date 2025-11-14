@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e444e5f947e2a7409a1eaa10f9fa16e, type: 3}
-  m_Name: Siren - Sound Effect SC
+  m_Name: scary-knocking-on-large-wooden-door-SC
   m_EditorClassIdentifier: Sonity.Public.Runtime::Sonity.SoundContainer
   internals:
     data:
@@ -51,7 +51,7 @@ MonoBehaviour:
       volumeRatio: 1
       volumeRandomEnable: 0
       volumeRandomRangeDecibel: -3
-      volumeDistanceRolloff: -2
+      volumeDistanceRolloff: -10
       volumeDistanceCurve:
         serializedVersion: 2
         m_Curve:
@@ -429,14 +429,14 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-      lowpassExpand: 0
-      lowpassEnabled: 0
+      lowpassExpand: 1
+      lowpassEnabled: 1
       lowpassFrequencyEditor: 20000
       lowpassFrequencyEngine: 1
       lowpassAmountEditor: 6
       lowpassAmountEngine: 1
-      lowpassDistanceEnable: 0
-      lowpassDistanceFrequencyRolloff: -2
+      lowpassDistanceEnable: 1
+      lowpassDistanceFrequencyRolloff: -15
       lowpassDistanceFrequencyCurve:
         serializedVersion: 2
         m_Curve:
@@ -650,7 +650,7 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
     audioClips:
-    - {fileID: 8300000, guid: aa48bfd29b526864dab12a303ac8d0c2, type: 3}
+    - {fileID: 8300000, guid: 8c1d23bfcbd099f4a838061484fa0b66, type: 3}
     notes: Notes
-  assetGuid: e156f8eaf17df1a488ea1170f7168016
-  assetGuidHash: -671198569665052686
+  assetGuid: 3b20fc25797bd6e47a94a1cdb3ad026f
+  assetGuidHash: -2154608147562555164

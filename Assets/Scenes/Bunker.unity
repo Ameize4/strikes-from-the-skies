@@ -3755,6 +3755,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2122156980}
+  - {fileID: 1611720974}
   - {fileID: 562103700}
   - {fileID: 177828894}
   - {fileID: 841224171}
@@ -6476,6 +6477,9 @@ MonoBehaviour:
   - name: Boom
     sound: {fileID: 11400000, guid: baf88464ce394894ea59f304e5e9ede3, type: 2}
     transform: {fileID: 2122156980}
+  - name: Knocking
+    sound: {fileID: 11400000, guid: 5f9f9b6638bc0614ba43261ebbcb4a4e, type: 2}
+    transform: {fileID: 1611720974}
   twoLetterTelegraphLimitEnabled: 0
 --- !u!4 &1084138476
 Transform:
@@ -10803,6 +10807,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8678823145569952518, guid: 347c94a10e01f334983a98f3b5c4337d, type: 3}
+--- !u!1 &1611720973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1611720974}
+  m_Layer: 0
+  m_Name: KnockingTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1611720974
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611720973}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.08, y: 3.855, z: -10.253}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 589710297}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1661554948
 GameObject:
   m_ObjectHideFlags: 0

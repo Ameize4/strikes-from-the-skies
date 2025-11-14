@@ -366,11 +366,13 @@ title: Chapter5_dying_artilerist
 
 title: Chapter5_fake_voice
 ---
-Наводчик! Открывай дверь. Запустишь? 
+<<PlaySound Knocking>>
+Наводчик! Открывай дверь. Запустишь? #line:chapter5_evacuation1XXXXXX
 <<InitBedInteract Chapter5_openthedoor>>
 ===
 
 title: Chapter5_openthedoor
 ---
+<<StopSound Knocking>>
 <<SpawnTimeline>>
 ===

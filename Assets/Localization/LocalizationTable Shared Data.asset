@@ -59,8 +59,8 @@ MonoBehaviour:
     m_Key: ui_interaction_no
     m_Metadata:
       m_Items: []
-  - m_Id: 91716366163968
-    m_Key: New Entry 1
+  - m_Id: 3986958928633856
+    m_Key: New Entry
     m_Metadata:
       m_Items: []
   - m_Id: 3002717757440
@@ -128,11 +128,6 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 3971364644551655483
-  - m_Id: 76895151251467
-    m_Key: line:chapter1_unfinished_enemy6
-    m_Metadata:
-      m_Items:
-      - rid: 3971364644551655484
   - m_Id: 76895151251468
     m_Key: line:chapter2_question_history1
     m_Metadata:
@@ -792,6 +787,10 @@ MonoBehaviour:
     m_Key: mapobj_imhere
     m_Metadata:
       m_Items: []
+  - m_Id: 3986958937022464
+    m_Key: New Entry 1
+    m_Metadata:
+      m_Items: []
   - m_Id: 1670395496030208
     m_Key: ui_continue
     m_Metadata:
@@ -800,91 +799,79 @@ MonoBehaviour:
     m_Key: ui_language
     m_Metadata:
       m_Items: []
-  - m_Id: 3774695705731072
-    m_Key: line:c41a3edc
+  - m_Id: 3986958937022465
+    m_Key: New Entry 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3986958937022466
+    m_Key: New Entry 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546691
+    m_Key: line:chapter2_question_posters_option2_answer6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546692
+    m_Key: line:chapter2_question_posters_option2_answer7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76895151251467
+    m_Key: line:chapter1_unfinished_enemy6
     m_Metadata:
       m_Items:
-      - rid: 3971364859702935980
-  - m_Id: 3774695739285504
-    m_Key: line:7e4b3745
+      - rid: 3971364644551655484
+  - m_Id: 3985337234546693
+    m_Key: line:dont_shoot_base_artillerist_1
     m_Metadata:
-      m_Items:
-      - rid: 3971364859702935981
-  - m_Id: 3774695739285505
-    m_Key: line:c6a83e71
+      m_Items: []
+  - m_Id: 3985337234546694
+    m_Key: line:dont_shoot_base_artillerist_2
     m_Metadata:
-      m_Items:
-      - rid: 3971364859702935982
-  - m_Id: 3774695739285506
-    m_Key: line:2321f911
+      m_Items: []
+  - m_Id: 3985337234546695
+    m_Key: line:dont_shoot_base_dispatcher_1
     m_Metadata:
-      m_Items:
-      - rid: 3971364859702935983
-  - m_Id: 3774695743479808
-    m_Key: line:817b442e
+      m_Items: []
+  - m_Id: 3985337234546696
+    m_Key: line:dont_shoot_base_dispetcher_2
     m_Metadata:
-      m_Items:
-      - rid: 3971364859702935984
-  - m_Id: 3774695743479809
-    m_Key: line:3b2a4db7
+      m_Items: []
+  - m_Id: 3985337234546697
+    m_Key: line:false_alarm_dispatcher
     m_Metadata:
-      m_Items:
-      - rid: 3971364859702935985
-  - m_Id: 3774695743479810
-    m_Key: line:34134a40
+      m_Items: []
+  - m_Id: 3985337234546698
+    m_Key: game_over
     m_Metadata:
-      m_Items:
-      - rid: 3971364859702935986
-  - m_Id: 3774695743479811
-    m_Key: line:5fb70ebe
+      m_Items: []
+  - m_Id: 3986958941216768
+    m_Key: New Entry 4
     m_Metadata:
-      m_Items:
-      - rid: 3971364859702935987
-  - m_Id: 3774695743479812
-    m_Key: line:f9a78dcb
+      m_Items: []
+  - m_Id: 3985337234546700
+    m_Key: line:chapter2_before_sleep4_repeat1
     m_Metadata:
-      m_Items:
-      - rid: 3971364859702935988
-  - m_Id: 3774695743479813
-    m_Key: line:8a1e4ddc
+      m_Items: []
+  - m_Id: 3985337234546701
+    m_Key: line:chapter2_before_sleep5_repeat1
     m_Metadata:
-      m_Items:
-      - rid: 3971364859702935989
-  - m_Id: 3774695743479814
-    m_Key: line:aa063e02
+      m_Items: []
+  - m_Id: 3985337234546702
+    m_Key: line:chapter2_before_sleep4_repeat2
     m_Metadata:
-      m_Items:
-      - rid: 3971364859702935990
-  - m_Id: 3774695743479815
-    m_Key: line:3b1b8192
+      m_Items: []
+  - m_Id: 3985337234546703
+    m_Key: line:chapter2_before_sleep5_repeat2
     m_Metadata:
-      m_Items:
-      - rid: 3971364859702935991
-  - m_Id: 3774695743479816
-    m_Key: line:ad2b86e5
+      m_Items: []
+  - m_Id: 3985337234546704
+    m_Key: line:dots_repeat1
     m_Metadata:
-      m_Items:
-      - rid: 3971364859702935992
-  - m_Id: 3774695743479817
-    m_Key: line:48a24185
+      m_Items: []
+  - m_Id: 3985337234546705
+    m_Key: line:dots_repeat2
     m_Metadata:
-      m_Items:
-      - rid: 3971364859702935993
-  - m_Id: 3774695743479818
-    m_Key: line:de9246f2
-    m_Metadata:
-      m_Items:
-      - rid: 3971364859702935994
-  - m_Id: 3774695743479819
-    m_Key: line:64c34f6b
-    m_Metadata:
-      m_Items:
-      - rid: 3971364859702935995
-  - m_Id: 3774695743479820
-    m_Key: line:chapter5_evacuation1XXXXXX
-    m_Metadata:
-      m_Items:
-      - rid: 3971364859702935996
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
@@ -1486,89 +1473,4 @@ MonoBehaviour:
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
         nodeName: Chapter5_Call
-        tags: []
-    - rid: 3971364859702935980
-      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
-      data:
-        nodeName: AfterWave1_X_X
-        tags: []
-    - rid: 3971364859702935981
-      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
-      data:
-        nodeName: AfterWave1_X_X
-        tags: []
-    - rid: 3971364859702935982
-      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
-      data:
-        nodeName: Wave2_WhyBunkerClosed
-        tags: []
-    - rid: 3971364859702935983
-      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
-      data:
-        nodeName: Wave2_WhyBunkerClosed
-        tags: []
-    - rid: 3971364859702935984
-      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
-      data:
-        nodeName: "\u0421hapter3_artillerist_inhumanely"
-        tags: []
-    - rid: 3971364859702935985
-      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
-      data:
-        nodeName: "\u0421hapter3_artillerist_inhumanely"
-        tags: []
-    - rid: 3971364859702935986
-      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
-      data:
-        nodeName: "\u0421hapter3_artillerist_must_be_done"
-        tags: []
-    - rid: 3971364859702935987
-      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
-      data:
-        nodeName: "\u0421hapter3_artillerist_must_be_done"
-        tags: []
-    - rid: 3971364859702935988
-      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
-      data:
-        nodeName: "\u0421hapter4_BigEnemy"
-        tags: []
-    - rid: 3971364859702935989
-      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
-      data:
-        nodeName: "\u0421hapter4_BigEnemy"
-        tags: []
-    - rid: 3971364859702935990
-      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
-      data:
-        nodeName: Chapter5_dying_artilerist
-        tags: []
-    - rid: 3971364859702935991
-      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
-      data:
-        nodeName: Chapter5_dying_artilerist
-        tags: []
-    - rid: 3971364859702935992
-      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
-      data:
-        nodeName: Chapter5_dying_artilerist
-        tags: []
-    - rid: 3971364859702935993
-      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
-      data:
-        nodeName: Chapter5_dying_artilerist
-        tags: []
-    - rid: 3971364859702935994
-      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
-      data:
-        nodeName: Chapter5_dying_artilerist
-        tags: []
-    - rid: 3971364859702935995
-      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
-      data:
-        nodeName: Chapter5_dying_artilerist
-        tags: []
-    - rid: 3971364859702935996
-      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
-      data:
-        nodeName: Chapter5_fake_voice
         tags: []

@@ -154,7 +154,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 76895151251467
-    m_Localized: Enough chitchat. Be ready to send me the coordinates.
+    m_Localized: Be ready to send me the coordinates.
     m_Metadata:
       m_Items: []
   - m_Id: 76895151251468
@@ -556,7 +556,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 76895159640086
-    m_Localized: One time the coals in the firplace got all cooled down, so Mimi
+    m_Localized: One time the coals in the fireplace got all cooled down, so Mimi
       snuck in there and slept through the night.
     m_Metadata:
       m_Items: []
@@ -732,6 +732,65 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1671234927255552
     m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546691
+    m_Localized: By the way, these used to be the Republic's bunkers. No one bothered
+      to remove their posters.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546692
+    m_Localized: I suppose, we never planned to stay here long.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546693
+    m_Localized: Sergeant, are you insane? Had I listened to you now - the Empire
+      would've been in ruins!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546694
+    m_Localized: Try this again - you'll be court-marshalled in a blink of an eye!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546695
+    m_Localized: 'Sergeant, let us hope this was a mistake. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546696
+    m_Localized: The order to attack the Command Headquarters is equated to an assassination
+      attempt.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546697
+    m_Localized: All-clear, Sergeant, false alarm.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546698
+    m_Localized: Game Over
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546700
+    m_Localized: Sleep a bit or do something else. You'll need the stength.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546701
+    m_Localized: Over.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546702
+    m_Localized: Sleep a bit or do something else. You'll need the stength.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546703
+    m_Localized: Over.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546704
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546705
+    m_Localized: ...
     m_Metadata:
       m_Items: []
   references:

@@ -216,6 +216,19 @@ namespace DefaultNamespace
             }
             Debug.LogWarning($"There is no yarn sound with {name} name");
         }
+        
+        [YarnCommand("BlockInteractiveObjects")]
+        public static void Yarn_BlockInteractiveObjects(bool value)
+        {
+            InteractiveObject.isBlocked = value;
+        }
+        
+        [YarnCommand("SetTrauma")]
+        public static void Yarn_SetTrauma(float value)
+        {
+            Instance._cameraShake.SetTrauma(value);
+            Instance.trauma = value;
+        }
 
         public void SendMorseCoordinates(string message)
         {

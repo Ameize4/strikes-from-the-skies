@@ -27,6 +27,366 @@ MonoBehaviour:
     m_Key: line:chapter1_intro3
     m_Metadata:
       m_Items: []
+  - m_Id: 361806420566016
+    m_Key: line:chapter1_intro4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 361806441537536
+    m_Key: line:chapter1_intro5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 361806441537537
+    m_Key: line:chapter1_intro6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 361806445731840
+    m_Key: line:chapter1_intro7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 361806445731841
+    m_Key: line:chapter1_intro8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 361806449926144
+    m_Key: line:chapter1_unfinished_enemy1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 361806449926145
+    m_Key: line:chapter1_unfinished_enemy2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 361806449926146
+    m_Key: line:chapter1_unfinished_enemy3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 361806449926147
+    m_Key: line:chapter1_unfinished_enemy4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 361806454120448
+    m_Key: line:chapter1_unfinished_enemy5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 361806454120449
+    m_Key: line:chapter1_unfinished_enemy6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248047222784
+    m_Key: line:chapter2_question_history1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248047222785
+    m_Key: line:chapter2_question_history2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248047222786
+    m_Key: line:chapter2_question_history3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248051417088
+    m_Key: line:chapter2_question_history_option1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248051417089
+    m_Key: line:chapter2_question_history_option2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248051417090
+    m_Key: line:chapter2_question_history_option1_answer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248051417091
+    m_Key: line:chapter2_question_history_option2_answer1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248051417092
+    m_Key: line:chapter2_question_history_option2_answer2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248055611392
+    m_Key: line:chapter2_question_posters2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248055611393
+    m_Key: line:chapter2_question_posters_option1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248055611394
+    m_Key: line:chapter2_question_posters_option2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248055611395
+    m_Key: line:chapter2_question_posters_option1_answer1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248059805696
+    m_Key: line:chapter2_question_posters_option2_answer1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248059805697
+    m_Key: line:chapter2_question_posters_option2_answer2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248059805698
+    m_Key: line:chapter2_question_posters_option2_answer3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248059805699
+    m_Key: line:chapter2_question_posters_option2_answer4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248064000000
+    m_Key: line:chapter2_question_posters_option2_answer5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248064000001
+    m_Key: line:chapter2_wave_incoming1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248068194304
+    m_Key: line:chapter2_question_isalive
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248068194305
+    m_Key: line:chapter2_question_isalive_yes2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248068194306
+    m_Key: line:chapter2_question_isalive_no2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248068194307
+    m_Key: line:chapter2_arrowslit1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248072388608
+    m_Key: line:chapter2_arrowslit2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248072388609
+    m_Key: line:chapter2_arrowslit3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248072388610
+    m_Key: line:chapter2_arrowslit4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248072388611
+    m_Key: line:chapter2_arrowslit_breath2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248076582912
+    m_Key: line:chapter2_arrowslit_light2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248076582913
+    m_Key: line:chapter2_before_sleep1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248076582914
+    m_Key: line:chapter2_before_sleep2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248076582915
+    m_Key: line:chapter2_before_sleep3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248080777216
+    m_Key: line:chapter2_before_sleep4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248080777217
+    m_Key: line:chapter2_before_sleep5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248080777218
+    m_Key: line:chapter3_interrupted_dialogue1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248084971520
+    m_Key: line:chapter3_interrupted_dialogue2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248084971521
+    m_Key: line:chapter3_interrupted_dialogue3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248084971522
+    m_Key: line:chapter3_interrupted_dialogue4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248089165824
+    m_Key: line:chapter3_artillerist_goodmood1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248089165825
+    m_Key: line:chapter3_artillerist_goodmood2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248089165826
+    m_Key: line:chapter3_artillerist_inhumanely2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248089165827
+    m_Key: line:chapter3_artillerist_inhumanely3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248093360128
+    m_Key: line:chapter3_artillerist_must_be_done2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248093360129
+    m_Key: line:chapter3_artillerist_must_be_done3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248093360130
+    m_Key: line:chapter4_sorrow1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248097554432
+    m_Key: line:chapter4_sorrow2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248097554433
+    m_Key: line:chapter4_sorrow3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248097554434
+    m_Key: line:chapter4_sorrow4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248097554435
+    m_Key: line:chapter4_sorrow5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248097554436
+    m_Key: line:chapter4_sorrow6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248101748736
+    m_Key: line:chapter4_sorrow_cat1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248101748737
+    m_Key: line:chapter4_sorrow_army2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248101748738
+    m_Key: line:chapter4_sorrow_army3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248101748739
+    m_Key: line:chapter4_sorrow_army4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248105943040
+    m_Key: line:chapter4_sorrow_army5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248105943041
+    m_Key: line:chapter4_sorrow_army6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248105943042
+    m_Key: line:chapter4_sorrow_cat2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248105943043
+    m_Key: line:chapter4_sorrow_cat4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248110137344
+    m_Key: line:chapter4_sorrow_cat5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248110137345
+    m_Key: line:chapter4_sorrow_cat6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248110137346
+    m_Key: line:chapter4_sorrow_cat7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248110137347
+    m_Key: line:chapter4_sorrow_cat9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248110137348
+    m_Key: line:chapter4_sorrow_cat10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248110137349
+    m_Key: line:chapter4_sorrow_cat11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248114331648
+    m_Key: line:chapter4_sorrow10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248114331649
+    m_Key: line:chapter4_sorrow11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248114331650
+    m_Key: line:chapter4_sorrow12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248114331651
+    m_Key: line:chapter5_evacuation1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248118525952
+    m_Key: line:chapter5_evacuation4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248118525953
+    m_Key: line:chapter5_evacuation12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248122720256
+    m_Key: line:chapter5_evacuation14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248122720257
+    m_Key: line:chapter5_dying_artilerist1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248122720258
+    m_Key: line:chapter5_dying_artilerist2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248122720259
+    m_Key: line:chapter5_dying_artilerist3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248122720260
+    m_Key: line:chapter5_dying_artilerist4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248122720261
+    m_Key: line:chapter5_dying_artilerist5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362248126914560
+    m_Key: line:chapter5_dying_artilerist6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368572990545920
+    m_Key: line:chapter2_before_sleep4_repeat1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368584935923712
+    m_Key: line:chapter2_before_sleep5_repeat1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368617236258816
+    m_Key: line:chapter2_before_sleep4_repeat2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368623724847104
+    m_Key: line:chapter2_before_sleep5_repeat2
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 3971364859702935861
@@ -47,13 +407,466 @@ MonoBehaviour:
           m_TableCodes:
           - en
           - ru
+          - zh
         - m_KeyId: 21530770464768
           m_TableCodes:
           - en
           - ru
+          - zh
         - m_KeyId: 21598781104128
           m_TableCodes:
           - en
           - ru
+          - zh
+        - m_KeyId: 361806420566016
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 361806441537536
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 361806441537537
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 361806445731840
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 361806445731841
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 361806449926144
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 361806449926145
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 361806449926146
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 361806449926147
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 361806454120448
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 361806454120449
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248047222784
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248047222785
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248047222786
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248051417088
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248051417089
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248051417090
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248051417091
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248051417092
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248055611392
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248055611393
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248055611394
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248055611395
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248059805696
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248059805697
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248059805698
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248059805699
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248064000000
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248064000001
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248068194304
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248068194305
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248068194306
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248068194307
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248072388608
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248072388609
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248072388610
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248072388611
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248076582912
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248076582913
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248076582914
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248076582915
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248080777216
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248080777217
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248080777218
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248084971520
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248084971521
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248084971522
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248089165824
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248089165825
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248089165826
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248089165827
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248093360128
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248093360129
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248093360130
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248097554432
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248097554433
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248097554434
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248097554435
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248097554436
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248101748736
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248101748737
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248101748738
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248101748739
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248105943040
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248105943041
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248105943042
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248105943043
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248110137344
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248110137345
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248110137346
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248110137347
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248110137348
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248110137349
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248114331648
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248114331649
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248114331650
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248114331651
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248118525952
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248118525953
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248122720256
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248122720257
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248122720258
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248122720259
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248122720260
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248122720261
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 362248126914560
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 368584935923712
+          m_TableCodes:
+          - en
+          - zh
+          - ru
+        - m_KeyId: 368623724847104
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 368617236258816
+          m_TableCodes:
+          - zh
+          - ru
+          - en
+        - m_KeyId: 368572990545920
+          m_TableCodes:
+          - zh
+          - ru
+          - en
         m_TypeString: UnityEngine.AudioClip, UnityEngine.AudioModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null

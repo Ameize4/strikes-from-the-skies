@@ -901,666 +901,660 @@ MonoBehaviour:
     - rid: 3971364639616533290
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: StartCall
+        nodeName: Start
         tags: []
     - rid: 3971364639616533291
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: StartCall
+        nodeName: Start
         tags: []
     - rid: 3971364644551655473
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: StartCall
+        nodeName: Start
         tags: []
     - rid: 3971364644551655474
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: StartCall
+        nodeName: Start
         tags: []
     - rid: 3971364644551655475
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: StartCall
+        nodeName: Start
         tags: []
     - rid: 3971364644551655476
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: StartCall
+        nodeName: Start
         tags: []
     - rid: 3971364644551655477
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: StartCall
+        nodeName: Start
         tags: []
     - rid: 3971364644551655478
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: StartCall
+        nodeName: Start
         tags: []
     - rid: 3971364644551655479
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: StartCall
+        nodeName: Start
         tags: []
     - rid: 3971364644551655480
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: StartCall
+        nodeName: Start
         tags: []
     - rid: 3971364644551655481
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: StartCall
+        nodeName: Start
         tags: []
     - rid: 3971364644551655482
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: StartCall
+        nodeName: Start
         tags: []
     - rid: 3971364644551655483
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: StartCall
+        nodeName: Start
         tags: []
     - rid: 3971364644551655484
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: StartCall
+        nodeName: Start
         tags: []
     - rid: 3971364644551655485
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave1Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655486
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave1Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655487
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave1Call
-        tags:
-        - lastline
+        nodeName: Start
+        tags: []
     - rid: 3971364644551655488
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave1Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655489
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave1_1
+        nodeName: Start
         tags: []
     - rid: 3971364644551655490
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave1Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655491
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave1_2
+        nodeName: Start
         tags: []
     - rid: 3971364644551655492
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave1_2
+        nodeName: Start
         tags: []
     - rid: 3971364644551655493
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave1_X
-        tags:
-        - lastline
+        nodeName: Start
+        tags: []
     - rid: 3971364644551655494
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave1_X
+        nodeName: Start
         tags: []
     - rid: 3971364644551655495
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave1_X_1
+        nodeName: Start
         tags: []
     - rid: 3971364644551655496
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave1_X
+        nodeName: Start
         tags: []
     - rid: 3971364644551655497
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave1_X_2
+        nodeName: Start
         tags: []
     - rid: 3971364644551655498
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave1_X_X
+        nodeName: Start
         tags: []
     - rid: 3971364644551655499
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave1_X_X
+        nodeName: Start
         tags: []
     - rid: 3971364644551655500
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave1_X_X
+        nodeName: Start
         tags: []
     - rid: 3971364644551655501
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave1_X_X
+        nodeName: Start
         tags: []
     - rid: 3971364644551655502
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave1_X_X_X
+        nodeName: Start
         tags: []
     - rid: 3971364644551655503
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave2Call
-        tags:
-        - lastline
+        nodeName: Start
+        tags: []
     - rid: 3971364644551655504
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave2Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655505
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave2_1
+        nodeName: Start
         tags: []
     - rid: 3971364644551655506
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave2_1
+        nodeName: Start
         tags: []
     - rid: 3971364644551655507
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave2_1
+        nodeName: Start
         tags: []
     - rid: 3971364644551655508
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave2Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655509
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave2_2
+        nodeName: Start
         tags: []
     - rid: 3971364644551655510
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave2_Finish
+        nodeName: Start
         tags: []
     - rid: 3971364644551655511
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave2_Finish
+        nodeName: Start
         tags: []
     - rid: 3971364644551655512
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave2_Finish
+        nodeName: Start
         tags: []
     - rid: 3971364644551655513
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave2_Finish
-        tags:
-        - lastline
+        nodeName: Start
+        tags: []
     - rid: 3971364644551655514
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave2_Finish
+        nodeName: Start
         tags: []
     - rid: 3971364644551655515
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter2_arrowslit_breath"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655516
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave2_Finish
+        nodeName: Start
         tags: []
     - rid: 3971364644551655517
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter2_arrowslit_light"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655518
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Wave2_WhyBunkerClosed
+        nodeName: Start
         tags: []
     - rid: 3971364644551655519
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Wave2_WhyBunkerClosed
+        nodeName: Start
         tags: []
     - rid: 3971364644551655520
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Wave2_WhyBunkerClosed
+        nodeName: Start
         tags: []
     - rid: 3971364644551655521
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Wave2_WhyBunkerClosed
+        nodeName: Start
         tags: []
     - rid: 3971364644551655522
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Wave2_WhyBunkerClosed
+        nodeName: Start
         tags: []
     - rid: 3971364644551655523
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Wave3_Init
+        nodeName: Start
         tags: []
     - rid: 3971364644551655524
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Wave3_Init
+        nodeName: Start
         tags: []
     - rid: 3971364644551655525
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Wave3_Init
+        nodeName: Start
         tags: []
     - rid: 3971364644551655526
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Wave3_Init
+        nodeName: Start
         tags: []
     - rid: 3971364644551655527
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Wave3_Init_CallFromCommand
+        nodeName: Start
         tags: []
     - rid: 3971364644551655528
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Wave3_Init_CallFromCommand
+        nodeName: Start
         tags: []
     - rid: 3971364644551655529
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Wave3_Init_CallFromCommand
+        nodeName: Start
         tags: []
     - rid: 3971364644551655530
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Wave3_Init_CallFromCommand
+        nodeName: Start
         tags: []
     - rid: 3971364644551655531
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Wave3_Init_CallFromCommand
+        nodeName: Start
         tags: []
     - rid: 3971364644551655532
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Wave3_EnemyDefeated_Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655533
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Wave3_EnemyDefeated_Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655534
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Wave3_EnemyDefeated_Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655535
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Wave3_EnemyDefeated_Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655536
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Wave3_EnemyDefeated_Call2
+        nodeName: Start
         tags: []
     - rid: 3971364644551655537
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Wave3_EnemyDefeated_Call2
-        tags:
-        - lastline
+        nodeName: Start
+        tags: []
     - rid: 3971364644551655538
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Wave3_EnemyDefeated_Call2
+        nodeName: Start
         tags: []
     - rid: 3971364644551655539
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter3_artillerist_inhumanely"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655540
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter3_artillerist_inhumanely"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655541
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Wave3_EnemyDefeated_Call2
+        nodeName: Start
         tags: []
     - rid: 3971364644551655542
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter3_artillerist_must_be_done"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655543
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter3_artillerist_must_be_done"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655544
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655545
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655546
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655547
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655548
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655549
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4"
-        tags:
-        - lastline
+        nodeName: Start
+        tags: []
     - rid: 3971364644551655550
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655551
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_army"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655552
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_army"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655553
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_army"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655554
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_army"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655555
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_army"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655556
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655557
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_cat"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655558
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_cat"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655559
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_cat"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655560
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_cat"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655561
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_cat"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655562
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_cat"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655563
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_cat"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655564
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_cat"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655565
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_cat"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655566
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_cat"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655567
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_BigEnemy"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655568
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_BigEnemy"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655569
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_BigEnemy"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655570
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_BigEnemy"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655571
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_BigEnemy"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655572
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_BigEnemy"
+        nodeName: Start
         tags: []
     - rid: 3971364644551655573
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Chapter5_Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655574
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Chapter5_Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655575
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Chapter5_Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655576
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Chapter5_Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655577
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Chapter5_Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655578
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Chapter5_Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655579
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Chapter5_Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655580
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Chapter5_Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655581
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Chapter5_Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655582
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Chapter5_Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655583
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Chapter5_Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655584
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Chapter5_Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655585
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Chapter5_Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655586
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Chapter5_Call
+        nodeName: Start
         tags: []
     - rid: 3971364644551655587
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Chapter5_Call
+        nodeName: Start
         tags: []
     - rid: 3971364883413074449
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Chapter5_dying_artilerist
+        nodeName: Start
         tags: []
     - rid: 3971364883413074450
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Chapter5_dying_artilerist
+        nodeName: Start
         tags: []
     - rid: 3971364883413074451
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Chapter5_dying_artilerist
+        nodeName: Start
         tags: []
     - rid: 3971364883413074452
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Chapter5_dying_artilerist
+        nodeName: Start
         tags: []
     - rid: 3971364883413074453
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Chapter5_dying_artilerist
+        nodeName: Start
         tags: []
     - rid: 3971364883413074454
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Chapter5_dying_artilerist
+        nodeName: Start
         tags: []
     - rid: 3971364883413074455
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: Chapter5_fake_voice
+        nodeName: Start
         tags: []
     - rid: 3971364883413074456
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave1_X_X
+        nodeName: Start
         tags: []
     - rid: 3971364883413074457
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: AfterWave1_X_X
+        nodeName: Start
         tags: []
     - rid: 3971364883413074458
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter3_artillerist_inhumanely"
+        nodeName: Start
         tags: []
     - rid: 3971364883413074459
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter3_artillerist_inhumanely"
+        nodeName: Start
         tags: []
     - rid: 3971364883413074460
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter3_artillerist_must_be_done"
+        nodeName: Start
         tags: []
     - rid: 3971364883413074461
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter3_artillerist_must_be_done"
+        nodeName: Start
         tags: []
     - rid: 3971364883413074462
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_BigEnemy"
+        nodeName: Start
         tags: []
     - rid: 3971364883413074463
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
-        nodeName: "\u0421hapter4_BigEnemy"
+        nodeName: Start
         tags: []

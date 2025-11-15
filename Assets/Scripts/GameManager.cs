@@ -147,6 +147,8 @@ namespace DefaultNamespace
             _cameraShake.Process();
         }
 
+        #region Yarn commands
+
         [YarnCommand("SpawnWave")]
         public static void Yarn_SpawnWave()
         {
@@ -189,6 +191,8 @@ namespace DefaultNamespace
         public static void Yarn_SpawnTimeline()
         {
             Instance._timelinePlayable.Play();
+            var c = FindFirstObjectByType<CreditsController>();
+            Instance._timelinePlayable.stopped += (director => c.StartCredits());
         }
         
         [YarnCommand("ShowInvisibleEnemies")]
@@ -216,6 +220,20 @@ namespace DefaultNamespace
             }
             Debug.LogWarning($"There is no yarn sound with {name} name");
         }
+        
+        [YarnCommand("BlockInteractiveObjects")]
+        public static void Yarn_BlockInteractiveObjects(bool value)
+        {
+            InteractiveObject.isBlocked = value;
+        }
+        
+        [YarnCommand("SetTrauma")]
+        public static void Yarn_SetTrauma(float value)
+        {
+            Instance._cameraShake.SetTrauma(value);
+            Instance.trauma = value;
+        }
+        #endregion
 
         public void SendMorseCoordinates(string message)
         {
@@ -295,7 +313,7 @@ namespace DefaultNamespace
             waitingForBed = false;
             dialogueRunner.StartDialogue(bedJumpDialogueName);
             bedJumpDialogueName = "";
-            // Fade In
+            bedHandler.StartSleep();
         }
     }
 }

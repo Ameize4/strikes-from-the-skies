@@ -20,6 +20,32 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b81bf9021cb10a843b7410d3614a2cf2
+    m_Address: chapter1_intro2
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7ce44ccbacb30f40a90b565ae081fef
+    m_Address: chapter1_intro3
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: db5a9116053dc3740b39f9a28fec11c8
+    m_Address: chapter1_intro1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: edb78d017619f514a8df90167cbc71fe
+    m_Address: Assets/Localization/LocalizationTableVoice Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 1e7269cfc4d133b419c7006c82e04873, type: 2}
   m_SchemaSet:

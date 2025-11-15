@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97269afb30aa84742ae3f3342603618a, type: 3}
+  m_Name: LocalizationTableVoice_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.AssetTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: edb78d017619f514a8df90167cbc71fe, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 10224122257408
+    m_Localized: db5a9116053dc3740b39f9a28fec11c8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21530770464768
+    m_Localized: b81bf9021cb10a843b7410d3614a2cf2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21598781104128
+    m_Localized: c7ce44ccbacb30f40a90b565ae081fef
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

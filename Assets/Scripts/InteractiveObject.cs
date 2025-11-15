@@ -16,6 +16,8 @@ public class InteractiveObject : MonoBehaviour
     private Transform player;
     private bool isFocused;
     private int defaultCameraPriority;
+    
+    public static bool isBlocked;
 
     public static event Action _currentFocusChanged;
     private static InteractiveObject _currentFocus;
@@ -69,6 +71,8 @@ public class InteractiveObject : MonoBehaviour
 
     private void StartInteraction()
     {
+        if (isBlocked) return;
+        
         isFocused = true;
         
         if (virtualCamera != null)

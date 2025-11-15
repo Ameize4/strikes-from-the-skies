@@ -189,6 +189,8 @@ namespace DefaultNamespace
         public static void Yarn_SpawnTimeline()
         {
             Instance._timelinePlayable.Play();
+            var c = FindFirstObjectByType<CreditsController>();
+            Instance._timelinePlayable.stopped += (director => c.StartCredits());
         }
         
         [YarnCommand("ShowInvisibleEnemies")]

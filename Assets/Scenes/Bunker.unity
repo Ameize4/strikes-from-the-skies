@@ -6833,7 +6833,7 @@ MonoBehaviour:
   - Color: {fileID: 2800000, guid: c3f52f325d3bcb548a042744bcd18336, type: 3}
   grid: {fileID: 1770552387}
   chapters: {fileID: 11400000, guid: 8e69d846da4771e4d917c3dca9dcc0c4, type: 2}
-  currentChapterIdx: 6
+  currentChapterIdx: 0
   phoneHandler: {fileID: 1389127516}
   bedHandler: {fileID: 915776384}
   cameraShakeProperties:
@@ -12915,7 +12915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb87ae987c60e9d4f8346202d271648d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: YarnSpinner.Unity::Yarn.Unity.VoiceOverPresenter
-  endLineWhenVoiceoverComplete: 0
+  endLineWhenVoiceoverComplete: 1
   dialogueRunner: {fileID: 921657498}
   fadeOutTimeOnLineFinish: 0.05
   waitTimeBeforeLineStart: 0
@@ -14178,8 +14178,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024224843}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.4487484, y: 0.060382433, z: -0.030217651, w: -0.89110374}
-  m_LocalPosition: {x: -8.737454, y: 2.1452012, z: 1.0342126}
+  m_LocalRotation: {x: 0.553452, y: -0.0008236146, z: 0.0017517031, w: 0.8328789}
+  m_LocalPosition: {x: -8.767757, y: 2.0902061, z: 1.4681745}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

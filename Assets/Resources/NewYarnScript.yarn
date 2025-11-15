@@ -10,6 +10,7 @@ title: StartCall
 День добрый, товарищ сержант. Меня зовут <b>Эдвард Доуэл</b>, я артиллерист. Ты – мой наводчик. #line:chapter1_intro1
 Сейчас войска Империи проводят эвакуацию гражданских. Наш долг – обеспечить им прикрытие. #line:chapter1_intro2
 Для начала включи карту на столе. Там должен быть рубильник. #line:chapter1_intro3
+<<SpawnWave>>
 Включил? Молодец. #line:chapter1_intro4
 Наводчик, ты обязан передавать мне координаты противника. Он отмечен на карте красными точками. #line:chapter1_intro5
 Увидишь такую – немедленно телеграфируй. #line:chapter1_intro6
@@ -21,7 +22,6 @@ title: StartCall
 Вот ведь. Пять лет мы потратили, чтобы эта земля стала нашей. #line:chapter1_unfinished_enemy4
 А враг сметает все укрепления за считанные часы… #line:chapter1_unfinished_enemy5
 Хватит болтовни. Будь готов отправлять мне координаты. #line:chapter1_unfinished_enemy6
-<<SpawnWave>>
 ===
 
 title: AfterWave1
@@ -152,8 +152,6 @@ title: Сhapter2_arrowslit_light
 
 title: Wave2_WhyBunkerClosed
 ---
-:Кстати, забыл сказать: если ошибся в воде координат и хочешь стереть её – зажми и держи кнопку ввода. Так ты сотрёшь символ.
-...
 Загрузил ты меня, сержант. #line:chapter2_before_sleep1
 Пойду прилягу. #line:chapter2_before_sleep2
 И тебе тоже стоит. С самого прибытия сюда ни на минуту не присел #line:chapter2_before_sleep3
@@ -368,7 +366,7 @@ title: Chapter5_dying_artilerist
 title: Chapter5_fake_voice
 ---
 <<PlaySound Knocking>>
-Наводчик! Открывай дверь. Запустишь? #line:chapter5_evacuation1XXXXXX
+Наводчик! Открывай дверь. Запустишь?
 <<InitBedInteract Chapter5_openthedoor>>
 ===
 

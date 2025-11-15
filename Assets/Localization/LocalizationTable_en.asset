@@ -132,8 +132,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 76895151251462
-    m_Localized: 'You''re in luck: there''s a wounded enemy on the battlefield. Still
-      alive, but immobile'
+    m_Localized: ':You''re in luck: there''s a wounded enemy on the battlefield.
+      Still alive, but immobile'
     m_Metadata:
       m_Items: []
   - m_Id: 76895151251463
@@ -141,7 +141,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 76895151251464
-    m_Localized: 'I repeat: when you see the red dot, do not hesitate and send me
+    m_Localized: ':I repeat: when you see the red dot, do not hesitate and send me
       the coordinates immediately.'
     m_Metadata:
       m_Items: []
@@ -172,7 +172,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 76895151251471
-    m_Localized: 'Not much: just dates and the outcomes.'
+    m_Localized: ':Not much: just dates and the outcomes.'
     m_Metadata:
       m_Items: []
   - m_Id: 76895151251472
@@ -232,7 +232,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 76895151251484
-    m_Localized: 'They made excuses! Said they didn''t have time to evacuate their
+    m_Localized: ':They made excuses! Said they didn''t have time to evacuate their
       civilians. The point is: they''ve destroyed everything they could get their
       hands on just so that we wouldn''t get it.'
     m_Metadata:
@@ -414,7 +414,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 76895155445795
-    m_Localized: 'I once again remind you: using the phone during attacks is strictly
+    m_Localized: ':I once again remind you: using the phone during attacks is strictly
       prohibited!'
     m_Metadata:
       m_Items: []

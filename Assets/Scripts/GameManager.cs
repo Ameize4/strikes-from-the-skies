@@ -85,6 +85,8 @@ namespace DefaultNamespace
         private bool waitingForBed;
         private string bedJumpDialogueName;
 
+        private bool waitingForDoor;
+        
         public bool twoLetterTelegraphLimitEnabled;
 
         private void Awake()
@@ -181,6 +183,12 @@ namespace DefaultNamespace
             Instance.waitingForBed = true;
         }
         
+        [YarnCommand("InitDoorInteract")]
+        public static void Yarn_InitDoorInteract()
+        {
+            Instance.waitingForDoor = true;
+        }
+        
         [YarnCommand("StopSleep")]
         public static void Yarn_StopSleep()
         {
@@ -190,9 +198,6 @@ namespace DefaultNamespace
         [YarnCommand("SpawnTimeline")]
         public static void Yarn_SpawnTimeline()
         {
-            Instance._timelinePlayable.Play();
-            var c = FindFirstObjectByType<CreditsController>();
-            Instance._timelinePlayable.stopped += (director => c.StartCredits());
         }
         
         [YarnCommand("ShowInvisibleEnemies")]
@@ -314,6 +319,18 @@ namespace DefaultNamespace
             dialogueRunner.StartDialogue(bedJumpDialogueName);
             bedJumpDialogueName = "";
             bedHandler.StartSleep();
+        }
+
+        public void DoorInteract()
+        {
+            if (!waitingForDoor)
+            {
+                return;
+            }
+            
+            _timelinePlayable.Play();
+            var c = FindFirstObjectByType<CreditsController>();
+            _timelinePlayable.stopped += (director => c.StartCredits());
         }
     }
 }

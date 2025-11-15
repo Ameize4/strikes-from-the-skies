@@ -147,6 +147,8 @@ namespace DefaultNamespace
             _cameraShake.Process();
         }
 
+        #region Yarn commands
+
         [YarnCommand("SpawnWave")]
         public static void Yarn_SpawnWave()
         {
@@ -231,6 +233,7 @@ namespace DefaultNamespace
             Instance._cameraShake.SetTrauma(value);
             Instance.trauma = value;
         }
+        #endregion
 
         public void SendMorseCoordinates(string message)
         {

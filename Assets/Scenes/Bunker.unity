@@ -1375,7 +1375,7 @@ AudioSource:
   m_GameObject: {fileID: 228787128}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8917451982255763891, guid: 86dfa72d77fa8cf468b98ab87e0e971c, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: c8555c1f3c3773d48bb03ce0467e8f02, type: 3}
   m_PlayOnAwake: 1
@@ -3317,7 +3317,7 @@ AudioSource:
   m_GameObject: {fileID: 469537391}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8917451982255763891, guid: 86dfa72d77fa8cf468b98ab87e0e971c, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: fdb8851f8dbd5954f89ed630fe0e8e20, type: 3}
   m_PlayOnAwake: 1
@@ -4623,7 +4623,7 @@ AudioSource:
   m_GameObject: {fileID: 739094581}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8874217729174980489, guid: 86dfa72d77fa8cf468b98ab87e0e971c, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -6697,7 +6697,7 @@ AudioSource:
   m_GameObject: {fileID: 1070334618}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8917451982255763891, guid: 86dfa72d77fa8cf468b98ab87e0e971c, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: e61e012e3a90cf04fac722dfcaf83c7e, type: 3}
   m_PlayOnAwake: 1
@@ -6833,7 +6833,7 @@ MonoBehaviour:
   - Color: {fileID: 2800000, guid: c3f52f325d3bcb548a042744bcd18336, type: 3}
   grid: {fileID: 1770552387}
   chapters: {fileID: 11400000, guid: 8e69d846da4771e4d917c3dca9dcc0c4, type: 2}
-  currentChapterIdx: 6
+  currentChapterIdx: 0
   phoneHandler: {fileID: 1389127516}
   bedHandler: {fileID: 915776384}
   cameraShakeProperties:
@@ -7449,7 +7449,7 @@ AudioSource:
   m_GameObject: {fileID: 1248687642}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8874217729174980489, guid: 86dfa72d77fa8cf468b98ab87e0e971c, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -12456,7 +12456,7 @@ GameObject:
   - component: {fileID: 1794629755}
   - component: {fileID: 1794629754}
   m_Layer: 0
-  m_Name: VL
+  m_Name: VoiceOverAudioSource3D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12471,11 +12471,11 @@ AudioSource:
   m_GameObject: {fileID: 1794629753}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 4727921224084469547, guid: 731a8227e9267394686f82f3cb6e3be9, type: 2}
+  OutputAudioMixerGroup: {fileID: 4727921224084469547, guid: 86dfa72d77fa8cf468b98ab87e0e971c, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -12484,9 +12484,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 20
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -12494,23 +12494,50 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      time: 0.09054337
+      value: 0.9965172
+      inSlope: -3.6433692
+      outSlope: -3.6433692
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0.2358245
+    - serializedVersion: 3
+      time: 0.25200957
+      value: 0.48260498
+      inSlope: -1.4606667
+      outSlope: -1.4606667
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.46032807
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.4307312
+      value: 0.28482056
+      inSlope: -0.62524897
+      outSlope: -0.62524897
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.78342897
+      value: 0.07626343
+      inSlope: -0.21142039
+      outSlope: -0.21142039
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33105478
+      outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 0.030389406
+      inSlope: -0.10003988
+      outSlope: -0.10003988
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -12519,7 +12546,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -12534,7 +12561,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.2
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -12571,12 +12598,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb87ae987c60e9d4f8346202d271648d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: YarnSpinner.Unity::Yarn.Unity.VoiceOverPresenter
-  endLineWhenVoiceoverComplete: 0
+  endLineWhenVoiceoverComplete: 1
   dialogueRunner: {fileID: 921657498}
   fadeOutTimeOnLineFinish: 0.05
   waitTimeBeforeLineStart: 0
   waitTimeAfterLineComplete: 0
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1794629754}
 --- !u!4 &1794629756
 Transform:
   m_ObjectHideFlags: 0
@@ -12586,7 +12613,7 @@ Transform:
   m_GameObject: {fileID: 1794629753}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4.96, y: 1.325, z: 0.169}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14210,12 +14237,12 @@ SceneRoots:
   - {fileID: 1716428966}
   - {fileID: 921657495}
   - {fileID: 1528412646}
-  - {fileID: 1794629756}
   - {fileID: 1590008379}
   - {fileID: 1385488763}
   - {fileID: 1416027391}
   - {fileID: 1728450382}
   - {fileID: 1577125093}
+  - {fileID: 1794629756}
   - {fileID: 376555769}
   - {fileID: 218730343}
   - {fileID: 202254985}

@@ -97,6 +97,7 @@ title: AfterWave1_X_X_X
 
 title: AfterWave2
 ---
+<<StopSound Siren>>
 <<NextChapter>>
 <<wait 4>>
 <<JumpToCall AfterWave2Call>>
@@ -178,6 +179,7 @@ title: Wave3_Init
 
 title: AfterWave3
 ---
+<<StopSound Siren>>
 <<NextChapter>>
 <<wait 4>>
 <<JumpToCall Wave3_Init_CallFromCommand>>
@@ -228,6 +230,7 @@ title: Сhapter3_artillerist_inhumanely
 Ещё раз что-то подобное ляпнешь – сообщу командованию и жалеть тебя не буду. #line:chapter3_artillerist_inhumanely3
 Поспи пока или ещё чем займись. Силы нам пока пригодятся. #line:chapter2_before_sleep4_repeat1
 Конец связи. #line:chapter2_before_sleep5_repeat1
+<<StopSound Siren>>
 <<NextChapter>>
 <<InitBedInteract Сhapter4_Wave>>
 ===
@@ -238,6 +241,7 @@ title: Сhapter3_artillerist_must_be_done
 Иначе долго здесь не протянешь. #line:chapter3_artillerist_must_be_done3
 Поспи пока или ещё чем займись. Силы нам пока пригодятся. #line:chapter2_before_sleep4_repeat2
 Конец связи. #line:chapter2_before_sleep5_repeat2
+<<StopSound Siren>>
 <<NextChapter>>
 <<InitBedInteract Сhapter4_Wave>>
 ===
@@ -257,6 +261,7 @@ title: Сhapter4_AfterWave
 ---
 /// Надо начать день прям с тревоги ///
 /// Добавить запуск новой волны. Сделать её ///
+<<StopSound Siren>>
 <<NextChapter>>
 <<wait 4>>
 <<JumpToCall Сhapter4>>
@@ -319,6 +324,7 @@ title: Сhapter4_BigEnemy
 
 title: Chapter5
 ---
+<<StopSound Siren>>
 <<NextChapter>>
 <<wait 4>>
 <<JumpToCall Chapter5_Call>>

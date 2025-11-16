@@ -25,6 +25,7 @@ namespace DefaultNamespace
         public struct LightingInfo
         {
             public Texture2D Color;
+            public GameObject lightObject;
             // public Texture2D ShadowMask;
         }
         [Space]
@@ -144,15 +145,9 @@ namespace DefaultNamespace
 
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                for (var index = 0; index < _lightingInfos.Length; index++)
-                {
-                    var info = _lightingInfos[index];
-                    KeyCode tempKeyCode = (KeyCode)(alphaKeyCode1+index);
-                    if (Input.GetKeyDown(tempKeyCode))
-                    {
-                        SetLightmaps(info);
-                    }
-                }
+                if (Input.GetKeyDown(KeyCode.Alpha1)) SetLight(0);
+                else if (Input.GetKeyDown(KeyCode.Alpha2)) SetLight(1);
+                else if (Input.GetKeyDown(KeyCode.Alpha3)) SetLight(2);
             }
 
             trauma = Mathf.Clamp01(trauma - cameraShakeProperties.recoverySpeed * Time.deltaTime);
@@ -257,6 +252,12 @@ namespace DefaultNamespace
         {
             Instance.AllEnemiesDestroyed();
         }
+        
+        [YarnCommand("ChangeLight")]
+        public static void Yarn_ChangeLight(int value)
+        {
+            Instance.SetLight(value);
+        }
         #endregion
 
         public void SendMorseCoordinates(string message)
@@ -319,12 +320,22 @@ namespace DefaultNamespace
             }
         }
         
+        public void SetLight(int idx)
+        {
+            foreach (var info in _lightingInfos)
+            {
+                info.lightObject.SetActive(false);
+            }
+            SetLightmaps(_lightingInfos[idx]);
+        }
+        
         public void SetLightmaps(LightingInfo info)
         {
             LightmapData data = new LightmapData();
             data.lightmapColor = info.Color;
             // data.shadowMask = info.ShadowMask;
             LightmapSettings.lightmaps = new LightmapData[] { data };
+            info.lightObject.SetActive(true);
         }
         
         public void AnswerPhone()

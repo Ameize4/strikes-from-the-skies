@@ -1981,7 +1981,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228633605}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 0.68235296, g: 0.58431375, b: 0.18039216, a: 1}
@@ -8808,7 +8808,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928077663}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 0.68235296, g: 0.58431375, b: 0.18039216, a: 1}
@@ -10048,8 +10048,12 @@ MonoBehaviour:
     project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
     nodeName: Start
   _lightingInfos:
-  - Color: {fileID: 2800000, guid: 23c2ab4cb1ce10145ac9253722d23369, type: 3}
-  - Color: {fileID: 2800000, guid: c3f52f325d3bcb548a042744bcd18336, type: 3}
+  - Color: {fileID: 2800000, guid: 8d0c042988fed0c4a844e7f89a4e4930, type: 3}
+    lightObject: {fileID: 1416027390}
+  - Color: {fileID: 2800000, guid: 5dc7b43901607d74b963a83ee159c4ec, type: 3}
+    lightObject: {fileID: 1156919794}
+  - Color: {fileID: 2800000, guid: 3f943eec56497a346b758e67154a9be4, type: 3}
+    lightObject: {fileID: 489431657}
   headquarterData:
     health: 30
     healthThresholds: 140000000a000000
@@ -17889,12 +17893,6 @@ MonoBehaviour:
   - posX: 7
     posY: 9
   mainTownCells:
-  - posX: 8
-    posY: 3
-  - posX: 8
-    posY: 4
-  - posX: 8
-    posY: 5
   - posX: 9
     posY: 3
   - posX: 9
@@ -19899,7 +19897,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028172959}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 0.68235296, g: 0.58431375, b: 0.18039216, a: 1}

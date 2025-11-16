@@ -358,6 +358,8 @@ title: Chapter5_dying_artilerist
 Ты… Это… Вспоминай меня на день воинской славы, хорошо? #line:chapter5_dying_artilerist5
 Бывай… Сержантик… #line:chapter5_dying_artilerist6
 <<StopSound Alarm>>
+<<wait 1.5>>
+<<ChangeLight 2>>
 /// Надо добавить вырубание света и последующее стучание в дверь и слова артиллериста ///
 <<wait 20>>
 <<jump Chapter5_fake_voice>>

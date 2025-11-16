@@ -367,7 +367,7 @@ title: Chapter5_dying_artilerist
 <<wait 1.5>>
 <<ChangeLight 2>>
 /// Надо добавить вырубание света и последующее стучание в дверь и слова артиллериста ///
-<<wait 20>>
+<<wait 10>>
 <<jump Chapter5_fake_voice>>
 ===
 
@@ -375,7 +375,7 @@ title: Chapter5_fake_voice
 ---
 <<PlaySound Knocking>>
 Наводчик! Открывай дверь. Запустишь? #line:chapter5_fake_voice
-<<InitDoorInteract>>
+<<InitDoorInteract Chapter5_openthedoor>>
 ===
 
 title: Chapter5_openthedoor

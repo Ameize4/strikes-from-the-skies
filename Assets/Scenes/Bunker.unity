@@ -6831,6 +6831,9 @@ MonoBehaviour:
   _lightingInfos:
   - Color: {fileID: 2800000, guid: 23c2ab4cb1ce10145ac9253722d23369, type: 3}
   - Color: {fileID: 2800000, guid: c3f52f325d3bcb548a042744bcd18336, type: 3}
+  headquarterData:
+    health: 30
+    firstHealthThreshold: 20
   grid: {fileID: 1770552387}
   chapters: {fileID: 11400000, guid: 8e69d846da4771e4d917c3dca9dcc0c4, type: 2}
   currentChapterIdx: 0

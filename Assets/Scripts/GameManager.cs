@@ -31,6 +31,11 @@ namespace DefaultNamespace
         [SerializeField] private LightingInfo[] _lightingInfos;
 
         [Space]
+        [SerializeField]
+        private Map.HeadquarterData headquarterData;
+        public Map.Headquarter headquarter;
+        
+        [Space]
         public Map.Grid grid;
 
         public Map.Chapters chapters;
@@ -96,7 +101,7 @@ namespace DefaultNamespace
 
         private void Start()
         {
-            dialogueRunner.StartDialogue(dialogue.nodeName);
+            // dialogueRunner.StartDialogue(dialogue.nodeName);
             
             CinemachineCore.CameraActivatedEvent.AddListener(CameraChangedListener);
 
@@ -106,6 +111,8 @@ namespace DefaultNamespace
             _volume.sharedProfile.TryGet(out Vignette vignette);
 
             this.vignette = vignette;
+
+            headquarter = new Map.Headquarter(headquarterData);
         }
 
         private void CameraChangedListener(ICinemachineCamera.ActivationEventParams arg0)

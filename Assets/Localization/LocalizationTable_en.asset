@@ -132,8 +132,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 76895151251462
-    m_Localized: 'You''re in luck: there''s a wounded enemy on the battlefield. Still
-      alive, but immobile'
+    m_Localized: ':You''re in luck: there''s a wounded enemy on the battlefield.
+      Still alive, but immobile'
     m_Metadata:
       m_Items: []
   - m_Id: 76895151251463
@@ -141,7 +141,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 76895151251464
-    m_Localized: 'I repeat: when you see the red dot, do not hesitate and send me
+    m_Localized: ':I repeat: when you see the red dot, do not hesitate and send me
       the coordinates immediately.'
     m_Metadata:
       m_Items: []
@@ -154,7 +154,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 76895151251467
-    m_Localized: Enough chitchat. Be ready to send me the coordinates.
+    m_Localized: Be ready to send me the coordinates.
     m_Metadata:
       m_Items: []
   - m_Id: 76895151251468
@@ -172,7 +172,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 76895151251471
-    m_Localized: 'Not much: just dates and the outcomes.'
+    m_Localized: ':Not much: just dates and the outcomes.'
     m_Metadata:
       m_Items: []
   - m_Id: 76895151251472
@@ -232,7 +232,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 76895151251484
-    m_Localized: 'They made excuses! Said they didn''t have time to evacuate their
+    m_Localized: ':They made excuses! Said they didn''t have time to evacuate their
       civilians. The point is: they''ve destroyed everything they could get their
       hands on just so that we wouldn''t get it.'
     m_Metadata:
@@ -414,7 +414,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 76895155445795
-    m_Localized: 'I once again remind you: using the phone during attacks is strictly
+    m_Localized: ':I once again remind you: using the phone during attacks is strictly
       prohibited!'
     m_Metadata:
       m_Items: []
@@ -556,7 +556,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 76895159640086
-    m_Localized: One time the coals in the firplace got all cooled down, so Mimi
+    m_Localized: One time the coals in the fireplace got all cooled down, so Mimi
       snuck in there and slept through the night.
     m_Metadata:
       m_Items: []
@@ -732,6 +732,65 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1671234927255552
     m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546691
+    m_Localized: By the way, these used to be the Republic's bunkers. No one bothered
+      to remove their posters.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546692
+    m_Localized: I suppose, we never planned to stay here long.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546693
+    m_Localized: Sergeant, are you insane? Had I listened to you now - the Empire
+      would've been in ruins!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546694
+    m_Localized: Try this again - you'll be court-marshalled in a blink of an eye!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546695
+    m_Localized: 'Sergeant, let us hope this was a mistake. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546696
+    m_Localized: The order to attack the Command Headquarters is equated to an assassination
+      attempt.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546697
+    m_Localized: All-clear, Sergeant, false alarm.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546698
+    m_Localized: Game Over
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546700
+    m_Localized: Sleep a bit or do something else. You'll need the stength.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546701
+    m_Localized: Over.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546702
+    m_Localized: Sleep a bit or do something else. You'll need the stength.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546703
+    m_Localized: Over.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546704
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985337234546705
+    m_Localized: ...
     m_Metadata:
       m_Items: []
   references:

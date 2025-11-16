@@ -9,6 +9,7 @@ namespace DefaultNamespace.Map
     public struct EnemyData
     {
         public float speed;
+        [Tooltip("If equal zero enemy will use walk speed as atk speed")] public float atkSpeed;
         public float delay;
         public GridPos beginPosition;
         public bool isInvisible;
@@ -64,8 +65,11 @@ namespace DefaultNamespace.Map
             
             coundDown -= Time.deltaTime;
             if (coundDown > 0) return;
-            
-            coundDown = data.speed;
+
+            if (cellTo.contentType == CellContentType.Destination && data.atkSpeed != 0)
+                coundDown = data.atkSpeed;
+            else
+                coundDown = data.speed;
             coundDown += Random.Range(randomMin, randomMax);
 
             if (isDelayed)
@@ -80,7 +84,7 @@ namespace DefaultNamespace.Map
 
             if (cellTo.contentType == CellContentType.Destination)
             {
-                Debug.Log("bruh");
+                GameManager.Instance.headquarter.TakeDamage(1);
                 return;
             }
             

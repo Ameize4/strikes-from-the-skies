@@ -186,7 +186,7 @@ title: AfterWave3
 ---
 <<StopSound Siren>>
 <<NextChapter>>
-<<wait 4>>
+<<wait 5>>
 <<JumpToCall Wave3_Init_CallFromCommand>>
 ===
 
@@ -206,12 +206,13 @@ title: Wave3_EnemyDefeated
 ---
 <<StopSound Siren>>
 <<NextChapter>>
-<<wait 4>>
+<<wait 5>>
 <<JumpToCall Wave3_EnemyDefeated_Call>>
 ===
 
 title: Wave3_EnemyDefeated_Call
 ---
+<<wait 5>>
 Сержант, Доуэл, поздравляю с успешной атакой. Родина вас не забудет. #line:chapter3_successfull_elimination1
 Этот разговор - исключение. Впредь такого не повторится. #line:chapter3_successfull_elimination2
 :Напоминаю: использовать телефон во время атаки категорически запрещено! #line:chapter3_successfull_elimination3

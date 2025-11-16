@@ -25,11 +25,17 @@ namespace DefaultNamespace
         public struct LightingInfo
         {
             public Texture2D Color;
+            public GameObject lightObject;
             // public Texture2D ShadowMask;
         }
         [Space]
         [SerializeField] private LightingInfo[] _lightingInfos;
 
+        [Space]
+        [SerializeField]
+        private Map.HeadquarterData headquarterData;
+        public Map.Headquarter headquarter;
+        
         [Space]
         public Map.Grid grid;
 
@@ -106,6 +112,14 @@ namespace DefaultNamespace
             _volume.sharedProfile.TryGet(out Vignette vignette);
 
             this.vignette = vignette;
+
+            headquarter = new Map.Headquarter(headquarterData);
+            headquarter.OnZeroHealth += () =>
+            {
+                _timelinePlayable.Play();
+                var c = FindFirstObjectByType<CreditsController>();
+                _timelinePlayable.stopped += (director => c.EndCredits());
+            };
         }
 
         private void CameraChangedListener(ICinemachineCamera.ActivationEventParams arg0)
@@ -131,15 +145,9 @@ namespace DefaultNamespace
 
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                for (var index = 0; index < _lightingInfos.Length; index++)
-                {
-                    var info = _lightingInfos[index];
-                    KeyCode tempKeyCode = (KeyCode)(alphaKeyCode1+index);
-                    if (Input.GetKeyDown(tempKeyCode))
-                    {
-                        SetLightmaps(info);
-                    }
-                }
+                if (Input.GetKeyDown(KeyCode.Alpha1)) SetLight(0);
+                else if (Input.GetKeyDown(KeyCode.Alpha2)) SetLight(1);
+                else if (Input.GetKeyDown(KeyCode.Alpha3)) SetLight(2);
             }
 
             trauma = Mathf.Clamp01(trauma - cameraShakeProperties.recoverySpeed * Time.deltaTime);
@@ -238,6 +246,18 @@ namespace DefaultNamespace
             Instance._cameraShake.SetTrauma(value);
             Instance.trauma = value;
         }
+        
+        [YarnCommand("BackToDialogue")]
+        public static void Yarn_BackToDialogue()
+        {
+            Instance.AllEnemiesDestroyed();
+        }
+        
+        [YarnCommand("ChangeLight")]
+        public static void Yarn_ChangeLight(int value)
+        {
+            Instance.SetLight(value);
+        }
         #endregion
 
         public void SendMorseCoordinates(string message)
@@ -287,10 +307,26 @@ namespace DefaultNamespace
 
         public void AllEnemiesDestroyed()
         {
+            string? reached = headquarter.IsThresholdReached();
+            if (reached != null)
+            {
+                dialogueRunner.StartDialogue(reached);
+                return;
+            }
+            
             if (chapters.chapters[currentChapterIdx].dialogueAfterWave != "")
             {
                 dialogueRunner.StartDialogue(chapters.chapters[currentChapterIdx].dialogueAfterWave);
             }
+        }
+        
+        public void SetLight(int idx)
+        {
+            foreach (var info in _lightingInfos)
+            {
+                info.lightObject.SetActive(false);
+            }
+            SetLightmaps(_lightingInfos[idx]);
         }
         
         public void SetLightmaps(LightingInfo info)
@@ -299,6 +335,7 @@ namespace DefaultNamespace
             data.lightmapColor = info.Color;
             // data.shadowMask = info.ShadowMask;
             LightmapSettings.lightmaps = new LightmapData[] { data };
+            info.lightObject.SetActive(true);
         }
         
         public void AnswerPhone()

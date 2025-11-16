@@ -375,3 +375,35 @@ title: Chapter5_openthedoor
 <<StopSound Knocking>>
 <<SpawnTimeline>>
 ===
+
+
+title: Basestate_damaged1
+---
+Как слышно? На связи штаб. #line:basestate_damaged1
+Командованию нанесены незначительные повреждения. Мы контролируем ситуацию. #line:basestate_damaged2
+Возвращайтесь к выполнению обязанностей. #line:basestate_damaged3
+
+<<BackToDialogue>>
+===
+
+
+title: Basestate_damaged2
+---
+Вы меня слышите? Это штаб. #line:basestate_seriously_damaged1
+Сержант, вам стоит быть внимательнее. #line:basestate_seriously_damaged2
+Последний налёт оставил существенный ущерб зданию командования. #line:basestate_seriously_damaged3
+Долго мы так не протянем. Пожалуйста, защитите нас. #line:basestate_seriously_damaged4
+
+<<BackToDialogue>>
+===
+
+
+title: Basestate_damaged3
+---
+Сержант! Это штаб. #line:basestate_almost_dead1
+Из-за вашей безалаберности под угрозой существование не только штаба командования, но и целой Империи! #line:basestate_almost_dead2
+Ситуация критическая. Ещё немного – и здание обвалится! #line:basestate_almost_dead3
+Не дайте этим тварям тут всех похоронить! #line:basestate_almost_dead4
+
+<<BackToDialogue>>
+===

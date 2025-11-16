@@ -1446,6 +1446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Character: {fileID: 199834479}
+  move: {fileID: 0}
 --- !u!4 &321276526
 Transform:
   m_ObjectHideFlags: 0
@@ -4248,9 +4249,7 @@ MonoBehaviour:
   tweenDuration: 0
   positionTarget: {x: -0.6934808, y: 0.07421839, z: -0.096372604}
   rotationTarget: {x: 0, y: 0, z: -7.718}
-  toneClip: {fileID: 0}
-  volume: 0.5
-  frequency: 700
+  sound: {fileID: 0}
 --- !u!1001 &741308088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7149,6 +7148,63 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5731547941117289742, guid: 347c94a10e01f334983a98f3b5c4337d, type: 3}
+--- !u!1001 &1363434332
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e8caba2b0d5ee5d40a12a207870f9887, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.199457
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e8caba2b0d5ee5d40a12a207870f9887, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.76851845
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e8caba2b0d5ee5d40a12a207870f9887, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.765184
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e8caba2b0d5ee5d40a12a207870f9887, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e8caba2b0d5ee5d40a12a207870f9887, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e8caba2b0d5ee5d40a12a207870f9887, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e8caba2b0d5ee5d40a12a207870f9887, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e8caba2b0d5ee5d40a12a207870f9887, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e8caba2b0d5ee5d40a12a207870f9887, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e8caba2b0d5ee5d40a12a207870f9887, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e8caba2b0d5ee5d40a12a207870f9887, type: 3}
+      propertyPath: m_Name
+      value: Telegraph_1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e8caba2b0d5ee5d40a12a207870f9887, type: 3}
 --- !u!1 &1364140641
 GameObject:
   m_ObjectHideFlags: 0
@@ -9741,6 +9797,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1861886475}
   m_Mesh: {fileID: -5746147162638082140, guid: 3298d6a034e84fd41baa7be8bd2cd5bb, type: 3}
+--- !u!1001 &1874888442
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 924a33de175a7cf44a5fdf57662f9390, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.079632
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 924a33de175a7cf44a5fdf57662f9390, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7699632
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 924a33de175a7cf44a5fdf57662f9390, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.0869724
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 924a33de175a7cf44a5fdf57662f9390, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 924a33de175a7cf44a5fdf57662f9390, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 924a33de175a7cf44a5fdf57662f9390, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 924a33de175a7cf44a5fdf57662f9390, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 924a33de175a7cf44a5fdf57662f9390, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 924a33de175a7cf44a5fdf57662f9390, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 924a33de175a7cf44a5fdf57662f9390, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 924a33de175a7cf44a5fdf57662f9390, type: 3}
+      propertyPath: m_Name
+      value: TelegraphKey
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 924a33de175a7cf44a5fdf57662f9390, type: 3}
 --- !u!1 &1926826430
 GameObject:
   m_ObjectHideFlags: 0
@@ -10908,3 +11021,5 @@ SceneRoots:
   - {fileID: 741308088}
   - {fileID: 423780729}
   - {fileID: 969145451}
+  - {fileID: 1363434332}
+  - {fileID: 1874888442}

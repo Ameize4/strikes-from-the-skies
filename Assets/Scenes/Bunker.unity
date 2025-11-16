@@ -6828,12 +6828,19 @@ MonoBehaviour:
   dialogue:
     project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
     nodeName: Start
+  onFirstThreshold:
+    project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
+    nodeName: Basestate_damaged1
   _lightingInfos:
   - Color: {fileID: 2800000, guid: 23c2ab4cb1ce10145ac9253722d23369, type: 3}
   - Color: {fileID: 2800000, guid: c3f52f325d3bcb548a042744bcd18336, type: 3}
   headquarterData:
     health: 30
-    firstHealthThreshold: 20
+    healthThresholds: 140000000a000000
+    dialogueToRun:
+    - Basestate_damaged1
+    - Basestate_damaged2
+    - Basestate_damaged3
   grid: {fileID: 1770552387}
   chapters: {fileID: 11400000, guid: 8e69d846da4771e4d917c3dca9dcc0c4, type: 2}
   currentChapterIdx: 0

@@ -101,7 +101,7 @@ namespace DefaultNamespace
 
         private void Start()
         {
-            // dialogueRunner.StartDialogue(dialogue.nodeName);
+            dialogueRunner.StartDialogue(dialogue.nodeName);
             
             CinemachineCore.CameraActivatedEvent.AddListener(CameraChangedListener);
 
@@ -113,6 +113,12 @@ namespace DefaultNamespace
             this.vignette = vignette;
 
             headquarter = new Map.Headquarter(headquarterData);
+            headquarter.OnZeroHealth += () =>
+            {
+                _timelinePlayable.Play();
+                var c = FindFirstObjectByType<CreditsController>();
+                _timelinePlayable.stopped += (director => c.EndCredits());
+            };
         }
 
         private void CameraChangedListener(ICinemachineCamera.ActivationEventParams arg0)
@@ -245,6 +251,12 @@ namespace DefaultNamespace
             Instance._cameraShake.SetTrauma(value);
             Instance.trauma = value;
         }
+        
+        [YarnCommand("BackToDialogue")]
+        public static void Yarn_BackToDialogue()
+        {
+            Instance.AllEnemiesDestroyed();
+        }
         #endregion
 
         public void SendMorseCoordinates(string message)
@@ -294,6 +306,13 @@ namespace DefaultNamespace
 
         public void AllEnemiesDestroyed()
         {
+            string? reached = headquarter.IsThresholdReached();
+            if (reached != null)
+            {
+                dialogueRunner.StartDialogue(reached);
+                return;
+            }
+            
             if (chapters.chapters[currentChapterIdx].dialogueAfterWave != "")
             {
                 dialogueRunner.StartDialogue(chapters.chapters[currentChapterIdx].dialogueAfterWave);

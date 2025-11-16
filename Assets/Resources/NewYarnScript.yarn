@@ -36,7 +36,7 @@ title: AfterWave1Call
 Молодец, сержант! Видишь, не так уж и сложно. Да и я не пальцем деланный, со мной не пропадёшь. #line:chapter2_question_history1
 Вот интересно, молодёжь вообще в курсе про великие завоевания Империи? #line:chapter2_question_history2
 Что сейчас про нас в школе говорят? #line:chapter2_question_history3
--> Совсем немного: только даты да итоги #line:chapter2_question_history_option1
+-> :Совсем немного: только даты да итоги #line:chapter2_question_history_option1
     <<jump AfterWave1_1>>
 -> Каждый год специальный урок. Ещё и историк мой без ума от этого времени #line:chapter2_question_history_option2
     <<jump AfterWave1_2>>

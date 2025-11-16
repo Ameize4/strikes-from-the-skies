@@ -367,7 +367,7 @@ title: Chapter5_fake_voice
 ---
 <<PlaySound Knocking>>
 Наводчик! Открывай дверь. Запустишь? #line:chapter5_fake_voice
-<<InitBedInteract Chapter5_openthedoor>>
+<<InitDoorInteract>>
 ===
 
 title: Chapter5_openthedoor

@@ -159,15 +159,20 @@ title: Wave2_WhyBunkerClosed
 Поспи пока или ещё чем займись. Силы нам пока пригодятся. #line:chapter2_before_sleep4
 Конец связи. #line:chapter2_before_sleep5
 /// Добавить скрипт о необходимости лечь спать ///
-<<InitBedInteract Wave3_Init>>
+<<InitBedInteract Wave3>>
 /// Здесь можно добавить ивент со скрежетом из толчка, тоесть трубы. Подойдя к нему, слышно, будто что-то убежало и звук прекращается ///
 ===
 
-
-title: Wave3_Init
+title: Wave3
 ---
 <<wait 2>>
 <<StopSleep>>
+<<JumpToCall Wave3_Init>>
+===
+
+title: Wave3_Init
+---
+
 Ну что, сержант, удалось поспать? #line:chapter3_interrupted_dialogue1
 Я дремал кое-как. Сюда бы подушку с одеялом… #line:chapter3_interrupted_dialogue2
 И книжку бы хорошую. Я вот писателя для себя открыл… как его… Уэллс! #line:chapter3_interrupted_dialogue3
@@ -199,6 +204,8 @@ title: Wave3_Init_CallFromCommand
 
 title: Wave3_EnemyDefeated
 ---
+<<StopSound Siren>>
+<<NextChapter>>
 <<wait 4>>
 <<JumpToCall Wave3_EnemyDefeated_Call>>
 ===
@@ -230,8 +237,6 @@ title: Сhapter3_artillerist_inhumanely
 Ещё раз что-то подобное ляпнешь – сообщу командованию и жалеть тебя не буду. #line:chapter3_artillerist_inhumanely3
 Поспи пока или ещё чем займись. Силы нам пока пригодятся. #line:chapter2_before_sleep4_repeat1
 Конец связи. #line:chapter2_before_sleep5_repeat1
-<<StopSound Siren>>
-<<NextChapter>>
 <<InitBedInteract Сhapter4_Wave>>
 ===
 
@@ -253,8 +258,6 @@ title: Сhapter4_Wave
 <<SpawnWave>>
 <<wait 2>>
 <<StopSleep>>
-
-
 ===
 
 title: Сhapter4_AfterWave

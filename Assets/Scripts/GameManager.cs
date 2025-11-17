@@ -138,6 +138,7 @@ namespace DefaultNamespace
 
         private void Update()
         {
+            #if UNITY_EDITOR
             if (Input.GetKeyDown(KeyCode.P))
             {
                 grid.BeginEnemyWave(chapters.debugEnemyData);
@@ -147,7 +148,7 @@ namespace DefaultNamespace
                 _cameraShake.SetTrauma(1f);
                 trauma = 1f;
             }
-
+            #endif
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 if (Input.GetKeyDown(KeyCode.Alpha1)) SetLight(0);

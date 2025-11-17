@@ -342,19 +342,23 @@ title: Chapter5_Call
 … #line:chapter5_evacuation3
 Это ещё что такое? #line:chapter5_evacuation4
 <<PlaySound Alarm>>
+<<ChangeLight 2>>
 Оно летит в нашу сторону! Доложите товарищу полковнику! #line:chapter5_evacuation5
 <<PlaySound Boom>>
-… #line:chapter5_evacuation6
-Все целы? #line:chapter5_evacuation7
+<<SetTrauma 1>>
+///… #line:chapter5_evacuation6
+///Все целы? #line:chapter5_evacuation7
 <<SpawnWave>>
-Товарищи, немедленно отставить панику! Это неразорвавшийся снаряд. #line:chapter5_evacuation8
-Только форма у него какая-то странная. #line:chapter5_evacuation9
-… #line:chapter5_evacuation10
-:Всему личному составу командования: незамедлительно проследуйте в убежище на минус третий этаж. #line:chapter5_evacuation11
-Да брось ты эти бумажки! Мы сейчас здесь нахрен поляжем! #line:chapter5_evacuation12
-:Повторяю. Всему личному составу командования: незамедлительно проследовать в убежище на минус третий этаж. #line:chapter5_evacuation13
-Господи! #line:chapter5_evacuation14
+<<BlockInteractiveObjects true>>
+///Товарищи, немедленно отставить панику! Это неразорвавшийся снаряд. #line:chapter5_evacuation8
+///Только форма у него какая-то странная. #line:chapter5_evacuation9
+///… #line:chapter5_evacuation10
+///:Всему личному составу командования: незамедлительно проследуйте в убежище на минус третий этаж. #line:chapter5_evacuation11
+///Да брось ты эти бумажки! Мы сейчас здесь нахрен поляжем! #line:chapter5_evacuation12
+///:Повторяю. Всему личному составу командования: незамедлительно проследовать в убежище на минус третий этаж. #line:chapter5_evacuation13
+///Господи! #line:chapter5_evacuation14
 ///ААААААААА! #line:chapter5_evacuation15
+
 /// Вырубать все красные точки на карте. По сути, вырубать карту ///
 <<wait 2.5>>
 <<JumpToCall Chapter5_dying_artilerist>>
@@ -370,9 +374,9 @@ title: Chapter5_dying_artilerist
 Бывай… Сержантик… #line:chapter5_dying_artilerist6
 <<StopSound Alarm>>
 <<wait 1.5>>
-<<ChangeLight 2>>
+<<ChangeLight 3>>
 /// Надо добавить вырубание света и последующее стучание в дверь и слова артиллериста ///
-<<wait 10>>
+<<wait 20>>
 <<jump Chapter5_fake_voice>>
 ===
 

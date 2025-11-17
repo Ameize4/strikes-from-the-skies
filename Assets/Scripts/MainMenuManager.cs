@@ -1,9 +1,6 @@
-using System;
 using DefaultNamespace;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Localization.Components;
-using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -13,7 +10,6 @@ public class pause : MonoBehaviour
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private Button 
         continueButton, 
-        localButton, 
         twoLetterMaxButton, 
         quitButton;
     
@@ -46,7 +42,6 @@ public class pause : MonoBehaviour
         {
             togglePause();
         });
-        localButton.onClick.AddListener(toggleLocal);
         twoLetterMaxButton.onClick.AddListener(toggleTwoLetterMax);
         toggleTwoLetterMax(); // Run once to prepare values
         toggleTwoLetterMax(); // Run twice because i want lazily rewert bool value
@@ -92,25 +87,6 @@ public class pause : MonoBehaviour
         }
     }
 
-
-    private void toggleLocal()
-    {
-        var availableLocales = LocalizationSettings.AvailableLocales.Locales;
-
-        int currentLocaleIndex = availableLocales.IndexOf(LocalizationSettings.SelectedLocale);
-        int nextLocaleIndex = (currentLocaleIndex + 1) % availableLocales.Count;
-        var nextLocale = availableLocales[nextLocaleIndex];
-        LocalizationSettings.SelectedLocale = nextLocale;
-
-        var textLabel = localButton.GetComponentInChildren<TMP_Text>();
-        
-        var localizedStringEvent = textLabel.GetComponent<LocalizeStringEvent>();
-        localizedStringEvent.enabled = false;
-
-        var stringOperation = LocalizationSettings.StringDatabase.GetLocalizedString("ui_language");
-        textLabel.text = $"{stringOperation} <b>{nextLocale.Identifier.Code.ToUpper()}</b>";
-    }
-    
     private string tlmString;
     
     private void toggleTwoLetterMax()

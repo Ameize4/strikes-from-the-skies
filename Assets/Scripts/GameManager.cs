@@ -274,7 +274,7 @@ namespace DefaultNamespace
         [YarnCommand("ChangeLight")]
         public static void Yarn_ChangeLight(int value)
         {
-            Instance.SetLight(value + 1);
+            Instance.SetLight(value - 1);
         }
         #endregion
 

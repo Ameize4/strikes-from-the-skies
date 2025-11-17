@@ -213,7 +213,7 @@ title: Wave3_Init_CallFromCommand
 <<PlaySound PhoneHangUp>>
 <<PlaySound Siren>>
 <<SpawnWave>>
-<<DelayCallInAttack 10 Wave3_CallFromCommand_Angry_1>>
+<<DelayCallInAttack 40 Wave3_CallFromCommand_Angry_1>>
 ===
 
 title: Wave3_CallFromCommand_Angry_1

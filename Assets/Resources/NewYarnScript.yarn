@@ -7,6 +7,7 @@
 
 title: StartCall
 ---
+<<BlockInteractiveObjects false>>
 День добрый, товарищ сержант. Меня зовут Эдвард Доуэл, я артиллерист. Ты – мой наводчик. #line:chapter1_intro1
 Сейчас войска Империи проводят эвакуацию гражданских. Наш долг – обеспечить им прикрытие. #line:chapter1_intro2
 Вот ведь. Пять лет мы потратили, чтобы эта земля стала нашей. #line:chapter1_unfinished_enemy4
@@ -97,6 +98,7 @@ title: AfterWave1_X_X_X
 
 title: AfterWave2
 ---
+<<StopSound Siren>>
 <<NextChapter>>
 <<wait 4>>
 <<JumpToCall AfterWave2Call>>
@@ -118,7 +120,6 @@ title: AfterWave2_1
 Ладно. Ты отлично справился. Молодец. #line:chapter2_question_isalive_yes4 
 <<jump AfterWave2_Finish>>
 ===
-
 
 title: AfterWave2_2
 ---
@@ -158,15 +159,19 @@ title: Wave2_WhyBunkerClosed
 Поспи пока или ещё чем займись. Силы нам пока пригодятся. #line:chapter2_before_sleep4
 Конец связи. #line:chapter2_before_sleep5
 /// Добавить скрипт о необходимости лечь спать ///
-<<InitBedInteract Wave3_Init>>
+<<InitBedInteract Wave3>>
 /// Здесь можно добавить ивент со скрежетом из толчка, тоесть трубы. Подойдя к нему, слышно, будто что-то убежало и звук прекращается ///
 ===
 
+title: Wave3
+---
+<<wait 3>>
+<<StopSleep>>
+<<JumpToCall Wave3_Init>>
+===
 
 title: Wave3_Init
 ---
-<<wait 2>>
-<<StopSleep>>
 Ну что, сержант, удалось поспать? #line:chapter3_interrupted_dialogue1
 Я дремал кое-как. Сюда бы подушку с одеялом… #line:chapter3_interrupted_dialogue2
 И книжку бы хорошую. Я вот писателя для себя открыл… как его… Уэллс! #line:chapter3_interrupted_dialogue3
@@ -178,8 +183,9 @@ title: Wave3_Init
 
 title: AfterWave3
 ---
+<<StopSound Siren>>
 <<NextChapter>>
-<<wait 4>>
+<<wait 5>>
 <<JumpToCall Wave3_Init_CallFromCommand>>
 ===
 
@@ -190,15 +196,29 @@ title: Wave3_Init_CallFromCommand
 Прямо сейчас противник находится в поселении Доттингем. Наш радар не может его засечь. Но мы точно знаем, что он там. #line:chapter3_invisible_enemy3
 Нужно стрелять по городу вслепую. Иначе враг успеет сбежать. #line:chapter3_invisible_enemy4
 Повторяю – стреляйте по городу Доттингем. Приступайте немедленно. #line:chapter3_invisible_enemy5
-<<ShowInvisibleEnemies>>
 <<PlaySound Siren>>
 <<SpawnWave>>
+<<DelayCallInAttack 40 Wave3_CallFromCommand_Angry_1>>
+===
+
+title: Wave3_CallFromCommand_Angry_1
+---
+Сержант, ты что себе позволяешь? #line:chapter3_long_inactivity1
+Под трибунал захотел? Я тебе это как пить дать устрою! Будешь у меня на каторге лес валить! #chapter3_long_inactivity2
+Повторяю – стреляйте по городу Доттингем. Приступайте немедленно. #line:chapter3_invisible_enemy5_repeat
+<<DelayCallInAttack 30 Wave3_CallFromCommand_Angry_1>>
 ===
 
 title: Wave3_EnemyDefeated
 ---
-<<wait 4>>
-<<JumpToCall Wave3_EnemyDefeated_Call>>
+<<StopSound Siren>>
+<<NextChapter>>
+<<wait 1>>
+<<if visited("Wave3_CallFromCommand_Angry_1")>>
+    <<JumpToCall Wave3_EnemyDefeated_AngryCall>>
+<<else>>
+    <<JumpToCall Wave3_EnemyDefeated_Call>>
+<<endif>>
 ===
 
 title: Wave3_EnemyDefeated_Call
@@ -211,6 +231,16 @@ title: Wave3_EnemyDefeated_Call
 <<JumpToCall Wave3_EnemyDefeated_Call2>>
 ===
 
+title: Wave3_EnemyDefeated_AngryCall
+---
+:Помяни моё слово: просто так ты отсюда не уйдёшь! #line:chapter3_long_inactivity3
+Скажи спасибо Эдварду. Не будь его – сегодня же бы встал к стенке. #line:chapter3_long_inactivity5
+Немедленно возвращайся к своим обязанностям. #line:chapter3_long_inactivity6
+Второго шанса у тебя не будет. #line:chapter3_long_inactivity7
+<<wait 10>>
+<<JumpToCall Wave3_EnemyDefeated_AngryCall2>>
+===
+
 title: Wave3_EnemyDefeated_Call2
 ---
 Эй, сержант. Ты отлично справился. #line:chapter3_artillerist_goodmood1
@@ -221,6 +251,15 @@ title: Wave3_EnemyDefeated_Call2
     <<jump Сhapter3_artillerist_must_be_done>>
 ===
 
+title: Wave3_EnemyDefeated_AngryCall2
+---
+Салага, ты умом тронулся? #line:chapter3_artilerist_badmood1
+Приказ есть приказ. #line:chapter3_artilerist_badmood2
+-> Это бесчеловечно. В городе могли остаться люди. #line:chapter3_artillerist_inhumanely1_repeat
+    <<jump Сhapter3_artillerist_inhumanely>>
+-> Вы правы. Я должен был это сделать. #line:chapter3_artillerist_must_be_done1_repeat
+    <<jump Сhapter3_artillerist_must_be_done>>
+===
 
 title: Сhapter3_artillerist_inhumanely
 ---
@@ -228,7 +267,6 @@ title: Сhapter3_artillerist_inhumanely
 Ещё раз что-то подобное ляпнешь – сообщу командованию и жалеть тебя не буду. #line:chapter3_artillerist_inhumanely3
 Поспи пока или ещё чем займись. Силы нам пока пригодятся. #line:chapter2_before_sleep4_repeat1
 Конец связи. #line:chapter2_before_sleep5_repeat1
-<<NextChapter>>
 <<InitBedInteract Сhapter4_Wave>>
 ===
 
@@ -238,6 +276,7 @@ title: Сhapter3_artillerist_must_be_done
 Иначе долго здесь не протянешь. #line:chapter3_artillerist_must_be_done3
 Поспи пока или ещё чем займись. Силы нам пока пригодятся. #line:chapter2_before_sleep4_repeat2
 Конец связи. #line:chapter2_before_sleep5_repeat2
+<<StopSound Siren>>
 <<NextChapter>>
 <<InitBedInteract Сhapter4_Wave>>
 ===
@@ -249,14 +288,13 @@ title: Сhapter4_Wave
 <<SpawnWave>>
 <<wait 2>>
 <<StopSleep>>
-
-
 ===
 
 title: Сhapter4_AfterWave
 ---
 /// Надо начать день прям с тревоги ///
 /// Добавить запуск новой волны. Сделать её ///
+<<StopSound Siren>>
 <<NextChapter>>
 <<wait 4>>
 <<JumpToCall Сhapter4>>
@@ -319,6 +357,7 @@ title: Сhapter4_BigEnemy
 
 title: Chapter5
 ---
+<<StopSound Siren>>
 <<NextChapter>>
 <<wait 4>>
 <<JumpToCall Chapter5_Call>>
@@ -332,19 +371,22 @@ title: Chapter5_Call
 … #line:chapter5_evacuation3
 Это ещё что такое? #line:chapter5_evacuation4
 <<PlaySound Alarm>>
+<<ChangeLight 2>>
 Оно летит в нашу сторону! Доложите товарищу полковнику! #line:chapter5_evacuation5
 <<PlaySound Boom>>
-… #line:chapter5_evacuation6
-Все целы? #line:chapter5_evacuation7
+<<SetTrauma 1>>
+///… #line:chapter5_evacuation6
+///Все целы? #line:chapter5_evacuation7
 <<SpawnWave>>
-Товарищи, немедленно отставить панику! Это неразорвавшийся снаряд. #line:chapter5_evacuation8
-Только форма у него какая-то странная. #line:chapter5_evacuation9
-… #line:chapter5_evacuation10
-:Всему личному составу командования: незамедлительно проследуйте в убежище на минус третий этаж. #line:chapter5_evacuation11
-Да брось ты эти бумажки! Мы сейчас здесь нахрен поляжем! #line:chapter5_evacuation12
-:Повторяю. Всему личному составу командования: незамедлительно проследовать в убежище на минус третий этаж. #line:chapter5_evacuation13
-Господи! #line:chapter5_evacuation14
-ААААААААА! #line:chapter5_evacuation15
+<<BlockInteractiveObjects true>>
+///Товарищи, немедленно отставить панику! Это неразорвавшийся снаряд. #line:chapter5_evacuation8
+///Только форма у него какая-то странная. #line:chapter5_evacuation9
+///… #line:chapter5_evacuation10
+///:Всему личному составу командования: незамедлительно проследуйте в убежище на минус третий этаж. #line:chapter5_evacuation11
+///Да брось ты эти бумажки! Мы сейчас здесь нахрен поляжем! #line:chapter5_evacuation12
+///:Повторяю. Всему личному составу командования: незамедлительно проследовать в убежище на минус третий этаж. #line:chapter5_evacuation13
+///Господи! #line:chapter5_evacuation14
+///ААААААААА! #line:chapter5_evacuation15
 <<wait 2.5>>
 <<JumpToCall Chapter5_dying_artilerist>>
 ===
@@ -359,9 +401,12 @@ title: Chapter5_dying_artilerist
 Бывай… Сержантик… #line:chapter5_dying_artilerist6
 <<StopSound Alarm>>
 <<wait 1.5>>
-<<ChangeLight 2>>
+<<ChangeLight 3>>
+<<PlaySound Shutdow>>
+/// Вырубать все красные точки на карте. По сути, вырубать карту ///
+<<DisableMapObject>>
 /// Надо добавить вырубание света и последующее стучание в дверь и слова артиллериста ///
-<<wait 10>>
+<<wait 20>>
 <<jump Chapter5_fake_voice>>
 ===
 

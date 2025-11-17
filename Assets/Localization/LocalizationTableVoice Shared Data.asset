@@ -83,14 +83,6 @@ MonoBehaviour:
     m_Key: line:chapter2_question_history3
     m_Metadata:
       m_Items: []
-  - m_Id: 362248051417088
-    m_Key: line:chapter2_question_history_option1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 362248051417089
-    m_Key: line:chapter2_question_history_option2
-    m_Metadata:
-      m_Items: []
   - m_Id: 362248051417090
     m_Key: line:chapter2_question_history_option1_answer
     m_Metadata:
@@ -105,14 +97,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 362248055611392
     m_Key: line:chapter2_question_posters2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 362248055611393
-    m_Key: line:chapter2_question_posters_option1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 362248055611394
-    m_Key: line:chapter2_question_posters_option2
     m_Metadata:
       m_Items: []
   - m_Id: 362248055611395
@@ -261,10 +245,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 362248097554436
     m_Key: line:chapter4_sorrow6
-    m_Metadata:
-      m_Items: []
-  - m_Id: 362248101748736
-    m_Key: line:chapter4_sorrow_cat1
     m_Metadata:
       m_Items: []
   - m_Id: 362248101748737
@@ -488,16 +468,6 @@ MonoBehaviour:
           - en
           - ru
           - zh
-        - m_KeyId: 362248051417088
-          m_TableCodes:
-          - en
-          - ru
-          - zh
-        - m_KeyId: 362248051417089
-          m_TableCodes:
-          - en
-          - ru
-          - zh
         - m_KeyId: 362248051417090
           m_TableCodes:
           - en
@@ -514,16 +484,6 @@ MonoBehaviour:
           - ru
           - zh
         - m_KeyId: 362248055611392
-          m_TableCodes:
-          - en
-          - ru
-          - zh
-        - m_KeyId: 362248055611393
-          m_TableCodes:
-          - en
-          - ru
-          - zh
-        - m_KeyId: 362248055611394
           m_TableCodes:
           - en
           - ru
@@ -709,11 +669,6 @@ MonoBehaviour:
           - ru
           - zh
         - m_KeyId: 362248097554436
-          m_TableCodes:
-          - en
-          - ru
-          - zh
-        - m_KeyId: 362248101748736
           m_TableCodes:
           - en
           - ru

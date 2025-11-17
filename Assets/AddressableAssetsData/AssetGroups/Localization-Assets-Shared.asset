@@ -300,6 +300,14 @@ MonoBehaviour:
     - Locale-ru
     - Locale-zh
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d36f8e1fe0a0914cab28f487fa3a5d0
+    m_Address: chapter5_evacuation1_silent
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-ru
+    - Locale-zh
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6f66244c509819a4c93aee8edf4525c3
     m_Address: chapter3_interrupted_dialogue2
     m_ReadOnly: 1
@@ -502,6 +510,14 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c094a721ac6700041a24da06a2cdac79
     m_Address: chapter4_sorrow_cat9
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-ru
+    - Locale-zh
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c4a0b43f103a62f4293a9bb15e9f99eb
+    m_Address: chapter4_sorrow1
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

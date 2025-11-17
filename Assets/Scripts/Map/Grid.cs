@@ -37,6 +37,7 @@ namespace DefaultNamespace.Map
         private Queue<Enemy> enemiesToClean = new Queue<Enemy>();
         
         private bool inActiveWave = false;
+        public bool InActiveWave => inActiveWave;
         
         static string[] alphabet = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
 

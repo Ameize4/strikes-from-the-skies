@@ -495,6 +495,10 @@ MonoBehaviour:
     m_Key: line:chapter5_evacuation13
     m_Metadata:
       m_Items: []
+  - m_Id: 975011874594816
+    m_Key: line:chapter5_fake_voice
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 3971364859702935861
@@ -1107,6 +1111,11 @@ MonoBehaviour:
           - ru
           - zh
         - m_KeyId: 971274091225088
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 975011874594816
           m_TableCodes:
           - en
           - ru

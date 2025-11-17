@@ -143,6 +143,14 @@ MonoBehaviour:
     - Locale-ru
     - Locale-zh
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1e41f30293291f046a511ee3a62cff5a
+    m_Address: chapter5_fake_voice
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-ru
+    - Locale-zh
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1ea68b36c36f2e345b99dd7a401caa17
     m_Address: chapter1_intro5
     m_ReadOnly: 1

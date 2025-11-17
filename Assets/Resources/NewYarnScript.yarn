@@ -199,15 +199,15 @@ title: Wave3_Init_CallFromCommand
 <<ShowInvisibleEnemies>>
 <<PlaySound Siren>>
 <<SpawnWave>>
-<<DelayCallInAttack 2 Wave3_CallFromCommand_Angry_1>>
+<<DelayCallInAttack 60 Wave3_CallFromCommand_Angry_1>>
 ===
 
 title: Wave3_CallFromCommand_Angry_1
 ---
-Ты ахуел?
-Я тебя на колбасу пущу, если не выстрелишь.
-Хуярь по Дотингему, блять.
-<<DelayCallInAttack 2 Wave3_CallFromCommand_Angry_1>>
+Сержант, ты что себе позволяешь? #line:chapter3_long_inactivity1
+Под трибунал захотел? Я тебе это как пить дать устрою! Будешь у меня на каторге лес валить! #chapter3_long_inactivity2
+Повторяю – стреляйте по городу Доттингем. Приступайте немедленно. #line:chapter3_invisible_enemy5_repeat
+<<DelayCallInAttack 30 Wave3_CallFromCommand_Angry_1>>
 ===
 
 title: Wave3_EnemyDefeated
@@ -234,9 +234,10 @@ title: Wave3_EnemyDefeated_Call
 
 title: Wave3_EnemyDefeated_AngryCall
 ---
-БЛЯДСКИЙ РОТ ЭТОЙ АРТИЛЛЕРИИ, БЛЯТЬ
-ТЫ КТО ТАКОЙ, СУКА, ЧТОБ ЭТО ДЕЛАТЬ!?
-КООРИДАНТЫ ПЕРЕДАВАЙ НОРМАЛЬНО БЛЯТЬ, СЫНОК ЁБАНЫЙ.
+:Помяни моё слово: просто так ты отсюда не уйдёшь! #line:chapter3_long_inactivity3
+Скажи спасибо Эдварду. Не будь его – сегодня же бы встал к стенке. #line:chapter3_long_inactivity5
+Немедленно возвращайся к своим обязанностям. #line:chapter3_long_inactivity6
+Второго шанса у тебя не будет. #line:chapter3_long_inactivity7
 <<wait 10>>
 <<JumpToCall Wave3_EnemyDefeated_AngryCall2>>
 ===
@@ -253,8 +254,8 @@ title: Wave3_EnemyDefeated_Call2
 
 title: Wave3_EnemyDefeated_AngryCall2
 ---
-Друг, ты шо творишь? Нахуя ты тянул с воодом координат. Мне ж теперь пизды дадут. И тебе, кстати, тоже.
-А я не хочу снова расплачиваться аналом.
+Салага, ты умом тронулся? #line:chapter3_artilerist_badmood1
+Приказ есть приказ. #line:chapter3_artilerist_badmood2
 -> Это бесчеловечно. В городе могли остаться люди.
     <<jump Сhapter3_artillerist_inhumanely>>
 -> Вы правы. Я должен был это сделать.

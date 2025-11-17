@@ -5284,6 +5284,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1520448003}
   m_SourcePrefab: {fileID: 100100000, guid: 4617969c7f2a8fb408479ea5c93f6695, type: 3}
+--- !u!23 &522674796 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -6091206152994862741, guid: 4617969c7f2a8fb408479ea5c93f6695, type: 3}
+  m_PrefabInstance: {fileID: 522674795}
+  m_PrefabAsset: {fileID: 0}
 --- !u!64 &525060251
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5767,6 +5772,7 @@ Transform:
   - {fileID: 562103700}
   - {fileID: 177828894}
   - {fileID: 841224171}
+  - {fileID: 1464124226}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &591791644
@@ -9863,6 +9869,11 @@ MonoBehaviour:
   - name: Knocking
     sound: {fileID: 11400000, guid: 5f9f9b6638bc0614ba43261ebbcb4a4e, type: 2}
     transform: {fileID: 1611720974}
+  - name: Shutdow
+    sound: {fileID: 11400000, guid: b408cf8bf58f23f4ca63a978cdfc6db7, type: 2}
+    transform: {fileID: 1464124226}
+  tableMesh: {fileID: 522674796}
+  darkTableMaterial: {fileID: 2100000, guid: 7df7269c4f0d2cc42ae1c540878a5726, type: 2}
   twoLetterTelegraphLimitEnabled: 0
 --- !u!4 &1084138476
 Transform:
@@ -14751,6 +14762,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462678596}
   m_CullTransparentMesh: 1
+--- !u!1 &1464124225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1464124226}
+  m_Layer: 0
+  m_Name: ShutdowTransform_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1464124226
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464124225}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.41891, y: -0.00072000036, z: 0.26653004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 589710297}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1464550126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17618,11 +17660,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
-  far clip plane: 5000
-  field of view: 46.3
+  near clip plane: 0.2
+  far clip plane: 1000
+  field of view: 60.000004
   orthographic: 0
-  orthographic size: 10
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -17646,8 +17688,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806735585}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.27038312, y: -0.29921195, z: 0.08882945, w: 0.9107549}
-  m_LocalPosition: {x: 2.7589998, y: 2.462, z: 3.8839998}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.525, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -120,7 +120,6 @@ title: AfterWave2_1
 <<jump AfterWave2_Finish>>
 ===
 
-
 title: AfterWave2_2
 ---
 Ха-ха. Вижу, ты любитель пошутить. Одобряю. #line:chapter2_question_isalive_no2 
@@ -388,8 +387,6 @@ title: Chapter5_Call
 ///:Повторяю. Всему личному составу командования: незамедлительно проследовать в убежище на минус третий этаж. #line:chapter5_evacuation13
 ///Господи! #line:chapter5_evacuation14
 ///ААААААААА! #line:chapter5_evacuation15
-
-/// Вырубать все красные точки на карте. По сути, вырубать карту ///
 <<wait 2.5>>
 <<JumpToCall Chapter5_dying_artilerist>>
 ===
@@ -405,6 +402,9 @@ title: Chapter5_dying_artilerist
 <<StopSound Alarm>>
 <<wait 1.5>>
 <<ChangeLight 3>>
+<<PlaySound Shutdow>>
+/// Вырубать все красные точки на карте. По сути, вырубать карту ///
+<<DisableMapObject>>
 /// Надо добавить вырубание света и последующее стучание в дверь и слова артиллериста ///
 <<wait 20>>
 <<jump Chapter5_fake_voice>>

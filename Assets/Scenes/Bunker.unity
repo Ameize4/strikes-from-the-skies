@@ -9870,7 +9870,7 @@ MonoBehaviour:
     sound: {fileID: 11400000, guid: 5f9f9b6638bc0614ba43261ebbcb4a4e, type: 2}
     transform: {fileID: 1611720974}
   - name: Shutdow
-    sound: {fileID: 11400000, guid: b408cf8bf58f23f4ca63a978cdfc6db7, type: 2}
+    sound: {fileID: 11400000, guid: 65a6fc81448547245892fd3f5d728f4e, type: 2}
     transform: {fileID: 1464124226}
   tableMesh: {fileID: 522674796}
   darkTableMaterial: {fileID: 2100000, guid: 7df7269c4f0d2cc42ae1c540878a5726, type: 2}

@@ -6,10 +6,12 @@ public class CreditsController : MonoBehaviour
 {
     [SerializeField] private CanvasGroup[] slides;
     [SerializeField] private float fadeDuration = 0.75f;
+    [SerializeField] private float autoNextSlideTimer = 5f;
 
     private int currentIndex = -1;
     private bool isTransitioning = false;
     private bool isRunning;
+    private float countdownNextSlide;
 
     private CanvasGroup container;
 
@@ -29,6 +31,7 @@ public class CreditsController : MonoBehaviour
         isRunning = true;
         container.alpha = 1f;
         currentIndex = 0;
+        countdownNextSlide = autoNextSlideTimer;
         ShowSlide(currentIndex);
     }
 
@@ -41,6 +44,12 @@ public class CreditsController : MonoBehaviour
 
         if (DetectAnyInput())
         {
+            HandleAdvance();
+        }
+        countdownNextSlide -= Time.deltaTime;
+        if (countdownNextSlide <= 0)
+        {
+            countdownNextSlide = autoNextSlideTimer;
             HandleAdvance();
         }
     }
@@ -56,7 +65,7 @@ public class CreditsController : MonoBehaviour
 
     private void HandleAdvance()
     {
-        if (currentIndex >= slides.Length - 1)
+        if (currentIndex >= slides.Length - 1 + 1) // explicitly show that we need one more iteration 
         {
             isRunning = false;
             EndCredits();
@@ -82,20 +91,24 @@ public class CreditsController : MonoBehaviour
         isTransitioning = true;
 
         var current = slides[currentIndex];
-        var next = slides[nextIndex];
-        next.gameObject.SetActive(true);
-        next.alpha = 0f;
-
         Sequence seq = DOTween.Sequence();
 
         seq.Append(current.DOFade(0f, fadeDuration))
-            .AppendCallback(() => current.gameObject.SetActive(false))
-            .Append(next.DOFade(1f, fadeDuration))
-            .OnComplete(() =>
-            {
-                currentIndex = nextIndex;
-                isTransitioning = false;
-            });
+            .AppendCallback(() => current.gameObject.SetActive(false));
+            
+        if (nextIndex < slides.Length)
+        {
+            var next = slides[nextIndex];
+            next.gameObject.SetActive(true);
+            next.alpha = 0f;
+            seq.Append(next.DOFade(1f, fadeDuration));
+        }
+        
+        seq.OnComplete(() =>
+        {
+            currentIndex = nextIndex;
+            isTransitioning = false;
+        });
     }
 
     public void EndCredits()

@@ -651,9 +651,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 19
-        y: 550
+        y: 516
         width: 48
-        height: 32
+        height: 66
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -672,10 +672,10 @@ TextureImporter:
       name: SFTS_UI_26
       rect:
         serializedVersion: 2
-        x: 101
-        y: 550
+        x: 100
+        y: 516
         width: 48
-        height: 32
+        height: 66
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -695,9 +695,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 187
-        y: 550
+        y: 516
         width: 48
-        height: 32
+        height: 66
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -730,72 +730,6 @@ TextureImporter:
       bones: []
       spriteID: 4306b13157db00549911f3443fee721a
       internalID: -987728313
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SFTS_UI_29
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 514
-        width: 48
-        height: 35
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac786d5717c3ee74098e8017088c77de
-      internalID: -1286910757
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SFTS_UI_30
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 514
-        width: 48
-        height: 35
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e9a08c78970c1e04ebd3294988480eb6
-      internalID: 1774912993
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SFTS_UI_31
-      rect:
-        serializedVersion: 2
-        x: 187
-        y: 514
-        width: 48
-        height: 35
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ebb4fdf930dbff94382b2d0dd1703157
-      internalID: -2056998937
       vertices: []
       indices: 
       edges: []

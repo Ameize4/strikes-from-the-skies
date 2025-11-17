@@ -77,6 +77,10 @@ namespace DefaultNamespace
             public void Stop() => sound.Stop(transform);
         }
         [Space] [SerializeField] private YarnSoundBox[] yarnSounds;
+        
+        [Space]
+        [SerializeField] private MeshRenderer tableMesh;
+        [SerializeField] private Material darkTableMaterial;
 
 
         // int values of KeyCode Enum of keyboard numbers
@@ -134,6 +138,7 @@ namespace DefaultNamespace
 
         private void Update()
         {
+            #if UNITY_EDITOR
             if (Input.GetKeyDown(KeyCode.P))
             {
                 grid.BeginEnemyWave(chapters.debugEnemyData);
@@ -143,7 +148,7 @@ namespace DefaultNamespace
                 _cameraShake.SetTrauma(1f);
                 trauma = 1f;
             }
-
+            #endif
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 if (Input.GetKeyDown(KeyCode.Alpha1)) SetLight(0);
@@ -197,6 +202,19 @@ namespace DefaultNamespace
         {
             Instance.doorJumpDialogueName = nodeName;
             Instance.waitingForDoor = true;
+        }
+        
+        [YarnCommand("DelayCallInAttack")]
+        public static void Yarn_DelayCallInAttack(int value, string nodeName)
+        {
+            DOTween.Sequence().AppendInterval(value).AppendCallback(() =>
+            {
+                if (!Instance.grid.InActiveWave) { return; }
+                if (Instance.waitingForCall) { return; }
+                Instance.phoneHandler.playAudioRing();
+                Instance.callJumpDialogueName = nodeName;
+                Instance.waitingForCall = true;
+            });
         }
         
         [YarnCommand("StopSleep")]
@@ -261,7 +279,15 @@ namespace DefaultNamespace
         [YarnCommand("ChangeLight")]
         public static void Yarn_ChangeLight(int value)
         {
-            Instance.SetLight(value + 1);
+            Instance.SetLight(value - 1);
+        }
+        [YarnCommand("DisableMapObject")]
+        public static void Yarn_DisableMapObject()
+        {
+            Instance.grid.KillAllEnemies();
+            var m = Instance.tableMesh.materials;
+            m[1] = Instance.darkTableMaterial;
+            Instance.tableMesh.SetMaterials(m.ToList());
         }
         #endregion
 

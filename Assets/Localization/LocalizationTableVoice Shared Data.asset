@@ -83,14 +83,6 @@ MonoBehaviour:
     m_Key: line:chapter2_question_history3
     m_Metadata:
       m_Items: []
-  - m_Id: 362248051417088
-    m_Key: line:chapter2_question_history_option1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 362248051417089
-    m_Key: line:chapter2_question_history_option2
-    m_Metadata:
-      m_Items: []
   - m_Id: 362248051417090
     m_Key: line:chapter2_question_history_option1_answer
     m_Metadata:
@@ -105,14 +97,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 362248055611392
     m_Key: line:chapter2_question_posters2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 362248055611393
-    m_Key: line:chapter2_question_posters_option1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 362248055611394
-    m_Key: line:chapter2_question_posters_option2
     m_Metadata:
       m_Items: []
   - m_Id: 362248055611395
@@ -263,10 +247,6 @@ MonoBehaviour:
     m_Key: line:chapter4_sorrow6
     m_Metadata:
       m_Items: []
-  - m_Id: 362248101748736
-    m_Key: line:chapter4_sorrow_cat1
-    m_Metadata:
-      m_Items: []
   - m_Id: 362248101748737
     m_Key: line:chapter4_sorrow_army2
     m_Metadata:
@@ -387,6 +367,98 @@ MonoBehaviour:
     m_Key: line:chapter2_before_sleep5_repeat2
     m_Metadata:
       m_Items: []
+  - m_Id: 842886835855360
+    m_Key: line:chapter5_evacuation2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 843359592636416
+    m_Key: line:chapter5_evacuation5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 845096965627904
+    m_Key: line:chapter3_invisible_enemy1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 845149511868416
+    m_Key: line:chapter3_invisible_enemy2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 845161708904448
+    m_Key: line:chapter3_invisible_enemy3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 845171670376448
+    m_Key: line:chapter3_invisible_enemy4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 845181313081344
+    m_Key: line:chapter3_invisible_enemy5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 845500201820160
+    m_Key: line:chapter3_long_inactivity1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 845515632664576
+    m_Key: line:chapter3_long_inactivity2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 845557873500160
+    m_Key: line:chapter3_invisible_enemy5_repeat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 845878695813120
+    m_Key: line:chapter3_successfull_elimination1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 845886509801472
+    m_Key: line:chapter3_successfull_elimination2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 846075140235264
+    m_Key: line:chapter3_successfull_elimination3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 846194392686592
+    m_Key: line:chapter3_successfull_elimination4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 846345492488192
+    m_Key: line:chapter3_long_inactivity3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 846366124269568
+    m_Key: line:chapter3_long_inactivity5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 846388442161152
+    m_Key: line:chapter3_long_inactivity6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 846417600962560
+    m_Key: line:chapter3_long_inactivity7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 846470558244864
+    m_Key: line:chapter3_artilerist_badmood1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 846500266500096
+    m_Key: line:chapter3_artilerist_badmood2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 847004807716864
+    m_Key: line:chapter2_question_posters_option2_answer6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 847034008461312
+    m_Key: line:chapter2_question_posters_option2_answer7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 847321314091008
+    m_Key: 'line:chapter2_question_isalive '
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 3971364859702935861
@@ -488,16 +560,6 @@ MonoBehaviour:
           - en
           - ru
           - zh
-        - m_KeyId: 362248051417088
-          m_TableCodes:
-          - en
-          - ru
-          - zh
-        - m_KeyId: 362248051417089
-          m_TableCodes:
-          - en
-          - ru
-          - zh
         - m_KeyId: 362248051417090
           m_TableCodes:
           - en
@@ -514,16 +576,6 @@ MonoBehaviour:
           - ru
           - zh
         - m_KeyId: 362248055611392
-          m_TableCodes:
-          - en
-          - ru
-          - zh
-        - m_KeyId: 362248055611393
-          m_TableCodes:
-          - en
-          - ru
-          - zh
-        - m_KeyId: 362248055611394
           m_TableCodes:
           - en
           - ru
@@ -713,11 +765,6 @@ MonoBehaviour:
           - en
           - ru
           - zh
-        - m_KeyId: 362248101748736
-          m_TableCodes:
-          - en
-          - ru
-          - zh
         - m_KeyId: 362248101748737
           m_TableCodes:
           - en
@@ -868,5 +915,120 @@ MonoBehaviour:
           - zh
           - ru
           - en
+        - m_KeyId: 842886835855360
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 843359592636416
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 845096965627904
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 845149511868416
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 845161708904448
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 845171670376448
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 845181313081344
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 845500201820160
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 845515632664576
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 845557873500160
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 845878695813120
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 845886509801472
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 846075140235264
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 846194392686592
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 846345492488192
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 846366124269568
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 846388442161152
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 846417600962560
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 846470558244864
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 846500266500096
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 847004807716864
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 847034008461312
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 847321314091008
+          m_TableCodes:
+          - en
+          - ru
+          - zh
         m_TypeString: UnityEngine.AudioClip, UnityEngine.AudioModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null

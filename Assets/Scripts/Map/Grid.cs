@@ -37,6 +37,7 @@ namespace DefaultNamespace.Map
         private Queue<Enemy> enemiesToClean = new Queue<Enemy>();
         
         private bool inActiveWave = false;
+        public bool InActiveWave => inActiveWave;
         
         static string[] alphabet = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
 
@@ -326,12 +327,18 @@ namespace DefaultNamespace.Map
         private void FinalizeEnemyWave()
         {
             inActiveWave = false;
-            foreach (var enemy in enemies)
-                enemy.Clean();
-
-            enemies = null;
-
+            KillAllEnemies();
             GameManager.Instance.AllEnemiesDestroyed();
+        }
+
+        public void KillAllEnemies()
+        {
+            if (enemies != null)
+            {
+                foreach (var enemy in enemies)
+                    enemy.Clean();
+                enemies = null;
+            }
         }
     }
 }

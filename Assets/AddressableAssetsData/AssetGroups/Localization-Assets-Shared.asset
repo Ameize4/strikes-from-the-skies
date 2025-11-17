@@ -287,6 +287,14 @@ MonoBehaviour:
     - Locale-ru
     - Locale-zh
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 46a3578d632dbeb46b75c746260dded8
+    m_Address: chapter5_evacuation9
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-ru
+    - Locale-zh
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4b2b9bd2544a15241a6b5ab82af29ff5
     m_Address: chapter3_artilerist_badmood1
     m_ReadOnly: 1
@@ -406,6 +414,14 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6b349d1d01f18c043b48916792d5135c
     m_Address: chapter3_successfull_elimination1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-ru
+    - Locale-zh
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d015405f3afc2d478049528db06494c
+    m_Address: chapter5_evacuation11
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -772,6 +788,14 @@ MonoBehaviour:
     - Locale-ru
     - Locale-zh
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: da1775b134aff7c4094602b085d7d476
+    m_Address: chapter5_evacuation8
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-ru
+    - Locale-zh
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: db5a9116053dc3740b39f9a28fec11c8
     m_Address: chapter1_intro1
     m_ReadOnly: 1
@@ -859,6 +883,14 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f0c4fd1f48841d24ab5c2569572cdbcf
     m_Address: chapter4_sorrow2
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-ru
+    - Locale-zh
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fa263b76815b44242bda73bf429ca99e
+    m_Address: chapter5_evacuation13
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

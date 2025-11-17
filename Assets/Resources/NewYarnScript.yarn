@@ -401,11 +401,12 @@ title: Chapter5_Call
 <<PlaySound PhoneNoise>>
 Товарищ сержант, на связи командир Эйкен. #line:chapter5_evacuation1
 Миссия по эвакуации гражданского населения завершена успешно. Империя благодарит вас за службу.  #line:chapter5_evacuation2
-<<PlaySound VeryFastEnemy>>
 … #line:chapter5_evacuation3
 Это ещё что такое? #line:chapter5_evacuation4
+<<PlaySound Siren>>
 <<PlaySound Alarm>>
 <<ChangeLight 2>>
+<<PlaySound VeryFastEnemy>>
 Оно летит в нашу сторону! Доложите товарищу полковнику! #line:chapter5_evacuation5
 <<PlaySound Boom>>
 <<SetTrauma 1>>
@@ -438,6 +439,7 @@ title: Chapter5_dying_artilerist
 Бывай… Сержантик… #line:chapter5_dying_artilerist6
 <<StopSound PhoneNoise>>
 <<PlaySound PhoneHangUp>>
+<<StopSound Siren>>
 <<StopSound Alarm>>
 <<wait 1.5>>
 <<ChangeLight 3>>

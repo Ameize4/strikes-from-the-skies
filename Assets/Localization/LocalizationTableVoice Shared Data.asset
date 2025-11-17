@@ -1091,5 +1091,25 @@ MonoBehaviour:
           - en
           - ru
           - zh
+        - m_KeyId: 970910210187264
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 970971212144640
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 971044809596928
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 971274091225088
+          m_TableCodes:
+          - en
+          - ru
+          - zh
         m_TypeString: UnityEngine.AudioClip, UnityEngine.AudioModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null

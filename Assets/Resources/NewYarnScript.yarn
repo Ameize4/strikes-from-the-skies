@@ -354,7 +354,8 @@ title: Chapter5_Call
 Да брось ты эти бумажки! Мы сейчас здесь нахрен поляжем! #line:chapter5_evacuation12
 :Повторяю. Всему личному составу командования: незамедлительно проследовать в убежище на минус третий этаж. #line:chapter5_evacuation13
 Господи! #line:chapter5_evacuation14
-ААААААААА! #line:chapter5_evacuation15
+///ААААААААА! #line:chapter5_evacuation15
+/// Вырубать все красные точки на карте. По сути, вырубать карту ///
 <<wait 2.5>>
 <<JumpToCall Chapter5_dying_artilerist>>
 ===

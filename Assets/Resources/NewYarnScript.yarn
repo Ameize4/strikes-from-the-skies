@@ -8,6 +8,7 @@
 title: StartCall
 ---
 <<BlockInteractiveObjects false>>
+<<PlaySound PhoneNoise>>
 День добрый, товарищ сержант. Меня зовут Эдвард Доуэл, я артиллерист. Ты – мой наводчик. #line:chapter1_intro1
 Сейчас войска Империи проводят эвакуацию гражданских. Наш долг – обеспечить им прикрытие. #line:chapter1_intro2
 Вот ведь. Пять лет мы потратили, чтобы эта земля стала нашей. #line:chapter1_unfinished_enemy4
@@ -23,6 +24,8 @@ title: StartCall
 Хоть поймёшь, что да как, пока гарью не запахло. #line:chapter1_unfinished_enemy2
 ///:Повторю: увидишь точку – не жди и сразу же шли её координаты мне. #line:chapter1_unfinished_enemy3
 Ладно, будь готов отправлять мне координаты. #line:chapter1_unfinished_enemy6
+<<StopSound PhoneNoise>>
+<<PlaySound PhoneHangUp>>
 ===
 
 title: AfterWave1
@@ -34,6 +37,7 @@ title: AfterWave1
 title: AfterWave1Call
 ---
 <<NextChapter>>
+<<PlaySound PhoneNoise>>
 Молодец, сержант! Видишь, не так уж и сложно. Да и я не пальцем деланный, со мной не пропадёшь. #line:chapter2_question_history1
 Вот интересно, молодёжь вообще в курсе про великие завоевания Империи? #line:chapter2_question_history2
 Что сейчас про нас в школе говорят? #line:chapter2_question_history3
@@ -93,6 +97,8 @@ title: AfterWave1_X_X_X
 <<PlaySound Siren>>
 /// Добавить звук проигрывания тревоги ///
 Вот чёрт! Они идут! Готовься посылать координаты! #line:chapter2_wave_incoming1 
+<<StopSound PhoneNoise>>
+<<PlaySound PhoneHangUp>>
 <<SpawnWave>>
 ===
 
@@ -106,6 +112,7 @@ title: AfterWave2
 
 title: AfterWave2Call
 ---
+<<PlaySound PhoneNoise>>
 Кажется, отбились. Сержант, ты как? Живой? #line:chapter2_question_isalive 
 -> Живой #line:chapter2_question_isalive_yes1 
     <<jump AfterWave2_1>>
@@ -158,6 +165,8 @@ title: Wave2_WhyBunkerClosed
 И тебе тоже стоит. С самого прибытия сюда ни на минуту не присел #line:chapter2_before_sleep3
 Поспи пока или ещё чем займись. Силы нам пока пригодятся. #line:chapter2_before_sleep4
 Конец связи. #line:chapter2_before_sleep5
+<<StopSound PhoneNoise>>
+<<PlaySound PhoneHangUp>>
 /// Добавить скрипт о необходимости лечь спать ///
 <<InitBedInteract Wave3>>
 /// Здесь можно добавить ивент со скрежетом из толчка, тоесть трубы. Подойдя к нему, слышно, будто что-то убежало и звук прекращается ///
@@ -172,11 +181,14 @@ title: Wave3
 
 title: Wave3_Init
 ---
+<<PlaySound PhoneNoise>>
 Ну что, сержант, удалось поспать? #line:chapter3_interrupted_dialogue1
 Я дремал кое-как. Сюда бы подушку с одеялом… #line:chapter3_interrupted_dialogue2
 И книжку бы хорошую. Я вот писателя для себя открыл… как его… Уэллс! #line:chapter3_interrupted_dialogue3
 Он, конечно, мастер выдумы... #line:chapter3_interrupted_dialogue4
 /// Добавить запуск новой волны. Сделать её ///
+<<StopSound PhoneNoise>>
+<<PlaySound PhoneHangUp>>
 <<PlaySound Siren>>
 <<SpawnWave>>
 ===
@@ -191,11 +203,14 @@ title: AfterWave3
 
 title: Wave3_Init_CallFromCommand
 ---
+<<PlaySound PhoneNoise>>
 Приём, как слышно? #line:chapter3_invisible_enemy1
 На связи командир Эйкен. #line:chapter3_invisible_enemy2
 Прямо сейчас противник находится в поселении Доттингем. Наш радар не может его засечь. Но мы точно знаем, что он там. #line:chapter3_invisible_enemy3
 Нужно стрелять по городу вслепую. Иначе враг успеет сбежать. #line:chapter3_invisible_enemy4
 Повторяю – стреляйте по городу Доттингем. Приступайте немедленно. #line:chapter3_invisible_enemy5
+<<StopSound PhoneNoise>>
+<<PlaySound PhoneHangUp>>
 <<PlaySound Siren>>
 <<SpawnWave>>
 <<DelayCallInAttack 40 Wave3_CallFromCommand_Angry_1>>
@@ -203,9 +218,12 @@ title: Wave3_Init_CallFromCommand
 
 title: Wave3_CallFromCommand_Angry_1
 ---
+<<PlaySound PhoneNoise>>
 Сержант, ты что себе позволяешь? #line:chapter3_long_inactivity1
 Под трибунал захотел? Я тебе это как пить дать устрою! Будешь у меня на каторге лес валить! #chapter3_long_inactivity2
 Повторяю – стреляйте по городу Доттингем. Приступайте немедленно. #line:chapter3_invisible_enemy5_repeat
+<<StopSound PhoneNoise>>
+<<PlaySound PhoneHangUp>>
 <<DelayCallInAttack 30 Wave3_CallFromCommand_Angry_1>>
 ===
 
@@ -223,26 +241,33 @@ title: Wave3_EnemyDefeated
 
 title: Wave3_EnemyDefeated_Call
 ---
+<<PlaySound PhoneNoise>>
 Сержант, Доуэл, поздравляю с успешной атакой. Родина вас не забудет. #line:chapter3_successfull_elimination1
 Этот разговор - исключение. Впредь такого не повторится. #line:chapter3_successfull_elimination2
 :Напоминаю: использовать телефон во время атаки категорически запрещено! #line:chapter3_successfull_elimination3
 До связи. #line:chapter3_successfull_elimination4
+<<StopSound PhoneNoise>>
+<<PlaySound PhoneHangUp>>
 <<wait 10>>
 <<JumpToCall Wave3_EnemyDefeated_Call2>>
 ===
 
 title: Wave3_EnemyDefeated_AngryCall
 ---
+<<PlaySound PhoneNoise>>
 :Помяни моё слово: просто так ты отсюда не уйдёшь! #line:chapter3_long_inactivity3
 Скажи спасибо Эдварду. Не будь его – сегодня же бы встал к стенке. #line:chapter3_long_inactivity5
 Немедленно возвращайся к своим обязанностям. #line:chapter3_long_inactivity6
 Второго шанса у тебя не будет. #line:chapter3_long_inactivity7
+<<StopSound PhoneNoise>>
+<<PlaySound PhoneHangUp>>
 <<wait 10>>
 <<JumpToCall Wave3_EnemyDefeated_AngryCall2>>
 ===
 
 title: Wave3_EnemyDefeated_Call2
 ---
+<<PlaySound PhoneNoise>>
 Эй, сержант. Ты отлично справился. #line:chapter3_artillerist_goodmood1
 Не грызи себя. Приказ есть приказ. #line:chapter3_artillerist_goodmood2
 -> Это бесчеловечно. В городе могли остаться люди. #line:chapter3_artillerist_inhumanely1
@@ -253,6 +278,7 @@ title: Wave3_EnemyDefeated_Call2
 
 title: Wave3_EnemyDefeated_AngryCall2
 ---
+<<PlaySound PhoneNoise>>
 Салага, ты умом тронулся? #line:chapter3_artilerist_badmood1
 Приказ есть приказ. #line:chapter3_artilerist_badmood2
 -> Это бесчеловечно. В городе могли остаться люди. #line:chapter3_artillerist_inhumanely1_repeat
@@ -267,6 +293,8 @@ title: Сhapter3_artillerist_inhumanely
 Ещё раз что-то подобное ляпнешь – сообщу командованию и жалеть тебя не буду. #line:chapter3_artillerist_inhumanely3
 Поспи пока или ещё чем займись. Силы нам пока пригодятся. #line:chapter2_before_sleep4_repeat1
 Конец связи. #line:chapter2_before_sleep5_repeat1
+<<StopSound PhoneNoise>>
+<<PlaySound PhoneHangUp>>
 <<InitBedInteract Сhapter4_Wave>>
 ===
 
@@ -276,6 +304,8 @@ title: Сhapter3_artillerist_must_be_done
 Иначе долго здесь не протянешь. #line:chapter3_artillerist_must_be_done3
 Поспи пока или ещё чем займись. Силы нам пока пригодятся. #line:chapter2_before_sleep4_repeat2
 Конец связи. #line:chapter2_before_sleep5_repeat2
+<<StopSound PhoneNoise>>
+<<PlaySound PhoneHangUp>>
 <<StopSound Siren>>
 <<NextChapter>>
 <<InitBedInteract Сhapter4_Wave>>
@@ -302,6 +332,7 @@ title: Сhapter4_AfterWave
 
 title: Сhapter4
 ---
+<<PlaySound PhoneNoise>>
 Эй, сержант, ты тут? #line:chapter4_sorrow1
 Я всё места себе найти не могу. #line:chapter4_sorrow2
 Что-то на сердце неспокойно. #line:chapter4_sorrow3
@@ -350,6 +381,8 @@ title: Сhapter4_BigEnemy
 Что происходит? #line:chapter4_sorrow11
 …  #line:dots_repeat2
 Это что ещё за… #line:chapter4_sorrow12
+<<StopSound PhoneNoise>>
+<<PlaySound PhoneHangUp>>
 <<PlaySound Siren>>
 <<SpawnWave>>
 ===
@@ -365,6 +398,7 @@ title: Chapter5
 
 title: Chapter5_Call
 ---
+<<PlaySound PhoneNoise>>
 Товарищ сержант, на связи командир Эйкен. #line:chapter5_evacuation1
 Миссия по эвакуации гражданского населения завершена успешно. Империя благодарит вас за службу.  #line:chapter5_evacuation2
 <<PlaySound VeryFastEnemy>>
@@ -387,18 +421,23 @@ title: Chapter5_Call
 ///:Повторяю. Всему личному составу командования: незамедлительно проследовать в убежище на минус третий этаж. #line:chapter5_evacuation13
 ///Господи! #line:chapter5_evacuation14
 ///ААААААААА! #line:chapter5_evacuation15
+<<StopSound PhoneNoise>>
+<<PlaySound PhoneHangUp>>
 <<wait 2.5>>
 <<JumpToCall Chapter5_dying_artilerist>>
 ===
 
 title: Chapter5_dying_artilerist
 ---
+<<PlaySound PhoneNoise>>
 Эй? Сержант? #line:chapter5_dying_artilerist1
 Ты славный малый… Хорошо мы с тобой поработали. #line:chapter5_dying_artilerist2
 Только теперь больно чего-то. Видать, почки опять воспалились… #line:chapter5_dying_artilerist3
 Надо было шарфом прикрывать, как жена говорила. А я, дурак, не слушал. #line:chapter5_dying_artilerist4
 Ты… Это… Вспоминай меня на день воинской славы, хорошо? #line:chapter5_dying_artilerist5
 Бывай… Сержантик… #line:chapter5_dying_artilerist6
+<<StopSound PhoneNoise>>
+<<PlaySound PhoneHangUp>>
 <<StopSound Alarm>>
 <<wait 1.5>>
 <<ChangeLight 3>>
@@ -426,9 +465,12 @@ title: Chapter5_openthedoor
 
 title: Basestate_damaged1
 ---
+<<PlaySound PhoneNoise>>
 Как слышно? На связи штаб. #line:basestate_damaged1
 Командованию нанесены незначительные повреждения. Мы контролируем ситуацию. #line:basestate_damaged2
 Возвращайтесь к выполнению обязанностей. #line:basestate_damaged3
+<<StopSound PhoneNoise>>
+<<PlaySound PhoneHangUp>>
 
 <<BackToDialogue>>
 ===
@@ -436,10 +478,13 @@ title: Basestate_damaged1
 
 title: Basestate_damaged2
 ---
+<<PlaySound PhoneNoise>>
 Вы меня слышите? Это штаб. #line:basestate_seriously_damaged1
 Сержант, вам стоит быть внимательнее. #line:basestate_seriously_damaged2
 Последний налёт оставил существенный ущерб зданию командования. #line:basestate_seriously_damaged3
 Долго мы так не протянем. Пожалуйста, защитите нас. #line:basestate_seriously_damaged4
+<<StopSound PhoneNoise>>
+<<PlaySound PhoneHangUp>>
 
 <<BackToDialogue>>
 ===
@@ -447,10 +492,13 @@ title: Basestate_damaged2
 
 title: Basestate_damaged3
 ---
+<<PlaySound PhoneNoise>>
 Сержант! Это штаб. #line:basestate_almost_dead1
 Из-за вашей безалаберности под угрозой существование не только штаба командования, но и целой Империи! #line:basestate_almost_dead2
 Ситуация критическая. Ещё немного – и здание обвалится! #line:basestate_almost_dead3
 Не дайте этим тварям тут всех похоронить! #line:basestate_almost_dead4
+<<StopSound PhoneNoise>>
+<<PlaySound PhoneHangUp>>
 
 <<BackToDialogue>>
 ===

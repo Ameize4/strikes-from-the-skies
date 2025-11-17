@@ -925,6 +925,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 3971364921661456394
+  - m_Id: 4622671177310208
+    m_Key: line:a1f35ded
+    m_Metadata:
+      m_Items:
+      - rid: 7043299261288546377
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
@@ -1714,3 +1719,9 @@ MonoBehaviour:
       data:
         nodeName: Wave3_EnemyDefeated_AngryCall2
         tags: []
+    - rid: 7043299261288546377
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Wave3_CallFromCommand_Angry_1
+        tags:
+        - chapter3_long_inactivity2

@@ -5471,6 +5471,7 @@ Transform:
   - {fileID: 177828894}
   - {fileID: 841224171}
   - {fileID: 1464124226}
+  - {fileID: 903197835}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &591791644
@@ -7797,6 +7798,37 @@ Transform:
   - {fileID: 1109995592}
   m_Father: {fileID: 1156919795}
   m_LocalEulerAnglesHint: {x: 0, y: 111.924, z: 0}
+--- !u!1 &903197834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 903197835}
+  m_Layer: 0
+  m_Name: PhoneNoiseTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &903197835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903197834}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 589710297}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &904050784
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9535,7 +9567,7 @@ MonoBehaviour:
   dialogueRunner: {fileID: 921657498}
   dialogue:
     project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
-    nodeName: Chapter5_fake_voice
+    nodeName: Start
   _lightingInfos:
   - Color: {fileID: 2800000, guid: 8d0c042988fed0c4a844e7f89a4e4930, type: 3}
     lightObject: {fileID: 1416027390}
@@ -9593,6 +9625,12 @@ MonoBehaviour:
   - name: Shutdow
     sound: {fileID: 11400000, guid: 65a6fc81448547245892fd3f5d728f4e, type: 2}
     transform: {fileID: 1464124226}
+  - name: PhoneNoise
+    sound: {fileID: 11400000, guid: a2cb3fa262eec7a4dba10d2abae1157c, type: 2}
+    transform: {fileID: 903197835}
+  - name: PhoneHangUp
+    sound: {fileID: 11400000, guid: e245cbf9781e4824980e4049bdd93c4d, type: 2}
+    transform: {fileID: 903197835}
   tableMesh: {fileID: 522674796}
   darkTableMaterial: {fileID: 2100000, guid: 7df7269c4f0d2cc42ae1c540878a5726, type: 2}
   twoLetterTelegraphLimitEnabled: 0
@@ -9605,7 +9643,7 @@ Transform:
   m_GameObject: {fileID: 1084138474}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.94, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14475,7 +14513,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1464124226}
   m_Layer: 0
-  m_Name: ShutdowTransform_1
+  m_Name: ShutdowTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

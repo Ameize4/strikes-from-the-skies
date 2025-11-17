@@ -77,6 +77,10 @@ namespace DefaultNamespace
             public void Stop() => sound.Stop(transform);
         }
         [Space] [SerializeField] private YarnSoundBox[] yarnSounds;
+        
+        [Space]
+        [SerializeField] private MeshRenderer tableMesh;
+        [SerializeField] private Material darkTableMaterial;
 
 
         // int values of KeyCode Enum of keyboard numbers
@@ -275,6 +279,14 @@ namespace DefaultNamespace
         public static void Yarn_ChangeLight(int value)
         {
             Instance.SetLight(value - 1);
+        }
+        [YarnCommand("DisableMapObject")]
+        public static void Yarn_DisableMapObject()
+        {
+            Instance.grid.KillAllEnemies();
+            var m = Instance.tableMesh.materials;
+            m[1] = Instance.darkTableMaterial;
+            Instance.tableMesh.SetMaterials(m.ToList());
         }
         #endregion
 

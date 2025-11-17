@@ -327,12 +327,18 @@ namespace DefaultNamespace.Map
         private void FinalizeEnemyWave()
         {
             inActiveWave = false;
-            foreach (var enemy in enemies)
-                enemy.Clean();
-
-            enemies = null;
-
+            KillAllEnemies();
             GameManager.Instance.AllEnemiesDestroyed();
+        }
+
+        public void KillAllEnemies()
+        {
+            if (enemies != null)
+            {
+                foreach (var enemy in enemies)
+                    enemy.Clean();
+                enemies = null;
+            }
         }
     }
 }

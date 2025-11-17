@@ -459,6 +459,22 @@ MonoBehaviour:
     m_Key: 'line:chapter2_question_isalive '
     m_Metadata:
       m_Items: []
+  - m_Id: 965131105198080
+    m_Key: line:chapter4_sorrow8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 965626779656192
+    m_Key: line:chapter4_sorrow9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 965634895634432
+    m_Key: line:dots_repeat1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 965636548190208
+    m_Key: line:dots_repeat2
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 3971364859702935861
@@ -922,8 +938,8 @@ MonoBehaviour:
           - zh
         - m_KeyId: 843359592636416
           m_TableCodes:
-          - en
           - ru
+          - en
           - zh
         - m_KeyId: 845096965627904
           m_TableCodes:
@@ -1026,6 +1042,26 @@ MonoBehaviour:
           - ru
           - zh
         - m_KeyId: 847321314091008
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 965131105198080
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 965626779656192
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 965634895634432
+          m_TableCodes:
+          - en
+          - ru
+          - zh
+        - m_KeyId: 965636548190208
           m_TableCodes:
           - en
           - ru

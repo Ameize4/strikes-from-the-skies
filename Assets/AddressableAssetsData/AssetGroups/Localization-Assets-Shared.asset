@@ -207,6 +207,14 @@ MonoBehaviour:
     - Locale-ru
     - Locale-zh
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2dc9665da12306042b07dd5d860424a9
+    m_Address: ambience_emitters_alien_03
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-ru
+    - Locale-zh
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2f7176abafc40d2499931e861856a543
     m_Address: chapter2_before_sleep2
     m_ReadOnly: 1
@@ -231,8 +239,24 @@ MonoBehaviour:
     - Locale-ru
     - Locale-zh
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4019776affde8a2498b15f99b0f586bf
+    m_Address: chapter5_evacuation5
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-ru
+    - Locale-zh
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 40da0c98db958cb47853ef8d3231e039
     m_Address: chapter2_arrowslit_breath2
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-ru
+    - Locale-zh
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4353145c7abc9c14cb9d62c3fb164a54
+    m_Address: ambience_emitters_alien_08
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -372,14 +396,6 @@ MonoBehaviour:
     - Locale-ru
     - Locale-zh
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 67ad1b348d9057549bd11cd976b9d47a
-    m_Address: chapter5_evacuation5
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Locale-ru
-    - Locale-zh
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 68b1dc7982a2af54f89994b8cd9c0e42
     m_Address: chapter4_sorrow_army6
     m_ReadOnly: 1
@@ -430,6 +446,14 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 71b1a42282b581d49862b2fbceb182a9
     m_Address: chapter4_sorrow_cat10
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-ru
+    - Locale-zh
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 74bd30b6ebabfcb47bb93405d759510e
+    m_Address: ambience_emitters_alien_02
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -596,6 +620,14 @@ MonoBehaviour:
     - Locale-ru
     - Locale-zh
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a6dbb188ad0ac6843bca9601deae7bc4
+    m_Address: chapter5_evacuation2
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-ru
+    - Locale-zh
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ab8e67756a6921847a147840ce86fdda
     m_Address: chapter1_unfinished_enemy1
     m_ReadOnly: 1
@@ -614,6 +646,14 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b224cb34800ab014e8a588f321f42684
     m_Address: chapter2_question_posters_option2_answer2
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-ru
+    - Locale-zh
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b4c641039e897dc4498bf1decfa935d9
+    m_Address: chapter4_sorrow8
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -646,14 +686,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bdd6d8115d506b64e92d5b9d8835acee
     m_Address: chapter4_sorrow_cat4
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Locale-ru
-    - Locale-zh
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bf6fdfaf919177e4392ae8aab90ef832
-    m_Address: chapter5_evacuation2_silent
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

@@ -7,6 +7,7 @@
 
 title: StartCall
 ---
+<<BlockInteractiveObjects false>>
 День добрый, товарищ сержант. Меня зовут Эдвард Доуэл, я артиллерист. Ты – мой наводчик. #line:chapter1_intro1
 Сейчас войска Империи проводят эвакуацию гражданских. Наш долг – обеспечить им прикрытие. #line:chapter1_intro2
 Вот ведь. Пять лет мы потратили, чтобы эта земля стала нашей. #line:chapter1_unfinished_enemy4
@@ -164,7 +165,7 @@ title: Wave2_WhyBunkerClosed
 
 title: Wave3
 ---
-<<wait 2>>
+<<wait 3>>
 <<StopSleep>>
 <<JumpToCall Wave3_Init>>
 ===
@@ -195,10 +196,9 @@ title: Wave3_Init_CallFromCommand
 Прямо сейчас противник находится в поселении Доттингем. Наш радар не может его засечь. Но мы точно знаем, что он там. #line:chapter3_invisible_enemy3
 Нужно стрелять по городу вслепую. Иначе враг успеет сбежать. #line:chapter3_invisible_enemy4
 Повторяю – стреляйте по городу Доттингем. Приступайте немедленно. #line:chapter3_invisible_enemy5
-<<ShowInvisibleEnemies>>
 <<PlaySound Siren>>
 <<SpawnWave>>
-<<DelayCallInAttack 60 Wave3_CallFromCommand_Angry_1>>
+<<DelayCallInAttack 40 Wave3_CallFromCommand_Angry_1>>
 ===
 
 title: Wave3_CallFromCommand_Angry_1
@@ -255,9 +255,9 @@ title: Wave3_EnemyDefeated_AngryCall2
 ---
 Салага, ты умом тронулся? #line:chapter3_artilerist_badmood1
 Приказ есть приказ. #line:chapter3_artilerist_badmood2
--> Это бесчеловечно. В городе могли остаться люди.
+-> Это бесчеловечно. В городе могли остаться люди. #line:chapter3_artillerist_inhumanely1_repeat
     <<jump Сhapter3_artillerist_inhumanely>>
--> Вы правы. Я должен был это сделать.
+-> Вы правы. Я должен был это сделать. #line:chapter3_artillerist_must_be_done1_repeat
     <<jump Сhapter3_artillerist_must_be_done>>
 ===
 

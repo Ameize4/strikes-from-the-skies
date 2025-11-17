@@ -9567,7 +9567,7 @@ MonoBehaviour:
   dialogueRunner: {fileID: 921657498}
   dialogue:
     project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
-    nodeName: Start
+    nodeName: Chapter5_fake_voice
   _lightingInfos:
   - Color: {fileID: 2800000, guid: 8d0c042988fed0c4a844e7f89a4e4930, type: 3}
     lightObject: {fileID: 1416027390}

@@ -113,6 +113,6 @@ public class CreditsController : MonoBehaviour
 
     public void EndCredits()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("MainMenu");
     }
 }

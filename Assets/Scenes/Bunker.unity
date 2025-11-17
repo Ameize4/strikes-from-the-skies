@@ -17580,7 +17580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb87ae987c60e9d4f8346202d271648d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: YarnSpinner.Unity::Yarn.Unity.VoiceOverPresenter
-  endLineWhenVoiceoverComplete: 0
+  endLineWhenVoiceoverComplete: 1
   dialogueRunner: {fileID: 921657498}
   fadeOutTimeOnLineFinish: 0.05
   waitTimeBeforeLineStart: 0

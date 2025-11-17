@@ -199,6 +199,19 @@ namespace DefaultNamespace
             Instance.waitingForDoor = true;
         }
         
+        [YarnCommand("DelayCallInAttack")]
+        public static void Yarn_DelayCallInAttack(int value, string nodeName)
+        {
+            DOTween.Sequence().AppendInterval(value).AppendCallback(() =>
+            {
+                if (!Instance.grid.InActiveWave) { return; }
+                if (Instance.waitingForCall) { return; }
+
+                Instance.callJumpDialogueName = nodeName;
+                Instance.waitingForCall = true;
+            });
+        }
+        
         [YarnCommand("StopSleep")]
         public static void Yarn_StopSleep()
         {
@@ -261,7 +274,7 @@ namespace DefaultNamespace
         [YarnCommand("ChangeLight")]
         public static void Yarn_ChangeLight(int value)
         {
-            Instance.SetLight(value + 1);
+            Instance.SetLight(value - 1);
         }
         #endregion
 

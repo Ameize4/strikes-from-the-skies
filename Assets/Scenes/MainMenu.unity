@@ -605,7 +605,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: Start game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 136cc6cadf9d2324b9bc46e99f032b07, type: 2}
   m_sharedMaterial: {fileID: -7578797847539021145, guid: 136cc6cadf9d2324b9bc46e99f032b07, type: 2}
@@ -700,7 +700,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:5c0bc3c92bb249b4b85cdf57aecf7bf9
     m_TableEntryReference:
-      m_KeyId: 1670395496030208
+      m_KeyId: 43523039232
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

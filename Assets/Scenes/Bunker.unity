@@ -2052,6 +2052,7 @@ Transform:
   - {fileID: 108307183}
   - {fileID: 1304644605}
   - {fileID: 1820941064}
+  - {fileID: 303718771}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &228633605
@@ -2207,7 +2208,7 @@ AudioSource:
   m_GameObject: {fileID: 228787128}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8917451982255763891, guid: 86dfa72d77fa8cf468b98ab87e0e971c, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: c8555c1f3c3773d48bb03ce0467e8f02, type: 3}
   m_PlayOnAwake: 1
@@ -2499,6 +2500,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268948325}
   m_CullTransparentMesh: 1
+--- !u!1 &303718770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 303718771}
+  - component: {fileID: 303718772}
+  m_Layer: 0
+  m_Name: AlienRandomEmitter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &303718771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303718770}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.63, y: 0, z: 0.74}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 218730343}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &303718772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303718770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ab86517f14edfd47b8eba447a044b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DefaultNamespace.RandomEmitter
+  soundEvent: {fileID: 11400000, guid: 8cf438f95ed06bf42b75695612485f73, type: 2}
+  intervalRange: {x: 21.5, y: 31.62}
+  innerRadius: 26.4
+  outerRadius: 74.3
+  spawnAroundEmitter: 1
 --- !u!64 &314202686
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4358,7 +4408,7 @@ AudioSource:
   m_GameObject: {fileID: 469537391}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8917451982255763891, guid: 86dfa72d77fa8cf468b98ab87e0e971c, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: fdb8851f8dbd5954f89ed630fe0e8e20, type: 3}
   m_PlayOnAwake: 1
@@ -9628,7 +9678,7 @@ AudioSource:
   m_GameObject: {fileID: 1070334618}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8917451982255763891, guid: 86dfa72d77fa8cf468b98ab87e0e971c, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: e61e012e3a90cf04fac722dfcaf83c7e, type: 3}
   m_PlayOnAwake: 1
@@ -9758,7 +9808,7 @@ MonoBehaviour:
   dialogueRunner: {fileID: 921657498}
   dialogue:
     project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
-    nodeName: Start
+    nodeName: Chapter5_fake_voice
   _lightingInfos:
   - Color: {fileID: 2800000, guid: 8d0c042988fed0c4a844e7f89a4e4930, type: 3}
     lightObject: {fileID: 1416027390}
@@ -9799,16 +9849,16 @@ MonoBehaviour:
   p3: {fileID: 130066414}
   yarnSounds:
   - name: Siren
-    sound: {fileID: 11400000, guid: c92f32e42797b6241b9fa2e8c6088a13, type: 2}
+    sound: {fileID: 11400000, guid: 0b26d1ffef59239499e98b90c33b2167, type: 2}
     transform: {fileID: 562103700}
   - name: Alarm
-    sound: {fileID: 11400000, guid: 22e4bca5aec5d1b4782f8571f09b46f3, type: 2}
+    sound: {fileID: 11400000, guid: cf5dd75e5ab9fa04cafaa078a94f634c, type: 2}
     transform: {fileID: 841224171}
   - name: VeryFastEnemy
-    sound: {fileID: 11400000, guid: 78fd6e1d08e06a64c8917e284b2de704, type: 2}
+    sound: {fileID: 11400000, guid: 1373a77963925904c8c98c5f824d3978, type: 2}
     transform: {fileID: 177828894}
   - name: Boom
-    sound: {fileID: 11400000, guid: baf88464ce394894ea59f304e5e9ede3, type: 2}
+    sound: {fileID: 11400000, guid: 0ac926afe3768a04590e0813e533f3f8, type: 2}
     transform: {fileID: 2122156980}
   - name: Knocking
     sound: {fileID: 11400000, guid: 5f9f9b6638bc0614ba43261ebbcb4a4e, type: 2}
@@ -10828,7 +10878,7 @@ AudioSource:
   m_GameObject: {fileID: 1248687642}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8874217729174980489, guid: 86dfa72d77fa8cf468b98ab87e0e971c, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -17139,6 +17189,10 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3956291990600726742, guid: 0a386dc253cff7845b9fe5e024b7425e, type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4522870835786653872, guid: 0a386dc253cff7845b9fe5e024b7425e, type: 3}
       propertyPath: m_Name
       value: Dust_Top_02
@@ -17204,7 +17258,7 @@ GameObject:
   - component: {fileID: 1794629755}
   - component: {fileID: 1794629754}
   m_Layer: 0
-  m_Name: VL
+  m_Name: VoiceOverAudioSource3D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17219,11 +17273,11 @@ AudioSource:
   m_GameObject: {fileID: 1794629753}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 4727921224084469547, guid: 731a8227e9267394686f82f3cb6e3be9, type: 2}
+  OutputAudioMixerGroup: {fileID: 4727921224084469547, guid: 86dfa72d77fa8cf468b98ab87e0e971c, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -17232,9 +17286,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 20
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -17242,23 +17296,50 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      time: 0.09054337
+      value: 0.9965172
+      inSlope: -3.6433692
+      outSlope: -3.6433692
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0.2358245
+    - serializedVersion: 3
+      time: 0.25200957
+      value: 0.48260498
+      inSlope: -1.4606667
+      outSlope: -1.4606667
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.46032807
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.4307312
+      value: 0.28482056
+      inSlope: -0.62524897
+      outSlope: -0.62524897
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.78342897
+      value: 0.07626343
+      inSlope: -0.21142039
+      outSlope: -0.21142039
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33105478
+      outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 0.030389406
+      inSlope: -0.10003988
+      outSlope: -0.10003988
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -17267,7 +17348,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -17282,7 +17363,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.2
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -17324,7 +17405,7 @@ MonoBehaviour:
   fadeOutTimeOnLineFinish: 0.05
   waitTimeBeforeLineStart: 0
   waitTimeAfterLineComplete: 0
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1794629754}
 --- !u!4 &1794629756
 Transform:
   m_ObjectHideFlags: 0
@@ -17334,7 +17415,7 @@ Transform:
   m_GameObject: {fileID: 1794629753}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4.96, y: 1.325, z: 0.169}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

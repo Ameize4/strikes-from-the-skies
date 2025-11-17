@@ -172,7 +172,6 @@ title: Wave3
 
 title: Wave3_Init
 ---
-
 Ну что, сержант, удалось поспать? #line:chapter3_interrupted_dialogue1
 Я дремал кое-как. Сюда бы подушку с одеялом… #line:chapter3_interrupted_dialogue2
 И книжку бы хорошую. Я вот писателя для себя открыл… как его… Уэллс! #line:chapter3_interrupted_dialogue3
@@ -200,25 +199,46 @@ title: Wave3_Init_CallFromCommand
 <<ShowInvisibleEnemies>>
 <<PlaySound Siren>>
 <<SpawnWave>>
+<<DelayCallInAttack 2 Wave3_CallFromCommand_Angry_1>>
+===
+
+title: Wave3_CallFromCommand_Angry_1
+---
+Ты ахуел?
+Я тебя на колбасу пущу, если не выстрелишь.
+Хуярь по Дотингему, блять.
+<<DelayCallInAttack 2 Wave3_CallFromCommand_Angry_1>>
 ===
 
 title: Wave3_EnemyDefeated
 ---
 <<StopSound Siren>>
 <<NextChapter>>
-<<wait 5>>
-<<JumpToCall Wave3_EnemyDefeated_Call>>
+<<wait 1>>
+<<if visited("Wave3_CallFromCommand_Angry_1")>>
+    <<JumpToCall Wave3_EnemyDefeated_AngryCall>>
+<<else>>
+    <<JumpToCall Wave3_EnemyDefeated_Call>>
+<<endif>>
 ===
 
 title: Wave3_EnemyDefeated_Call
 ---
-<<wait 5>>
 Сержант, Доуэл, поздравляю с успешной атакой. Родина вас не забудет. #line:chapter3_successfull_elimination1
 Этот разговор - исключение. Впредь такого не повторится. #line:chapter3_successfull_elimination2
 :Напоминаю: использовать телефон во время атаки категорически запрещено! #line:chapter3_successfull_elimination3
 До связи. #line:chapter3_successfull_elimination4
 <<wait 10>>
 <<JumpToCall Wave3_EnemyDefeated_Call2>>
+===
+
+title: Wave3_EnemyDefeated_AngryCall
+---
+БЛЯДСКИЙ РОТ ЭТОЙ АРТИЛЛЕРИИ, БЛЯТЬ
+ТЫ КТО ТАКОЙ, СУКА, ЧТОБ ЭТО ДЕЛАТЬ!?
+КООРИДАНТЫ ПЕРЕДАВАЙ НОРМАЛЬНО БЛЯТЬ, СЫНОК ЁБАНЫЙ.
+<<wait 10>>
+<<JumpToCall Wave3_EnemyDefeated_AngryCall2>>
 ===
 
 title: Wave3_EnemyDefeated_Call2
@@ -231,6 +251,15 @@ title: Wave3_EnemyDefeated_Call2
     <<jump Сhapter3_artillerist_must_be_done>>
 ===
 
+title: Wave3_EnemyDefeated_AngryCall2
+---
+Друг, ты шо творишь? Нахуя ты тянул с воодом координат. Мне ж теперь пизды дадут. И тебе, кстати, тоже.
+А я не хочу снова расплачиваться аналом.
+-> Это бесчеловечно. В городе могли остаться люди.
+    <<jump Сhapter3_artillerist_inhumanely>>
+-> Вы правы. Я должен был это сделать.
+    <<jump Сhapter3_artillerist_must_be_done>>
+===
 
 title: Сhapter3_artillerist_inhumanely
 ---

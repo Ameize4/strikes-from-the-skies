@@ -206,7 +206,7 @@ namespace DefaultNamespace
             {
                 if (!Instance.grid.InActiveWave) { return; }
                 if (Instance.waitingForCall) { return; }
-
+                Instance.phoneHandler.playAudioRing();
                 Instance.callJumpDialogueName = nodeName;
                 Instance.waitingForCall = true;
             });

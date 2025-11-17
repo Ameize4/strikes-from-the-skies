@@ -804,6 +804,14 @@ MonoBehaviour:
     - Locale-ru
     - Locale-zh
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e6e9246facc188048ac8d9da4f6d80e7
+    m_Address: chapter5_evacuation7
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-ru
+    - Locale-zh
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e8e7c46de3996764991a06980157b988
     m_Address: chapter1_intro8
     m_ReadOnly: 1

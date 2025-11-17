@@ -10,7 +10,6 @@ public class pause : MonoBehaviour
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private Button 
         continueButton, 
-        twoLetterMaxButton, 
         quitButton;
     
     [Space] [SerializeField] private Volume _volume;
@@ -42,9 +41,6 @@ public class pause : MonoBehaviour
         {
             togglePause();
         });
-        twoLetterMaxButton.onClick.AddListener(toggleTwoLetterMax);
-        toggleTwoLetterMax(); // Run once to prepare values
-        toggleTwoLetterMax(); // Run twice because i want lazily rewert bool value
         
         quitButton.onClick.AddListener(() => Application.Quit(0));
         
@@ -85,20 +81,5 @@ public class pause : MonoBehaviour
             depthOfField.active = true;
             return true;	
         }
-    }
-
-    private string tlmString;
-    
-    private void toggleTwoLetterMax()
-    {
-        var textLabel = twoLetterMaxButton.GetComponentInChildren<TMP_Text>();
-        tlmString ??= textLabel.text;
-        
-        GameManager.Instance.twoLetterTelegraphLimitEnabled = !GameManager.Instance.twoLetterTelegraphLimitEnabled;
-        bool value = GameManager.Instance.twoLetterTelegraphLimitEnabled;
-        if (value)
-            textLabel.text = $"{tlmString} <b>{value.ToString()}</b>";
-        else
-            textLabel.text = $"{tlmString} <b>{value.ToString()}</b>";
     }
 }

@@ -8317,7 +8317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ca26c15852b4e83b3ae4c791d26f8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DefaultNamespace.BedHandler
-  interactionDistance: 3
+  interactionDistance: 1
   interactKey: 101
   fadeInAnimator: {fileID: 2086574780}
 --- !u!64 &921401090
@@ -9808,7 +9808,7 @@ MonoBehaviour:
   dialogueRunner: {fileID: 921657498}
   dialogue:
     project: {fileID: 7545569452688597077, guid: 094f31606dfc57443bdf436cd2c92923, type: 3}
-    nodeName: Chapter5_fake_voice
+    nodeName: Chapter5
   _lightingInfos:
   - Color: {fileID: 2800000, guid: 8d0c042988fed0c4a844e7f89a4e4930, type: 3}
     lightObject: {fileID: 1416027390}
@@ -9825,7 +9825,7 @@ MonoBehaviour:
     - Basestate_damaged3
   grid: {fileID: 1770552387}
   chapters: {fileID: 11400000, guid: 8e69d846da4771e4d917c3dca9dcc0c4, type: 2}
-  currentChapterIdx: 0
+  currentChapterIdx: 5
   phoneHandler: {fileID: 1389127516}
   bedHandler: {fileID: 915776384}
   cameraShakeProperties:
@@ -17537,7 +17537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb87ae987c60e9d4f8346202d271648d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: YarnSpinner.Unity::Yarn.Unity.VoiceOverPresenter
-  endLineWhenVoiceoverComplete: 1
+  endLineWhenVoiceoverComplete: 0
   dialogueRunner: {fileID: 921657498}
   fadeOutTimeOnLineFinish: 0.05
   waitTimeBeforeLineStart: 0
@@ -18977,7 +18977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 106df85e723317844b77b2488e4dd33d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DefaultNamespace.DoorOpenTrigger
-  interactionDistance: 3
+  interactionDistance: 1
   interactKey: 101
 --- !u!4 &1965610728
 Transform:

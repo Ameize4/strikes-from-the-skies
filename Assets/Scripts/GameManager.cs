@@ -228,7 +228,7 @@ namespace DefaultNamespace
         {
             Instance._timelinePlayable.Play();
             var c = FindFirstObjectByType<CreditsController>();
-            Instance._timelinePlayable.stopped += (director => c.StartCredits());
+            // Instance._timelinePlayable.stopped += (director => c.StartCredits());
         }
         
         [YarnCommand("ShowInvisibleEnemies")]

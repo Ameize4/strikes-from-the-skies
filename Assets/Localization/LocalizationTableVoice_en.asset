@@ -131,7 +131,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 362248068194304
-    m_Localized: 526d3f777cdfff44b8e6b8c913682fe9
+    m_Localized: 665f68698cd69824b9b516c55c5079da
     m_Metadata:
       m_Items: []
   - m_Id: 362248068194305
@@ -456,10 +456,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 847034008461312
     m_Localized: d821f69d30fbff145927c960759592b1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 847321314091008
-    m_Localized: 665f68698cd69824b9b516c55c5079da
     m_Metadata:
       m_Items: []
   - m_Id: 965131105198080

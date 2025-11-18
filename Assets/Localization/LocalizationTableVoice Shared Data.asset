@@ -455,10 +455,6 @@ MonoBehaviour:
     m_Key: line:chapter2_question_posters_option2_answer7
     m_Metadata:
       m_Items: []
-  - m_Id: 847321314091008
-    m_Key: 'line:chapter2_question_isalive '
-    m_Metadata:
-      m_Items: []
   - m_Id: 965131105198080
     m_Key: line:chapter4_sorrow8
     m_Metadata:
@@ -1061,11 +1057,6 @@ MonoBehaviour:
           - ru
           - zh
         - m_KeyId: 847034008461312
-          m_TableCodes:
-          - en
-          - ru
-          - zh
-        - m_KeyId: 847321314091008
           m_TableCodes:
           - en
           - ru

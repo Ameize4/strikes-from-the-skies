@@ -32,6 +32,9 @@ public class MainMenuLoader : MonoBehaviour
             textLabel.text = $"{stringOperation} <b>{LocalizationSettings.SelectedLocale.Identifier.Code.ToUpper()}</b>";
             print(textLabel.text);
         });
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     private void LoadGameScene()

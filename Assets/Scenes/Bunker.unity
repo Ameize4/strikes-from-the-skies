@@ -1883,7 +1883,7 @@ MonoBehaviour:
   Motor: {fileID: 199834480}
   playerInputSpace: {fileID: 1806735588}
   speedWalk: 2
-  speedRun: 5
+  speedRun: 3.5
 --- !u!114 &199834480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3798,6 +3798,8 @@ PlayableDirector:
     value: {fileID: 1587457929}
   - key: {fileID: -2877680960053361531, guid: fc8f2baa4fc92d643b22c73eebb47609, type: 2}
     value: {fileID: 1587457930}
+  - key: {fileID: -5171870617080729238, guid: fc8f2baa4fc92d643b22c73eebb47609, type: 2}
+    value: {fileID: 1499248189}
   m_ExposedReferences:
     m_References:
     - aff0e34192e27f34e8010e039f21bffe: {fileID: 0}
@@ -9597,6 +9599,7 @@ MonoBehaviour:
   maxVignette: 0.333
   minVignette: 0.181
   _timelinePlayable: {fileID: 1943797404}
+  loseTimeline: {fileID: 394869052}
   enemyShowedUpSE: {fileID: 11400000, guid: ebc78f38efb6e5b4e8ae473cb27fbe1b, type: 2}
   enemyMovedSE: {fileID: 11400000, guid: c128da7fb614b214e8e4b2fc4d0fcb5f, type: 2}
   enemyDestroyedSE: {fileID: 11400000, guid: 2b467cc9a9eac7640b9755491fdd6916, type: 2}
@@ -15064,6 +15067,7 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 6c890fb2b3e3a7942a3275cd3f0ac3a9, type: 2}
+    - {fileID: 11400000, guid: 238239afa9c7ffc489502d8ae7bcf325, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -15079,6 +15083,20 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 1
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1499248187}
+          m_TargetAssemblyTypeName: CreditsController, Assembly-CSharp
+          m_MethodName: EndCredits
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1520448001 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4617969c7f2a8fb408479ea5c93f6695, type: 3}

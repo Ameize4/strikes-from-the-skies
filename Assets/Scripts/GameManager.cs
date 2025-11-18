@@ -54,7 +54,7 @@ namespace DefaultNamespace
         [SerializeField] float maxVignette, minVignette;
         private Vignette vignette;
         
-        [SerializeField] private PlayableDirector _timelinePlayable;
+        [SerializeField] private PlayableDirector _timelinePlayable, loseTimeline;
 
         [Space] [SerializeField] public SoundEvent enemyShowedUpSE;
         [SerializeField] public SoundEvent enemyMovedSE;
@@ -121,7 +121,7 @@ namespace DefaultNamespace
             headquarter = new Map.Headquarter(headquarterData);
             headquarter.OnZeroHealth += () =>
             {
-                _timelinePlayable.Play();
+                loseTimeline.Play();
                 var c = FindFirstObjectByType<CreditsController>();
                 _timelinePlayable.stopped += (director => c.EndCredits());
             };

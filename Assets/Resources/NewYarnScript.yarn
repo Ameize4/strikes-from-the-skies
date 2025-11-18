@@ -402,17 +402,18 @@ title: Chapter5_Call
 <<PlaySound PhoneNoise>>
 Товарищ сержант, на связи командир Эйкен. #line:chapter5_evacuation1
 Миссия по эвакуации гражданского населения завершена успешно. Империя благодарит вас за службу.  #line:chapter5_evacuation2
-… #line:chapter5_evacuation3
+/// … #line:chapter5_evacuation3
+<<PlaySound VeryFastEnemy>>
+<<wait 1.5>>
 Это ещё что такое? #line:chapter5_evacuation4
 <<PlaySound Siren>>
 <<PlaySound Alarm>>
 <<ChangeLight 2>>
-<<PlaySound VeryFastEnemy>>
 Оно летит в нашу сторону! Доложите товарищу полковнику! #line:chapter5_evacuation5
 <<PlaySound Boom>>
 <<SetTrauma 1>>
 ///… #line:chapter5_evacuation6
-<<wait 5>>
+<<wait 3>>
 Все целы? #line:chapter5_evacuation7
 <<SpawnWave>>
 <<BlockInteractiveObjects true>>
@@ -423,7 +424,7 @@ title: Chapter5_Call
 Да брось ты эти бумажки! Мы сейчас здесь нахрен поляжем! #line:chapter5_evacuation12
 :Повторяю. Всему личному составу командования: незамедлительно проследовать в убежище на минус третий этаж. #line:chapter5_evacuation13
 Господи! #line:chapter5_evacuation14
-///ААААААААА! #line:chapter5_evacuation15
+ААААААААА! #line:chapter5_evacuation15
 <<StopSound PhoneNoise>>
 <<PlaySound PhoneHangUp>>
 <<wait 2.5>>

@@ -516,6 +516,14 @@ MonoBehaviour:
     - Locale-ru
     - Locale-zh
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8302fee8a53d4834aa76be7b019a59d6
+    m_Address: chapter5_evacuation15
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-ru
+    - Locale-zh
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 84343d192c939b34e9e35714ba4f820f
     m_Address: chapter2_arrowslit_light2
     m_ReadOnly: 1

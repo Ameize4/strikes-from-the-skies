@@ -5,6 +5,7 @@ using DG.Tweening;
 using Sonity;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Telegraph : MonoBehaviour, IInteractive
 {
@@ -23,6 +24,10 @@ public class Telegraph : MonoBehaviour, IInteractive
     [SerializeField] private float tweenDuration;
     [SerializeField] private Vector3 positionTarget;
     [SerializeField] private Vector3 rotationTarget;
+    
+    [Space]
+    [SerializeField] private Image usageHint;
+    private bool isHintChecked;
 
     private Vector3 positionInit;
     private Vector3 rotationInit;
@@ -61,6 +66,15 @@ public class Telegraph : MonoBehaviour, IInteractive
 
         inputDurationHandler.Press += AnimateClickOn;
         inputDurationHandler.Release += AnimateClickOff;
+
+        inputDurationHandler.Press += () =>
+        {
+            if (!isHintChecked)
+            {
+                isHintChecked = true;
+                usageHint.DOFade(0f, 1f);
+            }
+        };
 
         positionInit = transform.localPosition;
         rotationInit = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);

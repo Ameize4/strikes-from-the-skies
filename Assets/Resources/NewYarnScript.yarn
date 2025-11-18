@@ -104,6 +104,7 @@ title: AfterWave1_X_X_X
 
 title: AfterWave2
 ---
+<<wait 5>>
 <<StopSound Siren>>
 <<NextChapter>>
 <<wait 4>>
@@ -195,6 +196,7 @@ title: Wave3_Init
 
 title: AfterWave3
 ---
+<<wait 5>>
 <<StopSound Siren>>
 <<NextChapter>>
 <<wait 5>>
@@ -306,8 +308,6 @@ title: Сhapter3_artillerist_must_be_done
 Конец связи. #line:chapter2_before_sleep5_repeat2
 <<StopSound PhoneNoise>>
 <<PlaySound PhoneHangUp>>
-<<StopSound Siren>>
-<<NextChapter>>
 <<InitBedInteract Сhapter4_Wave>>
 ===
 
@@ -324,6 +324,7 @@ title: Сhapter4_AfterWave
 ---
 /// Надо начать день прям с тревоги ///
 /// Добавить запуск новой волны. Сделать её ///
+<<wait 5>>
 <<StopSound Siren>>
 <<NextChapter>>
 <<wait 4>>
@@ -387,9 +388,9 @@ title: Сhapter4_BigEnemy
 <<SpawnWave>>
 ===
 
-
 title: Chapter5
 ---
+<<wait 5>>
 <<StopSound Siren>>
 <<NextChapter>>
 <<wait 4>>

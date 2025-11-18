@@ -220,7 +220,7 @@ title: Wave3_CallFromCommand_Angry_1
 ---
 <<PlaySound PhoneNoise>>
 Сержант, ты что себе позволяешь? #line:chapter3_long_inactivity1
-Под трибунал захотел? Я тебе это как пить дать устрою! Будешь у меня на каторге лес валить! #chapter3_long_inactivity2
+Под трибунал захотел? Я тебе это как пить дать устрою! Будешь у меня на каторге лес валить! #line:chapter3_long_inactivity2
 Повторяю – стреляйте по городу Доттингем. Приступайте немедленно. #line:chapter3_invisible_enemy5_repeat
 <<StopSound PhoneNoise>>
 <<PlaySound PhoneHangUp>>

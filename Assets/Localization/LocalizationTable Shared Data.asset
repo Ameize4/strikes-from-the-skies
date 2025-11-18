@@ -379,7 +379,8 @@ MonoBehaviour:
   - m_Id: 76895155445787
     m_Key: line:chapter3_long_inactivity2
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3971364946199969865
   - m_Id: 76895155445788
     m_Key: line:chapter3_long_inactivity3
     m_Metadata:
@@ -905,11 +906,6 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 3971364883413074463
-  - m_Id: 4510619548835840
-    m_Key: line:c75fd252
-    m_Metadata:
-      m_Items:
-      - rid: 3971364921661456391
   - m_Id: 4510619586584576
     m_Key: line:chapter3_invisible_enemy5_repeat
     m_Metadata:
@@ -926,10 +922,20 @@ MonoBehaviour:
       m_Items:
       - rid: 3971364921661456394
   - m_Id: 4622671177310208
-    m_Key: line:a1f35ded
+    m_Key: 'line:'
     m_Metadata:
       m_Items:
       - rid: 7043299261288546377
+  - m_Id: 4903440860635136
+    m_Key: line:0da78e4
+    m_Metadata:
+      m_Items:
+      - rid: 3971364946199969866
+  - m_Id: 4904106756726784
+    m_Key: line:c75fd252
+    m_Metadata:
+      m_Items:
+      - rid: 3971364946199969867
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
@@ -1698,12 +1704,6 @@ MonoBehaviour:
         nodeName: Wave3_EnemyDefeated_AngryCall2
         tags:
         - lastline
-    - rid: 3971364921661456391
-      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
-      data:
-        nodeName: Wave3_CallFromCommand_Angry_1
-        tags:
-        - chapter3_long_inactivity2
     - rid: 3971364921661456392
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
@@ -1719,6 +1719,23 @@ MonoBehaviour:
       data:
         nodeName: Wave3_EnemyDefeated_AngryCall2
         tags: []
+    - rid: 3971364946199969865
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Wave3_CallFromCommand_Angry_1
+        tags: []
+    - rid: 3971364946199969866
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Wave3_CallFromCommand_Angry_1
+        tags:
+        - chapter3_long_inactivity2
+    - rid: 3971364946199969867
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Wave3_CallFromCommand_Angry_1
+        tags:
+        - chapter3_long_inactivity2
     - rid: 7043299261288546377
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:

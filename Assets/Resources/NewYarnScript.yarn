@@ -224,7 +224,7 @@ title: Wave3_CallFromCommand_Angry_1
 Повторяю – стреляйте по городу Доттингем. Приступайте немедленно. #line:chapter3_invisible_enemy5_repeat
 <<StopSound PhoneNoise>>
 <<PlaySound PhoneHangUp>>
-<<DelayCallInAttack 30 Wave3_CallFromCommand_Angry_1>>
+<<DelayCallInAttack 25 Wave3_CallFromCommand_Angry_1>>
 ===
 
 title: Wave3_EnemyDefeated
@@ -258,7 +258,7 @@ title: Wave3_EnemyDefeated_AngryCall
 :Помяни моё слово: просто так ты отсюда не уйдёшь! #line:chapter3_long_inactivity3
 Скажи спасибо Эдварду. Не будь его – сегодня же бы встал к стенке. #line:chapter3_long_inactivity5
 Немедленно возвращайся к своим обязанностям. #line:chapter3_long_inactivity6
-Второго шанса у тебя не будет. #line:chapter3_long_inactivity7
+/// Второго шанса у тебя не будет. #line:chapter3_long_inactivity7
 <<StopSound PhoneNoise>>
 <<PlaySound PhoneHangUp>>
 <<wait 10>>
@@ -411,6 +411,7 @@ title: Chapter5_Call
 <<PlaySound Boom>>
 <<SetTrauma 1>>
 ///… #line:chapter5_evacuation6
+<<wait 5>>
 Все целы? #line:chapter5_evacuation7
 <<SpawnWave>>
 <<BlockInteractiveObjects true>>

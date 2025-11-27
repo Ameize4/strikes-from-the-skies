@@ -59,7 +59,7 @@ MonoBehaviour:
         distortionIncrease: 0
         fadeInLength: 0
         fadeInShape: 2
-        fadeOutLength: 0
+        fadeOutLength: 0.1
         fadeOutShape: -2
         followPosition: 1
         bypassReverbZones: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
         distortionIncreaseUse: 0
         fadeInLengthUse: 0
         fadeInShapeUse: 0
-        fadeOutLengthUse: 0
+        fadeOutLengthUse: 1
         fadeOutShapeUse: 0
         followPositionUse: 0
         bypassReverbZonesUse: 0
@@ -88,7 +88,7 @@ MonoBehaviour:
       settingsExpandBase: 1
       settingsExpandAdvanced: 0
       polyphonyMode: 0
-      audioMixerGroup: {fileID: 0}
+      audioMixerGroup: {fileID: 8874217729174980489, guid: 86dfa72d77fa8cf468b98ab87e0e971c, type: 2}
       soundVolumeGroup: {fileID: 0}
       soundMix: {fileID: 0}
       soundPolyGroup: {fileID: 0}

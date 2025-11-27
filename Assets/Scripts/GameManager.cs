@@ -25,11 +25,17 @@ namespace DefaultNamespace
         public struct LightingInfo
         {
             public Texture2D Color;
+            public GameObject lightObject;
             // public Texture2D ShadowMask;
         }
         [Space]
         [SerializeField] private LightingInfo[] _lightingInfos;
 
+        [Space]
+        [SerializeField]
+        private Map.HeadquarterData headquarterData;
+        public Map.Headquarter headquarter;
+        
         [Space]
         public Map.Grid grid;
 
@@ -38,6 +44,7 @@ namespace DefaultNamespace
 
         [Space]
         [SerializeField] private PhoneHandler phoneHandler;
+        [SerializeField] private BedHandler bedHandler;
         
         [Space]
         [SerializeField] private CameraShake.CameraShakeProperties cameraShakeProperties;
@@ -47,7 +54,7 @@ namespace DefaultNamespace
         [SerializeField] float maxVignette, minVignette;
         private Vignette vignette;
         
-        [SerializeField] private PlayableDirector _timelinePlayable;
+        [SerializeField] private PlayableDirector _timelinePlayable, loseTimeline;
 
         [Space] [SerializeField] public SoundEvent enemyShowedUpSE;
         [SerializeField] public SoundEvent enemyMovedSE;
@@ -59,6 +66,22 @@ namespace DefaultNamespace
 
         [Space] [SerializeField] private ParticleSystem p1, p2, p3;
 
+        [Serializable]
+        private struct YarnSoundBox
+        {
+            public string name;
+            public SoundEvent sound;
+            public Transform transform;
+
+            public void Play() => sound.Play(transform);
+            public void Stop() => sound.Stop(transform);
+        }
+        [Space] [SerializeField] private YarnSoundBox[] yarnSounds;
+        
+        [Space]
+        [SerializeField] private MeshRenderer tableMesh;
+        [SerializeField] private Material darkTableMaterial;
+
 
         // int values of KeyCode Enum of keyboard numbers
         private int alphaKeyCode1 = 49;
@@ -68,6 +91,12 @@ namespace DefaultNamespace
 
         private bool waitingForCall;
         private string callJumpDialogueName;
+
+        private bool waitingForBed;
+        private string bedJumpDialogueName;
+
+        private bool waitingForDoor;
+        private string doorJumpDialogueName;
 
         public bool twoLetterTelegraphLimitEnabled;
 
@@ -88,6 +117,14 @@ namespace DefaultNamespace
             _volume.sharedProfile.TryGet(out Vignette vignette);
 
             this.vignette = vignette;
+
+            headquarter = new Map.Headquarter(headquarterData);
+            headquarter.OnZeroHealth += () =>
+            {
+                loseTimeline.Play();
+                var c = FindFirstObjectByType<CreditsController>();
+                _timelinePlayable.stopped += (director => c.EndCredits());
+            };
         }
 
         private void CameraChangedListener(ICinemachineCamera.ActivationEventParams arg0)
@@ -101,6 +138,7 @@ namespace DefaultNamespace
 
         private void Update()
         {
+            #if UNITY_EDITOR
             if (Input.GetKeyDown(KeyCode.P))
             {
                 grid.BeginEnemyWave(chapters.debugEnemyData);
@@ -110,18 +148,12 @@ namespace DefaultNamespace
                 _cameraShake.SetTrauma(1f);
                 trauma = 1f;
             }
-
+            #endif
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                for (var index = 0; index < _lightingInfos.Length; index++)
-                {
-                    var info = _lightingInfos[index];
-                    KeyCode tempKeyCode = (KeyCode)(alphaKeyCode1+index);
-                    if (Input.GetKeyDown(tempKeyCode))
-                    {
-                        SetLightmaps(info);
-                    }
-                }
+                if (Input.GetKeyDown(KeyCode.Alpha1)) SetLight(0);
+                else if (Input.GetKeyDown(KeyCode.Alpha2)) SetLight(1);
+                else if (Input.GetKeyDown(KeyCode.Alpha3)) SetLight(2);
             }
 
             trauma = Mathf.Clamp01(trauma - cameraShakeProperties.recoverySpeed * Time.deltaTime);
@@ -130,6 +162,8 @@ namespace DefaultNamespace
 
             _cameraShake.Process();
         }
+
+        #region Yarn commands
 
         [YarnCommand("SpawnWave")]
         public static void Yarn_SpawnWave()
@@ -155,11 +189,46 @@ namespace DefaultNamespace
             Instance.callJumpDialogueName = nodeName;
             Instance.waitingForCall = true;
         }
+        
+        [YarnCommand("InitBedInteract")]
+        public static void Yarn_InitBedInteract(string nodeName)
+        {
+            Instance.bedJumpDialogueName = nodeName;
+            Instance.waitingForBed = true;
+        }
+        
+        [YarnCommand("InitDoorInteract")]
+        public static void Yarn_InitDoorInteract(string nodeName)
+        {
+            Instance.doorJumpDialogueName = nodeName;
+            Instance.waitingForDoor = true;
+        }
+        
+        [YarnCommand("DelayCallInAttack")]
+        public static void Yarn_DelayCallInAttack(int value, string nodeName)
+        {
+            DOTween.Sequence().AppendInterval(value).AppendCallback(() =>
+            {
+                if (!Instance.grid.InActiveWave) { return; }
+                if (Instance.waitingForCall) { return; }
+                Instance.phoneHandler.playAudioRing();
+                Instance.callJumpDialogueName = nodeName;
+                Instance.waitingForCall = true;
+            });
+        }
+        
+        [YarnCommand("StopSleep")]
+        public static void Yarn_StopSleep()
+        {
+            Instance.bedHandler.StopSleep();
+        }
 
         [YarnCommand("SpawnTimeline")]
         public static void Yarn_SpawnTimeline()
         {
             Instance._timelinePlayable.Play();
+            var c = FindFirstObjectByType<CreditsController>();
+            // Instance._timelinePlayable.stopped += (director => c.StartCredits());
         }
         
         [YarnCommand("ShowInvisibleEnemies")]
@@ -167,6 +236,60 @@ namespace DefaultNamespace
         {
             DOTween.Sequence().AppendInterval(60f).AppendCallback(Instance.grid.ShowAllEnemies);
         }
+        
+        [YarnCommand("PlaySound")]
+        public static void Yarn_PlaySound(string name)
+        {
+            foreach (var yarnSoundBox in Instance.yarnSounds)
+            {
+                if (yarnSoundBox.name == name) {yarnSoundBox.Play(); return;}
+            }
+            Debug.LogWarning($"There is no yarn sound with {name} name");
+        }
+        
+        [YarnCommand("StopSound")]
+        public static void Yarn_StopSound(string name)
+        {
+            foreach (var yarnSoundBox in Instance.yarnSounds)
+            {
+                if (yarnSoundBox.name == name) {yarnSoundBox.Stop(); return;}
+            }
+            Debug.LogWarning($"There is no yarn sound with {name} name");
+        }
+        
+        [YarnCommand("BlockInteractiveObjects")]
+        public static void Yarn_BlockInteractiveObjects(bool value)
+        {
+            InteractiveObject.isBlocked = value;
+        }
+        
+        [YarnCommand("SetTrauma")]
+        public static void Yarn_SetTrauma(float value)
+        {
+            Instance._cameraShake.SetTrauma(value);
+            Instance.trauma = value;
+        }
+        
+        [YarnCommand("BackToDialogue")]
+        public static void Yarn_BackToDialogue()
+        {
+            Instance.AllEnemiesDestroyed();
+        }
+        
+        [YarnCommand("ChangeLight")]
+        public static void Yarn_ChangeLight(int value)
+        {
+            Instance.SetLight(value - 1);
+        }
+        [YarnCommand("DisableMapObject")]
+        public static void Yarn_DisableMapObject()
+        {
+            Instance.grid.KillAllEnemies();
+            var m = Instance.tableMesh.materials;
+            m[1] = Instance.darkTableMaterial;
+            Instance.tableMesh.SetMaterials(m.ToList());
+        }
+        #endregion
 
         public void SendMorseCoordinates(string message)
         {
@@ -215,10 +338,26 @@ namespace DefaultNamespace
 
         public void AllEnemiesDestroyed()
         {
+            string? reached = headquarter.IsThresholdReached();
+            if (reached != null)
+            {
+                dialogueRunner.StartDialogue(reached);
+                return;
+            }
+            
             if (chapters.chapters[currentChapterIdx].dialogueAfterWave != "")
             {
                 dialogueRunner.StartDialogue(chapters.chapters[currentChapterIdx].dialogueAfterWave);
             }
+        }
+        
+        public void SetLight(int idx)
+        {
+            foreach (var info in _lightingInfos)
+            {
+                info.lightObject.SetActive(false);
+            }
+            SetLightmaps(_lightingInfos[idx]);
         }
         
         public void SetLightmaps(LightingInfo info)
@@ -227,6 +366,7 @@ namespace DefaultNamespace
             data.lightmapColor = info.Color;
             // data.shadowMask = info.ShadowMask;
             LightmapSettings.lightmaps = new LightmapData[] { data };
+            info.lightObject.SetActive(true);
         }
         
         public void AnswerPhone()
@@ -237,6 +377,28 @@ namespace DefaultNamespace
             dialogueRunner.StartDialogue(callJumpDialogueName);
             callJumpDialogueName = "";
             phoneHandler.playAudioPlasticImpact();
+        }
+        
+        public void BedInteract()
+        {
+            if (!waitingForBed) return;
+            
+            waitingForBed = false;
+            dialogueRunner.StartDialogue(bedJumpDialogueName);
+            bedJumpDialogueName = "";
+            bedHandler.StartSleep();
+        }
+
+        public void DoorInteract()
+        {
+            if (!waitingForDoor)
+            {
+                return;
+            }
+
+            waitingForDoor = false;
+            dialogueRunner.StartDialogue(doorJumpDialogueName);
+            doorJumpDialogueName = "";
         }
     }
 }

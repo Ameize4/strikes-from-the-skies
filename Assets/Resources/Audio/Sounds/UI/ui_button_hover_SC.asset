@@ -23,7 +23,7 @@ MonoBehaviour:
       settingsExpandBase: 1
       settingsExpandAdvanced: 0
       priority: 0.5
-      distanceEnabled: 1
+      distanceEnabled: 0
       distanceScale: 100
       preventEndClicks: 1
       loopEnabled: 0
@@ -49,7 +49,7 @@ MonoBehaviour:
       volumeExpand: 1
       volumeDecibel: 0
       volumeRatio: 1
-      volumeRandomEnable: 0
+      volumeRandomEnable: 1
       volumeRandomRangeDecibel: -3
       volumeDistanceRolloff: -2
       volumeDistanceCurve:
@@ -203,7 +203,7 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
       spatialBlendExpand: 0
-      spatialBlend: 1
+      spatialBlend: 0
       spatialBlendDistanceRolloff: -4
       spatialBlendDistance3DIncrease: 0.5
       spatialBlendDistanceCurve:

@@ -51,7 +51,7 @@ MonoBehaviour:
       volumeRatio: 1
       volumeRandomEnable: 0
       volumeRandomRangeDecibel: -3
-      volumeDistanceRolloff: -2
+      volumeDistanceRolloff: -13.9
       volumeDistanceCurve:
         serializedVersion: 2
         m_Curve:
@@ -202,7 +202,7 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-      spatialBlendExpand: 0
+      spatialBlendExpand: 1
       spatialBlend: 1
       spatialBlendDistanceRolloff: -4
       spatialBlendDistance3DIncrease: 0.5
@@ -429,14 +429,14 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-      lowpassExpand: 0
-      lowpassEnabled: 0
+      lowpassExpand: 1
+      lowpassEnabled: 1
       lowpassFrequencyEditor: 20000
       lowpassFrequencyEngine: 1
       lowpassAmountEditor: 6
       lowpassAmountEngine: 1
-      lowpassDistanceEnable: 0
-      lowpassDistanceFrequencyRolloff: -2
+      lowpassDistanceEnable: 1
+      lowpassDistanceFrequencyRolloff: -13.6
       lowpassDistanceFrequencyCurve:
         serializedVersion: 2
         m_Curve:
